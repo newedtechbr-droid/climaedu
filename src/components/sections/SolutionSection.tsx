@@ -24,9 +24,9 @@ const steps = [
 
 const badges = [
   "White-label completo",
-  "Compatível com SCORM",
-  "API disponível",
-  "LGPD e WCAG 2.1",
+  "Compatível com diversos formatos",
+  "IA para produção de conteúdo",
+  "LGPD",
 ];
 
 export function SolutionSection() {
