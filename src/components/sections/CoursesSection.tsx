@@ -1,37 +1,25 @@
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
+import {
+  CloudRain,
+  Leaf,
+  Recycle,
+  ClipboardCheck,
+  TreePine,
+  Droplets,
+  Building2,
+  ShieldAlert,
+} from "lucide-react";
 
-const courses = [
-  {
-    hours: "30h",
-    topics: ["Prevenção", "Protocolos e recuperação", "Educação comunitária"],
-    available: true,
-  },
-  {
-    hours: "60h",
-    topics: ["Fundamentos", "Governança climática e mitigação", "Ferramentas de SbN"],
-    available: true,
-  },
-  {
-    hours: "20h",
-    topics: ["Segregação", "PGRS", "Metas e indicadores"],
-    available: true,
-  },
-  {
-    hours: "20h",
-    topics: ["Ciclo PDCA", "Requisitos da norma", "Auditoria interna"],
-    available: true,
-  },
-  {
-    hours: "20h",
-    topics: ["AIA", "PRAD", "Medidas de controle"],
-    available: true,
-  },
-  {
-    hours: "Em breve",
-    topics: ["Bacias transfronteiriças", "Qualidade da água", "Uso sustentável"],
-    available: false,
-  },
+const areas = [
+  { icon: CloudRain, label: "Eventos climáticos extremos" },
+  { icon: Leaf, label: "ESG e governança climática" },
+  { icon: Recycle, label: "Resíduos sólidos (PNRS)" },
+  { icon: ClipboardCheck, label: "ISO 14001 e auditoria" },
+  { icon: TreePine, label: "Avaliação de impacto ambiental" },
+  { icon: Droplets, label: "Recursos hídricos" },
+  { icon: Building2, label: "Infraestrutura sustentável" },
+  { icon: ShieldAlert, label: "Defesa civil e adaptação" },
 ];
 
 export function CoursesSection() {
@@ -40,34 +28,20 @@ export function CoursesSection() {
       <div className="mx-auto max-w-6xl px-6 py-20">
         <FadeIn>
           <SectionTitle
-            eyebrow="Cursos e trilhas"
-            title="Conteúdo técnico pronto para aplicar"
-            subtitle="Cursos desenvolvidos por especialistas em gestão ambiental pública, com linguagem acessível e aplicação imediata na rotina institucional."
+            eyebrow="Trilhas e áreas"
+            title="Conhecimento técnico organizado por área de atuação"
+            subtitle="Trilhas curtas, modulares e auditáveis — desenvolvidas com especialistas em gestão ambiental e adaptáveis à realidade de cada órgão."
           />
         </FadeIn>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {courses.map((c, i) => (
-            <FadeIn key={i} delay={i * 0.04}>
-              <article className="flex h-full flex-col rounded-xl border border-border bg-background p-6 transition-shadow hover:shadow-[0_4px_20px_rgba(15,110,86,0.06)]">
-                <p className="text-sm text-muted-foreground">{c.hours}</p>
-                <ul className="mt-4 flex-1 space-y-1.5 text-sm text-foreground/80">
-                  {c.topics.map((t) => (
-                    <li key={t} className="flex gap-2">
-                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-                <span
-                  className={`mt-5 inline-flex w-fit rounded-full px-2.5 py-1 text-xs ${
-                    c.available
-                      ? "bg-accent text-primary-dark"
-                      : "bg-surface text-muted-foreground"
-                  }`}
-                >
-                  {c.available ? "Disponível" : "Em breve"}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {areas.map((a, i) => (
+            <FadeIn key={a.label} delay={i * 0.04}>
+              <article className="group flex h-full flex-col rounded-xl border border-border bg-background p-5 transition-all hover:border-primary/40 hover:shadow-[0_4px_20px_rgba(15,110,86,0.08)]">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-primary-dark">
+                  <a.icon size={20} />
                 </span>
+                <h3 className="mt-4 text-base text-foreground">{a.label}</h3>
               </article>
             </FadeIn>
           ))}
@@ -75,7 +49,7 @@ export function CoursesSection() {
 
         <FadeIn>
           <p className="mt-10 text-center text-sm text-muted-foreground">
-            Conteúdo versionado, reutilizável e customizável para a identidade visual do seu órgão.
+            Catálogo em expansão contínua. Trilhas customizáveis para a identidade e os processos do seu órgão.
           </p>
         </FadeIn>
       </div>
