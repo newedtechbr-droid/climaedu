@@ -3,37 +3,31 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 const courses = [
   {
-    name: "Eventos Extremos e Resiliência Climática",
     hours: "30h",
     topics: ["Prevenção", "Protocolos e recuperação", "Educação comunitária"],
     available: true,
   },
   {
-    name: "Mudanças Climáticas e ESG",
     hours: "60h",
     topics: ["Fundamentos", "Governança climática e mitigação", "Ferramentas de SbN"],
     available: true,
   },
   {
-    name: "Gestão de Resíduos Sólidos (PNRS)",
     hours: "20h",
     topics: ["Segregação", "PGRS", "Metas e indicadores"],
     available: true,
   },
   {
-    name: "ISO 14001 — Sistemas de Gestão Ambiental",
     hours: "20h",
     topics: ["Ciclo PDCA", "Requisitos da norma", "Auditoria interna"],
     available: true,
   },
   {
-    name: "Avaliação de Impactos Ambientais",
     hours: "20h",
     topics: ["AIA", "PRAD", "Medidas de controle"],
     available: true,
   },
   {
-    name: "Gestão de Recursos Hídricos",
     hours: "Em breve",
     topics: ["Bacias transfronteiriças", "Qualidade da água", "Uso sustentável"],
     available: false,
@@ -54,12 +48,9 @@ export function CoursesSection() {
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {courses.map((c, i) => (
-            <FadeIn key={c.name} delay={i * 0.04}>
+            <FadeIn key={i} delay={i * 0.04}>
               <article className="flex h-full flex-col rounded-xl border border-border bg-background p-6 transition-shadow hover:shadow-[0_4px_20px_rgba(15,110,86,0.06)]">
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-base leading-snug">{c.name}</h3>
-                </div>
-                <p className="mt-2 text-sm text-muted-foreground">{c.hours}</p>
+                <p className="text-sm text-muted-foreground">{c.hours}</p>
                 <ul className="mt-4 flex-1 space-y-1.5 text-sm text-foreground/80">
                   {c.topics.map((t) => (
                     <li key={t} className="flex gap-2">
