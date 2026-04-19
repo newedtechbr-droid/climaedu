@@ -3,37 +3,31 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 const courses = [
   {
-    name: "Eventos Extremos e Resiliência Climática",
     hours: "30h",
     topics: ["Prevenção", "Protocolos e recuperação", "Educação comunitária"],
     available: true,
   },
   {
-    name: "Mudanças Climáticas e ESG",
     hours: "60h",
     topics: ["Fundamentos", "Governança climática e mitigação", "Ferramentas de SbN"],
     available: true,
   },
   {
-    name: "Gestão de Resíduos Sólidos (PNRS)",
     hours: "20h",
     topics: ["Segregação", "PGRS", "Metas e indicadores"],
     available: true,
   },
   {
-    name: "ISO 14001 — Sistemas de Gestão Ambiental",
     hours: "20h",
     topics: ["Ciclo PDCA", "Requisitos da norma", "Auditoria interna"],
     available: true,
   },
   {
-    name: "Avaliação de Impactos Ambientais",
     hours: "20h",
     topics: ["AIA", "PRAD", "Medidas de controle"],
     available: true,
   },
   {
-    name: "Gestão de Recursos Hídricos",
     hours: "Em breve",
     topics: ["Bacias transfronteiriças", "Qualidade da água", "Uso sustentável"],
     available: false,
