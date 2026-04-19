@@ -6,6 +6,7 @@ import { AudienceSection } from "@/components/sections/AudienceSection";
 import { CoursesSection } from "@/components/sections/CoursesSection";
 import { AISection } from "@/components/sections/AISection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
+import { SDGSection } from "@/components/sections/SDGSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
@@ -39,6 +40,7 @@ function Index() {
       <CoursesSection />
       <AISection />
       <DifferentialsSection />
+      <SDGSection />
       <AboutSection />
       <ContactSection />
     </>
