@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/climaedu-logo.png";
+import logo from "@/assets/0ff0c5a7-369d-4dc7-9c28-8599834d10c6.png";
 
 const nav = [
   { to: "/sobre", label: "Sobre" },
