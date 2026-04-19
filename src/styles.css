@@ -28,41 +28,51 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-institutional: var(--institutional);
+  --color-terracotta: var(--terracotta);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-surface: var(--surface);
+  --color-surface-dark: var(--surface-dark);
+  --color-primary-deep: var(--primary-deep);
 }
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.22 0.02 165);
+  /* Off-white quente, menos asséptico */
+  --background: oklch(0.985 0.003 100);
+  --foreground: oklch(0.18 0.02 165);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.02 165);
+  --card-foreground: oklch(0.18 0.02 165);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.02 165);
+  --popover-foreground: oklch(0.18 0.02 165);
   /* #1D9E75 verde-floresta */
   --primary: oklch(0.62 0.13 162);
   --primary-foreground: oklch(1 0 0);
   /* #0F6E56 verde-escuro */
   --primary-dark: oklch(0.46 0.10 165);
-  --secondary: oklch(0.96 0.005 165);
-  --secondary-foreground: oklch(0.22 0.02 165);
-  /* #F4F4F4 cinza-claro */
-  --surface: oklch(0.965 0 0);
-  --muted: oklch(0.965 0 0);
-  --muted-foreground: oklch(0.48 0.01 165);
-  --accent: oklch(0.95 0.02 162);
+  /* Verde profundo para áreas escuras (hero, footer dark, CTAs) */
+  --primary-deep: oklch(0.28 0.06 168);
+  --secondary: oklch(0.94 0.008 165);
+  --secondary-foreground: oklch(0.18 0.02 165);
+  /* Cinza-claro para superfícies — um pouco mais quente */
+  --surface: oklch(0.945 0.005 100);
+  /* Superfície escura para contraste institucional */
+  --surface-dark: oklch(0.22 0.03 168);
+  --muted: oklch(0.945 0.005 100);
+  --muted-foreground: oklch(0.45 0.015 165);
+  --accent: oklch(0.93 0.04 162);
   --accent-foreground: oklch(0.46 0.10 165);
   /* #185FA5 azul-institucional */
   --institutional: oklch(0.49 0.13 252);
+  /* Terracota (do moodboard) — usado pontualmente em destaques */
+  --terracotta: oklch(0.55 0.14 35);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.91 0.005 165);
-  --input: oklch(0.91 0.005 165);
+  --border: oklch(0.89 0.008 165);
+  --input: oklch(0.89 0.008 165);
   --ring: oklch(0.62 0.13 162);
 }
 
