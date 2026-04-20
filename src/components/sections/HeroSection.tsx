@@ -57,13 +57,6 @@ export function HeroSection() {
         </FadeIn>
       </div>
 
-      {/* Scroll cue */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70">
-        <div className="flex flex-col items-center gap-2 text-[12px] uppercase tracking-[0.2em]">
-          <span>​</span>
-          <span className="h-10 w-px animate-pulse bg-white/50" />
-        </div>
-      </div>
     </section>
   );
 }
