@@ -6,7 +6,7 @@ const sdgs = [
     number: 4,
     name: "Educação de Qualidade",
     color: "#C5192D",
-    icon: "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/E_SDG_PRINT-04.jpg",
+    icon: "https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-04.jpg",
     meta: "Meta 4.7",
     metaDesc: "Garantir educação para o desenvolvimento sustentável e cidadania global",
     contribution:
@@ -17,7 +17,7 @@ const sdgs = [
     number: 10,
     name: "Redução das Desigualdades",
     color: "#DD1367",
-    icon: "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/E_SDG_PRINT-10.jpg",
+    icon: "https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-10.jpg",
     meta: "Meta 10.2",
     metaDesc: "Promover inclusão social, econômica e política para todos",
     contribution:
@@ -28,7 +28,7 @@ const sdgs = [
     number: 12,
     name: "Consumo e Produção Responsáveis",
     color: "#BF8B2E",
-    icon: "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/E_SDG_PRINT-12.jpg",
+    icon: "https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg",
     meta: "Meta 12.6",
     metaDesc:
       "Incentivar empresas a adotar práticas sustentáveis e integrar informações de sustentabilidade",
@@ -40,7 +40,7 @@ const sdgs = [
     number: 13,
     name: "Ação Climática",
     color: "#3F7E44",
-    icon: "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/E_SDG_PRINT-13.jpg",
+    icon: "https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-13.jpg",
     meta: "Meta 13.3",
     metaDesc: "Melhorar a capacitação e a conscientização sobre mudanças climáticas",
     contribution:
@@ -51,7 +51,7 @@ const sdgs = [
     number: 16,
     name: "Paz, Justiça e Instituições Eficazes",
     color: "#00689D",
-    icon: "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/E_SDG_PRINT-16.jpg",
+    icon: "https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-16.jpg",
     meta: "Meta 16.6",
     metaDesc: "Desenvolver instituições eficazes, responsáveis e transparentes em todos os níveis",
     contribution:
@@ -62,7 +62,7 @@ const sdgs = [
     number: 17,
     name: "Parcerias e Meios de Implementação",
     color: "#19486A",
-    icon: "https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/E_SDG_PRINT-17.jpg",
+    icon: "https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-17.jpg",
     meta: "Meta 17.17",
     metaDesc: "Estimular parcerias multissetoriais para o desenvolvimento sustentável",
     contribution:
