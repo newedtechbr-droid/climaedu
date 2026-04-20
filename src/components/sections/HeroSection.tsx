@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BarChart3, CheckCircle2, TrendingUp, ShieldCheck } from "lucide-react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { FadeIn } from "@/components/FadeIn";
 import heroCity from "@/assets/hero-city.jpg";
 
@@ -20,7 +21,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-surface-dark/60 via-transparent to-surface-dark" />
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:py-28 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-24 md:py-28 lg:grid-cols-[1.1fr_1fr] lg:items-center">
         <FadeIn>
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/80 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
@@ -33,6 +34,10 @@ export function HeroSection() {
             A ClimaEdu transforma normas e políticas ambientais em aprendizado prático,
             mensurável e auditável — para equipes que precisam entregar resultados, não só
             concluir cursos.
+          </p>
+          <p className="mt-5 max-w-xl text-[15px] italic text-white/60">
+            Desenvolvida por quem conhece a pressão de entregar resultado com equipe enxuta,
+            orçamento apertado e cobranças reais de auditoria.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
@@ -48,21 +53,6 @@ export function HeroSection() {
               Conhecer os cursos
             </Link>
           </div>
-
-          <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-white/10 pt-6">
-            <div>
-              <dt className="text-xs text-white/55">Trilhas por função</dt>
-              <dd className="mt-1 text-2xl font-medium text-white">+30</dd>
-            </div>
-            <div>
-              <dt className="text-xs text-white/55">Conteúdo técnico</dt>
-              <dd className="mt-1 text-2xl font-medium text-white">170h</dd>
-            </div>
-            <div>
-              <dt className="text-xs text-white/55">Auditável</dt>
-              <dd className="mt-1 text-2xl font-medium text-white">100%</dd>
-            </div>
-          </dl>
         </FadeIn>
 
         <FadeIn delay={0.15}>

@@ -8,6 +8,7 @@ import { AISection } from "@/components/sections/AISection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
 import { SDGSection } from "@/components/sections/SDGSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { RecognitionSection } from "@/components/sections/RecognitionSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const Route = createFileRoute("/")({
@@ -42,6 +43,7 @@ function Index() {
       <DifferentialsSection />
       <SDGSection />
       <AboutSection />
+      <RecognitionSection />
       <ContactSection />
     </>
   );

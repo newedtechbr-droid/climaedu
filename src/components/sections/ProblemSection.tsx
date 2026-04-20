@@ -6,29 +6,38 @@ const items = [
   {
     icon: CloudLightning,
     title: "Eventos climáticos extremos",
-    text: "Enchentes e queimadas exigem protocolos atualizados e equipes preparadas para agir.",
+    text: "Enchentes e queimadas exigem protocolos atualizados.",
   },
   {
     icon: FileSearch,
     title: "Auditorias e prestação de contas",
-    text: "TCE e TCU cobram execução documentada. Evidências inexistentes geram glosas e sanções.",
+    text: "TCE e TCU cobram execução documentada e evidências.",
   },
   {
     icon: UserX,
     title: "Rotatividade pós-eleição",
-    text: "Equipes novas precisam de padronização rápida sem depender de consultoria externa.",
+    text: "Equipes novas precisam de padronização rápida.",
   },
   {
     icon: BookOpen,
     title: "Capacitação desconectada da rotina",
-    text: "Cursos pontuais não mudam prática. PNRS, compras sustentáveis e licenciamentos continuam travados.",
+    text: "Cursos pontuais não mudam prática institucional.",
   },
 ];
 
 export function ProblemSection() {
   return (
-    <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+    <section className="relative isolate overflow-hidden bg-surface">
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1400&q=80"
+          alt=""
+          aria-hidden
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/[0.88]" />
+      </div>
+      <div className="mx-auto max-w-6xl px-6 py-24">
         <FadeIn>
           <SectionTitle
             eyebrow="Contexto"
@@ -40,7 +49,7 @@ export function ProblemSection() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((it, i) => (
             <FadeIn key={it.title} delay={i * 0.05}>
-              <article className="h-full rounded-xl border border-border bg-background p-6">
+              <article className="h-full rounded-xl border border-border bg-background/80 p-6 backdrop-blur-sm">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-accent text-primary-dark">
                   <it.icon size={18} aria-hidden />
                 </span>

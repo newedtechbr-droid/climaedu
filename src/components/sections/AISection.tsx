@@ -1,7 +1,5 @@
 import { Sparkles, Wand2, FileText, Layers, ShieldCheck } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
-import { SectionTitle } from "@/components/SectionTitle";
-import heroCity from "@/assets/hero-city.jpg";
 
 const features = [
   {
@@ -23,18 +21,11 @@ const features = [
 
 export function AISection() {
   return (
-    <section className="relative isolate overflow-hidden bg-surface-dark text-white">
-      <div className="absolute inset-0 -z-10">
-        <img
-          src={heroCity}
-          alt=""
-          aria-hidden
-          className="h-full w-full object-cover opacity-25"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-dark via-surface-dark/95 to-surface-dark" />
-      </div>
-
-      <div className="mx-auto max-w-6xl px-6 py-20">
+    <section
+      className="relative isolate overflow-hidden text-white"
+      style={{ backgroundColor: "#1A2A3A" }}
+    >
+      <div className="mx-auto max-w-6xl px-6 py-24">
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/85 backdrop-blur">
@@ -42,7 +33,8 @@ export function AISection() {
               Diferencial ClimaEdu
             </span>
             <h2 className="mt-5 text-3xl text-white md:text-4xl">
-              Inteligência artificial para <span className="text-primary">produção de conteúdo customizado</span>
+              Inteligência artificial para{" "}
+              <span className="text-primary">produção de conteúdo customizado</span>
             </h2>
             <p className="mt-5 text-base text-white/75">
               Não entregamos só uma plataforma — entregamos um motor que transforma normas, planos e

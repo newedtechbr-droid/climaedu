@@ -50,7 +50,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <p className="mx-auto max-w-6xl px-6 py-5 text-xs text-muted-foreground">
-          © 2025 ClimaEdu — New EdTech · Florianópolis, SC · CNPJ [a preencher]
+          © 2025 ClimaEdu — New EdTech · Florianópolis, SC
         </p>
       </div>
     </footer>
