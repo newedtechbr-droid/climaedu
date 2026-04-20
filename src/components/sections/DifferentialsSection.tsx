@@ -31,8 +31,7 @@ export function DifferentialsSection() {
                   <th className="px-5 py-4 font-medium text-foreground">Recurso</th>
                   <th className="px-5 py-4 text-center font-medium text-primary-dark">ClimaEdu</th>
                   <th className="px-5 py-4 text-center font-medium text-muted-foreground">
-                    Plataformas gratuitas
-                    <span className="block text-xs font-normal">(Educamb / EV.G)</span>
+                    Outras plataformas
                   </th>
                 </tr>
               </thead>
