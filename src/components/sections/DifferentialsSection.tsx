@@ -14,7 +14,7 @@ const rows = [
 export function DifferentialsSection() {
   return (
     <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-24">
         <FadeIn>
           <SectionTitle
             eyebrow="Diferenciais"

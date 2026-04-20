@@ -6,6 +6,7 @@ const sdgs = [
     number: 4,
     name: "Educação de Qualidade",
     color: "#C5192D",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Sustainable_Development_Goal_4.png/120px-Sustainable_Development_Goal_4.png",
     meta: "Meta 4.7",
     metaDesc: "Garantir educação para o desenvolvimento sustentável e cidadania global",
     contribution:
@@ -16,6 +17,7 @@ const sdgs = [
     number: 10,
     name: "Redução das Desigualdades",
     color: "#DD1367",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Sustainable_Development_Goal_10.png/120px-Sustainable_Development_Goal_10.png",
     meta: "Meta 10.2",
     metaDesc: "Promover inclusão social, econômica e política para todos",
     contribution:
@@ -26,6 +28,7 @@ const sdgs = [
     number: 12,
     name: "Consumo e Produção Responsáveis",
     color: "#BF8B2E",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Sustainable_Development_Goal_12.png/120px-Sustainable_Development_Goal_12.png",
     meta: "Meta 12.6",
     metaDesc:
       "Incentivar empresas a adotar práticas sustentáveis e integrar informações de sustentabilidade",
@@ -37,6 +40,7 @@ const sdgs = [
     number: 13,
     name: "Ação Climática",
     color: "#3F7E44",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sustainable_Development_Goal_13.png/120px-Sustainable_Development_Goal_13.png",
     meta: "Meta 13.3",
     metaDesc: "Melhorar a capacitação e a conscientização sobre mudanças climáticas",
     contribution:
@@ -47,6 +51,7 @@ const sdgs = [
     number: 16,
     name: "Paz, Justiça e Instituições Eficazes",
     color: "#00689D",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Sustainable_Development_Goal_16.png/120px-Sustainable_Development_Goal_16.png",
     meta: "Meta 16.6",
     metaDesc: "Desenvolver instituições eficazes, responsáveis e transparentes em todos os níveis",
     contribution:
@@ -57,6 +62,7 @@ const sdgs = [
     number: 17,
     name: "Parcerias e Meios de Implementação",
     color: "#19486A",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sustainable_Development_Goal_17.png/120px-Sustainable_Development_Goal_17.png",
     meta: "Meta 17.17",
     metaDesc: "Estimular parcerias multissetoriais para o desenvolvimento sustentável",
     contribution:
@@ -100,12 +106,13 @@ export function SDGSection() {
                 )}
 
                 <div className="flex items-center gap-3">
-                  <span
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-base font-semibold text-white"
-                    style={{ backgroundColor: sdg.color }}
-                  >
-                    {sdg.number}
-                  </span>
+                  <img
+                    src={sdg.icon}
+                    alt={`Ícone oficial ODS ${sdg.number}`}
+                    width={56}
+                    height={56}
+                    className="h-14 w-14 shrink-0 rounded-lg object-cover"
+                  />
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
                       ODS {sdg.number}
