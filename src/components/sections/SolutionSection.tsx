@@ -24,7 +24,7 @@ const steps = [
 
 const badges = [
   "White-label completo",
-  "Compatível com diversos formatos",
+  "Múltiplos formatos de conteúdo",
   "IA para produção de conteúdo",
   "LGPD",
 ];
@@ -32,7 +32,7 @@ const badges = [
 export function SolutionSection() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-24">
         <FadeIn>
           <SectionTitle
             eyebrow="Solução"
