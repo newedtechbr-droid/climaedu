@@ -21,20 +21,11 @@ const PRIMARY = "#1D9E75";
 
 export function RecognitionSection() {
   return (
-    <section style={{ backgroundColor: "#F5F3EE", paddingTop: 80, paddingBottom: 80 }}>
+    <section style={{ backgroundColor: "#F5F3EE", paddingTop: 128, paddingBottom: 128 }}>
       <div className="mx-auto max-w-5xl px-6">
         <FadeIn>
-          <h2
-            className="text-center"
-            style={{
-              fontFamily: "'DM Serif Display', Georgia, serif",
-              fontSize: 36,
-              lineHeight: 1.15,
-              color: PRIMARY,
-              fontWeight: 400,
-            }}
-          >
-            como nos reconhecem
+          <h2 className="text-center" style={{ color: PRIMARY }}>
+            Como nos reconhecem
           </h2>
         </FadeIn>
 
