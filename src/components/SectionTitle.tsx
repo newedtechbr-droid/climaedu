@@ -15,10 +15,10 @@ export function SectionTitle({
   return (
     <div className={`max-w-3xl ${a}`}>
       {eyebrow && (
-        <p className="mb-3 uppercase tracking-[0.18em] text-primary" style={{ fontSize: "13px" }}>{eyebrow}</p>
+        <p className="mb-4 font-semibold uppercase tracking-[0.2em] text-primary" style={{ fontSize: "13px" }}>{eyebrow}</p>
       )}
       <h2>{title}</h2>
-      {subtitle && <p className="mt-4 text-muted-foreground">{subtitle}</p>}
+      {subtitle && <p className="mt-5 text-lg text-foreground/75">{subtitle}</p>}
     </div>
   );
 }
