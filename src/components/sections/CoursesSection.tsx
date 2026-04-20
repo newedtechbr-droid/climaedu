@@ -25,7 +25,7 @@ const areas = [
 export function CoursesSection() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-24">
         <FadeIn>
           <SectionTitle
             eyebrow="Trilhas e áreas"
@@ -48,9 +48,18 @@ export function CoursesSection() {
         </div>
 
         <FadeIn>
-          <p className="mt-10 text-center text-sm text-muted-foreground">
-            Catálogo em expansão contínua. Trilhas customizáveis para a identidade e os processos do seu órgão.
-          </p>
+          <div className="mt-10 flex flex-col items-center gap-5">
+            <p className="max-w-2xl text-center text-sm text-muted-foreground">
+              Converse com nossa equipe para conhecer o catálogo completo e entender quais trilhas
+              se aplicam ao seu contexto.
+            </p>
+            <a
+              href="#contato"
+              className="inline-flex items-center justify-center rounded-lg border-[1.5px] border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              Solicitar catálogo completo
+            </a>
+          </div>
         </FadeIn>
       </div>
     </section>
