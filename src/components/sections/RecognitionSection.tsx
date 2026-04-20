@@ -24,18 +24,18 @@ export function RecognitionSection() {
     <section style={{ backgroundColor: "#F5F3EE", paddingTop: 80, paddingBottom: 80 }}>
       <div className="mx-auto max-w-5xl px-6">
         <FadeIn>
-          <p
+          <h2
             className="text-center"
             style={{
-              fontFamily: "Inter, sans-serif",
-              fontSize: 11,
-              letterSpacing: "0.08em",
+              fontFamily: "'DM Serif Display', Georgia, serif",
+              fontSize: 36,
+              lineHeight: 1.15,
               color: PRIMARY,
-              textTransform: "lowercase",
+              fontWeight: 400,
             }}
           >
             como nos reconhecem
-          </p>
+          </h2>
         </FadeIn>
 
         <FadeIn delay={0.1}>
