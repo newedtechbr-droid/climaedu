@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
+import heroImg from "@/assets/hero-climate.jpg";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1569163139394-de4798aa62b6?w=2000&q=80&auto=format&fit=crop";
+const HERO_IMG = heroImg;
 
 export function HeroSection() {
   return (
