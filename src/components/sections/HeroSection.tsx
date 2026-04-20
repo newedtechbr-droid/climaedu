@@ -19,7 +19,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
       </div>
 
-      <div className="mx-auto w-full max-w-5xl px-6 py-32 text-center md:py-40">
+      <div className="mx-auto w-full max-w-5xl px-6 py-32 md:py-40 text-center">
         <FadeIn>
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[13px] font-medium tracking-wide text-white backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
