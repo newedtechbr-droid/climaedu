@@ -67,7 +67,7 @@ export function ContactSection() {
 
   return (
     <section className="bg-surface" id="contato">
-      <div className="mx-auto max-w-6xl px-6 py-24">
+      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
         <FadeIn>
           <SectionTitle
             eyebrow="Contato"

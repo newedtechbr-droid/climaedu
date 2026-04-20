@@ -5,7 +5,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 export function AudienceSection() {
   return (
     <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-24">
+      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
         <FadeIn>
           <SectionTitle
             eyebrow="Para quem"

@@ -7,57 +7,53 @@ const rows = [
   "Dashboard de evidências para auditoria",
   "White-label com identidade do órgão",
   "Integração à rotina (não só conteúdo)",
-  "IA para produção de conteúdo customizado",
-  "Suporte comercial e implantação",
+  "IA para conteúdo customizado",
+  "Suporte e implantação dedicados",
 ];
 
 export function DifferentialsSection() {
   return (
     <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-24">
+      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
         <FadeIn>
           <SectionTitle
             eyebrow="Diferenciais"
-            title="O que diferencia a ClimaEdu das alternativas existentes"
-            subtitle="Plataformas gratuitas do governo entregam conteúdo. A ClimaEdu entrega capacidade institucional — com execução, evidência e continuidade."
+            title="ClimaEdu vs. alternativas"
+            align="center"
           />
         </FadeIn>
 
-        <FadeIn>
-          <div className="mt-10 overflow-hidden rounded-xl border border-border bg-background">
-            <table className="w-full text-sm">
+        <FadeIn delay={0.1}>
+          <div className="mt-14 overflow-hidden rounded-2xl border border-border bg-background shadow-sm">
+            <table className="w-full text-left">
               <thead>
-                <tr className="border-b border-border bg-background text-left">
-                  <th className="px-5 py-4 font-medium text-foreground">Recurso</th>
-                  <th className="px-5 py-4 text-center font-medium text-primary-dark">ClimaEdu</th>
-                  <th className="px-5 py-4 text-center font-medium text-muted-foreground">
-                    Outras plataformas
+                <tr className="bg-primary-dark text-white">
+                  <th className="px-6 py-5 text-base font-semibold md:text-lg">Recurso</th>
+                  <th className="px-6 py-5 text-center text-base font-semibold md:text-lg">ClimaEdu</th>
+                  <th className="px-6 py-5 text-center text-base font-semibold text-white/80 md:text-lg">
+                    Outras
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((r, i) => (
-                  <tr key={r} className={i !== rows.length - 1 ? "border-b border-border" : ""}>
-                    <td className="px-5 py-4 text-foreground/90">{r}</td>
-                    <td className="px-5 py-4 text-center">
-                      <Check size={18} className="mx-auto text-primary" aria-label="Sim" />
+                  <tr key={r} className={i % 2 === 0 ? "bg-background" : "bg-surface/60"}>
+                    <td className="px-6 py-5 text-base font-medium text-foreground md:text-lg">{r}</td>
+                    <td className="px-6 py-5 text-center">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary/15">
+                        <Check size={22} className="text-primary" aria-label="Sim" />
+                      </span>
                     </td>
-                    <td className="px-5 py-4 text-center">
-                      <X size={18} className="mx-auto text-muted-foreground" aria-label="Não" />
+                    <td className="px-6 py-5 text-center">
+                      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-muted">
+                        <X size={22} className="text-muted-foreground" aria-label="Não" />
+                      </span>
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-        </FadeIn>
-
-        <FadeIn>
-          <p className="mx-auto mt-6 max-w-3xl text-center text-sm text-muted-foreground">
-            A ClimaEdu não compete com plataformas gratuitas em preço — compete no resultado. Cada
-            real investido se justifica na redução de retrabalho, na aprovação de projetos e na
-            segurança em processos de auditoria.
-          </p>
         </FadeIn>
       </div>
     </section>

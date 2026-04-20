@@ -25,7 +25,7 @@ const areas = [
 export function CoursesSection() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-24">
+      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
         <FadeIn>
           <SectionTitle
             eyebrow="Trilhas e áreas"
