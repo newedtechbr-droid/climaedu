@@ -2,9 +2,12 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { CheckCircle2, MessageCircle } from "lucide-react";
+import { CheckCircle2, MessageCircle, AlertCircle } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
+
+// TODO: substitua pelo ID real do Formspree (formspree.io → e-mail destino: contato@newedtech.com.br)
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/XXXXXXXX";
 
 const schema = z.object({
   nome: z.string().trim().min(2, "Informe seu nome").max(100),
@@ -22,6 +25,7 @@ type FormValues = z.infer<typeof schema>;
 
 export function ContactSection() {
   const [sent, setSent] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -30,11 +34,35 @@ export function ContactSection() {
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormValues) => {
-    // Endpoint placeholder — substituir por Formspree/email real em produção.
-    await new Promise((r) => setTimeout(r, 600));
-    console.log("Solicitação ClimaEdu:", data);
-    setSent(true);
-    reset();
+    setErrorMsg(null);
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          nome: data.nome,
+          orgao: data.organizacao,
+          cargo: data.cargo,
+          email: data.email,
+          whatsapp: data.whatsapp,
+          tipo: data.tipo,
+          mensagem: data.mensagem,
+        }),
+      });
+
+      if (!response.ok) throw new Error("Falha no envio");
+
+      setSent(true);
+      reset();
+    } catch (err) {
+      console.error("Erro ao enviar formulário:", err);
+      setErrorMsg(
+        "Ocorreu um erro no envio. Por favor, tente pelo WhatsApp: (48) 99160-6518",
+      );
+    }
   };
 
   return (
@@ -96,7 +124,8 @@ export function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm text-primary-foreground transition-colors hover:bg-primary-dark disabled:opacity-60"
+                className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-primary-foreground transition-colors hover:bg-primary-dark disabled:opacity-60"
+                style={{ fontSize: "15px" }}
               >
                 {isSubmitting ? "Enviando…" : "Enviar solicitação"}
               </button>
@@ -104,9 +133,20 @@ export function ContactSection() {
               {sent && (
                 <p
                   role="status"
-                  className="mt-4 inline-flex items-center gap-2 rounded-md bg-accent px-3 py-2 text-sm text-primary-dark"
+                  className="mt-4 inline-flex items-center gap-2 rounded-md bg-accent px-3 py-2 text-primary-dark"
+                  style={{ fontSize: "15px" }}
                 >
-                  <CheckCircle2 size={16} /> Solicitação recebida. Retornaremos em até 48 horas.
+                  <CheckCircle2 size={16} /> Recebemos sua solicitação! Entraremos em contato em até 48 horas.
+                </p>
+              )}
+
+              {errorMsg && (
+                <p
+                  role="alert"
+                  className="mt-4 inline-flex items-center gap-2 rounded-md bg-destructive/10 px-3 py-2 text-destructive"
+                  style={{ fontSize: "15px" }}
+                >
+                  <AlertCircle size={16} /> {errorMsg}
                 </p>
               )}
 
@@ -117,8 +157,9 @@ export function ContactSection() {
                   background: var(--color-background);
                   color: var(--color-foreground);
                   border-radius: 0.5rem;
-                  padding: 0.625rem 0.75rem;
-                  font-size: 0.875rem;
+                  padding: 0.75rem 0.875rem;
+                  font-size: 16px;
+                  line-height: 1.5;
                   transition: border-color .15s, box-shadow .15s;
                 }
                 .input:focus {
@@ -132,22 +173,23 @@ export function ContactSection() {
 
           <FadeIn delay={0.1} className="lg:col-span-2">
             <aside className="h-full rounded-xl border border-border bg-background p-7">
-              <h3 className="text-base text-primary-dark">Prefere conversar agora?</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
+              <h3>Prefere conversar agora?</h3>
+              <p className="mt-2 text-muted-foreground" style={{ fontSize: "16px" }}>
                 Fale diretamente com a equipe pelo WhatsApp.
               </p>
               <a
                 href="https://wa.me/5548991606518"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2.5 text-sm text-primary-dark transition-colors hover:bg-accent"
+                className="mt-5 inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2.5 text-primary-dark transition-colors hover:bg-accent"
+                style={{ fontSize: "15px" }}
               >
                 <MessageCircle size={16} />
                 (48) 99160-6518
               </a>
               <div className="mt-8 border-t border-border pt-6">
-                <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Resposta</p>
-                <p className="mt-2 text-sm text-foreground/80">
+                <p className="uppercase tracking-[0.18em] text-muted-foreground" style={{ fontSize: "13px" }}>Resposta</p>
+                <p className="mt-2 text-foreground/80" style={{ fontSize: "16px" }}>
                   Em até 48 horas úteis, com proposta inicial alinhada ao seu contexto institucional.
                 </p>
               </div>
@@ -170,9 +212,9 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-sm text-foreground/90">{label}</span>
+      <span className="mb-1.5 block text-foreground/90" style={{ fontSize: "16px", fontWeight: 500 }}>{label}</span>
       {children}
-      {error && <span className="mt-1 block text-xs text-destructive">{error}</span>}
+      {error && <span className="mt-1 block text-destructive" style={{ fontSize: "13px" }}>{error}</span>}
     </label>
   );
 }
