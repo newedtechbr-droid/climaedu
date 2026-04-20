@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/513073ff-c831-4d17-85b3-62a04ba1211d.png";
 
 const nav = [
+  { to: "/", label: "Início" },
   { to: "/sobre", label: "Sobre" },
   { to: "/como-funciona", label: "Como Funciona" },
   { to: "/cursos", label: "Cursos" },
