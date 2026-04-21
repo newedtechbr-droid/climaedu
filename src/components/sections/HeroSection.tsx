@@ -1,21 +1,18 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
-import heroImg from "@/assets/hero-climate.jpg";
-
-const HERO_IMG = heroImg;
 
 export function HeroSection() {
   return (
     <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden text-white">
-      <div className="absolute inset-0 -z-10">
-        <img
-          src={HERO_IMG}
-          alt="Equipe pública atuando em campo após evento climático"
-          className="h-full w-full object-cover"
-          width={2000}
-          height={1200}
-        />
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1400&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
       </div>
 

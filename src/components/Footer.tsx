@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Instagram } from "lucide-react";
-import logo from "@/assets/climaedu-logo.png";
+
+const LOGO_URL = "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=200&h=80&q=80&fit=crop";
 
 export function Footer() {
   return (
