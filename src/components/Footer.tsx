@@ -1,13 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Instagram } from "lucide-react";
-import logo from "@/assets/climaedu-logo.png";
+
+
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background" style={{ fontSize: "15px", color: "#3A3A38" }}>
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <img src={logo} alt="ClimaEdu" className="h-11 w-auto" />
+          <span className="text-2xl font-bold text-primary-dark">ClimaEdu</span>
           <p className="mt-4 max-w-xs" style={{ fontSize: "15px", color: "#3A3A38", lineHeight: 1.6 }}>
             Capacitação climática que vira rotina e evidência.
           </p>

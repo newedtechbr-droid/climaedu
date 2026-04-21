@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/513073ff-c831-4d17-85b3-62a04ba1211d.png";
+
+
 
 const nav = [
   { to: "/", label: "Início" },
@@ -31,7 +32,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center" aria-label="ClimaEdu - página inicial">
-          <img src={logo} alt="ClimaEdu" className="h-12 w-auto md:h-14" />
+          <span className="text-2xl font-bold text-primary-dark md:text-3xl">ClimaEdu</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
