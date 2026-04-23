@@ -8,7 +8,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1400&q=80')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1400&q=80')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -42,7 +42,7 @@ export function HeroSection() {
               to="/contato"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-8px_rgba(29,158,117,0.7)] transition-all hover:bg-primary-dark hover:scale-[1.02]"
             >
-              Solicitar demonstração <ArrowRight size={18} />
+              Vamos conversar? <ArrowRight size={18} />
             </Link>
             <Link
               to="/cursos"
@@ -53,7 +53,6 @@ export function HeroSection() {
           </div>
         </FadeIn>
       </div>
-
     </section>
   );
 }

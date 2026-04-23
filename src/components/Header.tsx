@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 
-
-
 const nav = [
   { to: "/", label: "Início" },
   { to: "/sobre", label: "Sobre" },
@@ -52,7 +50,7 @@ export function Header() {
           to="/contato"
           className="hidden rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary-dark md:inline-flex"
         >
-          Solicitar demonstração
+          Vamos conversar?
         </Link>
 
         <button
@@ -84,7 +82,7 @@ export function Header() {
               onClick={() => setOpen(false)}
               className="mt-2 rounded-lg bg-primary px-4 py-2 text-center text-sm text-primary-foreground"
             >
-              Solicitar demonstração
+              Vamos conversar?
             </Link>
           </nav>
         </div>

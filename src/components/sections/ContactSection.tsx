@@ -5,13 +5,68 @@ import { z } from "zod";
 import { CheckCircle2, MessageCircle, AlertCircle } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
+import { createServerFn } from "@tanstack/react-start";
 
-// TODO: substitua pelo ID real do Formspree (formspree.io → e-mail destino: contato@newedtech.com.br)
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/XXXXXXXX";
+interface ContactInput {
+  nome: string;
+  organizacao: string;
+  cargo: string;
+  email: string;
+  whatsapp?: string;
+  tipo: string;
+  mensagem?: string;
+}
+
+const sendContactEmail = createServerFn({ method: "POST" })
+  .inputValidator((input: unknown) => input as ContactInput)
+  .handler(async ({ data }: { data: ContactInput }) => {
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    const LOVABLE_API_KEY = process.env.LOVABLE_API_KEY;
+
+    if (!RESEND_API_KEY || !LOVABLE_API_KEY) {
+      throw new Error("Chaves de API não configuradas");
+    }
+
+    const html = `
+      <h2>Nova solicitação de contato — ClimaEdu</h2>
+      <table style="border-collapse:collapse;width:100%">
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Nome</td><td style="padding:8px;border-bottom:1px solid #eee">${data.nome}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Instituição/Empresa</td><td style="padding:8px;border-bottom:1px solid #eee">${data.organizacao}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Cargo</td><td style="padding:8px;border-bottom:1px solid #eee">${data.cargo}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">E-mail</td><td style="padding:8px;border-bottom:1px solid #eee">${data.email}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">WhatsApp</td><td style="padding:8px;border-bottom:1px solid #eee">${data.whatsapp || "—"}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Tipo</td><td style="padding:8px;border-bottom:1px solid #eee">${data.tipo}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold">Mensagem</td><td style="padding:8px">${data.mensagem || "—"}</td></tr>
+      </table>
+    `;
+
+    const response = await fetch("https://connector-gateway.lovable.dev/resend/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${LOVABLE_API_KEY}`,
+        "X-Connection-Api-Key": RESEND_API_KEY,
+      },
+      body: JSON.stringify({
+        from: "ClimaEdu <onboarding@resend.dev>",
+        to: ["conttao@newedtech.com"],
+        subject: `[ClimaEdu] Nova solicitação de ${data.nome} — ${data.tipo}`,
+        html,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error("Resend error:", errorText);
+      throw new Error("Falha ao enviar e-mail");
+    }
+
+    return { success: true };
+  });
 
 const schema = z.object({
   nome: z.string().trim().min(2, "Informe seu nome").max(100),
-  organizacao: z.string().trim().min(2, "Informe o órgão ou empresa").max(120),
+  organizacao: z.string().trim().min(2, "Informe a instituição ou empresa").max(120),
   cargo: z.string().trim().min(2, "Informe seu cargo").max(80),
   email: z.string().trim().email("E-mail inválido").max(160),
   whatsapp: z.string().trim().max(30).optional().or(z.literal("")),
@@ -36,25 +91,7 @@ export function ContactSection() {
   const onSubmit = async (data: FormValues) => {
     setErrorMsg(null);
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          nome: data.nome,
-          orgao: data.organizacao,
-          cargo: data.cargo,
-          email: data.email,
-          whatsapp: data.whatsapp,
-          tipo: data.tipo,
-          mensagem: data.mensagem,
-        }),
-      });
-
-      if (!response.ok) throw new Error("Falha no envio");
-
+      await sendContactEmail({ data });
       setSent(true);
       reset();
     } catch (err) {
@@ -71,7 +108,7 @@ export function ContactSection() {
         <FadeIn>
           <SectionTitle
             eyebrow="Contato"
-            title="Vamos conversar sobre o seu órgão ou empresa"
+            title="Vamos conversar sobre a sua instituição ou empresa"
             subtitle="Nos conte o contexto. Em 48 horas, uma de nossas especialistas entra em contato para entender sua necessidade e apresentar uma proposta."
           />
         </FadeIn>
@@ -87,7 +124,7 @@ export function ContactSection() {
                 <Field label="Nome completo" error={errors.nome?.message}>
                   <input type="text" className="input" {...register("nome")} />
                 </Field>
-                <Field label="Órgão ou empresa" error={errors.organizacao?.message}>
+                <Field label="Instituição ou empresa" error={errors.organizacao?.message}>
                   <input type="text" className="input" {...register("organizacao")} />
                 </Field>
                 <Field label="Cargo" error={errors.cargo?.message}>

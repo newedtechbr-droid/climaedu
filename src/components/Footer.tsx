@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Linkedin, Instagram } from "lucide-react";
 
-
-
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background" style={{ fontSize: "15px", color: "#3A3A38" }}>
@@ -27,10 +25,10 @@ export function Footer() {
         <div>
           <h3 className="text-[13px] font-semibold uppercase tracking-[0.16em] text-primary-dark">Conecte-se</h3>
           <div className="mt-4 flex gap-3">
-            <a href="#" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary-dark" style={{ color: "#3A3A38" }}>
+            <a href="https://www.linkedin.com/company/new-edtech/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary-dark" style={{ color: "#3A3A38" }}>
               <Linkedin size={18} />
             </a>
-            <a href="#" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary-dark" style={{ color: "#3A3A38" }}>
+            <a href="https://www.instagram.com/new.edtech" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary-dark" style={{ color: "#3A3A38" }}>
               <Instagram size={18} />
             </a>
           </div>
