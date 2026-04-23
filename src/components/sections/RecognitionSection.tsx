@@ -17,35 +17,33 @@ const small = [
   "Validável",
 ];
 
-const PRIMARY = "#1D9E75";
-
 export function RecognitionSection() {
   return (
-    <section style={{ backgroundColor: "#F5F3EE", paddingTop: 128, paddingBottom: 128 }}>
+    <section className="bg-surface py-32 md:py-40">
       <div className="mx-auto max-w-5xl px-6">
         <FadeIn>
-          <h2 className="text-center" style={{ color: PRIMARY }}>
+          <h2 className="text-center text-primary-dark">
             Como nos reconhecem
           </h2>
         </FadeIn>
 
         <FadeIn delay={0.1}>
           <div
-            className="mt-10 flex flex-wrap items-center justify-center"
-            style={{ gap: "14px 28px", fontFamily: "Inter, sans-serif", color: PRIMARY }}
+            className="mt-10 flex flex-wrap items-center justify-center text-primary-dark"
+            style={{ gap: "18px 32px", fontFamily: "var(--font-sans)" }}
           >
             {large.map((w) => (
-              <span key={w} style={{ fontSize: 22, opacity: 1, marginRight: 6 }}>
+              <span key={w} className="text-3xl md:text-4xl font-bold opacity-100">
                 {w}
               </span>
             ))}
             {medium.map((w) => (
-              <span key={w} style={{ fontSize: 16, opacity: 0.75, marginRight: 4 }}>
+              <span key={w} className="text-xl md:text-2xl font-semibold opacity-75">
                 {w}
               </span>
             ))}
             {small.map((w) => (
-              <span key={w} style={{ fontSize: 13, opacity: 0.5 }}>
+              <span key={w} className="text-lg md:text-xl font-medium opacity-50">
                 {w}
               </span>
             ))}
