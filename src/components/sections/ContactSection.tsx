@@ -7,17 +7,19 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import { createServerFn } from "@tanstack/react-start";
 
+interface ContactInput {
+  nome: string;
+  organizacao: string;
+  cargo: string;
+  email: string;
+  whatsapp?: string;
+  tipo: string;
+  mensagem?: string;
+}
+
 const sendContactEmail = createServerFn({ method: "POST" })
-  .validator((input: {
-    nome: string;
-    organizacao: string;
-    cargo: string;
-    email: string;
-    whatsapp?: string;
-    tipo: string;
-    mensagem?: string;
-  }) => input)
-  .handler(async ({ data }) => {
+  .inputValidator((input: unknown) => input as ContactInput)
+  .handler(async ({ data }: { data: ContactInput }) => {
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
     const LOVABLE_API_KEY = process.env.LOVABLE_API_KEY;
 
