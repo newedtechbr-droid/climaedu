@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
+import heroImg from "@/assets/hero-field.jpg";
 
 export function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export function HeroSection() {
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=1400&q=80')",
+          backgroundImage: `url('${heroImg}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -20,20 +21,29 @@ export function HeroSection() {
         <FadeIn>
           <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[13px] font-medium tracking-wide text-white backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Capacitação climática para o setor público
+            Plataforma GovTech de educação climática
           </p>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <h1 className="mx-auto max-w-4xl text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)]">
-            Da norma climática à evidência auditável.
+          <h1 className="mx-auto max-w-4xl text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.4)]" style={{ fontSize: "clamp(44px, 6vw, 76px)" }}>
+            Educação aplicada para ação climática no setor público
           </h1>
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 md:text-xl">
-            Trilhas práticas, checklists com evidência e dashboards prontos para auditoria.
+          <p className="mx-auto mt-6 max-w-2xl text-xl text-white/90 md:text-2xl leading-relaxed">
+            Transformamos diretrizes ambientais em práticas executáveis dentro do poder público.
           </p>
+        </FadeIn>
+
+        {/* Positioning block */}
+        <FadeIn delay={0.25}>
+          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-white/20 bg-white/10 px-8 py-6 backdrop-blur-md">
+            <p className="text-lg md:text-xl font-semibold text-white leading-relaxed">
+              Somos uma <span className="text-primary font-bold">plataforma GovTech</span> de educação aplicada para a ação climática. Transformamos diretrizes ambientais em <span className="text-primary font-bold">práticas executáveis</span> dentro do poder público.
+            </p>
+          </div>
         </FadeIn>
 
         <FadeIn delay={0.3}>
