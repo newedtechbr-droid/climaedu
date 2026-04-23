@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-border bg-background" style={{ fontSize: "15px", color: "#3A3A38" }}>
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <span className="text-2xl font-bold text-primary-dark">ClimaEdu</span>
+          <img src="/logo.png" alt="ClimaEdu" className="h-8" />
           <p className="mt-4 max-w-xs" style={{ fontSize: "15px", color: "#3A3A38", lineHeight: 1.6 }}>
             Capacitação climática que vira rotina e evidência.
           </p>

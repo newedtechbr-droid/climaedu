@@ -32,7 +32,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center" aria-label="ClimaEdu - página inicial">
-          <span className="text-2xl font-bold text-primary-dark md:text-3xl">ClimaEdu</span>
+          <img src="/logo.png" alt="ClimaEdu" className="h-8 md:h-10" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
