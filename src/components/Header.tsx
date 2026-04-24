@@ -71,8 +71,9 @@ export function Header() {
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4" aria-label="Navegação móvel">
             {nav.map((item) => (
               <Link
-                key={item.to}
+                key={`${item.to}${"hash" in item ? `#${item.hash}` : ""}`}
                 to={item.to}
+                hash={"hash" in item ? item.hash : undefined}
                 onClick={() => setOpen(false)}
                 className="rounded-md px-2 py-2 text-sm text-foreground/80 hover:bg-surface"
               >
