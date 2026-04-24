@@ -37,8 +37,9 @@ export function Header() {
         <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
           {nav.map((item) => (
             <Link
-              key={item.to}
+              key={`${item.to}${"hash" in item ? `#${item.hash}` : ""}`}
               to={item.to}
+              hash={"hash" in item ? item.hash : undefined}
               className="text-sm text-foreground/80 transition-colors hover:text-primary-dark"
               activeProps={{ className: "text-primary-dark" }}
             >
