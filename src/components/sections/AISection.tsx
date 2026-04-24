@@ -22,7 +22,8 @@ const features = [
 export function AISection() {
   return (
     <section
-      className="relative isolate overflow-hidden text-white"
+      id="inteligencia-artificial"
+      className="relative isolate overflow-hidden text-white scroll-mt-24"
       style={{ backgroundColor: "#1A2A3A" }}
     >
       <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">

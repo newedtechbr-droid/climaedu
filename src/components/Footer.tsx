@@ -18,6 +18,7 @@ export function Footer() {
             <li><Link to="/sobre" className="hover:text-primary-dark">Sobre</Link></li>
             <li><Link to="/cursos" className="hover:text-primary-dark">Cursos</Link></li>
             <li><Link to="/para-quem" className="hover:text-primary-dark">Para quem</Link></li>
+            <li><Link to="/" hash="inteligencia-artificial" className="hover:text-primary-dark">Inteligência Artificial</Link></li>
             <li><Link to="/contato" className="hover:text-primary-dark">Contato</Link></li>
           </ul>
         </div>
