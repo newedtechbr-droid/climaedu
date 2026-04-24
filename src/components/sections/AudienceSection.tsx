@@ -67,7 +67,7 @@ export function AudienceSection() {
                   <Factory size={20} aria-hidden />
                 </span>
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-institutional">B2B · Empresas</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-institutional text-slate-800">B2B · Empresas</p>
                   <h3 className="text-xl font-bold">Setor Privado</h3>
                 </div>
               </div>
