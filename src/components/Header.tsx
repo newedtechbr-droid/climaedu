@@ -8,6 +8,7 @@ const nav = [
   { to: "/como-funciona", label: "Como Funciona" },
   { to: "/cursos", label: "Cursos" },
   { to: "/para-quem", label: "Para Quem" },
+  { to: "/", hash: "inteligencia-artificial", label: "Inteligência Artificial" },
   { to: "/contato", label: "Contato" },
 ] as const;
 
