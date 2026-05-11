@@ -8,6 +8,7 @@ import { AISection } from "@/components/sections/AISection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
 import { SDGSection } from "@/components/sections/SDGSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { RecognitionSection } from "@/components/sections/RecognitionSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
