@@ -44,6 +44,7 @@ function Index() {
       <DifferentialsSection />
       <SDGSection />
       <AboutSection />
+      <EcosystemSection />
       <RecognitionSection />
       <ContactSection />
     </>
