@@ -4,7 +4,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 export function AudienceSection() {
   return (
-    <section className="bg-surface">
+    <section id="para-quem" className="bg-surface scroll-mt-24">
       <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
         <FadeIn>
           <SectionTitle

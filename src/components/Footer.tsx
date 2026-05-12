@@ -15,11 +15,12 @@ export function Footer() {
         <div>
           <h3 className="text-[13px] font-semibold uppercase tracking-[0.16em] text-primary-dark">Navegar</h3>
           <ul className="mt-4 space-y-2.5" style={{ fontSize: "15px" }}>
-            <li><Link to="/sobre" className="hover:text-primary-dark">Sobre</Link></li>
-            <li><Link to="/cursos" className="hover:text-primary-dark">Cursos</Link></li>
-            <li><Link to="/para-quem" className="hover:text-primary-dark">Para quem</Link></li>
+            <li><Link to="/" hash="sobre" className="hover:text-primary-dark">Sobre</Link></li>
+            <li><Link to="/" hash="cursos" className="hover:text-primary-dark">Cursos</Link></li>
+            <li><Link to="/" hash="para-quem" className="hover:text-primary-dark">Para quem</Link></li>
             <li><Link to="/" hash="inteligencia-artificial" className="hover:text-primary-dark">Inteligência Artificial</Link></li>
-            <li><Link to="/contato" className="hover:text-primary-dark">Contato</Link></li>
+            <li><Link to="/" hash="ecossistema" className="hover:text-primary-dark">Ecossistema</Link></li>
+            <li><Link to="/" hash="contato" className="hover:text-primary-dark">Contato</Link></li>
           </ul>
         </div>
 
@@ -33,9 +34,6 @@ export function Footer() {
               <Instagram size={18} />
             </a>
           </div>
-          <p className="mt-5" style={{ fontSize: "14px", color: "#3A3A38" }}>
-            contato@newedtech.com.br
-          </p>
         </div>
       </div>
 
