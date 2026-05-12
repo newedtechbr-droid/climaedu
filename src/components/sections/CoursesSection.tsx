@@ -24,7 +24,7 @@ const areas = [
 
 export function CoursesSection() {
   return (
-    <section className="bg-background">
+    <section id="cursos" className="bg-background scroll-mt-24">
       <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
         <FadeIn>
           <SectionTitle
