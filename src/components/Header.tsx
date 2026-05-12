@@ -4,12 +4,12 @@ import { Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Início" },
-  { to: "/sobre", label: "Sobre" },
-  { to: "/como-funciona", label: "Como Funciona" },
-  { to: "/cursos", label: "Cursos" },
-  { to: "/para-quem", label: "Para Quem" },
-  { to: "/", hash: "inteligencia-artificial", label: "Inteligência Artificial" },
-  { to: "/contato", label: "Contato" },
+  { to: "/", hash: "sobre", label: "Sobre" },
+  { to: "/", hash: "cursos", label: "Cursos" },
+  { to: "/", hash: "para-quem", label: "Para Quem" },
+  { to: "/", hash: "inteligencia-artificial", label: "IA" },
+  { to: "/", hash: "ecossistema", label: "Ecossistema" },
+  { to: "/", hash: "contato", label: "Contato" },
 ] as const;
 
 export function Header() {
@@ -34,7 +34,7 @@ export function Header() {
           <img src="/logo.png" alt="ClimaEdu" className="h-10 md:h-12" />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Navegação principal">
           {nav.map((item) => (
             <Link
               key={`${item.to}${"hash" in item ? `#${item.hash}` : ""}`}
@@ -49,7 +49,8 @@ export function Header() {
         </nav>
 
         <Link
-          to="/contato"
+          to="/"
+          hash="contato"
           className="hidden rounded-lg bg-primary px-4 py-2 text-sm text-primary-foreground transition-colors hover:bg-primary-dark md:inline-flex"
         >
           Vamos conversar?
@@ -81,7 +82,8 @@ export function Header() {
               </Link>
             ))}
             <Link
-              to="/contato"
+              to="/"
+              hash="contato"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-lg bg-primary px-4 py-2 text-center text-sm text-primary-foreground"
             >
