@@ -13,33 +13,34 @@ const sdgs = [
 export function SDGSection() {
   return (
     <section className="border-t border-border" style={{ backgroundColor: "#F5F3EE" }}>
-      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <SectionTitle
             eyebrow="Agenda 2030"
             title="Contribuição rastreável aos ODS"
+            subtitle="Alinhada aos Objetivos de Desenvolvimento Sustentável da Agenda 2030."
             align="center"
           />
         </FadeIn>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {sdgs.map((sdg, i) => (
             <FadeIn key={sdg.number} delay={i * 0.06}>
-              <article className="flex h-full items-center gap-5 rounded-2xl border border-[#E0DDD8] bg-white p-6 transition-shadow hover:shadow-md">
+              <article className="flex h-full items-center gap-4 rounded-xl border border-[#E0DDD8] bg-white p-5 transition-shadow hover:shadow-md">
                 <img
                   src={sdg.icon}
                   alt={`ODS ${sdg.number}`}
-                  width={88}
-                  height={88}
-                  className="h-22 w-22 shrink-0 rounded-xl object-cover"
-                  style={{ width: 88, height: 88 }}
+                  width={72}
+                  height={72}
+                  className="h-18 w-18 shrink-0 rounded-lg object-cover"
+                  style={{ width: 72, height: 72 }}
                 />
                 <div>
-                  <p className="text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ color: sdg.color }}>
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.16em]" style={{ color: sdg.color }}>
                     ODS {sdg.number}
                   </p>
-                  <h3 className="mt-1 text-lg font-bold leading-tight text-foreground">{sdg.name}</h3>
-                  <p className="mt-1.5 text-[15px] text-foreground/70">{sdg.desc}</p>
+                  <h3 className="mt-0.5 text-base font-bold leading-tight text-foreground">{sdg.name}</h3>
+                  <p className="mt-1 text-sm text-foreground/70">{sdg.desc}</p>
                 </div>
               </article>
             </FadeIn>

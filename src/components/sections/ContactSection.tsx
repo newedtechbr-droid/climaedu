@@ -104,12 +104,13 @@ export function ContactSection() {
 
   return (
     <section className="bg-surface scroll-mt-24" id="contato">
-      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <SectionTitle
             eyebrow="Contato"
-            title="Vamos conversar sobre a sua instituição ou empresa"
-            subtitle="Nos conte o contexto. Em 48 horas, uma de nossas especialistas entra em contato para entender sua necessidade e apresentar uma proposta."
+            title="Leve a ClimaEdu para sua instituição"
+            subtitle="Em até 48 horas, uma de nossas especialistas entra em contato para entender o seu contexto e apresentar uma proposta."
+            align="center"
           />
         </FadeIn>
 

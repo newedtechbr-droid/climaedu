@@ -10,6 +10,7 @@ import { SDGSection } from "@/components/sections/SDGSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { RecognitionSection } from "@/components/sections/RecognitionSection";
+import { CtaBannerSection } from "@/components/sections/CtaBannerSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const Route = createFileRoute("/")({
@@ -41,6 +42,7 @@ function Index() {
       <AudienceSection />
       <CoursesSection />
       <AISection />
+      <CtaBannerSection />
       <DifferentialsSection />
       <SDGSection />
       <AboutSection />

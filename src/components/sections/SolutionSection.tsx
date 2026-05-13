@@ -29,7 +29,7 @@ const steps = [
 export function SolutionSection() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <SectionTitle
             eyebrow="Solução"
