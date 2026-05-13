@@ -40,7 +40,7 @@ const sizeClass: Record<NonNullable<Logo["weight"]>, string> = {
 export function EcosystemSection() {
   return (
     <section id="ecossistema" className="bg-surface scroll-mt-24">
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
             <p className="mb-3 font-semibold uppercase tracking-[0.2em] text-primary" style={{ fontSize: "13px" }}>
@@ -57,7 +57,7 @@ export function EcosystemSection() {
           </div>
         </FadeIn>
 
-        <div className="mt-12 md:mt-14 space-y-10 md:space-y-12">
+        <div className="mt-10 md:mt-12 space-y-7 md:space-y-9">
           {groups.map((group, gi) => (
             <FadeIn key={group.title} delay={gi * 0.06}>
               <div>
@@ -95,7 +95,7 @@ export function EcosystemSection() {
         </div>
 
         <FadeIn delay={0.18}>
-          <p className="mx-auto mt-14 md:mt-16 max-w-xl text-center text-base md:text-lg italic text-foreground/65">
+          <p className="mx-auto mt-10 md:mt-12 max-w-xl text-center text-base md:text-lg italic text-foreground/65">
             Desenvolvendo soluções para fortalecer a capacidade institucional e acelerar a ação
             climática no setor público.
           </p>
