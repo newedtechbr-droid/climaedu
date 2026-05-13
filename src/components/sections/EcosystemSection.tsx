@@ -50,8 +50,9 @@ export function EcosystemSection() {
               Conectada ao ecossistema de inovação
             </h2>
             <p className="mt-4 text-base md:text-lg text-foreground/70">
-              A ClimaEdu participa de iniciativas de incubação, pré-aceleração e desenvolvimento
-              tecnológico voltadas à inovação e à ação climática no setor público.
+              A ClimaEdu vem sendo desenvolvida com apoio de ambientes de inovação, programas de
+              incubação, iniciativas de pré-aceleração e mecanismos públicos de fomento à inovação
+              em Santa Catarina.
             </p>
           </div>
         </FadeIn>
