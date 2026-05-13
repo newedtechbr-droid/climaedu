@@ -108,8 +108,9 @@ export function ContactSection() {
         <FadeIn>
           <SectionTitle
             eyebrow="Contato"
-            title="Vamos conversar sobre a sua instituição ou empresa"
-            subtitle="Nos conte o contexto. Em 48 horas, uma de nossas especialistas entra em contato para entender sua necessidade e apresentar uma proposta."
+            title="Leve a ClimaEdu para sua instituição"
+            subtitle="Em até 48 horas, uma de nossas especialistas entra em contato para entender o seu contexto e apresentar uma proposta."
+            align="center"
           />
         </FadeIn>
 

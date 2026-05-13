@@ -52,13 +52,13 @@ export function DifferentialsSection() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="mt-14 overflow-hidden rounded-2xl border border-border bg-background shadow-sm">
+          <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-background shadow-sm">
             <table className="w-full text-left">
               <thead>
                 <tr className="bg-primary-dark text-white">
-                  <th className="px-6 py-5 text-lg font-semibold md:text-xl">Recurso</th>
-                  <th className="px-6 py-5 text-center text-lg font-semibold md:text-xl">ClimaEdu</th>
-                  <th className="px-6 py-5 text-center text-lg font-semibold text-white/80 md:text-xl">
+                  <th className="px-5 py-3.5 text-base font-semibold md:text-lg">Recurso</th>
+                  <th className="px-5 py-3.5 text-center text-base font-semibold md:text-lg">ClimaEdu</th>
+                  <th className="px-5 py-3.5 text-center text-base font-semibold text-white/80 md:text-lg">
                     Outras
                   </th>
                 </tr>
@@ -66,17 +66,17 @@ export function DifferentialsSection() {
               <tbody>
                 {rows.map((r, i) => (
                   <tr key={r.text} className={i % 2 === 0 ? "bg-background" : "bg-surface/60"}>
-                    <td className="px-6 py-5 text-lg font-medium text-foreground md:text-xl">
+                    <td className="px-5 py-3.5 text-base font-medium text-foreground md:text-[17px]">
                       <BoldText text={r.text} bold={r.bold} />
                     </td>
-                    <td className="px-6 py-5 text-center">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/15">
-                        <Check size={24} className="text-primary" aria-label="Sim" />
+                    <td className="px-5 py-3.5 text-center">
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/15">
+                        <Check size={18} className="text-primary" aria-label="Sim" />
                       </span>
                     </td>
-                    <td className="px-6 py-5 text-center">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-muted">
-                        <X size={24} className="text-muted-foreground" aria-label="Não" />
+                    <td className="px-5 py-3.5 text-center">
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-muted">
+                        <X size={18} className="text-muted-foreground" aria-label="Não" />
                       </span>
                     </td>
                   </tr>
