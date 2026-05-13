@@ -19,7 +19,7 @@ const small = [
 
 export function RecognitionSection() {
   return (
-    <section className="bg-surface py-32 md:py-40">
+    <section className="bg-surface py-20 md:py-28">
       <div className="mx-auto max-w-5xl px-6">
         <FadeIn>
           <h2 className="text-center text-primary-dark">

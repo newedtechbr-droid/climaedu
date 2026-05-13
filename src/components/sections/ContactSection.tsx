@@ -104,7 +104,7 @@ export function ContactSection() {
 
   return (
     <section className="bg-surface scroll-mt-24" id="contato">
-      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <SectionTitle
             eyebrow="Contato"

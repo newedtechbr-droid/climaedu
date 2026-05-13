@@ -21,7 +21,7 @@ export function ProblemSection() {
         />
         <div className="absolute inset-0 bg-background/90" />
       </div>
-      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <SectionTitle
             eyebrow="Contexto"

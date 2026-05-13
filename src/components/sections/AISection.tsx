@@ -26,7 +26,7 @@ export function AISection() {
       className="relative isolate overflow-hidden text-white scroll-mt-24"
       style={{ backgroundColor: "#1A2A3A" }}
     >
-      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/85 backdrop-blur">

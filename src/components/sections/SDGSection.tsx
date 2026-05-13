@@ -13,7 +13,7 @@ const sdgs = [
 export function SDGSection() {
   return (
     <section className="border-t border-border" style={{ backgroundColor: "#F5F3EE" }}>
-      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <SectionTitle
             eyebrow="Agenda 2030"

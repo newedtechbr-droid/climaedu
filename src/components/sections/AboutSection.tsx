@@ -5,7 +5,7 @@ import teamImg from "@/assets/team-meeting.jpg";
 export function AboutSection() {
   return (
     <section id="sobre" className="bg-background scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-32 md:py-40">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <img
             src={teamImg}
