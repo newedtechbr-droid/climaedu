@@ -8,7 +8,7 @@ export function CtaBannerSection() {
       <div className="mx-auto max-w-5xl px-6">
         <FadeIn>
           <div
-            className="relative overflow-hidden rounded-2xl px-8 py-10 md:px-14 md:py-14 text-white shadow-[0_20px_60px_-20px_rgba(15,110,86,0.45)]"
+            className="relative overflow-hidden rounded-2xl px-8 py-10 md:px-14 md:py-14 text-white shadow-[0_20px_60px_-20px_rgba(32,36,39,0.35)]"
             style={{
               background:
                 "linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, color-mix(in oklab, var(--color-primary) 70%, white) 100%)",

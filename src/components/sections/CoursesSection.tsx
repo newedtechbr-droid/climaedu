@@ -37,7 +37,7 @@ export function CoursesSection() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {areas.map((a, i) => (
             <FadeIn key={a.label} delay={i * 0.04}>
-              <article className="group flex h-full flex-col rounded-xl border border-border bg-background p-5 transition-all hover:border-primary/40 hover:shadow-[0_4px_20px_rgba(15,110,86,0.08)]">
+              <article className="group flex h-full flex-col rounded-xl border border-border bg-background p-5 transition-all hover:border-primary/40 hover:shadow-[0_4px_20px_rgba(154,75,66,0.10)]">
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-primary-dark">
                   <a.icon size={20} />
                 </span>
