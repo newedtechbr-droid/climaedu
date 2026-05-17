@@ -42,7 +42,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/contato"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-8px_rgba(29,158,117,0.7)] transition-all hover:bg-primary-dark hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-8px_rgba(154,75,66,0.45)] transition-all hover:bg-primary-dark hover:scale-[1.02]"
             >
               Vamos conversar? <ArrowRight size={18} />
             </Link>

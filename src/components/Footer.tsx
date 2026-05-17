@@ -3,11 +3,11 @@ import { Linkedin, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background" style={{ fontSize: "15px", color: "#3A3A38" }}>
+    <footer className="border-t border-border bg-background text-foreground/80" style={{ fontSize: "15px" }}>
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <img src="/logo.png" alt="ClimaEdu" className="h-8" />
-          <p className="mt-4 max-w-xs" style={{ fontSize: "15px", color: "#3A3A38", lineHeight: 1.6 }}>
+          <img src="/logo.png" alt="ClimaEdu" className="h-10" />
+          <p className="mt-4 max-w-xs text-foreground/70" style={{ fontSize: "15px", lineHeight: 1.6 }}>
             Capacitação climática que vira rotina e evidência.
           </p>
         </div>
@@ -27,10 +27,10 @@ export function Footer() {
         <div>
           <h3 className="text-[13px] font-semibold uppercase tracking-[0.16em] text-primary-dark">Conecte-se</h3>
           <div className="mt-4 flex gap-3">
-            <a href="https://www.linkedin.com/company/new-edtech/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary-dark" style={{ color: "#3A3A38" }}>
+            <a href="https://www.linkedin.com/company/new-edtech/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground/75 hover:border-primary hover:text-primary">
               <Linkedin size={18} />
             </a>
-            <a href="https://www.instagram.com/new.edtech" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary-dark" style={{ color: "#3A3A38" }}>
+            <a href="https://www.instagram.com/new.edtech" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground/75 hover:border-primary hover:text-primary">
               <Instagram size={18} />
             </a>
           </div>
@@ -38,7 +38,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <p className="mx-auto max-w-6xl px-6 py-5" style={{ fontSize: "14px", color: "#3A3A38" }}>
+        <p className="mx-auto max-w-6xl px-6 py-5 text-foreground/70" style={{ fontSize: "14px" }}>
           © 2025 ClimaEdu — New EdTech · Florianópolis, SC
         </p>
       </div>

@@ -24,7 +24,7 @@ export function AISection() {
     <section
       id="inteligencia-artificial"
       className="relative isolate overflow-hidden text-white scroll-mt-24"
-      style={{ backgroundColor: "#1A2A3A" }}
+      style={{ backgroundColor: "var(--color-surface-dark)" }}
     >
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
@@ -48,7 +48,8 @@ export function AISection() {
           {features.map((f, i) => (
             <FadeIn key={f.title} delay={i * 0.08}>
               <article className="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition-colors hover:bg-white/[0.07]">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-olive">
+                  
                   <f.icon size={20} />
                 </span>
                 <h3 className="mt-5 text-lg text-white">{f.title}</h3>
