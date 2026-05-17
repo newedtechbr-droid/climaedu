@@ -49,7 +49,7 @@ export function AISection() {
             <FadeIn key={f.title} delay={i * 0.08}>
               <article className="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition-colors hover:bg-white/[0.07]">
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-olive">
-                  <span className="sr-only" />
+                  
                   <f.icon size={20} />
                 </span>
                 <h3 className="mt-5 text-lg text-white">{f.title}</h3>
