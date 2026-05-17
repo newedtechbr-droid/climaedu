@@ -70,8 +70,8 @@ export function DifferentialsSection() {
                       <BoldText text={r.text} bold={r.bold} />
                     </td>
                     <td className="px-5 py-3.5 text-center">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/15">
-                        <Check size={18} className="text-primary" aria-label="Sim" />
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full" style={{ backgroundColor: "rgba(132,154,116,0.18)" }}>
+                        <Check size={18} style={{ color: "var(--color-olive)" }} aria-label="Sim" />
                       </span>
                     </td>
                     <td className="px-5 py-3.5 text-center">
