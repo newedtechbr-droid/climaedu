@@ -25,7 +25,7 @@ export function AudienceSection() {
                 />
                 <div
                   className="absolute inset-0"
-                  style={{ backgroundColor: "rgba(29, 158, 117, 0.95)" }}
+                  style={{ backgroundColor: "rgba(32, 36, 39, 0.92)" }}
                 />
               </div>
               <div className="flex items-center gap-3">
