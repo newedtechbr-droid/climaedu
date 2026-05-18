@@ -54,35 +54,35 @@
   --popover: #FFFFFF;
   --popover-foreground: #202427;
 
-  /* Terracota como CTA / acento */
-  --primary: #9A4B42;
+  /* Oliva mineral como CTA / acento principal (tom mais clima) */
+  --primary: #849A74;
   --primary-foreground: #F3F1EC;
   --primary-dark: #202427;          /* Títulos institucionais em Ônix */
-  --primary-deep: #202427;
+  --primary-deep: #3A4A33;
 
   --secondary: #E7E3DA;
   --secondary-foreground: #202427;
 
-  --surface: #ECE8DF;               /* Calcário levemente mais quente */
-  --surface-dark: #202427;          /* Ônix para seções escuras */
+  --surface: #E8ECEC;               /* Calcário com leve sopro de ardósia */
+  --surface-dark: #2A3942;          /* Ardósia profunda para seções escuras */
 
   --muted: #ECE8DF;
   --muted-foreground: #485C68;      /* Ardósia */
 
-  /* Oliva mineral como apoio discreto */
-  --accent: #E4E8DE;
-  --accent-foreground: #3A4A33;
+  /* Ardósia ganha mais presença como apoio */
+  --accent: #DDE4E8;
+  --accent-foreground: #2A3942;
   --olive: #849A74;
   --slate-blue: #485C68;
 
   --institutional: #485C68;         /* Ardósia */
-  --terracotta: #9A4B42;
-  --destructive: #B33A2A;
+  --terracotta: #9A4B42;            /* Mantida apenas como acento pontual */
+  --destructive: #9A4B42;
   --destructive-foreground: #F3F1EC;
 
-  --border: #DDD7C9;
-  --input: #DDD7C9;
-  --ring: #9A4B42;
+  --border: #CFD6D6;
+  --input: #CFD6D6;
+  --ring: #849A74;
 }
 
 @layer base {
