@@ -14,7 +14,8 @@ export function HeroSection() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
       </div>
 
       <div className="mx-auto w-full max-w-5xl px-6 py-24 md:py-32 text-center">
