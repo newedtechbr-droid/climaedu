@@ -3,11 +3,12 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
 const rows = [
-  { text: "Trilhas por perfil funcional", bold: ["Trilhas", "perfil funcional"] },
-  { text: "Dashboard de evidências para auditoria", bold: ["Dashboard de evidências", "auditoria"] },
-  { text: "White-label com identidade da instituição", bold: ["White-label", "identidade da instituição"] },
-  { text: "Integração à rotina (não só conteúdo)", bold: ["Integração à rotina"] },
-  { text: "Conteúdo gerado com supervisão técnica humana", bold: ["supervisão técnica humana"] },
+  { text: "Cursos ambientais especializados", bold: ["Cursos ambientais especializados"] },
+  { text: "Produção ágil com apoio de IA", bold: ["Produção ágil", "IA"] },
+  { text: "Trilhas por perfil e contexto institucional", bold: ["perfil", "contexto institucional"] },
+  { text: "Dados de adesão, conclusão e proficiência", bold: ["adesão, conclusão e proficiência"] },
+  { text: "Conteúdo com curadoria técnica humana", bold: ["curadoria técnica humana"] },
+  { text: "White-label institucional", bold: ["White-label institucional"] },
   { text: "Suporte e implantação dedicados", bold: ["Suporte", "implantação dedicados"] },
 ];
 
@@ -46,7 +47,7 @@ export function DifferentialsSection() {
         <FadeIn>
           <SectionTitle
             eyebrow="Diferenciais"
-            title="ClimaEdu vs. alternativas"
+            title="ClimaEdu vs. plataformas genéricas de cursos"
             align="center"
           />
         </FadeIn>
@@ -59,7 +60,7 @@ export function DifferentialsSection() {
                   <th className="px-5 py-3.5 text-base font-semibold md:text-lg">Recurso</th>
                   <th className="px-5 py-3.5 text-center text-base font-semibold md:text-lg">ClimaEdu</th>
                   <th className="px-5 py-3.5 text-center text-base font-semibold text-white/80 md:text-lg">
-                    Outras
+                    Plataformas genéricas
                   </th>
                 </tr>
               </thead>
