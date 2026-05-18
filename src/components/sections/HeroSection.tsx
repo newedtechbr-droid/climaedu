@@ -33,9 +33,8 @@ export function HeroSection() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="mx-auto mt-7 max-w-3xl text-lg text-white/90 md:text-xl leading-relaxed">
-            A ClimaEdu utiliza inteligência artificial e supervisão técnica humana para converter
-            documentos institucionais em trilhas aplicáveis, auditáveis e prontas para implementação.
+          <p className="mx-auto mt-7 max-w-2xl text-lg text-white/90 md:text-xl leading-relaxed">
+            Capacitação climática online com IA, curadoria técnica e dados para acompanhar a aprendizagem das equipes.
           </p>
         </FadeIn>
 

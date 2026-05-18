@@ -4,7 +4,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 
 const items = [
   { icon: CloudLightning, title: "Eventos extremos", text: "Protocolos atualizados, urgentes." },
-  { icon: FileSearch, title: "Auditorias rigorosas", text: "TCE e TCU exigem evidências." },
+  { icon: FileSearch, title: "Controles e auditorias", text: "Preparo técnico, formação e rastreabilidade." },
   { icon: UserX, title: "Equipes em rotação", text: "Padronização rápida pós-eleição." },
   { icon: BookOpen, title: "Cursos sem aplicação", text: "Conteúdo solto não muda prática." },
 ];

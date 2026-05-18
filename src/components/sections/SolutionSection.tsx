@@ -1,28 +1,28 @@
-import { GraduationCap, ListChecks, BarChart3 } from "lucide-react";
+import { FileText, GraduationCap, BarChart3 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
 const steps = [
   {
     n: "01",
-    icon: GraduationCap,
-    tag: "Aprender",
-    title: "Trilhas curtas por função",
-    text: "Módulos práticos com certificado.",
+    icon: FileText,
+    tag: "Transformar",
+    title: "Normas em trilhas de aprendizagem",
+    text: "Normas, planos e documentos viram cursos e trilhas estruturadas.",
   },
   {
     n: "02",
-    icon: ListChecks,
-    tag: "Implementar",
-    title: "Checklists com evidência",
-    text: "Tarefas com prazo e comprovação.",
+    icon: GraduationCap,
+    tag: "Capacitar",
+    title: "Equipes preparadas tecnicamente",
+    text: "Equipes aprendem com conteúdo climático contextualizado e recursos práticos.",
   },
   {
     n: "03",
     icon: BarChart3,
-    tag: "Comprovar",
-    title: "Dashboards auditáveis",
-    text: "Relatórios prontos para auditoria.",
+    tag: "Acompanhar",
+    title: "Dados auditáveis de aprendizagem",
+    text: "A gestão visualiza adesão, conclusão e proficiência com dados auditáveis.",
   },
 ];
 
@@ -33,7 +33,7 @@ export function SolutionSection() {
         <FadeIn>
           <SectionTitle
             eyebrow="Solução"
-            title="Da norma à evidência em três etapas"
+            title="Da norma à aprendizagem rastreável em três etapas"
             align="center"
           />
         </FadeIn>
@@ -44,7 +44,10 @@ export function SolutionSection() {
               <article className="flex flex-col items-center text-center">
                 <div className="relative flex h-24 w-24 items-center justify-center rounded-2xl bg-accent text-primary-dark">
                   <s.icon size={44} strokeWidth={1.6} />
-                  <span className="absolute -right-3 -top-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-base font-bold text-primary-foreground shadow-lg">
+                  <span
+                    className="absolute -right-3 -top-3 flex h-10 w-10 items-center justify-center rounded-full text-base font-bold shadow-lg"
+                    style={{ backgroundColor: "var(--color-terracotta)", color: "#F3F1EC" }}
+                  >
                     {s.n}
                   </span>
                 </div>
