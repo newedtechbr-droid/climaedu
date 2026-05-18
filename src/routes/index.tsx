@@ -2,8 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
+import { OutcomesSection } from "@/components/sections/OutcomesSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
 import { CoursesSection } from "@/components/sections/CoursesSection";
+import { ClimateFocusSection } from "@/components/sections/ClimateFocusSection";
 import { AISection } from "@/components/sections/AISection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
 import { SDGSection } from "@/components/sections/SDGSection";
@@ -39,8 +41,10 @@ function Index() {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
+      <OutcomesSection />
       <AudienceSection />
       <CoursesSection />
+      <ClimateFocusSection />
       <AISection />
       <CtaBannerSection />
       <DifferentialsSection />
