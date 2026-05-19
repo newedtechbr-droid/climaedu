@@ -85,9 +85,9 @@ export function Header() {
               to="/"
               hash="contato"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-lg bg-primary px-4 py-2 text-center text-sm text-primary-foreground"
+              className="mt-2 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(132,154,116,0.55)]"
             >
-              Vamos conversar?
+              Solicitar demonstração
             </Link>
           </nav>
         </div>
