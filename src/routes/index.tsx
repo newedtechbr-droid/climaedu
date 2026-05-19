@@ -4,7 +4,7 @@ import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { OutcomesSection } from "@/components/sections/OutcomesSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
-import { CoursesSection } from "@/components/sections/CoursesSection";
+
 import { ClimateFocusSection } from "@/components/sections/ClimateFocusSection";
 import { AISection } from "@/components/sections/AISection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
@@ -43,7 +43,7 @@ function Index() {
       <SolutionSection />
       <OutcomesSection />
       <AudienceSection />
-      <CoursesSection />
+      
       <ClimateFocusSection />
       <AISection />
       <CtaBannerSection />

@@ -35,7 +35,7 @@ export function CtaBannerSection() {
               <Link
                 to="/"
                 hash="contato"
-                className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-white px-6 py-3.5 text-base font-semibold text-primary-dark transition-transform hover:scale-[1.02]"
+                className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-white px-7 py-4 text-base font-semibold text-primary-deep shadow-[0_14px_38px_-10px_rgba(0,0,0,0.45)] ring-1 ring-white/60 transition-transform hover:scale-[1.03]"
               >
                 Solicitar demonstração <ArrowRight size={18} />
               </Link>
