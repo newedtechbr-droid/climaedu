@@ -43,7 +43,7 @@ function Index() {
       <SolutionSection />
       <OutcomesSection />
       <AudienceSection />
-      <CoursesSection />
+      
       <ClimateFocusSection />
       <AISection />
       <CtaBannerSection />
