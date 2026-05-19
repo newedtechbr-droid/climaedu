@@ -39,18 +39,18 @@ export function HeroSection() {
         </FadeIn>
 
         <FadeIn delay={0.3}>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/contato"
-              className="inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_30px_-8px_rgba(154,75,66,0.45)] transition-all hover:bg-primary-dark hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-[0_14px_38px_-10px_rgba(132,154,116,0.75)] ring-1 ring-primary/40 transition-all hover:bg-primary-deep hover:scale-[1.03]"
             >
-              Vamos conversar? <ArrowRight size={18} />
+              Solicitar demonstração <ArrowRight size={18} />
             </Link>
             <Link
-              to="/cursos"
-              className="inline-flex items-center gap-2 rounded-lg border-2 border-white/40 bg-white/5 px-7 py-4 text-base font-semibold text-white backdrop-blur transition-colors hover:bg-white/15"
+              to="/contato"
+              className="inline-flex items-center gap-2 rounded-lg border-2 border-white bg-white/95 px-8 py-4 text-base font-semibold text-foreground backdrop-blur transition-colors hover:bg-white"
             >
-              Conhecer os cursos
+              Agendar conversa
             </Link>
           </div>
         </FadeIn>
