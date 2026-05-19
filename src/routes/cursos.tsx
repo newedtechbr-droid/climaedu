@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CoursesSection } from "@/components/sections/CoursesSection";
 import { AISection } from "@/components/sections/AISection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
@@ -22,7 +21,6 @@ export const Route = createFileRoute("/cursos")({
   }),
   component: () => (
     <>
-      <CoursesSection />
       <AISection />
       <ContactSection />
     </>
