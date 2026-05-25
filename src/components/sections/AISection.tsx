@@ -4,18 +4,18 @@ import { FadeIn } from "@/components/FadeIn";
 const features = [
   {
     icon: Wand2,
-    title: "Geração assistida por IA",
-    text: "Produza módulos, quizzes e materiais de apoio a partir de normativas, planos diretores e documentos do próprio órgão.",
+    title: "Geração assistida",
+    text: "Roteiros, quizzes, resumos, apostilas e materiais de apoio a partir de normas e documentos institucionais.",
   },
   {
     icon: Layers,
     title: "Customização por contexto",
-    text: "A IA adapta linguagem, exemplos e estudos de caso à realidade do município, secretaria ou empresa.",
+    text: "Conteúdos adaptados à realidade do município, secretaria, empresa ou unidade.",
   },
   {
     icon: FileText,
-    title: "Versionamento e curadoria",
-    text: "Todo conteúdo gerado passa por revisão técnica, fica versionado e rastreável — pronto para auditoria.",
+    title: "Curadoria e versionamento",
+    text: "Revisão técnica, histórico de alterações e rastreabilidade para auditoria.",
   },
 ];
 
@@ -26,43 +26,60 @@ export function AISection() {
       className="relative isolate overflow-hidden text-white scroll-mt-24"
       style={{ backgroundColor: "var(--color-surface-dark)" }}
     >
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      {/* respiro: textura suave */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 20%, var(--color-olive) 0, transparent 45%), radial-gradient(circle at 80% 80%, var(--color-slate-blue) 0, transparent 45%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
         <FadeIn>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/85 backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur">
               <Sparkles size={14} className="text-primary" />
               Diferencial ClimaEdu
             </span>
-            <h2 className="mt-5 text-3xl text-white md:text-4xl">
-              Inteligência artificial para{" "}
-              <span className="text-primary">produção de conteúdo customizado</span>
+            <h2 className="mt-6 text-white" style={{ fontSize: "clamp(34px, 4.2vw, 52px)" }}>
+              IA para transformar{" "}
+              <span className="text-primary">documentos em aprendizagem aplicada</span>
             </h2>
-            <p className="mt-5 text-base text-white/75">
-              Não entregamos só uma plataforma — entregamos um motor que transforma normas, planos e
-              documentos institucionais em trilhas de aprendizagem aplicáveis, no ritmo do seu órgão.
+            <p className="mt-6 text-lg leading-relaxed text-white/85 md:text-xl">
+              A ClimaEdu usa IA para apoiar a produção de conteúdos customizados a partir de normas,
+              planos, protocolos e documentos institucionais — sempre com curadoria técnica humana.
             </p>
           </div>
         </FadeIn>
 
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
           {features.map((f, i) => (
             <FadeIn key={f.title} delay={i * 0.08}>
-              <article className="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition-colors hover:bg-white/[0.07]">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-olive">
-                  
-                  <f.icon size={20} />
+              <article className="h-full rounded-2xl border border-white/15 bg-white/[0.06] p-7 backdrop-blur transition-all hover:-translate-y-1 hover:bg-white/[0.09]">
+                <span
+                  className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
+                  style={{
+                    backgroundColor: "color-mix(in oklab, var(--color-olive) 35%, transparent)",
+                    color: "#F3F1EC",
+                  }}
+                >
+                  <f.icon size={22} />
                 </span>
-                <h3 className="mt-5 text-lg text-white">{f.title}</h3>
-                <p className="mt-2 text-sm text-white/70">{f.text}</p>
+                <h3 className="mt-6 text-xl text-white">{f.title}</h3>
+                <p className="mt-3 text-[17px] leading-relaxed text-white/80">{f.text}</p>
               </article>
             </FadeIn>
           ))}
         </div>
 
-        <FadeIn delay={0.2}>
-          <div className="mt-12 flex items-center justify-center gap-2 text-xs text-white/60">
-            <ShieldCheck size={14} className="text-primary" />
-            Conteúdo gerado com supervisão técnica humana e trilha de auditoria completa
+        <FadeIn delay={0.25}>
+          <div
+            className="mx-auto mt-14 inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/[0.06] px-5 py-2.5 text-sm text-white/90 backdrop-blur"
+            style={{ display: "flex", width: "fit-content" }}
+          >
+            <ShieldCheck size={16} className="text-primary" />
+            Todo conteúdo gerado por IA passa por supervisão técnica humana
           </div>
         </FadeIn>
       </div>

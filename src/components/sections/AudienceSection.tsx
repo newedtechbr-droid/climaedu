@@ -1,87 +1,113 @@
-import { Building2, Factory, ShieldCheck } from "lucide-react";
+import { Building2, Factory, Network, ArrowRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
+const audiences = [
+  {
+    icon: Building2,
+    tag: "B2G · Foco principal",
+    title: "Instituições Públicas",
+    description:
+      "Para secretarias de meio ambiente, defesa civil, planejamento, educação ambiental e prefeituras.",
+    buyer: "Secretarias e prefeituras",
+    user: "Equipes técnicas e operacionais",
+    useCase:
+      "Cumprir PNRS, estruturar plano climático, capacitar equipe antes de auditoria e responder ao MP/TCE.",
+  },
+  {
+    icon: Factory,
+    tag: "B2B · Setor privado",
+    title: "Empresas",
+    description:
+      "Para áreas de ESG, sustentabilidade, RH/T&D, saúde, segurança e meio ambiente.",
+    buyer: "Diretorias de ESG, RH e SSMA",
+    user: "Times técnicos e operacionais",
+    useCase:
+      "Onboarding ambiental, evidências para auditoria ISO 14001 e capacitação contínua sem depender de consultoria.",
+  },
+  {
+    icon: Network,
+    tag: "Canais e Agregadores",
+    title: "Parcerias institucionais",
+    description:
+      "Para consórcios intermunicipais, universidades, escolas de governo, consultorias e OSCs.",
+    buyer: "Consórcios, universidades, OSCs",
+    user: "Equipes parceiras e municípios atendidos",
+    useCase:
+      "Distribuir trilhas climáticas em rede, ampliar capilaridade e operar como braço de capacitação dos associados.",
+  },
+];
+
 export function AudienceSection() {
   return (
-    <section id="para-quem" className="bg-surface scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <section id="para-quem" className="bg-background scroll-mt-24">
+      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <FadeIn>
           <SectionTitle
             eyebrow="Para quem"
-            title="Desenvolvida para quem carrega a responsabilidade institucional"
+            title="Três segmentos, uma mesma capacidade institucional"
+            subtitle="A ClimaEdu atende quem precisa preparar equipes, comprovar resultados e responder a obrigações ambientais."
+            align="center"
           />
         </FadeIn>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <FadeIn>
-            <article className="relative isolate h-full overflow-hidden rounded-xl border border-border p-7 text-white">
-              <div className="absolute inset-0 -z-10">
-                <img
-                  src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80"
-                  alt=""
-                  aria-hidden
-                  className="h-full w-full object-cover"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ backgroundColor: "rgba(32, 36, 39, 0.92)" }}
-                />
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-white/15 text-white">
-                  <Building2 size={20} aria-hidden />
-                </span>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/95">
-                    B2G · Foco principal
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {audiences.map((a, i) => (
+            <FadeIn key={a.title} delay={i * 0.08}>
+              <article
+                className="group relative flex h-full flex-col rounded-2xl border bg-surface p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 22%, transparent)" }}
+              >
+                <div className="flex items-center gap-3">
+                  <span
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
+                    style={{
+                      backgroundColor: "color-mix(in oklab, var(--color-olive) 20%, transparent)",
+                      color: "var(--color-primary-deep)",
+                    }}
+                  >
+                    <a.icon size={22} aria-hidden />
+                  </span>
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
+                    {a.tag}
                   </p>
-                  <h3 className="text-xl font-bold text-white">Instituições Públicas</h3>
                 </div>
-              </div>
-              <ul className="mt-5 space-y-2.5 text-[15px] leading-relaxed text-white/90">
-                <li>• Secretarias de Meio Ambiente</li>
-                <li>• Secretarias de Planejamento e Defesa Civil</li>
-                <li>• Prefeituras de pequeno, médio e grande porte</li>
-              </ul>
-              <p className="mt-5 text-[15px] leading-relaxed text-white/85">
-                <strong className="font-semibold text-white">Caso de uso:</strong> cumprir PNRS,
-                estruturar plano climático municipal, capacitar equipe antes de auditoria, responder
-                a exigências do MP ou TCE.
-              </p>
-              <p className="mt-3 text-[15px] leading-relaxed text-white/85">
-                <strong className="font-semibold text-white">Contratação:</strong> por dispensa
-                de licitação (projetos piloto), pregão eletrônico ou ata de registro de preços
-                (Lei nº 14.133/2021).
-              </p>
-              <span className="mt-5 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-medium text-white">
-                <ShieldCheck size={14} aria-hidden /> Compatível com licitação pública
-              </span>
-            </article>
-          </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <article className="h-full rounded-xl border-2 border-border bg-background p-7">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-accent text-primary-dark">
-                  <Factory size={20} aria-hidden />
-                </span>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-institutional text-slate-800">B2B · Empresas</p>
-                  <h3 className="text-xl font-bold">Setor Privado</h3>
-                </div>
-              </div>
-              <ul className="mt-5 space-y-2.5 text-[15px] leading-relaxed text-foreground/80">
-                <li>• Times de SSMA, Sustentabilidade, RH e T&D</li>
-                <li>• Empresas com obrigações ESG, ISO 14001 ou relatórios de conformidade ambiental</li>
-              </ul>
-              <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
-                <strong className="font-semibold text-foreground">Caso de uso:</strong> onboarding
-                ambiental estruturado, evidências para auditorias externas, capacitação contínua sem
-                depender de consultoria.
-              </p>
-            </article>
-          </FadeIn>
+                <h3 className="mt-5 text-2xl font-bold text-primary-dark">{a.title}</h3>
+                <p className="mt-3 text-[17px] leading-relaxed text-foreground/80">{a.description}</p>
+
+                <dl className="mt-6 space-y-3 border-t pt-5"
+                    style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 18%, transparent)" }}>
+                  <div>
+                    <dt className="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                      Quem compra
+                    </dt>
+                    <dd className="mt-1 text-[15px] text-foreground/85">{a.buyer}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                      Quem usa
+                    </dt>
+                    <dd className="mt-1 text-[15px] text-foreground/85">{a.user}</dd>
+                  </div>
+                  <div>
+                    <dt className="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                      Caso de uso
+                    </dt>
+                    <dd className="mt-1 text-[15px] text-foreground/85">{a.useCase}</dd>
+                  </div>
+                </dl>
+
+                <Link
+                  to="/para-quem"
+                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-deep transition-colors hover:text-primary"
+                >
+                  Ver aplicação <ArrowRight size={14} />
+                </Link>
+              </article>
+            </FadeIn>
+          ))}
         </div>
       </div>
     </section>
