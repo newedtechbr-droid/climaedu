@@ -99,8 +99,8 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 18px;
-    line-height: 1.65;
+    font-size: 19px;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }

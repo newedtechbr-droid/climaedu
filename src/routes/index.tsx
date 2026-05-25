@@ -44,7 +44,7 @@ function Index() {
       <SolutionSection />
       <OutcomesSection />
       <AudienceSection />
-      
+      <ChallengeSection />
       <ClimateFocusSection />
       <AISection />
       <CtaBannerSection />
