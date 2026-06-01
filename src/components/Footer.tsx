@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-border bg-background text-foreground/80" style={{ fontSize: "15px" }}>
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
         <div>
-          <img src="/logo.png" alt="ClimaEdu" className="h-10" />
+          <img src="/logo.png" alt="CLIMAEDU" className="h-10" />
           <p className="mt-4 max-w-xs text-foreground/70" style={{ fontSize: "15px", lineHeight: 1.6 }}>
             Capacitação climática que vira rotina e evidência.
           </p>

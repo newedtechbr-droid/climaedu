@@ -79,10 +79,19 @@ function RootComponent() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pb-16 md:pb-0">
         <Outlet />
       </main>
       <Footer />
+
+      {/* Sticky CTA mobile */}
+      <Link
+        to="/"
+        hash="contato"
+        className="fixed bottom-3 left-3 right-3 z-40 inline-flex h-12 items-center justify-center rounded-lg bg-primary text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-8px_rgba(132,154,116,0.7)] ring-1 ring-primary/40 md:hidden"
+      >
+        Agendar demonstração
+      </Link>
     </div>
   );
 }

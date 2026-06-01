@@ -70,9 +70,10 @@ const schema = z.object({
   cargo: z.string().trim().min(2, "Informe seu cargo").max(80),
   email: z.string().trim().email("E-mail inválido").max(160),
   whatsapp: z.string().trim().max(30).optional().or(z.literal("")),
-  tipo: z.enum(["Prefeitura", "Secretaria Estadual", "Empresa", "Outro"], {
-    message: "Selecione o tipo de organização",
-  }),
+  tipo: z.enum(
+    ["Enchentes", "Queimadas", "Resíduos", "Licenciamento", "ESG", "Defesa civil", "Outro"],
+    { message: "Selecione o principal desafio" },
+  ),
   mensagem: z.string().trim().max(1000).optional().or(z.literal("")),
 });
 
@@ -104,54 +105,70 @@ export function ContactSection() {
 
   return (
     <section className="bg-surface scroll-mt-24" id="contato">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
         <FadeIn>
-          <SectionTitle
-            eyebrow="Contato"
-            title="Leve a ClimaEdu para sua instituição"
-            subtitle="Em até 48 horas, uma de nossas especialistas entra em contato para entender o seu contexto e apresentar uma proposta."
-            align="center"
-          />
+          <div className="mx-auto max-w-2xl text-center">
+            <span
+              className="mb-3 inline-flex items-center gap-2 rounded-md px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.18em]"
+              style={{
+                backgroundColor: "color-mix(in oklab, var(--color-terracotta) 14%, transparent)",
+                color: "var(--color-terracotta)",
+              }}
+            >
+              <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
+              Agenda de demonstrações limitada
+            </span>
+            <h2 className="text-primary-dark" style={{ fontSize: "clamp(28px, 3.2vw, 40px)", lineHeight: 1.1 }}>
+              Solicite uma demonstração aplicada ao seu contexto
+            </h2>
+            <p className="mt-3 text-[16px] leading-relaxed text-foreground/75">
+              Em até 48 horas, nossa equipe entra em contato para entender sua realidade
+              institucional e apresentar exemplos de trilhas, dashboards e evidências.
+            </p>
+          </div>
         </FadeIn>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-5">
+        <div className="mt-10 grid gap-6 lg:grid-cols-5">
           <FadeIn className="lg:col-span-3">
             <form
               onSubmit={handleSubmit(onSubmit)}
               noValidate
-              className="rounded-xl border border-border bg-background p-7"
+              className="rounded-xl border border-border bg-background p-6 md:p-7"
             >
-              <div className="grid gap-5 sm:grid-cols-2">
-                <Field label="Nome completo" error={errors.nome?.message}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="Nome" error={errors.nome?.message}>
                   <input type="text" className="input" {...register("nome")} />
                 </Field>
-                <Field label="Instituição ou empresa" error={errors.organizacao?.message}>
+                <Field label="Instituição" error={errors.organizacao?.message}>
                   <input type="text" className="input" {...register("organizacao")} />
                 </Field>
                 <Field label="Cargo" error={errors.cargo?.message}>
                   <input type="text" className="input" {...register("cargo")} />
                 </Field>
-                <Field label="E-mail institucional" error={errors.email?.message}>
+                <Field label="E-mail" error={errors.email?.message}>
                   <input type="email" className="input" {...register("email")} />
                 </Field>
-                <Field label="WhatsApp (opcional)" error={errors.whatsapp?.message}>
+                <Field label="WhatsApp" error={errors.whatsapp?.message}>
                   <input type="tel" className="input" {...register("whatsapp")} />
                 </Field>
-                <Field label="Tipo de organização" error={errors.tipo?.message}>
+                <Field label="Principal desafio" error={errors.tipo?.message}>
                   <select className="input" defaultValue="" {...register("tipo")}>
                     <option value="" disabled>Selecione…</option>
-                    <option>Prefeitura</option>
-                    <option>Secretaria Estadual</option>
-                    <option>Empresa</option>
+                    <option>Enchentes</option>
+                    <option>Queimadas</option>
+                    <option>Resíduos</option>
+                    <option>Licenciamento</option>
+                    <option>ESG</option>
+                    <option>Defesa civil</option>
                     <option>Outro</option>
                   </select>
                 </Field>
               </div>
 
-              <div className="mt-5">
+              <div className="mt-4">
                 <Field label="Mensagem (opcional)" error={errors.mensagem?.message}>
                   <textarea
-                    rows={4}
+                    rows={3}
                     className="input resize-y"
                     placeholder="Descreva brevemente o que precisa"
                     {...register("mensagem")}
@@ -159,14 +176,28 @@ export function ContactSection() {
                 </Field>
               </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-primary-foreground transition-colors hover:bg-primary-dark disabled:opacity-60"
-                style={{ fontSize: "15px" }}
-              >
-                {isSubmitting ? "Enviando…" : "Enviar solicitação"}
-              </button>
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-10px_rgba(132,154,116,0.7)] ring-1 ring-primary/40 transition-all hover:bg-primary-deep hover:scale-[1.02] disabled:opacity-60"
+                >
+                  {isSubmitting ? "Enviando…" : "Solicitar demonstração"}
+                </button>
+                <a
+                  href="https://wa.me/5548991606518"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-12 items-center gap-2 rounded-lg border-2 border-primary bg-background px-5 text-base font-semibold text-primary-dark transition-colors hover:bg-accent"
+                >
+                  <MessageCircle size={18} /> Falar pelo WhatsApp
+                </a>
+              </div>
+
+              <p className="mt-3 text-[13px] text-foreground/60">
+                Sem compromisso. A conversa ajuda a mapear se a CLIMAEDU faz sentido para sua
+                instituição.
+              </p>
 
               {sent && (
                 <p
@@ -195,7 +226,7 @@ export function ContactSection() {
                   background: var(--color-background);
                   color: var(--color-foreground);
                   border-radius: 0.5rem;
-                  padding: 0.75rem 0.875rem;
+                  padding: 0.7rem 0.875rem;
                   font-size: 16px;
                   line-height: 1.5;
                   transition: border-color .15s, box-shadow .15s;
@@ -210,11 +241,23 @@ export function ContactSection() {
           </FadeIn>
 
           <FadeIn delay={0.1} className="lg:col-span-2">
-            <aside className="h-full rounded-xl border border-border bg-background p-7">
-              <h3>Prefere conversar agora?</h3>
-              <p className="mt-2 text-muted-foreground" style={{ fontSize: "16px" }}>
-                Fale diretamente com a equipe pelo WhatsApp.
+            <aside
+              className="h-full rounded-xl border bg-background p-6 md:p-7"
+              style={{
+                borderColor: "color-mix(in oklab, var(--color-terracotta) 30%, var(--color-border))",
+              }}
+            >
+              <p className="text-[12px] font-bold uppercase tracking-[0.18em]" style={{ color: "var(--color-terracotta)" }}>
+                Prioridade
               </p>
+              <h3 className="mt-2 text-xl font-bold text-primary-dark">
+                Prioridade para órgãos em fase de planejamento ou capacitação
+              </h3>
+              <p className="mt-3 text-[15px] text-foreground/75">
+                Atendemos prefeituras, secretarias estaduais, empresas com obrigações ambientais
+                e canais agregadores.
+              </p>
+
               <a
                 href="https://wa.me/5548991606518"
                 target="_blank"
@@ -225,10 +268,11 @@ export function ContactSection() {
                 <MessageCircle size={16} />
                 (48) 99160-6518
               </a>
-              <div className="mt-8 border-t border-border pt-6">
-                <p className="uppercase tracking-[0.18em] text-muted-foreground" style={{ fontSize: "13px" }}>Resposta</p>
-                <p className="mt-2 text-foreground/80" style={{ fontSize: "16px" }}>
-                  Em até 48 horas úteis, com proposta inicial alinhada ao seu contexto institucional.
+
+              <div className="mt-6 border-t border-border pt-5">
+                <p className="uppercase tracking-[0.18em] text-muted-foreground" style={{ fontSize: "12px", fontWeight: 600 }}>Resposta</p>
+                <p className="mt-1.5 text-foreground/80" style={{ fontSize: "15px" }}>
+                  Em até 48 horas úteis, com proposta inicial alinhada ao seu contexto.
                 </p>
               </div>
             </aside>
