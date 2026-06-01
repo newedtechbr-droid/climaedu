@@ -70,9 +70,10 @@ const schema = z.object({
   cargo: z.string().trim().min(2, "Informe seu cargo").max(80),
   email: z.string().trim().email("E-mail inválido").max(160),
   whatsapp: z.string().trim().max(30).optional().or(z.literal("")),
-  tipo: z.enum(["Prefeitura", "Secretaria Estadual", "Empresa", "Outro"], {
-    message: "Selecione o tipo de organização",
-  }),
+  tipo: z.enum(
+    ["Enchentes", "Queimadas", "Resíduos", "Licenciamento", "ESG", "Defesa civil", "Outro"],
+    { message: "Selecione o principal desafio" },
+  ),
   mensagem: z.string().trim().max(1000).optional().or(z.literal("")),
 });
 
