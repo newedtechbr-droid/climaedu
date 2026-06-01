@@ -30,8 +30,8 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center" aria-label="ClimaEdu - página inicial">
-          <img src="/logo.png" alt="ClimaEdu" className="h-10 md:h-12" />
+        <Link to="/" className="flex items-center" aria-label="CLIMAEDU - página inicial">
+          <img src="/logo.png" alt="CLIMAEDU" className="h-10 md:h-12" />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Navegação principal">
