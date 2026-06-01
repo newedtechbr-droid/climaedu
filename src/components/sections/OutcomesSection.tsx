@@ -1,76 +1,111 @@
-import { UserPlus, Lightbulb, Wrench, LineChart, Gauge } from "lucide-react";
+import { Route as RouteIcon, ClipboardCheck, FileCheck2, BarChart3 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
-const stages = [
+const cards = [
   {
-    n: "01",
-    icon: UserPlus,
-    title: "Adesão",
-    text: "A equipe entra na jornada e acessa trilhas relevantes para sua função.",
+    icon: RouteIcon,
+    title: "Trilhas por perfil",
+    text: "Cursos e módulos organizados por função, secretaria, unidade ou risco.",
+    accent: "olive" as const,
   },
   {
-    n: "02",
-    icon: Lightbulb,
-    title: "Consciência",
-    text: "O conhecimento climático é assimilado com conteúdo claro, contextualizado e aplicável.",
+    icon: ClipboardCheck,
+    title: "Atividades e checklists",
+    text: "Instrumentos para transformar conteúdo em rotina e aplicação declarada.",
+    accent: "olive" as const,
   },
   {
-    n: "03",
-    icon: Wrench,
-    title: "Aplicação",
-    text: "O aprendizado se conecta a rotinas, protocolos e desafios reais da instituição.",
+    icon: FileCheck2,
+    title: "Evidências registradas",
+    text: "Arquivos, respostas, entregas e certificados organizados por turma ou usuário.",
+    accent: "terra" as const,
   },
   {
-    n: "04",
-    icon: LineChart,
-    title: "Evidência",
-    text: "A gestão acompanha participação, conclusão e proficiência com dados rastreáveis.",
-  },
-  {
-    n: "05",
-    icon: Gauge,
-    title: "Eficiência",
-    text: "Mais preparo técnico, menos retrabalho e maior segurança na tomada de decisão.",
+    icon: BarChart3,
+    title: "Relatórios para gestão",
+    text: "Dados exportáveis para auditorias, prestação de contas e tomada de decisão.",
+    accent: "terra" as const,
   },
 ];
 
 export function OutcomesSection() {
   return (
     <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
         <FadeIn>
           <SectionTitle
-            eyebrow="Resultados esperados"
-            title="Da adesão à eficiência: o que a capacitação gera na instituição"
+            eyebrow="Aplicação na prática"
+            title="Como a CLIMAEDU apoia a aplicação prática"
+            subtitle="A plataforma organiza a jornada de capacitação e oferece instrumentos para que o gestor acompanhe registros, entregas e evidências."
             align="center"
           />
         </FadeIn>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          {stages.map((s, i) => (
-            <FadeIn key={s.n} delay={i * 0.06}>
-              <article className="relative h-full rounded-2xl border border-border bg-background p-6 shadow-sm transition-shadow hover:shadow-md">
-                <span
-                  className="absolute left-6 top-6 h-[2px] w-8"
-                  style={{ backgroundColor: "var(--color-terracotta)" }}
-                  aria-hidden
-                />
-                <p
-                  className="pt-5 text-xs font-bold uppercase tracking-[0.22em]"
-                  style={{ color: "var(--color-terracotta)" }}
-                >
-                  {s.n}
-                </p>
-                <span className="mt-3 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent text-primary-dark">
-                  <s.icon size={20} aria-hidden />
-                </span>
-                <h3 className="mt-4 text-lg font-bold text-primary-dark">{s.title}</h3>
-                <p className="mt-2 text-sm text-foreground/75">{s.text}</p>
-              </article>
-            </FadeIn>
-          ))}
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {cards.map((c, i) => {
+            const isTerra = c.accent === "terra";
+            const color = isTerra ? "var(--color-terracotta)" : "var(--color-olive)";
+            return (
+              <FadeIn key={c.title} delay={i * 0.06}>
+                <article className="relative h-full overflow-hidden rounded-xl border border-border bg-background p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
+                  <span
+                    className="absolute inset-x-0 top-0 h-[3px]"
+                    style={{ backgroundColor: color }}
+                    aria-hidden
+                  />
+                  <span
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-lg"
+                    style={{
+                      backgroundColor: `color-mix(in oklab, ${color} 16%, transparent)`,
+                      color,
+                    }}
+                  >
+                    <c.icon size={20} aria-hidden />
+                  </span>
+                  <h3 className="mt-3 text-[17px] font-bold text-primary-dark">{c.title}</h3>
+                  <p className="mt-1.5 text-[15px] leading-relaxed text-foreground/75">{c.text}</p>
+                </article>
+              </FadeIn>
+            );
+          })}
         </div>
+
+        {/* Bloco "O que chamamos de rastreabilidade" */}
+        <FadeIn delay={0.3}>
+          <div
+            className="mt-10 rounded-2xl border bg-background p-6 md:p-7"
+            style={{
+              borderColor: "color-mix(in oklab, var(--color-terracotta) 35%, var(--color-border))",
+            }}
+          >
+            <div className="flex flex-wrap items-start gap-4 md:gap-6">
+              <span
+                className="inline-flex shrink-0 items-center gap-2 rounded-md px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.18em]"
+                style={{
+                  backgroundColor: "color-mix(in oklab, var(--color-terracotta) 16%, transparent)",
+                  color: "var(--color-terracotta)",
+                }}
+              >
+                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
+                O que chamamos de rastreabilidade
+              </span>
+              <div className="flex-1 min-w-[260px]">
+                <p className="text-[16px] leading-relaxed text-foreground/85">
+                  Na CLIMAEDU, rastreabilidade é a capacidade de organizar{" "}
+                  <strong className="font-semibold text-foreground">registros verificáveis</strong>{" "}
+                  da jornada de capacitação: quem participou, o que estudou, quando concluiu, qual
+                  foi o aproveitamento e quais evidências ou atividades foram registradas pela
+                  instituição.
+                </p>
+                <p className="mt-2 text-[14px] text-foreground/65">
+                  A plataforma oferece os instrumentos; a validação da aplicação prática permanece
+                  sob governança do gestor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
