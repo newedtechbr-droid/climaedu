@@ -81,7 +81,7 @@ export function OutcomesSection() {
           >
             <div className="flex flex-wrap items-start gap-4 md:gap-6">
               <span
-                className="inline-flex shrink-0 items-center gap-2 rounded-md px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.18em]"
+                className="inline-flex shrink-0 items-center gap-2 rounded-md px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.14em]"
                 style={{
                   backgroundColor: "color-mix(in oklab, var(--color-terracotta) 16%, transparent)",
                   color: "var(--color-terracotta)",
@@ -91,14 +91,13 @@ export function OutcomesSection() {
                 O que chamamos de rastreabilidade
               </span>
               <div className="flex-1 min-w-[260px]">
-                <p className="text-[16px] leading-relaxed text-foreground/85">
-                  Na CLIMAEDU, rastreabilidade é a capacidade de organizar{" "}
+                <p className="text-[17px] leading-relaxed text-foreground/85">
+                  Rastreabilidade é organizar{" "}
                   <strong className="font-semibold text-foreground">registros verificáveis</strong>{" "}
-                  da jornada de capacitação: quem participou, o que estudou, quando concluiu, qual
-                  foi o aproveitamento e quais evidências ou atividades foram registradas pela
-                  instituição.
+                  da jornada de capacitação: participação, conclusão, aproveitamento, atividades e
+                  evidências registradas pela instituição.
                 </p>
-                <p className="mt-2 text-[14px] text-foreground/65">
+                <p className="mt-2 text-[15px] text-foreground/70">
                   A plataforma oferece os instrumentos; a validação da aplicação prática permanece
                   sob governança do gestor.
                 </p>
