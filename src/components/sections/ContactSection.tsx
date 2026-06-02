@@ -109,14 +109,15 @@ export function ContactSection() {
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
             <span
-              className="mb-3 inline-flex items-center gap-2 rounded-md px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.18em]"
+              className="mb-3 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12.5px] font-semibold uppercase"
               style={{
-                backgroundColor: "color-mix(in oklab, var(--color-terracotta) 14%, transparent)",
-                color: "var(--color-terracotta)",
+                backgroundColor: "#9A4B42",
+                color: "#FFFFFF",
+                letterSpacing: "0.06em",
               }}
             >
-              <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
-              Agenda de demonstrações limitada
+              <span className="h-1.5 w-1.5 rounded-full bg-white" />
+              Demonstrações institucionais abertas
             </span>
             <h2 className="text-primary-dark" style={{ fontSize: "clamp(28px, 3.2vw, 40px)", lineHeight: 1.1 }}>
               Solicite uma demonstração aplicada ao seu contexto

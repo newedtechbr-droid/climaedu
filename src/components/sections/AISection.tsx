@@ -46,9 +46,9 @@ export function AISection() {
               IA para transformar{" "}
               <span className="text-primary">documentos em aprendizagem aplicada</span>
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-white/85 md:text-xl">
+            <p className="mt-6 text-lg leading-relaxed text-white/90 md:text-xl">
               A ClimaEdu usa IA para apoiar a produção de conteúdos customizados a partir de normas,
-              planos, protocolos e documentos institucionais — sempre com curadoria técnica humana.
+              planos, protocolos e documentos institucionais — sempre com revisão técnica humana.
             </p>
           </div>
         </FadeIn>
