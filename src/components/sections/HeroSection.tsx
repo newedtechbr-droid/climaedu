@@ -42,7 +42,7 @@ export function HeroSection() {
                 style={{
                   backgroundColor: "#9A4B42",
                   color: "#FFFFFF",
-                  letterSpacing: "0.06em",
+                  letterSpacing: "0.02em",
                 }}
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-white" />
@@ -57,19 +57,29 @@ export function HeroSection() {
               >
                 Transformando a ação climática
                 <br />
-                em <span style={{ color: "#B7CFA3" }}>rotinas executáveis</span>
+                em{" "}
+                <span
+                  style={{
+                    color: "#849A74",
+                    fontWeight: 700,
+                    textShadow: "0 1px 0 rgba(0,0,0,0.45), 0 0 18px rgba(132,154,116,0.35)",
+                  }}
+                >
+                  rotinas executáveis
+                </span>
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.18}>
               <p
                 className="mt-6 max-w-xl text-white"
-                style={{ fontSize: "clamp(17px, 1.5vw, 20px)", lineHeight: 1.55, opacity: 0.96 }}
+                style={{ fontSize: "clamp(17px, 1.5vw, 20px)", lineHeight: 1.55, opacity: 1, fontWeight: 500 }}
               >
                 A ClimaEdu capacita equipes, organiza trilhas por perfil e entrega dashboards com
                 evidências para gestão, auditoria e prestação de contas.
               </p>
             </FadeIn>
+
 
             <FadeIn delay={0.28}>
               <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -94,29 +104,30 @@ export function HeroSection() {
 
       {/* Faixa de microprovas */}
       <div className="border-b border-border bg-background">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-6 py-7 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-6 py-8 sm:grid-cols-3">
           {microProofs.map((p, i) => (
             <div
               key={p.label}
-              className="flex items-center gap-3 rounded-lg border bg-card px-4 py-4"
+              className="flex items-center gap-3 rounded-lg border bg-card px-5 py-5 shadow-sm"
               style={{
-                borderColor: i === 1 ? "color-mix(in oklab, var(--color-terracotta) 35%, var(--color-border))" : "var(--color-border)",
+                borderColor: i === 1 ? "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))" : "var(--color-border)",
               }}
             >
               <span
-                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
+                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full"
                 style={{
-                  backgroundColor: i === 1 ? "color-mix(in oklab, var(--color-terracotta) 16%, transparent)" : "color-mix(in oklab, var(--color-olive) 16%, transparent)",
+                  backgroundColor: i === 1 ? "color-mix(in oklab, var(--color-terracotta) 18%, transparent)" : "color-mix(in oklab, var(--color-olive) 18%, transparent)",
                   color: i === 1 ? "var(--color-terracotta)" : "var(--color-olive)",
                 }}
               >
-                <p.icon size={20} aria-hidden />
+                <p.icon size={22} aria-hidden />
               </span>
-              <span className="text-[16px] font-semibold leading-snug text-foreground">{p.label}</span>
+              <span className="text-[17px] font-semibold leading-snug text-foreground">{p.label}</span>
             </div>
           ))}
         </div>
       </div>
+
     </>
   );
 }
