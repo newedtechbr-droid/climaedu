@@ -47,20 +47,20 @@ export function EcosystemSection() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="mt-10 grid grid-cols-2 items-center gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 items-center gap-x-10 gap-y-12 sm:grid-cols-3 md:grid-cols-4">
             {logos.map((logo) =>
               logo.src ? (
-                <div key={logo.name} className="flex h-20 items-center justify-center md:h-24">
+                <div key={logo.name} className="flex h-24 items-center justify-center md:h-28">
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-16 w-auto max-w-[200px] object-contain opacity-85 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 md:max-h-[68px]"
+                    className="max-h-20 w-auto max-w-[240px] object-contain opacity-95 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 md:max-h-[84px]"
                     loading="lazy"
                   />
                 </div>
               ) : (
-                <div key={logo.name} className="flex h-20 items-center justify-center md:h-24">
-                  <span className="text-[18px] font-semibold tracking-tight text-foreground/75 transition-colors hover:text-foreground">
+                <div key={logo.name} className="flex h-24 items-center justify-center md:h-28">
+                  <span className="text-[20px] font-semibold tracking-tight text-foreground/80 transition-colors hover:text-foreground">
                     {logo.name}
                   </span>
                 </div>

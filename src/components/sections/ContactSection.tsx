@@ -113,7 +113,7 @@ export function ContactSection() {
               style={{
                 backgroundColor: "#9A4B42",
                 color: "#FFFFFF",
-                letterSpacing: "0.06em",
+                letterSpacing: "0.02em",
               }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-white" />
