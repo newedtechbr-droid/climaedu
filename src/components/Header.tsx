@@ -4,12 +4,11 @@ import { Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Início" },
-  { to: "/", hash: "sobre", label: "Sobre" },
-  
-  { to: "/", hash: "para-quem", label: "Para Quem" },
-  { to: "/", hash: "inteligencia-artificial", label: "IA" },
-  { to: "/", hash: "ecossistema", label: "Ecossistema" },
-  { to: "/", hash: "contato", label: "Contato" },
+  { to: "/", hash: "como-funciona", label: "Como funciona" },
+  { to: "/", hash: "para-quem", label: "Para quem" },
+  { to: "/", hash: "trilhas", label: "Trilhas" },
+  { to: "/", hash: "diferenciais", label: "Diferenciais" },
+  { to: "/", hash: "demonstracao", label: "Demonstração" },
 ] as const;
 
 export function Header() {

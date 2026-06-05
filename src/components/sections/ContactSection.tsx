@@ -13,6 +13,7 @@ interface ContactInput {
   cargo: string;
   email: string;
   whatsapp?: string;
+  instituicao: string;
   tipo: string;
   mensagem?: string;
 }
@@ -28,14 +29,15 @@ const sendContactEmail = createServerFn({ method: "POST" })
     }
 
     const html = `
-      <h2>Nova solicitação de contato — ClimaEdu</h2>
+      <h2>Nova solicitação de contato — CLIMAEDU</h2>
       <table style="border-collapse:collapse;width:100%">
         <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Nome</td><td style="padding:8px;border-bottom:1px solid #eee">${data.nome}</td></tr>
         <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Instituição/Empresa</td><td style="padding:8px;border-bottom:1px solid #eee">${data.organizacao}</td></tr>
         <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Cargo</td><td style="padding:8px;border-bottom:1px solid #eee">${data.cargo}</td></tr>
         <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">E-mail</td><td style="padding:8px;border-bottom:1px solid #eee">${data.email}</td></tr>
         <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">WhatsApp</td><td style="padding:8px;border-bottom:1px solid #eee">${data.whatsapp || "—"}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Tipo</td><td style="padding:8px;border-bottom:1px solid #eee">${data.tipo}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Tipo de instituição</td><td style="padding:8px;border-bottom:1px solid #eee">${data.instituicao}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Principal desafio</td><td style="padding:8px;border-bottom:1px solid #eee">${data.tipo}</td></tr>
         <tr><td style="padding:8px;font-weight:bold">Mensagem</td><td style="padding:8px">${data.mensagem || "—"}</td></tr>
       </table>
     `;
@@ -48,9 +50,9 @@ const sendContactEmail = createServerFn({ method: "POST" })
         "X-Connection-Api-Key": RESEND_API_KEY,
       },
       body: JSON.stringify({
-        from: "ClimaEdu <onboarding@resend.dev>",
+        from: "CLIMAEDU <onboarding@resend.dev>",
         to: ["conttao@newedtech.com"],
-        subject: `[ClimaEdu] Nova solicitação de ${data.nome} — ${data.tipo}`,
+        subject: `[CLIMAEDU] Nova solicitação de ${data.nome} — ${data.instituicao}`,
         html,
       }),
     });
@@ -70,6 +72,10 @@ const schema = z.object({
   cargo: z.string().trim().min(2, "Informe seu cargo").max(80),
   email: z.string().trim().email("E-mail inválido").max(160),
   whatsapp: z.string().trim().max(30).optional().or(z.literal("")),
+  instituicao: z.enum(
+    ["Órgão público", "Empresa", "Parceiro", "Outro"],
+    { message: "Selecione o tipo de instituição" },
+  ),
   tipo: z.enum(
     ["Enchentes", "Queimadas", "Resíduos", "Licenciamento", "ESG", "Defesa civil", "Outro"],
     { message: "Selecione o principal desafio" },
@@ -120,11 +126,11 @@ export function ContactSection() {
               Demonstrações institucionais abertas
             </span>
             <h2 className="text-primary-dark" style={{ fontSize: "clamp(28px, 3.2vw, 40px)", lineHeight: 1.1 }}>
-              Solicite uma demonstração aplicada ao seu contexto
+              Quer ver a CLIMAEDU aplicada à realidade da sua instituição?
             </h2>
             <p className="mt-3 text-[16px] leading-relaxed text-foreground/75">
-              Em até 48 horas, nossa equipe entra em contato para entender sua realidade
-              institucional e apresentar exemplos de trilhas, dashboards e evidências.
+              Agende uma demonstração de 20 minutos e veja exemplos de trilhas, certificados,
+              dashboards e relatórios para o seu contexto.
             </p>
           </div>
         </FadeIn>
@@ -151,6 +157,15 @@ export function ContactSection() {
                 </Field>
                 <Field label="WhatsApp" error={errors.whatsapp?.message}>
                   <input type="tel" className="input" {...register("whatsapp")} />
+                </Field>
+                <Field label="Tipo de instituição" error={errors.instituicao?.message}>
+                  <select className="input" defaultValue="" {...register("instituicao")}>
+                    <option value="" disabled>Selecione…</option>
+                    <option>Órgão público</option>
+                    <option>Empresa</option>
+                    <option>Parceiro</option>
+                    <option>Outro</option>
+                  </select>
                 </Field>
                 <Field label="Principal desafio" error={errors.tipo?.message}>
                   <select className="input" defaultValue="" {...register("tipo")}>
