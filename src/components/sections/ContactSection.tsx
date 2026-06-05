@@ -158,6 +158,15 @@ export function ContactSection() {
                 <Field label="WhatsApp" error={errors.whatsapp?.message}>
                   <input type="tel" className="input" {...register("whatsapp")} />
                 </Field>
+                <Field label="Tipo de instituição" error={errors.instituicao?.message}>
+                  <select className="input" defaultValue="" {...register("instituicao")}>
+                    <option value="" disabled>Selecione…</option>
+                    <option>Órgão público</option>
+                    <option>Empresa</option>
+                    <option>Parceiro</option>
+                    <option>Outro</option>
+                  </select>
+                </Field>
                 <Field label="Principal desafio" error={errors.tipo?.message}>
                   <select className="input" defaultValue="" {...register("tipo")}>
                     <option value="" disabled>Selecione…</option>
