@@ -126,11 +126,11 @@ export function ContactSection() {
               Demonstrações institucionais abertas
             </span>
             <h2 className="text-primary-dark" style={{ fontSize: "clamp(28px, 3.2vw, 40px)", lineHeight: 1.1 }}>
-              Solicite uma demonstração aplicada ao seu contexto
+              Quer ver a CLIMAEDU aplicada à realidade da sua instituição?
             </h2>
             <p className="mt-3 text-[16px] leading-relaxed text-foreground/75">
-              Em até 48 horas, nossa equipe entra em contato para entender sua realidade
-              institucional e apresentar exemplos de trilhas, dashboards e evidências.
+              Agende uma demonstração de 20 minutos e veja exemplos de trilhas, certificados,
+              dashboards e relatórios para o seu contexto.
             </p>
           </div>
         </FadeIn>
