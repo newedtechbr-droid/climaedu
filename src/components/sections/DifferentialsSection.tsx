@@ -1,85 +1,93 @@
-import { Check, X } from "lucide-react";
+import { Check, Minus } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
-const rows = [
-  { text: "Cursos ambientais especializados", bold: ["Cursos ambientais especializados"] },
-  { text: "Produção ágil com apoio de IA", bold: ["Produção ágil", "IA"] },
-  { text: "Trilhas por perfil e contexto institucional", bold: ["perfil", "contexto institucional"] },
-  { text: "Dados de adesão, conclusão e proficiência", bold: ["adesão, conclusão e proficiência"] },
-  { text: "Conteúdo com curadoria técnica humana", bold: ["curadoria técnica humana"] },
-  { text: "White-label institucional", bold: ["White-label institucional"] },
-  { text: "Suporte e implantação dedicados", bold: ["Suporte", "implantação dedicados"] },
+type Mark = "yes" | "partial" | "no";
+
+const columns = ["CLIMAEDU", "Cursos avulsos", "LMS genéricos"] as const;
+
+const rows: { label: string; values: [Mark, Mark, Mark] }[] = [
+  { label: "Conteúdo climático especializado", values: ["yes", "partial", "no"] },
+  { label: "Trilhas por perfil e contexto", values: ["yes", "no", "partial"] },
+  { label: "Certificados e relatórios", values: ["yes", "partial", "yes"] },
+  { label: "Dashboards de evidências", values: ["yes", "no", "partial"] },
+  { label: "White-label institucional", values: ["yes", "no", "partial"] },
+  { label: "IA com curadoria humana", values: ["yes", "no", "no"] },
+  { label: "Aplicação prática com checklists e atividades", values: ["yes", "no", "no"] },
 ];
 
-function BoldText({ text, bold }: { text: string; bold: string[] }) {
-  let result = text;
-  const parts: (string | { bold: string })[] = [];
-  let remaining = text;
-
-  for (const b of bold) {
-    const idx = remaining.indexOf(b);
-    if (idx >= 0) {
-      if (idx > 0) parts.push(remaining.slice(0, idx));
-      parts.push({ bold: b });
-      remaining = remaining.slice(idx + b.length);
-    }
-  }
-  if (remaining) parts.push(remaining);
-
+function MarkIcon({ m }: { m: Mark }) {
+  if (m === "yes")
+    return (
+      <span
+        className="inline-flex h-7 w-7 items-center justify-center rounded-full"
+        style={{ backgroundColor: "color-mix(in oklab, var(--color-olive) 22%, transparent)", color: "var(--color-primary-deep)" }}
+        aria-label="Sim"
+      >
+        <Check size={16} strokeWidth={3} />
+      </span>
+    );
+  if (m === "partial")
+    return (
+      <span
+        className="inline-flex h-7 w-7 items-center justify-center rounded-full"
+        style={{ backgroundColor: "color-mix(in oklab, var(--color-terracotta) 18%, transparent)", color: "var(--color-terracotta)" }}
+        aria-label="Parcial"
+      >
+        <Minus size={16} strokeWidth={3} />
+      </span>
+    );
   return (
-    <span>
-      {parts.map((p, i) =>
-        typeof p === "string" ? (
-          <span key={i}>{p}</span>
-        ) : (
-          <strong key={i} className="font-bold">{p.bold}</strong>
-        )
-      )}
+    <span
+      className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-black/5 text-foreground/40"
+      aria-label="Não"
+    >
+      —
     </span>
   );
 }
 
 export function DifferentialsSection() {
   return (
-    <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <section id="diferenciais" className="bg-surface scroll-mt-24">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
         <FadeIn>
           <SectionTitle
             eyebrow="Diferenciais"
-            title="ClimaEdu vs. plataformas genéricas de cursos"
+            title="Por que CLIMAEDU em vez de cursos avulsos ou LMS genéricos"
             align="center"
           />
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-background shadow-sm">
-            <table className="w-full text-left">
+          <div className="mt-10 overflow-x-auto">
+            <table
+              className="w-full min-w-[680px] overflow-hidden rounded-xl border bg-background text-left"
+              style={{ borderColor: "var(--color-border)" }}
+            >
               <thead>
-                <tr className="bg-primary-dark text-white">
-                  <th className="px-5 py-3.5 text-base font-semibold md:text-lg">Recurso</th>
-                  <th className="px-5 py-3.5 text-center text-base font-semibold md:text-lg">ClimaEdu</th>
-                  <th className="px-5 py-3.5 text-center text-base font-semibold text-white/80 md:text-lg">
-                    Plataformas genéricas
-                  </th>
+                <tr style={{ backgroundColor: "color-mix(in oklab, var(--color-olive) 12%, transparent)" }}>
+                  <th className="px-5 py-4 text-[14px] font-bold text-primary-dark">Recursos</th>
+                  {columns.map((c, i) => (
+                    <th
+                      key={c}
+                      className="px-5 py-4 text-center text-[14px] font-bold"
+                      style={{ color: i === 0 ? "var(--color-primary-deep)" : "var(--color-foreground)" }}
+                    >
+                      {c}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
-                {rows.map((r, i) => (
-                  <tr key={r.text} className={i % 2 === 0 ? "bg-background" : "bg-surface/60"}>
-                    <td className="px-5 py-3.5 text-base font-medium text-foreground md:text-[17px]">
-                      <BoldText text={r.text} bold={r.bold} />
-                    </td>
-                    <td className="px-5 py-3.5 text-center">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full" style={{ backgroundColor: "rgba(132,154,116,0.18)" }}>
-                        <Check size={18} style={{ color: "var(--color-olive)" }} aria-label="Sim" />
-                      </span>
-                    </td>
-                    <td className="px-5 py-3.5 text-center">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-muted">
-                        <X size={18} className="text-muted-foreground" aria-label="Não" />
-                      </span>
-                    </td>
+                {rows.map((row, idx) => (
+                  <tr key={row.label} className={idx % 2 === 0 ? "bg-background" : "bg-surface/50"}>
+                    <td className="px-5 py-4 text-[15px] font-medium text-foreground/85">{row.label}</td>
+                    {row.values.map((v, i) => (
+                      <td key={i} className="px-5 py-4 text-center">
+                        <MarkIcon m={v} />
+                      </td>
+                    ))}
                   </tr>
                 ))}
               </tbody>

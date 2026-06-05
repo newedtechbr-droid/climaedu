@@ -1,4 +1,4 @@
-import { CloudLightning, FileSearch, UserX, BookOpen, ArrowUpRight } from "lucide-react";
+import { CloudLightning, FileSearch, UserX, BookOpen } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
@@ -6,82 +6,56 @@ const items = [
   {
     icon: CloudLightning,
     title: "Eventos extremos",
-    highlight: "agir rápido",
-    text: "Equipes precisam agir rápido diante de enchentes, queimadas e ondas de calor.",
+    text: "Enchentes, queimadas e ondas de calor exigem equipes preparadas e respostas padronizadas.",
   },
   {
     icon: FileSearch,
-    title: "Controles e auditorias",
-    highlight: "comprovar capacitação",
-    text: "Gestores precisam comprovar capacitação, execução e evidências.",
+    title: "Pressão de auditorias",
+    text: "Órgãos de controle e auditorias internas exigem comprovação de capacitação e execução.",
   },
   {
     icon: UserX,
-    title: "Equipes em rotação",
-    highlight: "onboarding ambiental",
-    text: "A troca de pessoas exige onboarding ambiental contínuo e padronizado.",
+    title: "Rotatividade de equipes",
+    text: "A troca constante de pessoas exige onboarding ambiental contínuo e replicável.",
   },
   {
     icon: BookOpen,
-    title: "Cursos sem aplicação",
-    highlight: "transformar conhecimento em rotina",
-    text: "O desafio não é só aprender, é transformar conhecimento em rotina.",
+    title: "Cursos sem aplicação prática",
+    text: "Conteúdo solto não vira rotina. É preciso conectar aprendizagem a checklists e entregas.",
   },
 ];
-
-function HighlightedText({ text, highlight }: { text: string; highlight: string }) {
-  const idx = text.indexOf(highlight);
-  if (idx < 0) return <>{text}</>;
-  return (
-    <>
-      {text.slice(0, idx)}
-      <span className="font-semibold" style={{ color: "var(--color-olive)" }}>
-        {highlight}
-      </span>
-      {text.slice(idx + highlight.length)}
-    </>
-  );
-}
 
 export function ProblemSection() {
   return (
     <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
         <FadeIn>
           <SectionTitle
             eyebrow="Contexto"
-            title="O que pressiona a gestão pública hoje"
+            title="A crise climática exige equipes preparadas e evidências organizadas"
             align="center"
-            subtitle="Quatro pressões reais que a ClimaEdu ajuda a transformar em rotina técnica."
+            subtitle="Órgãos públicos e empresas precisam capacitar pessoas, padronizar rotinas e comprovar ações. O desafio não é falta de conteúdo, é transformar conhecimento ambiental em prática acompanhável."
           />
         </FadeIn>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((it, i) => (
-            <FadeIn key={it.title} delay={i * 0.08}>
+            <FadeIn key={it.title} delay={i * 0.07}>
               <article
-                className="group relative h-full overflow-hidden rounded-2xl border bg-background p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 22%, transparent)" }}
+                className="h-full rounded-2xl border bg-background p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 20%, transparent)" }}
               >
                 <span
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-xl transition-colors"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-xl"
                   style={{
                     backgroundColor: "color-mix(in oklab, var(--color-olive) 18%, transparent)",
                     color: "var(--color-primary-deep)",
                   }}
                 >
-                  <it.icon size={24} aria-hidden />
+                  <it.icon size={22} aria-hidden />
                 </span>
-                <h3 className="mt-6 text-xl font-bold text-primary-dark">{it.title}</h3>
-                <p className="mt-3 text-[17px] leading-relaxed text-foreground/80">
-                  <HighlightedText text={it.text} highlight={it.highlight} />
-                </p>
-                <ArrowUpRight
-                  size={18}
-                  className="absolute right-5 top-5 opacity-0 transition-opacity group-hover:opacity-60"
-                  style={{ color: "var(--color-slate-blue)" }}
-                  aria-hidden
-                />
+                <h3 className="mt-5 text-[18px] font-bold text-primary-dark">{it.title}</h3>
+                <p className="mt-2 text-[15px] leading-relaxed text-foreground/75">{it.text}</p>
               </article>
             </FadeIn>
           ))}
