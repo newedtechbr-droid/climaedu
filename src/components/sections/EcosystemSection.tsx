@@ -50,11 +50,15 @@ export function EcosystemSection() {
           <div className="mt-10 grid grid-cols-2 items-center gap-x-10 gap-y-12 sm:grid-cols-3 md:grid-cols-4">
             {logos.map((logo) =>
               logo.src ? (
-                <div key={logo.name} className="flex h-24 items-center justify-center md:h-28">
+                <div key={logo.name} className={`flex items-center justify-center ${logo.name.startsWith("SebraeHub") ? "h-32 md:h-40" : "h-24 md:h-28"}`}>
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-20 w-auto max-w-[240px] object-contain opacity-95 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 md:max-h-[84px]"
+                    className={`w-auto object-contain opacity-95 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 ${
+                      logo.name.startsWith("SebraeHub")
+                        ? "max-h-32 max-w-[340px] md:max-h-[140px]"
+                        : "max-h-20 max-w-[240px] md:max-h-[84px]"
+                    }`}
                     loading="lazy"
                   />
                 </div>
