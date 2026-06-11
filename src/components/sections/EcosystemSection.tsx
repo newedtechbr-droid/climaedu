@@ -49,11 +49,17 @@ export function EcosystemSection() {
         <FadeIn delay={0.1}>
           <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 sm:grid-cols-3 sm:gap-x-10 md:grid-cols-4 lg:gap-x-12">
             {logos.map((logo, i) => {
+              const isSebrae = logo.name.startsWith("SebraeHub");
+              const isInova = logo.name.startsWith("Inova");
+              const isTxm = logo.name.startsWith("TXM");
               const featured = i < 2;
               const boxH = featured ? "h-24 md:h-28" : "h-20 md:h-24";
-              const imgH = featured
+              // Sebrae: featured base. Inova: featured -10%. Others: base.
+              const imgH = isSebrae
                 ? "max-h-[76px] max-w-[216px] md:max-h-24 md:max-w-[240px]"
-                : "max-h-16 max-w-[180px] md:max-h-20 md:max-w-[200px]";
+                : isInova
+                  ? "max-h-[68px] max-w-[194px] md:max-h-[86px] md:max-w-[216px]"
+                  : "max-h-16 max-w-[180px] md:max-h-20 md:max-w-[200px]";
               return logo.src ? (
                 <div key={logo.name} className={`flex w-full items-center justify-center ${boxH}`}>
                   <img
@@ -65,13 +71,14 @@ export function EcosystemSection() {
                 </div>
               ) : (
                 <div key={logo.name} className={`flex w-full items-center justify-center ${boxH}`}>
-                  <span className={`font-semibold tracking-tight text-foreground/60 transition-colors hover:text-foreground/90 ${featured ? "text-[18px]" : "text-[15px]"}`}>
+                  <span className={`font-semibold tracking-tight text-foreground/60 transition-colors hover:text-foreground/90 ${isTxm ? "text-[20px] md:text-[22px]" : "text-[15px]"}`}>
                     {logo.name}
                   </span>
                 </div>
               );
             })}
           </div>
+
 
 
 
