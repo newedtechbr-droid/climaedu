@@ -1,31 +1,31 @@
-import { Layers, GraduationCap, Award, BarChart3 } from "lucide-react";
+import { GraduationCap, Wrench, BarChart3, FileCheck2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
 const steps = [
   {
-    icon: Layers,
-    label: "Organizar",
-    title: "Trilhas por perfil, secretaria, área ou risco",
-    text: "Estruture o conteúdo conforme a realidade da instituição: cargo, contexto de risco ou área de atuação.",
-  },
-  {
     icon: GraduationCap,
-    label: "Capacitar",
-    title: "Cursos, quizzes, atividades e checklists",
-    text: "Equipes aprendem com material aplicado, com avaliações e tarefas que conectam teoria à rotina.",
+    label: "Aprender",
+    title: "Cursos aplicados ao contexto",
+    text: "Conteúdo técnico organizado por perfil, com avaliações e materiais práticos.",
   },
   {
-    icon: Award,
-    label: "Certificar",
-    title: "Certificados automáticos e registro de entregas",
-    text: "Cada conclusão gera certificado nominal e fica registrada para consulta futura.",
+    icon: Wrench,
+    label: "Aplicar",
+    title: "Da teoria à rotina institucional",
+    text: "Checklists, atividades e referências que conectam o conteúdo ao dia a dia das equipes.",
   },
   {
     icon: BarChart3,
-    label: "Acompanhar",
-    title: "Adesão, conclusão, proficiência e evidências",
-    text: "Dashboards mostram quem fez, quem aplicou e o que foi entregue, por unidade ou perfil.",
+    label: "Medir",
+    title: "Adesão, conclusão e proficiência",
+    text: "Dashboards acompanham o avanço por unidade, perfil ou turma em tempo real.",
+  },
+  {
+    icon: FileCheck2,
+    label: "Evidenciar",
+    title: "Registros para gestão e auditoria",
+    text: "Certificados e relatórios exportáveis para prestação de contas e controle interno.",
   },
 ];
 
@@ -36,8 +36,8 @@ export function SolutionSection() {
         <FadeIn>
           <SectionTitle
             eyebrow="Como funciona"
-            title="Da capacitação isolada à aprendizagem aplicada"
-            subtitle="Quatro etapas para transformar conteúdo climático em rotina e em registros úteis para gestão."
+            title="Da capacitação à evidência"
+            subtitle="Aprender → Aplicar → Medir → Evidenciar. A CLIMAEDU transforma conteúdo climático em aprendizagem aplicada, acompanhamento e registros úteis para a gestão."
             align="center"
           />
         </FadeIn>

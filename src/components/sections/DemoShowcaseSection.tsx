@@ -1,15 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Monitor, BookOpen, PlayCircle, Award, BarChart3, FileText } from "lucide-react";
+import { ArrowRight, Monitor, BookOpen, BarChart3 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
 const screens = [
-  { icon: Monitor, title: "Tela inicial da plataforma", text: "Visão personalizada por perfil de acesso." },
-  { icon: BookOpen, title: "Exemplo de trilha", text: "Estrutura modular com progresso e marcos." },
-  { icon: PlayCircle, title: "Aula / módulo", text: "Vídeo, leitura, quiz e checklist em sequência." },
-  { icon: Award, title: "Certificado", text: "Emitido automaticamente ao concluir a trilha." },
-  { icon: BarChart3, title: "Dashboard de indicadores", text: "Adesão, conclusão e proficiência por unidade." },
-  { icon: FileText, title: "Relatório de evidências", text: "Exportável para auditoria e prestação de contas." },
+  { icon: Monitor, title: "Tela inicial da plataforma", text: "Ambiente white-label com identidade da instituição e visão personalizada por perfil." },
+  { icon: BookOpen, title: "Trilha de aprendizagem", text: "Estrutura modular com progresso, atividades e certificados ao final." },
+  { icon: BarChart3, title: "Dashboard de evidências", text: "Acompanhamento de adesão, conclusão e proficiência, exportável para gestão e auditoria." },
 ];
 
 export function DemoShowcaseSection() {
@@ -25,7 +22,7 @@ export function DemoShowcaseSection() {
           />
         </FadeIn>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {screens.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.06}>
               <article
