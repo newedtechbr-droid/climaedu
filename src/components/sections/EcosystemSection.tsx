@@ -47,30 +47,48 @@ export function EcosystemSection() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="mt-10 grid grid-cols-2 items-center gap-x-10 gap-y-12 sm:grid-cols-3 md:grid-cols-4">
-            {logos.map((logo) =>
-              logo.src ? (
-                <div key={logo.name} className={`flex items-center justify-center ${logo.name.startsWith("SebraeHub") ? "h-32 md:h-40" : "h-24 md:h-28"}`}>
+          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+            {logos
+              .filter((l) => l.src && (l.name.startsWith("SebraeHub") || l.name.startsWith("Rede Catarinense")))
+              .map((logo) => (
+                <div
+                  key={logo.name}
+                  className="flex h-44 items-center justify-center rounded-2xl border bg-white p-6 md:h-52"
+                  style={{ borderColor: "color-mix(in oklab, var(--color-olive) 22%, transparent)" }}
+                >
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className={`w-auto object-contain opacity-95 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 ${
-                      logo.name.startsWith("SebraeHub")
-                        ? "max-h-32 max-w-[340px] md:max-h-[140px]"
-                        : "max-h-20 max-w-[240px] md:max-h-[84px]"
-                    }`}
+                    className="max-h-32 w-auto max-w-[380px] object-contain md:max-h-40 md:max-w-[460px]"
                     loading="lazy"
                   />
                 </div>
-              ) : (
-                <div key={logo.name} className="flex h-24 items-center justify-center md:h-28">
-                  <span className="text-[20px] font-semibold tracking-tight text-foreground/80 transition-colors hover:text-foreground">
-                    {logo.name}
-                  </span>
-                </div>
-              ),
-            )}
+              ))}
           </div>
+
+          <div className="mt-10 grid grid-cols-2 items-center gap-x-8 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
+            {logos
+              .filter((l) => !l.name.startsWith("SebraeHub") && !l.name.startsWith("Rede Catarinense"))
+              .map((logo) =>
+                logo.src ? (
+                  <div key={logo.name} className="flex h-16 items-center justify-center md:h-20">
+                    <img
+                      src={logo.src}
+                      alt={logo.name}
+                      className="max-h-12 w-auto max-w-[150px] object-contain opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 md:max-h-14"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div key={logo.name} className="flex h-16 items-center justify-center md:h-20">
+                    <span className="text-[14px] font-semibold tracking-tight text-foreground/70">
+                      {logo.name}
+                    </span>
+                  </div>
+                ),
+              )}
+          </div>
+
         </FadeIn>
 
         <FadeIn delay={0.2}>
