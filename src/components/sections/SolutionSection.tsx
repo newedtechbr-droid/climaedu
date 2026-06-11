@@ -1,6 +1,6 @@
 import { GraduationCap, Wrench, BarChart3, FileCheck2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
-import { SectionTitle } from "@/components/SectionTitle";
+
 
 const steps = [
   {
