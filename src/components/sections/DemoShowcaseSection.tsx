@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import platformHome from "@/assets/platform-home-real.png";
 import platformCourse from "@/assets/platform-course-real.png";
-import screenDashboard from "@/assets/screen-dashboard.jpg";
+import screenDashboard from "@/assets/dashboard-real.png";
 
 const screens = [
   {
