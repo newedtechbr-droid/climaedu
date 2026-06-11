@@ -54,7 +54,7 @@ export function DifferentialsSection() {
         <FadeIn>
           <SectionTitle
             eyebrow="Diferenciais"
-            title="Por que CLIMAEDU em vez de cursos avulsos ou LMS genéricos"
+            title="O mercado entrega partes. A CLIMAEDU estrutura a jornada."
             align="center"
           />
         </FadeIn>

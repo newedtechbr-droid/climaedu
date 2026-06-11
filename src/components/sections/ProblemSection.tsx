@@ -32,9 +32,9 @@ export function ProblemSection() {
         <FadeIn>
           <SectionTitle
             eyebrow="Contexto"
-            title="A crise climática exige equipes preparadas e evidências organizadas"
+            title="A emergência climática mudou a régua da gestão pública"
             align="center"
-            subtitle="Órgãos públicos e empresas precisam capacitar pessoas, padronizar rotinas e comprovar ações. O desafio não é falta de conteúdo, é transformar conhecimento ambiental em prática acompanhável."
+            subtitle="Antes, bastava responder à crise. Agora, instituições precisam demonstrar preparação contínua — com pessoas capacitadas, rotinas padronizadas e evidências organizadas."
           />
         </FadeIn>
 

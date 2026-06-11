@@ -32,7 +32,7 @@ export function HeroSection() {
               style={{ backgroundColor: "#9A4B42", color: "#FFFFFF", letterSpacing: "0.02em" }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-white" />
-              Plataforma SaaS · LMS white-label
+              Ambiente de aprendizagem white-label
             </p>
           </FadeIn>
 
@@ -41,11 +41,10 @@ export function HeroSection() {
               className="text-primary-dark"
               style={{ fontSize: "clamp(32px, 4.2vw, 54px)", lineHeight: 1.08, letterSpacing: "-0.015em" }}
             >
-              Ambiente de aprendizagem online para{" "}
-              <span style={{ color: "var(--color-olive)", fontWeight: 700 }}>
-                capacitação climática
-              </span>{" "}
-              de equipes públicas e corporativas
+              Transformando a{" "}
+              <span style={{ color: "var(--color-olive)", fontWeight: 700 }}>ação climática</span>
+              <br />
+              em rotinas executáveis
             </h1>
           </FadeIn>
 
@@ -54,9 +53,9 @@ export function HeroSection() {
               className="mt-6 max-w-xl text-foreground/80"
               style={{ fontSize: "clamp(16px, 1.4vw, 19px)", lineHeight: 1.55 }}
             >
-              A CLIMAEDU é uma plataforma white-label com trilhas, cursos, certificados,
-              dashboards e relatórios para transformar conhecimento climático em rotina,
-              evidência e decisão.
+              A CLIMAEDU ajuda instituições públicas e organizações a preparar equipes,
+              padronizar rotinas e gerar evidências de capacitação para gestão, auditoria
+              e prestação de contas.
             </p>
           </FadeIn>
 
