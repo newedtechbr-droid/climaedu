@@ -31,16 +31,37 @@ const steps = [
 
 export function SolutionSection() {
   return (
-    <section id="como-funciona" className="bg-background scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <section id="como-funciona" className="relative overflow-hidden scroll-mt-24" style={{ backgroundColor: "var(--color-primary-dark)" }}>
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 20%, var(--color-terracotta) 0%, transparent 40%), radial-gradient(circle at 80% 80%, var(--color-olive) 0%, transparent 45%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
         <FadeIn>
-          <SectionTitle
-            eyebrow="Como funciona"
-            title="Da capacitação à evidência"
-            subtitle="Aprender → Aplicar → Medir → Evidenciar. A CLIMAEDU transforma conteúdo climático em aprendizagem aplicada, acompanhamento e registros úteis para a gestão."
-            align="center"
-          />
+          <div className="mx-auto max-w-3xl text-center">
+            <span
+              className="mb-4 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.22em]"
+              style={{
+                backgroundColor: "color-mix(in oklab, var(--color-terracotta) 22%, transparent)",
+                color: "#fff",
+              }}
+            >
+              <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
+              O método ClimaEdu
+            </span>
+            <h2 className="text-white" style={{ fontSize: "clamp(32px, 4.2vw, 54px)", lineHeight: 1.05, fontWeight: 700 }}>
+              Aprender <span style={{ color: "var(--color-terracotta)" }}>→</span> Aplicar <span style={{ color: "var(--color-terracotta)" }}>→</span> Medir <span style={{ color: "var(--color-terracotta)" }}>→</span> Evidenciar
+            </h2>
+            <p className="mt-5 text-[17px] leading-relaxed text-white/75">
+              A CLIMAEDU transforma conteúdo climático em aprendizagem aplicada,
+              acompanhamento institucional e registros úteis para a gestão.
+            </p>
+          </div>
         </FadeIn>
+
 
         <ol className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
