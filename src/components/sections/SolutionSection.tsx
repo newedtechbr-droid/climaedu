@@ -63,35 +63,35 @@ export function SolutionSection() {
         </FadeIn>
 
 
-        <ol className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <ol className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
             <FadeIn key={s.label} delay={i * 0.08}>
               <li
-                className="relative h-full rounded-2xl border bg-card p-6 shadow-sm"
-                style={{ borderColor: "color-mix(in oklab, var(--color-olive) 28%, var(--color-border))" }}
+                className="relative h-full rounded-2xl border bg-white p-7 shadow-[0_18px_50px_-20px_rgba(0,0,0,0.45)] transition-all hover:-translate-y-1"
+                style={{ borderColor: "color-mix(in oklab, var(--color-olive) 30%, transparent)" }}
               >
                 <span
-                  className="absolute -top-3 right-5 inline-flex h-7 w-7 items-center justify-center rounded-full text-[12px] font-bold text-white"
+                  className="absolute -top-4 left-7 inline-flex h-10 items-center justify-center rounded-full px-3 text-[13px] font-bold text-white shadow-md"
                   style={{ backgroundColor: i === 3 ? "var(--color-terracotta)" : "var(--color-olive)" }}
                 >
-                  {i + 1}
+                  Etapa {i + 1}
                 </span>
                 <span
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
+                  className="mt-3 inline-flex h-14 w-14 items-center justify-center rounded-xl"
                   style={{
                     backgroundColor:
                       i === 3
-                        ? "color-mix(in oklab, var(--color-terracotta) 16%, transparent)"
-                        : "color-mix(in oklab, var(--color-olive) 18%, transparent)",
+                        ? "color-mix(in oklab, var(--color-terracotta) 18%, transparent)"
+                        : "color-mix(in oklab, var(--color-olive) 20%, transparent)",
                     color: i === 3 ? "var(--color-terracotta)" : "var(--color-primary-deep)",
                   }}
                 >
-                  <s.icon size={24} aria-hidden />
+                  <s.icon size={28} aria-hidden />
                 </span>
-                <p className="mt-4 text-[12px] font-bold uppercase tracking-[0.18em] text-foreground/55">
+                <p className="mt-5 text-[13px] font-bold uppercase tracking-[0.22em]" style={{ color: i === 3 ? "var(--color-terracotta)" : "var(--color-primary-deep)" }}>
                   {s.label}
                 </p>
-                <h3 className="mt-1 text-[18px] font-bold leading-snug text-primary-dark">
+                <h3 className="mt-2 text-[20px] font-bold leading-snug text-primary-dark">
                   {s.title}
                 </h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-foreground/75">{s.text}</p>
@@ -103,3 +103,4 @@ export function SolutionSection() {
     </section>
   );
 }
+
