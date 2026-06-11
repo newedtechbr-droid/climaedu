@@ -47,47 +47,27 @@ export function EcosystemSection() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-            {logos
-              .filter((l) => l.src && (l.name.startsWith("SebraeHub") || l.name.startsWith("Rede Catarinense")))
-              .map((logo) => (
-                <div
-                  key={logo.name}
-                  className="flex h-44 items-center justify-center rounded-2xl border bg-white p-6 md:h-52"
-                  style={{ borderColor: "color-mix(in oklab, var(--color-olive) 22%, transparent)" }}
-                >
+          <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-10 gap-y-12 sm:grid-cols-3 md:grid-cols-4">
+            {logos.map((logo) =>
+              logo.src ? (
+                <div key={logo.name} className="flex h-20 w-full items-center justify-center md:h-24">
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-32 w-auto max-w-[380px] object-contain md:max-h-40 md:max-w-[460px]"
+                    className="max-h-16 w-auto max-w-[160px] object-contain opacity-70 grayscale transition-opacity duration-300 hover:opacity-100 md:max-h-20 md:max-w-[180px]"
                     loading="lazy"
                   />
                 </div>
-              ))}
+              ) : (
+                <div key={logo.name} className="flex h-20 w-full items-center justify-center md:h-24">
+                  <span className="text-[15px] font-semibold tracking-tight text-foreground/60 transition-colors hover:text-foreground/90">
+                    {logo.name}
+                  </span>
+                </div>
+              ),
+            )}
           </div>
 
-          <div className="mt-10 grid grid-cols-2 items-center gap-x-8 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
-            {logos
-              .filter((l) => !l.name.startsWith("SebraeHub") && !l.name.startsWith("Rede Catarinense"))
-              .map((logo) =>
-                logo.src ? (
-                  <div key={logo.name} className="flex h-16 items-center justify-center md:h-20">
-                    <img
-                      src={logo.src}
-                      alt={logo.name}
-                      className="max-h-12 w-auto max-w-[150px] object-contain opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 md:max-h-14"
-                      loading="lazy"
-                    />
-                  </div>
-                ) : (
-                  <div key={logo.name} className="flex h-16 items-center justify-center md:h-20">
-                    <span className="text-[14px] font-semibold tracking-tight text-foreground/70">
-                      {logo.name}
-                    </span>
-                  </div>
-                ),
-              )}
-          </div>
 
         </FadeIn>
 
