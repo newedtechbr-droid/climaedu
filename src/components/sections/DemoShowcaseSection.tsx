@@ -2,22 +2,22 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
-import screenHome from "@/assets/screen-home.jpg";
-import screenTrack from "@/assets/screen-track.jpg";
+import platformHome from "@/assets/platform-home-real.png";
+import platformCourse from "@/assets/platform-course-real.png";
 import screenDashboard from "@/assets/screen-dashboard.jpg";
 
 const screens = [
   {
-    image: screenHome,
-    alt: "Tela inicial da plataforma ClimaEdu white-label",
+    image: platformHome,
+    alt: "Tela inicial real da plataforma CLIMAEDU",
     title: "Tela inicial da plataforma",
-    text: "Ambiente white-label com identidade da instituição e visão personalizada por perfil.",
+    text: "Ambiente white-label com identidade da instituição, busca de cursos, trilhas e podcasts.",
   },
   {
-    image: screenTrack,
-    alt: "Trilha de aprendizagem com módulos e progresso",
-    title: "Trilha de aprendizagem",
-    text: "Estrutura modular com progresso, atividades e certificados ao final.",
+    image: platformCourse,
+    alt: "Tela real de curso da plataforma CLIMAEDU com lista de módulos",
+    title: "Curso e módulos",
+    text: "Aulas em vídeo, questões, fórum e desafios PBL com progresso por unidade.",
   },
   {
     image: screenDashboard,
