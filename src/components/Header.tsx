@@ -6,7 +6,7 @@ const nav = [
   { to: "/", label: "Início" },
   { to: "/", hash: "como-funciona", label: "Como funciona" },
   { to: "/", hash: "para-quem", label: "Para quem" },
-  { to: "/", hash: "trilhas", label: "Trilhas" },
+  
   { to: "/", hash: "diferenciais", label: "Diferenciais" },
   { to: "/", hash: "demonstracao", label: "Demonstração" },
 ] as const;
