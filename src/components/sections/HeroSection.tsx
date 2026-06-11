@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Route as RouteIcon, Award, BarChart3, Palette, Sparkles } from "lucide-react";
+import heroPlatform from "@/assets/hero-platform.jpg";
 import { FadeIn } from "@/components/FadeIn";
 
 const badges = [
