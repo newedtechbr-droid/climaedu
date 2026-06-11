@@ -40,8 +40,6 @@ function Index() {
       <SolutionSection />
       <PlatformFeaturesSection />
       <AudienceSection />
-      <ChallengeSection />
-      <TracksSection />
       <DemoShowcaseSection />
       <DifferentialsSection />
       <AISection />
