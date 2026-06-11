@@ -47,26 +47,32 @@ export function EcosystemSection() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-10 gap-y-12 sm:grid-cols-3 md:grid-cols-4">
-            {logos.map((logo) =>
-              logo.src ? (
-                <div key={logo.name} className="flex h-20 w-full items-center justify-center md:h-24">
+          <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-10 sm:grid-cols-3 sm:gap-x-10 md:grid-cols-4 lg:gap-x-12">
+            {logos.map((logo, i) => {
+              const featured = i < 2;
+              const boxH = featured ? "h-24 md:h-28" : "h-20 md:h-24";
+              const imgH = featured
+                ? "max-h-[76px] max-w-[216px] md:max-h-24 md:max-w-[240px]"
+                : "max-h-16 max-w-[180px] md:max-h-20 md:max-w-[200px]";
+              return logo.src ? (
+                <div key={logo.name} className={`flex w-full items-center justify-center ${boxH}`}>
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="max-h-16 w-auto max-w-[160px] object-contain opacity-70 grayscale transition-opacity duration-300 hover:opacity-100 md:max-h-20 md:max-w-[180px]"
+                    className={`w-auto object-contain opacity-70 grayscale transition-opacity duration-300 hover:opacity-100 ${imgH}`}
                     loading="lazy"
                   />
                 </div>
               ) : (
-                <div key={logo.name} className="flex h-20 w-full items-center justify-center md:h-24">
-                  <span className="text-[15px] font-semibold tracking-tight text-foreground/60 transition-colors hover:text-foreground/90">
+                <div key={logo.name} className={`flex w-full items-center justify-center ${boxH}`}>
+                  <span className={`font-semibold tracking-tight text-foreground/60 transition-colors hover:text-foreground/90 ${featured ? "text-[18px]" : "text-[15px]"}`}>
                     {logo.name}
                   </span>
                 </div>
-              ),
-            )}
+              );
+            })}
           </div>
+
 
 
         </FadeIn>
