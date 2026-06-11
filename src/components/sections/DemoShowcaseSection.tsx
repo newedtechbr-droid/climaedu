@@ -1,12 +1,30 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Monitor, BookOpen, BarChart3 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
+import screenHome from "@/assets/screen-home.jpg";
+import screenTrack from "@/assets/screen-track.jpg";
+import screenDashboard from "@/assets/screen-dashboard.jpg";
 
 const screens = [
-  { icon: Monitor, title: "Tela inicial da plataforma", text: "Ambiente white-label com identidade da instituição e visão personalizada por perfil." },
-  { icon: BookOpen, title: "Trilha de aprendizagem", text: "Estrutura modular com progresso, atividades e certificados ao final." },
-  { icon: BarChart3, title: "Dashboard de evidências", text: "Acompanhamento de adesão, conclusão e proficiência, exportável para gestão e auditoria." },
+  {
+    image: screenHome,
+    alt: "Tela inicial da plataforma ClimaEdu white-label",
+    title: "Tela inicial da plataforma",
+    text: "Ambiente white-label com identidade da instituição e visão personalizada por perfil.",
+  },
+  {
+    image: screenTrack,
+    alt: "Trilha de aprendizagem com módulos e progresso",
+    title: "Trilha de aprendizagem",
+    text: "Estrutura modular com progresso, atividades e certificados ao final.",
+  },
+  {
+    image: screenDashboard,
+    alt: "Dashboard de evidências com indicadores de adesão e conclusão",
+    title: "Dashboard de evidências",
+    text: "Acompanhamento de adesão, conclusão e proficiência, exportável para gestão e auditoria.",
+  },
 ];
 
 export function DemoShowcaseSection() {
@@ -29,37 +47,18 @@ export function DemoShowcaseSection() {
                 className="group h-full overflow-hidden rounded-xl border bg-card transition-all hover:-translate-y-1 hover:shadow-md"
                 style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 20%, var(--color-border))" }}
               >
-                {/* Mockup placeholder */}
                 <div
-                  className="relative flex aspect-[16/10] items-center justify-center border-b"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, color-mix(in oklab, var(--color-olive) 12%, var(--color-surface)) 0%, color-mix(in oklab, var(--color-slate-blue) 8%, var(--color-surface)) 100%)",
-                    borderColor: "color-mix(in oklab, var(--color-slate-blue) 15%, var(--color-border))",
-                  }}
+                  className="aspect-[16/10] overflow-hidden border-b"
+                  style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 15%, var(--color-border))" }}
                 >
-                  <div className="absolute inset-3 rounded-lg border border-black/5 bg-white/60 shadow-inner">
-                    <div className="flex items-center gap-1.5 border-b border-black/5 px-2.5 py-1.5">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#E08977]" />
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#E8C679]" />
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#A9C397]" />
-                    </div>
-                    <div className="space-y-1.5 p-3">
-                      <div className="h-2 w-2/3 rounded bg-black/10" />
-                      <div className="h-2 w-5/6 rounded bg-black/5" />
-                      <div className="mt-3 grid grid-cols-3 gap-1.5">
-                        <div className="h-6 rounded bg-primary/20" />
-                        <div className="h-6 rounded bg-black/5" />
-                        <div className="h-6 rounded bg-black/5" />
-                      </div>
-                    </div>
-                  </div>
-                  <span
-                    className="relative z-10 inline-flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md"
-                    style={{ color: "var(--color-primary-deep)" }}
-                  >
-                    <s.icon size={26} aria-hidden />
-                  </span>
+                  <img
+                    src={s.image}
+                    alt={s.alt}
+                    loading="lazy"
+                    width={1280}
+                    height={800}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
                 </div>
 
                 <div className="p-5">
