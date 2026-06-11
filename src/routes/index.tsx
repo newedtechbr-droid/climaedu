@@ -4,9 +4,13 @@ import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
 import { PlatformFeaturesSection } from "@/components/sections/PlatformFeaturesSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
+import { ChallengeSection } from "@/components/sections/ChallengeSection";
 import { TracksSection } from "@/components/sections/TracksSection";
 import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
+import { AISection } from "@/components/sections/AISection";
+import { EcosystemSection } from "@/components/sections/EcosystemSection";
+import { SDGSection } from "@/components/sections/SDGSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
@@ -38,9 +42,13 @@ function Index() {
       <SolutionSection />
       <PlatformFeaturesSection />
       <AudienceSection />
+      <ChallengeSection />
       <TracksSection />
       <DemoShowcaseSection />
       <DifferentialsSection />
+      <AISection />
+      <EcosystemSection />
+      <SDGSection />
       <AboutSection />
       <ContactSection />
     </>
