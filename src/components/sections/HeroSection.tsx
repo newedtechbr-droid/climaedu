@@ -106,23 +106,83 @@ export function HeroSection() {
 function PlatformMockup() {
   return (
     <div className="relative">
+      {/* halo suave */}
       <div
-        className="relative mx-auto w-full max-w-[560px] overflow-hidden rounded-xl border bg-card shadow-[0_30px_60px_-20px_rgba(20,30,40,0.35)]"
+        aria-hidden
+        className="pointer-events-none absolute -inset-6 -z-10 rounded-[28px] blur-2xl"
+        style={{
+          background:
+            "radial-gradient(60% 60% at 50% 50%, color-mix(in oklab, var(--color-olive) 22%, transparent), transparent 70%)",
+        }}
+      />
+
+      {/* Mockup principal — sugerido, não literal */}
+      <div
+        className="relative mx-auto w-full max-w-[520px] overflow-hidden rounded-2xl border bg-card shadow-[0_30px_70px_-22px_rgba(20,30,40,0.4)] animate-fade-in"
         style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 25%, var(--color-border))" }}
       >
-        <img
-          src={heroPlatform}
-          alt="Plataforma ClimaEdu — trilha de aprendizagem com progresso e desempenho"
-          width={1280}
-          height={896}
-          className="block h-auto w-full"
-        />
+        {/* barra superior estilo navegador */}
+        <div
+          className="flex items-center gap-1.5 border-b px-4 py-2.5"
+          style={{
+            borderColor: "color-mix(in oklab, var(--color-slate-blue) 12%, var(--color-border))",
+            backgroundColor: "color-mix(in oklab, var(--color-surface) 60%, white)",
+          }}
+        >
+          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#E2B7B3" }} />
+          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#E7D9A8" }} />
+          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#B9CDB0" }} />
+          <span
+            className="ml-3 rounded px-2 py-0.5 text-[10px] font-semibold"
+            style={{
+              backgroundColor: "color-mix(in oklab, var(--color-olive) 14%, white)",
+              color: "var(--color-primary-deep)",
+            }}
+          >
+            plataforma.instituicao.gov.br
+          </span>
+        </div>
+
+        <div className="relative">
+          <img
+            src={heroPlatform}
+            alt="Plataforma ClimaEdu — ambiente white-label de capacitação climática"
+            width={1280}
+            height={896}
+            className="block h-auto w-full"
+          />
+          {/* Véu leve para reduzir 'spoiler' da plataforma */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 55%, color-mix(in oklab, var(--color-background) 55%, transparent))",
+            }}
+          />
+        </div>
       </div>
 
-      {/* Card flutuante certificado */}
+      {/* Chip flutuante — trilha por perfil */}
       <div
-        className="absolute -bottom-4 -left-4 hidden w-[190px] rotate-[-3deg] rounded-lg border bg-card p-3 shadow-lg sm:block"
-        style={{ borderColor: "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))" }}
+        className="absolute -left-3 top-6 hidden rounded-full border bg-card px-3 py-1.5 text-[11px] font-semibold shadow-md sm:flex items-center gap-1.5 animate-fade-in"
+        style={{
+          borderColor: "color-mix(in oklab, var(--color-olive) 35%, var(--color-border))",
+          color: "var(--color-primary-deep)",
+          animation: "fade-in 0.6s ease-out 0.3s both, float 6s ease-in-out 1s infinite",
+        }}
+      >
+        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-olive)" }} />
+        Trilha por perfil
+      </div>
+
+      {/* Card flutuante — certificado */}
+      <div
+        className="absolute -bottom-5 -left-5 hidden w-[195px] rotate-[-3deg] rounded-lg border bg-card p-3 shadow-lg sm:block"
+        style={{
+          borderColor: "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))",
+          animation: "fade-in 0.6s ease-out 0.5s both, float 7s ease-in-out infinite",
+        }}
       >
         <p className="text-[10px] font-bold uppercase tracking-wider" style={{ color: "var(--color-terracotta)" }}>
           Certificado emitido
@@ -132,6 +192,62 @@ function PlatformMockup() {
         </p>
         <p className="mt-0.5 text-[10px] text-foreground/60">320 servidores · 18h</p>
       </div>
+
+      {/* Card flutuante — dashboard de adesão */}
+      <div
+        className="absolute -right-4 -top-4 hidden w-[180px] rotate-[2deg] rounded-lg border bg-card p-3 shadow-lg md:block"
+        style={{
+          borderColor: "color-mix(in oklab, var(--color-olive) 45%, var(--color-border))",
+          animation: "fade-in 0.6s ease-out 0.7s both, float 8s ease-in-out 0.5s infinite",
+        }}
+      >
+        <p className="text-[10px] font-bold uppercase tracking-wider" style={{ color: "var(--color-olive)" }}>
+          Adesão por secretaria
+        </p>
+        <div className="mt-2 space-y-1.5">
+          {[
+            { l: "Meio Ambiente", v: 92 },
+            { l: "Defesa Civil", v: 78 },
+            { l: "Planejamento", v: 64 },
+          ].map((r) => (
+            <div key={r.l}>
+              <div className="flex justify-between text-[9.5px] text-foreground/65">
+                <span>{r.l}</span>
+                <span className="font-semibold text-primary-dark">{r.v}%</span>
+              </div>
+              <div className="mt-0.5 h-1 rounded-full bg-muted">
+                <div
+                  className="h-full rounded-full"
+                  style={{
+                    width: `${r.v}%`,
+                    backgroundColor: "var(--color-olive)",
+                  }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Chip flutuante — white-label */}
+      <div
+        className="absolute -bottom-2 right-2 hidden rounded-full border bg-card px-3 py-1.5 text-[11px] font-semibold shadow-md md:flex items-center gap-1.5"
+        style={{
+          borderColor: "color-mix(in oklab, var(--color-slate-blue) 35%, var(--color-border))",
+          color: "var(--color-primary-deep)",
+          animation: "fade-in 0.6s ease-out 0.9s both, float 6.5s ease-in-out 1.5s infinite",
+        }}
+      >
+        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
+        Identidade institucional
+      </div>
+
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+          50% { transform: translateY(-6px) rotate(var(--r, 0deg)); }
+        }
+      `}</style>
     </div>
   );
 }
