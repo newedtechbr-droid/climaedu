@@ -7,6 +7,8 @@ import { AudienceSection } from "@/components/sections/AudienceSection";
 import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
 import { AISection } from "@/components/sections/AISection";
+import { TracksSection } from "@/components/sections/TracksSection";
+import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { SDGSection } from "@/components/sections/SDGSection";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -39,6 +41,8 @@ function Index() {
       <ProblemSection />
       <SolutionSection />
       <PlatformFeaturesSection />
+      <TracksSection />
+      <ClimateImpactStrip />
       <AudienceSection />
       <DemoShowcaseSection />
       <DifferentialsSection />
