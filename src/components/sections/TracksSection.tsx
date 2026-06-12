@@ -1,4 +1,4 @@
-import { Clock, Users, Target, Sparkles } from "lucide-react";
+import { Clock } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import comprasCover from "@/assets/courses/compras-publicas.png.asset.json";
@@ -9,11 +9,9 @@ import eventosCover from "@/assets/courses/eventos-extremos.png.asset.json";
 type Course = {
   title: string;
   hours: string;
-  cover?: string;
+  cover: string;
   category: string;
-  audience: string;
-  outcome: string;
-  badge?: string;
+  description: string;
 };
 
 const courses: Course[] = [
@@ -22,40 +20,32 @@ const courses: Course[] = [
     hours: "20h",
     cover: comprasCover.url,
     category: "Contratações sustentáveis",
-    audience: "Equipes de licitação, compras e suprimentos do setor público.",
-    outcome: "Capacidade de inserir critérios de sustentabilidade em contratações públicas.",
+    description:
+      "Critérios de sustentabilidade aplicados às contratações públicas, para equipes de licitação e compras.",
   },
   {
-    title: "Planejamento, Riscos e Conformidade nas Contratações Públicas",
+    title: "Planejamento, Riscos e Conformidade",
     hours: "40h",
     cover: planejamentoCover.url,
     category: "Gestão pública",
-    audience: "Gestores públicos, controle interno e áreas de contratação.",
-    outcome: "Domínio do ciclo de planejamento, riscos e conformidade nas compras.",
+    description:
+      "Ciclo completo de planejamento, gestão de riscos e conformidade nas contratações do setor público.",
   },
   {
     title: "Mudanças Climáticas e ESG",
     hours: "60h",
     cover: esgCover.url,
     category: "Clima e ESG",
-    audience: "Lideranças públicas e corporativas, áreas de sustentabilidade e ESG.",
-    outcome: "Visão integrada para conduzir agendas climáticas e de ESG nas instituições.",
+    description:
+      "Visão integrada para conduzir agendas climáticas e de ESG em instituições públicas e corporativas.",
   },
   {
-    title: "Eventos Extremos e Resiliência Climática",
+    title: "Eventos Extremos e Resiliência",
     hours: "20h",
     cover: eventosCover.url,
     category: "Resiliência climática",
-    audience: "Defesa Civil, Meio Ambiente, planejamento urbano e gestão de riscos.",
-    outcome: "Preparação para prevenir, responder e adaptar-se a eventos extremos.",
-  },
-  {
-    title: "Governança em Tempos de Emergência Climática",
-    hours: "20h",
-    category: "Governança climática",
-    audience: "Alta liderança pública e gestores intersetoriais.",
-    outcome: "Modelos de governança e coordenação para enfrentar emergências climáticas.",
-    badge: "Lançamento 2026",
+    description:
+      "Prevenção, resposta e adaptação a eventos extremos, para Defesa Civil, Meio Ambiente e planejamento urbano.",
   },
 ];
 
@@ -67,85 +57,64 @@ export function TracksSection() {
           <SectionTitle
             eyebrow="Cursos"
             title="Alguns dos nossos cursos"
-            subtitle="Cinco cursos autoinstrucionais para preparar equipes públicas em gestão climática, compras, riscos, ESG, eventos extremos e governança em emergência climática."
+            subtitle="Trilhas autoinstrucionais para preparar equipes públicas em clima, contratações, riscos e resiliência."
             align="center"
           />
         </FadeIn>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 grid-cols-2 lg:grid-cols-4">
           {courses.map((c, i) => (
             <FadeIn key={c.title} delay={i * 0.06}>
               <article
-                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-background transition-all hover:-translate-y-1 hover:shadow-lg"
+                className="group relative flex h-full flex-col overflow-hidden rounded-xl border bg-background shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
-                  borderColor: c.badge
-                    ? "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))"
-                    : "color-mix(in oklab, var(--color-olive) 28%, var(--color-border))",
+                  borderColor:
+                    "color-mix(in oklab, var(--color-olive) 22%, var(--color-border))",
                 }}
               >
-                {/* Capa */}
-                <div
-                  className="relative aspect-[3/4] overflow-hidden"
-                  style={{
-                    backgroundColor: c.cover
-                      ? "transparent"
-                      : "color-mix(in oklab, var(--color-olive) 18%, var(--color-surface))",
-                  }}
-                >
-                  {c.cover ? (
-                    <img
-                      src={c.cover}
-                      alt={`Capa do curso ${c.title}`}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center p-8 text-center">
-                      <span className="text-[20px] font-bold leading-tight text-primary-dark/80">
-                        {c.title}
-                      </span>
-                    </div>
-                  )}
-                  {c.badge && (
-                    <span
-                      className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10.5px] font-bold uppercase tracking-wider text-white shadow"
-                      style={{ backgroundColor: "var(--color-terracotta)", letterSpacing: "0.06em" }}
-                    >
-                      <Sparkles size={10} /> {c.badge}
-                    </span>
-                  )}
+                {/* Capa compacta */}
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <img
+                    src={c.cover}
+                    alt={`Capa do curso ${c.title}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
                   <span
-                    className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-md px-2 py-1 text-[11px] font-bold backdrop-blur"
+                    className="absolute left-2.5 top-2.5 inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10.5px] font-bold backdrop-blur"
                     style={{
-                      backgroundColor: "color-mix(in oklab, white 78%, transparent)",
+                      backgroundColor: "color-mix(in oklab, white 82%, transparent)",
                       color: "var(--color-primary-deep)",
                     }}
                   >
-                    <Clock size={11} /> {c.hours}
+                    <Clock size={10} /> {c.hours}
                   </span>
+
+                  {/* Overlay com descrição no hover */}
+                  <div
+                    className="pointer-events-none absolute inset-0 flex items-end p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, transparent 30%, color-mix(in oklab, var(--color-primary-dark) 88%, transparent))",
+                    }}
+                  >
+                    <p className="text-[12.5px] leading-relaxed text-white/95">
+                      {c.description}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Conteúdo */}
-                <div className="flex flex-1 flex-col p-5">
+                {/* Legenda compacta */}
+                <div className="flex flex-1 flex-col p-3.5">
                   <p
-                    className="text-[11.5px] font-bold uppercase tracking-[0.14em]"
+                    className="text-[10.5px] font-bold uppercase tracking-[0.12em]"
                     style={{ color: "var(--color-terracotta)" }}
                   >
                     {c.category}
                   </p>
-                  <h3 className="mt-1.5 text-[16px] font-bold leading-snug text-primary-dark">
+                  <h3 className="mt-1 text-[14px] font-bold leading-snug text-primary-dark">
                     {c.title}
                   </h3>
-                  <div className="mt-3 space-y-2 text-[13.5px] leading-relaxed text-foreground/75">
-                    <p className="flex gap-2">
-                      <Users size={14} className="mt-0.5 shrink-0" style={{ color: "var(--color-olive)" }} />
-                      <span><span className="font-semibold text-foreground/90">Para quem: </span>{c.audience}</span>
-                    </p>
-                    <p className="flex gap-2">
-                      <Target size={14} className="mt-0.5 shrink-0" style={{ color: "var(--color-olive)" }} />
-                      <span><span className="font-semibold text-foreground/90">Resultado: </span>{c.outcome}</span>
-                    </p>
-                  </div>
                 </div>
               </article>
             </FadeIn>
