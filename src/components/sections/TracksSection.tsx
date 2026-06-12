@@ -6,7 +6,17 @@ import planejamentoCover from "@/assets/courses/planejamento-riscos.png.asset.js
 import esgCover from "@/assets/courses/mudancas-esg.png.asset.json";
 import eventosCover from "@/assets/courses/eventos-extremos.png.asset.json";
 
-const courses = [
+type Course = {
+  title: string;
+  hours: string;
+  cover?: string;
+  category: string;
+  audience: string;
+  outcome: string;
+  badge?: string;
+};
+
+const courses: Course[] = [
   {
     title: "Compras Públicas Sustentáveis",
     hours: "20h",
@@ -47,7 +57,7 @@ const courses = [
     outcome: "Modelos de governança e coordenação para enfrentar emergências climáticas.",
     badge: "Lançamento 2026",
   },
-] as const;
+];
 
 export function TracksSection() {
   return (
