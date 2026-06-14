@@ -1,10 +1,6 @@
 import { Clock } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
-import comprasCover from "@/assets/courses/compras-publicas.png.asset.json";
-import planejamentoCover from "@/assets/courses/planejamento-riscos.png.asset.json";
-import esgCover from "@/assets/courses/mudancas-esg.png.asset.json";
-import eventosCover from "@/assets/courses/eventos-extremos.png.asset.json";
 
 type Course = {
   title: string;
@@ -18,7 +14,7 @@ const courses: Course[] = [
   {
     title: "Compras Públicas Sustentáveis",
     hours: "20h",
-    cover: comprasCover.url,
+    cover: "/images/cursos/curso-contratacoes-sustentaveis.png",
     category: "Contratações sustentáveis",
     description:
       "Critérios de sustentabilidade aplicados às contratações públicas, para equipes de licitação e compras.",
@@ -26,7 +22,7 @@ const courses: Course[] = [
   {
     title: "Planejamento, Riscos e Conformidade",
     hours: "40h",
-    cover: planejamentoCover.url,
+    cover: "/images/cursos/curso-planejamento-riscos.png",
     category: "Gestão pública",
     description:
       "Ciclo completo de planejamento, gestão de riscos e conformidade nas contratações do setor público.",
@@ -34,7 +30,7 @@ const courses: Course[] = [
   {
     title: "Mudanças Climáticas e ESG",
     hours: "60h",
-    cover: esgCover.url,
+    cover: "/images/cursos/curso-clima-esg.png",
     category: "Clima e ESG",
     description:
       "Visão integrada para conduzir agendas climáticas e de ESG em instituições públicas e corporativas.",
@@ -42,7 +38,7 @@ const courses: Course[] = [
   {
     title: "Eventos Extremos e Resiliência",
     hours: "20h",
-    cover: eventosCover.url,
+    cover: "/images/cursos/curso-resiliencia-climatica.png",
     category: "Resiliência climática",
     description:
       "Prevenção, resposta e adaptação a eventos extremos, para Defesa Civil, Meio Ambiente e planejamento urbano.",
@@ -62,7 +58,7 @@ export function TracksSection() {
           />
         </FadeIn>
 
-        <div className="mt-12 grid gap-5 grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-5 lg:grid-cols-4">
           {courses.map((c, i) => (
             <FadeIn key={c.title} delay={i * 0.06}>
               <article
@@ -72,7 +68,6 @@ export function TracksSection() {
                     "color-mix(in oklab, var(--color-olive) 22%, var(--color-border))",
                 }}
               >
-                {/* Capa compacta */}
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
                     src={c.cover}
@@ -80,17 +75,18 @@ export function TracksSection() {
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
+
                   <span
                     className="absolute left-2.5 top-2.5 inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10.5px] font-bold backdrop-blur"
                     style={{
-                      backgroundColor: "color-mix(in oklab, white 82%, transparent)",
+                      backgroundColor:
+                        "color-mix(in oklab, white 82%, transparent)",
                       color: "var(--color-primary-deep)",
                     }}
                   >
                     <Clock size={10} /> {c.hours}
                   </span>
 
-                  {/* Overlay com descrição no hover */}
                   <div
                     className="pointer-events-none absolute inset-0 flex items-end p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                     style={{
@@ -104,7 +100,6 @@ export function TracksSection() {
                   </div>
                 </div>
 
-                {/* Legenda compacta */}
                 <div className="flex flex-1 flex-col p-3.5">
                   <p
                     className="text-[10.5px] font-bold uppercase tracking-[0.12em]"
@@ -112,6 +107,7 @@ export function TracksSection() {
                   >
                     {c.category}
                   </p>
+
                   <h3 className="mt-1 text-[14px] font-bold leading-snug text-primary-dark">
                     {c.title}
                   </h3>
