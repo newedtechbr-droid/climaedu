@@ -153,14 +153,14 @@ function PlatformMockup() {
             className="block h-auto w-full"
           />
           {/* Véu leve para reduzir 'spoiler' da plataforma */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(180deg, transparent 55%, color-mix(in oklab, var(--color-background) 55%, transparent))",
-            }}
-          />
+<div
+  aria-hidden
+  className="pointer-events-none absolute inset-0"
+  style={{
+    background:
+      "linear-gradient(180deg, transparent 72%, color-mix(in oklab, var(--color-background) 18%, transparent))",
+  }}
+/>
         </div>
       </div>
 
