@@ -101,18 +101,19 @@ export function TracksSection() {
                   </div>
                 </div>
 
-                <div className="flex flex-1 flex-col p-3.5">
+                <div className="flex flex-1 flex-col p-5">
                   <p
-                    className="text-[10.5px] font-bold uppercase tracking-[0.12em]"
+                    className="text-[10.5px] font-bold uppercase tracking-[0.14em]"
                     style={{ color: "var(--color-terracotta)" }}
                   >
                     {c.category}
                   </p>
 
-                  <h3 className="mt-1 text-[14px] font-bold leading-snug text-primary-dark">
+                  <h3 className="mt-2 text-[15.5px] font-bold leading-snug text-primary-dark">
                     {c.title}
                   </h3>
                 </div>
+
               </article>
             </FadeIn>
           ))}
