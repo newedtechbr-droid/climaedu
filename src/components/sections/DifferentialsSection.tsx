@@ -50,7 +50,7 @@ function MarkIcon({ m }: { m: Mark }) {
 export function DifferentialsSection() {
   return (
     <section id="diferenciais" className="bg-surface scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <FadeIn>
           <SectionTitle
             eyebrow="Diferenciais"
@@ -60,7 +60,8 @@ export function DifferentialsSection() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="mt-10 overflow-x-auto">
+          <div className="mt-14 overflow-x-auto">
+
             <table
               className="w-full min-w-[680px] overflow-hidden rounded-xl border bg-background text-left"
               style={{ borderColor: "var(--color-border)" }}
