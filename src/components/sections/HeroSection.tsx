@@ -24,44 +24,43 @@ export function HeroSection() {
         }}
       />
 
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-12 md:gap-10 md:py-24">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-12 md:gap-12 md:py-32">
         {/* Coluna texto */}
         <div className="md:col-span-7">
           <FadeIn>
             <p
-              className="mb-5 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12.5px] font-semibold uppercase"
-              style={{ backgroundColor: "#9A4B42", color: "#FFFFFF", letterSpacing: "0.02em" }}
+              className="mb-7 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12.5px] font-semibold uppercase"
+              style={{ backgroundColor: "#9A4B42", color: "#FFFFFF", letterSpacing: "0.04em" }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-white" />
-              Ambiente de aprendizagem white-label
+              Ambiente de aprendizagem online para ação climática
             </p>
           </FadeIn>
 
           <FadeIn delay={0.08}>
             <h1
               className="text-primary-dark"
-              style={{ fontSize: "clamp(32px, 4.2vw, 54px)", lineHeight: 1.08, letterSpacing: "-0.015em" }}
+              style={{ fontSize: "clamp(38px, 5.6vw, 72px)", lineHeight: 1.06, letterSpacing: "-0.018em", fontWeight: 600 }}
             >
-              Transformando a{" "}
-              <span style={{ color: "var(--color-olive)", fontWeight: 700 }}>ação climática</span>
-              <br />
-              em rotinas executáveis
+              Capacitação climática que vira{" "}
+              <span style={{ color: "var(--color-olive)", fontWeight: 700 }}>rotina, evidência e resposta pública</span>.
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.18}>
             <p
-              className="mt-6 max-w-xl text-foreground/80"
-              style={{ fontSize: "clamp(16px, 1.4vw, 19px)", lineHeight: 1.55 }}
+              className="mt-8 max-w-xl text-foreground/80"
+              style={{ fontSize: "clamp(17px, 1.35vw, 21px)", lineHeight: 1.65 }}
             >
               A CLIMAEDU ajuda instituições públicas e organizações a preparar equipes,
-              padronizar rotinas e gerar evidências de capacitação para gestão, auditoria
-              e prestação de contas.
+              orientar pessoas, padronizar rotinas e gerar <strong className="font-semibold text-primary-dark">evidências</strong> para
+              gestão, auditoria e prestação de contas.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.26}>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+
               <Link
                 to="/"
                 hash="contato"
