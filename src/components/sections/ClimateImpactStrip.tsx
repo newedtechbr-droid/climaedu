@@ -24,7 +24,7 @@ export function ClimateImpactStrip() {
         }}
       />
 
-      <div className="mx-auto max-w-5xl px-6 py-24 md:py-32 text-center">
+      <div className="mx-auto max-w-5xl px-6 py-28 md:py-36 text-center">
         <FadeIn>
           <p
             className="mb-4 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.18em] text-white"
