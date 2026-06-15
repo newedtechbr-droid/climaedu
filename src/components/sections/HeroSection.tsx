@@ -166,7 +166,7 @@ function PlatformMockup() {
 
       {/* Chip flutuante — trilha por perfil */}
       <div
-        className="absolute -left-3 top-6 hidden rounded-full border bg-card px-3 py-1.5 text-[11px] font-semibold shadow-md sm:flex items-center gap-1.5 animate-fade-in"
+     className="absolute -left-3 top-6 hidden rounded-full border bg-white px-3 py-1.5 text-[11px] font-semibold shadow-xl sm:flex items-center gap-1.5 animate-fade-in"
         style={{
           borderColor: "color-mix(in oklab, var(--color-olive) 35%, var(--color-border))",
           color: "var(--color-primary-deep)",
@@ -179,7 +179,7 @@ function PlatformMockup() {
 
       {/* Card flutuante — certificado */}
       <div
-        className="absolute -bottom-5 -left-5 hidden w-[195px] rotate-[-3deg] rounded-lg border bg-card p-3 shadow-lg sm:block"
+     className="absolute -bottom-5 -left-5 hidden w-[195px] rotate-[-3deg] rounded-lg border bg-white p-3 shadow-xl sm:block"
         style={{
           borderColor: "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))",
           animation: "fade-in 0.6s ease-out 0.5s both, float 7s ease-in-out infinite",
@@ -196,7 +196,7 @@ function PlatformMockup() {
 
       {/* Card flutuante — dashboard de adesão */}
       <div
-        className="absolute -right-4 -top-4 hidden w-[180px] rotate-[2deg] rounded-lg border bg-card p-3 shadow-lg md:block"
+       className="absolute -right-4 -top-4 hidden w-[180px] rotate-[2deg] rounded-lg border bg-white p-3 shadow-xl md:block"
         style={{
           borderColor: "color-mix(in oklab, var(--color-olive) 45%, var(--color-border))",
           animation: "fade-in 0.6s ease-out 0.7s both, float 8s ease-in-out 0.5s infinite",
