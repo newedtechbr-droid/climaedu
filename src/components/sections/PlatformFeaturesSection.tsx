@@ -25,7 +25,7 @@ const features = [
 export function PlatformFeaturesSection() {
   return (
     <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <FadeIn>
           <SectionTitle
             eyebrow="A plataforma"
@@ -35,12 +35,12 @@ export function PlatformFeaturesSection() {
           />
         </FadeIn>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
             <FadeIn key={f.title} delay={i * 0.05}>
-              <article className="h-full rounded-xl border border-border bg-background p-5 transition-all hover:-translate-y-1 hover:shadow-md">
+              <article className="h-full rounded-2xl border border-border bg-background p-6 transition-all hover:-translate-y-1 hover:shadow-md">
                 <span
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
                   style={{
                     backgroundColor: "color-mix(in oklab, var(--color-olive) 16%, transparent)",
                     color: "var(--color-primary-deep)",
@@ -48,12 +48,13 @@ export function PlatformFeaturesSection() {
                 >
                   <f.icon size={20} aria-hidden />
                 </span>
-                <h3 className="mt-4 text-[16px] font-bold leading-snug text-primary-dark">{f.title}</h3>
-                <p className="mt-1.5 text-[14px] leading-relaxed text-foreground/75">{f.text}</p>
+                <h3 className="mt-5 text-[17px] font-bold leading-snug text-primary-dark">{f.title}</h3>
+                <p className="mt-2.5 text-[14.5px] leading-[1.65] text-foreground/80">{f.text}</p>
               </article>
             </FadeIn>
           ))}
         </div>
+
       </div>
     </section>
   );
