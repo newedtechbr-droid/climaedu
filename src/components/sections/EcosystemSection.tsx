@@ -23,7 +23,8 @@ const logos: Logo[] = [
 export function EcosystemSection() {
   return (
     <section id="ecossistema" className="bg-surface scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
             <span

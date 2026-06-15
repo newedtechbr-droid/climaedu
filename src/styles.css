@@ -135,14 +135,16 @@
   }
 
   h2 {
-    font-size: 34px;
-    line-height: 1.1;
-    letter-spacing: -0.012em;
+    font-size: 36px;
+    line-height: 1.08;
+    letter-spacing: -0.014em;
     font-weight: 600;
   }
   @media (min-width: 768px) {
-    h2 { font-size: 46px; }
+    h2 { font-size: 50px; }
   }
+
+
 
   h3 {
     font-size: 22px;
