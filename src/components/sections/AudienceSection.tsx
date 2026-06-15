@@ -23,7 +23,7 @@ const audiences = [
 export function AudienceSection() {
   return (
     <section id="para-quem" className="bg-background scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <FadeIn>
           <SectionTitle
             eyebrow="Para quem"
@@ -32,28 +32,31 @@ export function AudienceSection() {
           />
         </FadeIn>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-16 grid gap-7 lg:grid-cols-3">
           {audiences.map((a, i) => (
             <FadeIn key={a.title} delay={i * 0.08}>
               <article
-                className="h-full rounded-2xl border bg-surface p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="h-full rounded-2xl border bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 22%, transparent)" }}
               >
                 <span
-                  className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
+                  className="inline-flex h-13 w-13 items-center justify-center rounded-xl"
                   style={{
                     backgroundColor: "color-mix(in oklab, var(--color-olive) 18%, transparent)",
                     color: "var(--color-primary-deep)",
+                    width: 52,
+                    height: 52,
                   }}
                 >
-                  <a.icon size={24} aria-hidden />
+                  <a.icon size={26} aria-hidden />
                 </span>
-                <h3 className="mt-5 text-[20px] font-bold text-primary-dark">{a.title}</h3>
-                <p className="mt-3 text-[16px] leading-relaxed text-foreground/80">{a.text}</p>
+                <h3 className="mt-6 text-[22px] font-bold text-primary-dark">{a.title}</h3>
+                <p className="mt-4 text-[16.5px] leading-[1.7] text-foreground/80">{a.text}</p>
               </article>
             </FadeIn>
           ))}
         </div>
+
       </div>
     </section>
   );
