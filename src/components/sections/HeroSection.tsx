@@ -230,18 +230,18 @@ function PlatformMockup() {
         </div>
       </div>
 
-      {/* Chip flutuante — white-label */}
-      <div
-        className="absolute -bottom-2 right-2 hidden rounded-full border bg-card px-3 py-1.5 text-[11px] font-semibold shadow-md md:flex items-center gap-1.5"
-        style={{
-          borderColor: "color-mix(in oklab, var(--color-slate-blue) 35%, var(--color-border))",
-          color: "var(--color-primary-deep)",
-          animation: "fade-in 0.6s ease-out 0.9s both, float 6.5s ease-in-out 1.5s infinite",
-        }}
-      >
-        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
-        Identidade institucional
-      </div>
+    {/* Chip flutuante — white-label */}
+<div
+  className="absolute -bottom-2 right-2 hidden rounded-full border bg-white px-3 py-1.5 text-[11px] font-semibold shadow-xl md:flex items-center gap-1.5"
+  style={{
+    borderColor: "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))",
+    color: "var(--color-primary-deep)",
+    animation: "fade-in 0.6s ease-out 0.9s both, float 6.5s ease-in-out 1.5s infinite",
+  }}
+>
+  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
+  Identidade institucional
+</div>
 
       <style>{`
         @keyframes float {
