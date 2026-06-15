@@ -30,7 +30,7 @@ const screens = [
 export function DemoShowcaseSection() {
   return (
     <section id="demonstracao" className="bg-background scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <FadeIn>
           <SectionTitle
             eyebrow="Demonstração"
@@ -40,11 +40,11 @@ export function DemoShowcaseSection() {
           />
         </FadeIn>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-16 grid gap-7 md:grid-cols-3">
           {screens.map((s, i) => (
             <FadeIn key={s.title} delay={i * 0.06}>
               <article
-                className="group h-full overflow-hidden rounded-xl border bg-card transition-all hover:-translate-y-1 hover:shadow-md"
+                className="group h-full overflow-hidden rounded-2xl border bg-card transition-all hover:-translate-y-1 hover:shadow-md"
                 style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 20%, var(--color-border))" }}
               >
                 <div
@@ -61,14 +61,15 @@ export function DemoShowcaseSection() {
                   />
                 </div>
 
-                <div className="p-5">
-                  <h3 className="text-[16px] font-bold text-primary-dark">{s.title}</h3>
-                  <p className="mt-1.5 text-[14px] leading-relaxed text-foreground/70">{s.text}</p>
+                <div className="p-6">
+                  <h3 className="text-[17px] font-bold text-primary-dark">{s.title}</h3>
+                  <p className="mt-2.5 text-[14.5px] leading-[1.7] text-foreground/75">{s.text}</p>
                 </div>
               </article>
             </FadeIn>
           ))}
         </div>
+
 
         <FadeIn delay={0.3}>
           <div className="mt-12 flex justify-center">
