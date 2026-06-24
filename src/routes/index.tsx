@@ -9,7 +9,7 @@ import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
 import { AISection } from "@/components/sections/AISection";
 import { ClassroomSection } from "@/components/sections/ClassroomSection";
-import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
+import { TracksSection } from "@/components/sections/TracksSection";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { SDGSection } from "@/components/sections/SDGSection";
 import { AboutSection } from "@/components/sections/AboutSection";
