@@ -8,7 +8,7 @@ import { AudienceSection } from "@/components/sections/AudienceSection";
 import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
 import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
 import { AISection } from "@/components/sections/AISection";
-import { TracksSection } from "@/components/sections/TracksSection";
+import { ClassroomSection } from "@/components/sections/ClassroomSection";
 import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { SDGSection } from "@/components/sections/SDGSection";
