@@ -74,6 +74,7 @@ function Index() {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
+      <ClassroomSection />
       <PlatformFeaturesSection />
       <TracksSection />
       <ClimateImpactStrip />
