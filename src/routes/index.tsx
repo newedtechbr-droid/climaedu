@@ -10,6 +10,7 @@ import { DifferentialsSection } from "@/components/sections/DifferentialsSection
 import { AISection } from "@/components/sections/AISection";
 import { ClassroomSection } from "@/components/sections/ClassroomSection";
 import { TracksSection } from "@/components/sections/TracksSection";
+import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { SDGSection } from "@/components/sections/SDGSection";
 import { AboutSection } from "@/components/sections/AboutSection";
