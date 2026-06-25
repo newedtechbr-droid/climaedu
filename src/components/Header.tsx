@@ -75,7 +75,7 @@ export function Header() {
                 to={item.to}
                 hash={"hash" in item ? item.hash : undefined}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-2 text-sm text-foreground/80 hover:bg-surface"
+                className="rounded-md px-2 py-3 text-[16px] font-semibold text-foreground/85 hover:bg-surface"
               >
                 {item.label}
               </Link>
