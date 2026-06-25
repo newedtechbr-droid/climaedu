@@ -28,19 +28,19 @@ export function Header() {
         scrolled ? "shadow-[0_1px_8px_rgba(0,0,0,0.06)]" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link to="/" className="flex items-center" aria-label="CLIMAEDU - página inicial">
-          <img src="/logo.png" alt="CLIMAEDU" className="h-10 md:h-12" />
+          <img src="/logo.png" alt="CLIMAEDU" className="h-11 md:h-14" />
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Navegação principal">
+        <nav className="hidden items-center gap-9 md:flex" aria-label="Navegação principal">
           {nav.map((item) => (
             <Link
               key={`${item.to}${"hash" in item ? `#${item.hash}` : ""}`}
               to={item.to}
               hash={"hash" in item ? item.hash : undefined}
-              className="text-sm text-foreground/80 transition-colors hover:text-primary-dark"
-              activeProps={{ className: "text-primary-dark" }}
+              className="text-[15.5px] font-semibold text-foreground/85 transition-colors hover:text-primary"
+              activeProps={{ className: "text-primary" }}
             >
               {item.label}
             </Link>
@@ -50,7 +50,7 @@ export function Header() {
         <Link
           to="/"
           hash="contato"
-          className="hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(132,154,116,0.55)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:shadow-[0_10px_24px_-8px_rgba(132,154,116,0.65)] md:inline-flex"
+          className="hidden rounded-lg bg-primary px-6 py-3 text-[15px] font-semibold text-primary-foreground shadow-[0_8px_22px_-8px_rgba(95,122,79,0.6)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:shadow-[0_12px_28px_-8px_rgba(61,81,50,0.7)] md:inline-flex"
         >
           Solicitar demonstração
         </Link>
