@@ -20,7 +20,7 @@ type CSSVars = CSSProperties & Record<`--${string}`, string>;
 
 const climaeduTheme: CSSVars = {
   "--background": "42 38% 96%",
-  "--foreground": "200 22% 16%",
+  "--foreground": "200 22% 12%",
   "--card": "42 36% 98%",
   "--muted": "42 24% 90%",
 
@@ -29,13 +29,16 @@ const climaeduTheme: CSSVars = {
   "--color-card": "#FFFCF7",
   "--color-border": "#D8CBBB",
 
-  "--color-primary-dark": "#1F2A2E",
-  "--color-primary-deep": "#253126",
+  "--color-primary": "#5F7A4F",
+  "--color-primary-dark": "#1A1E20",
+  "--color-primary-deep": "#3D5132",
+  "--color-primary-foreground": "#F5F2EA",
+  "--color-ring": "#5F7A4F",
 
-  "--color-olive": "#849A74",
+  "--color-olive": "#5F7A4F",
   "--color-terracotta": "#9A4B42",
 
-  "--color-slate-blue": "#849A74",
+  "--color-slate-blue": "#5F7A4F",
 };
 
 export const Route = createFileRoute("/")({

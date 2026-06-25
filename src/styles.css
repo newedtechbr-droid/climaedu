@@ -47,41 +47,40 @@
   /* ClimaEdu — Identidade Visual Oficial
      Calcário #F3F1EC · Ônix #202427 · Ardósia #485C68 · Terracota #9A4B42 · Oliva mineral #849A74 */
   --background: #F3F1EC;            /* Calcário */
-  --foreground: #202427;            /* Ônix */
+  --foreground: #1A1E20;            /* Ônix com mais contraste */
   --card: #FFFFFF;
-  --card-foreground: #202427;
+  --card-foreground: #1A1E20;
   --popover: #FFFFFF;
-  --popover-foreground: #202427;
+  --popover-foreground: #1A1E20;
 
-  /* Oliva mineral como CTA / acento principal (tom mais clima) */
-  --primary: #849A74;
-  --primary-foreground: #F3F1EC;
-  --primary-dark: #202427;          /* Títulos institucionais em Ônix */
-  --primary-deep: #3A4A33;
+  /* Verde musgo profundo — CTA institucional, mais vivo e sofisticado */
+  --primary: #5F7A4F;
+  --primary-foreground: #F5F2EA;
+  --primary-dark: #1A1E20;
+  --primary-deep: #3D5132;
 
   --secondary: #E7E3DA;
-  --secondary-foreground: #202427;
+  --secondary-foreground: #1A1E20;
 
-  --surface: #E8ECEC;               /* Calcário com leve sopro de ardósia */
-  --surface-dark: #2A3942;          /* Ardósia profunda para seções escuras */
+  --surface: #E8ECEC;
+  --surface-dark: #2A3942;
 
   --muted: #ECE8DF;
-  --muted-foreground: #485C68;      /* Ardósia */
+  --muted-foreground: #3F4F5A;      /* Ardósia mais escura */
 
-  /* Ardósia ganha mais presença como apoio */
   --accent: #DDE4E8;
   --accent-foreground: #2A3942;
-  --olive: #849A74;
+  --olive: #5F7A4F;                 /* Musgo profundo */
   --slate-blue: #485C68;
 
-  --institutional: #485C68;         /* Ardósia */
-  --terracotta: #9A4B42;            /* Mantida apenas como acento pontual */
+  --institutional: #485C68;
+  --terracotta: #9A4B42;
   --destructive: #9A4B42;
-  --destructive-foreground: #F3F1EC;
+  --destructive-foreground: #F5F2EA;
 
   --border: #CFD6D6;
   --input: #CFD6D6;
-  --ring: #849A74;
+  --ring: #5F7A4F;
 }
 
 @layer base {
