@@ -43,7 +43,7 @@ export function HeroSection() {
               style={{ fontSize: "clamp(38px, 5.6vw, 72px)", lineHeight: 1.06, letterSpacing: "-0.018em", fontWeight: 600 }}
             >
               Capacitação climática que vira{" "}
-             <span style={{ color: "#5F724F", fontWeight: 800 }}>
+             <span style={{ color: "#3D5132", fontWeight: 800 }}>
   rotina, evidência e resposta pública
 </span>
             </h1>
