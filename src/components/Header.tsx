@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
+
+const solucoes = [
+  { to: "/orgaos-publicos", label: "Órgãos públicos" },
+  { to: "/empresas", label: "Empresas" },
+  { to: "/escolas", label: "Escolas e redes de ensino" },
+] as const;
 
 const nav = [
-  { to: "/", label: "Início" },
-  { to: "/", hash: "como-funciona", label: "Como funciona" },
-  { to: "/", hash: "para-quem", label: "Para quem" },
-  { to: "/", hash: "sala-de-aula", label: "Na Sala de Aula" },
-  { to: "/", hash: "diferenciais", label: "Diferenciais" },
-  { to: "/", hash: "demonstracao", label: "Demonstração" },
+  { to: "/plataforma", label: "Plataforma" },
+  { to: "/cursos", label: "Cursos" },
+  { to: "/diferenciais", label: "Diferenciais" },
+  { to: "/sobre", label: "Sobre" },
 ] as const;
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [openSol, setOpenSol] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -33,12 +38,46 @@ export function Header() {
           <img src="/logo.png" alt="CLIMAEDU" className="h-11 md:h-14" />
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex" aria-label="Navegação principal">
+        <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
+          {/* Soluções dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setOpenSol(true)}
+            onMouseLeave={() => setOpenSol(false)}
+          >
+            <button
+              type="button"
+              className="inline-flex items-center gap-1 text-[15.5px] font-semibold text-foreground/85 transition-colors hover:text-primary"
+              aria-haspopup="menu"
+              aria-expanded={openSol}
+              onClick={() => setOpenSol((v) => !v)}
+            >
+              Soluções <ChevronDown size={15} />
+            </button>
+            {openSol && (
+              <div
+                role="menu"
+                className="absolute left-0 top-full z-50 mt-2 w-64 rounded-lg border border-border bg-card p-2 shadow-[0_18px_48px_-18px_rgba(20,30,40,0.35)]"
+              >
+                {solucoes.map((s) => (
+                  <Link
+                    key={s.to}
+                    to={s.to}
+                    role="menuitem"
+                    className="block rounded-md px-3 py-2.5 text-[15px] font-medium text-foreground/85 hover:bg-surface hover:text-primary"
+                    activeProps={{ className: "text-primary" }}
+                  >
+                    {s.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           {nav.map((item) => (
             <Link
-              key={`${item.to}${"hash" in item ? `#${item.hash}` : ""}`}
+              key={item.to}
               to={item.to}
-              hash={"hash" in item ? item.hash : undefined}
               className="text-[15.5px] font-semibold text-foreground/85 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
             >
@@ -48,11 +87,10 @@ export function Header() {
         </nav>
 
         <Link
-          to="/"
-          hash="contato"
+          to="/demonstracao"
           className="hidden rounded-lg bg-primary px-6 py-3 text-[15px] font-semibold text-primary-foreground shadow-[0_8px_22px_-8px_rgba(95,122,79,0.6)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:shadow-[0_12px_28px_-8px_rgba(61,81,50,0.7)] md:inline-flex"
         >
-          Solicitar demonstração
+          Agendar demonstração
         </Link>
 
         <button
@@ -69,24 +107,38 @@ export function Header() {
       {open && (
         <div className="border-t border-border bg-background md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4" aria-label="Navegação móvel">
+            <p className="px-2 pt-2 pb-1 text-[11px] font-bold uppercase tracking-[0.18em] text-foreground/55">
+              Soluções
+            </p>
+            {solucoes.map((s) => (
+              <Link
+                key={s.to}
+                to={s.to}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-2 py-2.5 text-[16px] font-semibold text-foreground/85 hover:bg-surface"
+              >
+                {s.label}
+              </Link>
+            ))}
+            <p className="mt-3 px-2 pb-1 text-[11px] font-bold uppercase tracking-[0.18em] text-foreground/55">
+              Institucional
+            </p>
             {nav.map((item) => (
               <Link
-                key={`${item.to}${"hash" in item ? `#${item.hash}` : ""}`}
+                key={item.to}
                 to={item.to}
-                hash={"hash" in item ? item.hash : undefined}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-3 text-[16px] font-semibold text-foreground/85 hover:bg-surface"
+                className="rounded-md px-2 py-2.5 text-[16px] font-semibold text-foreground/85 hover:bg-surface"
               >
                 {item.label}
               </Link>
             ))}
             <Link
-              to="/"
-              hash="contato"
+              to="/demonstracao"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(132,154,116,0.55)]"
+              className="mt-3 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(132,154,116,0.55)]"
             >
-              Solicitar demonstração
+              Agendar demonstração
             </Link>
           </nav>
         </div>
