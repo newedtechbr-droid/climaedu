@@ -64,17 +64,16 @@ export function HeroSection() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
 
               <Link
-                to="/"
-                hash="contato"
+                to="/demonstracao"
                 className="inline-flex h-14 items-center gap-2 rounded-lg bg-primary px-7 text-base font-semibold text-primary-foreground shadow-[0_14px_38px_-10px_rgba(132,154,116,0.65)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:scale-[1.02]"
               >
                 Agendar demonstração <ArrowRight size={18} />
               </Link>
               <Link
-                to="/como-funciona"
+                to="/orgaos-publicos"
                 className="inline-flex h-14 items-center gap-2 rounded-lg border-2 border-primary bg-background px-7 text-base font-semibold text-primary-dark transition-colors hover:bg-accent"
               >
-                Ver como funciona a plataforma
+                Conhecer soluções
               </Link>
             </div>
           </FadeIn>
