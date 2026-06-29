@@ -42,10 +42,10 @@ export function HeroSection() {
               className="text-primary-dark"
               style={{ fontSize: "clamp(38px, 5.6vw, 72px)", lineHeight: 1.06, letterSpacing: "-0.018em", fontWeight: 600 }}
             >
-              Capacitação climática que vira{" "}
-             <span style={{ color: "#3D5132", fontWeight: 800 }}>
-  rotina, evidência e resposta pública
-</span>
+              Da reação à prevenção:{" "}
+              <span style={{ color: "#3D5132", fontWeight: 800 }}>
+                capacitação climática para colocar toda a instituição na mesma página
+              </span>
             </h1>
           </FadeIn>
 
@@ -54,9 +54,9 @@ export function HeroSection() {
               className="mt-8 max-w-xl text-foreground/80"
               style={{ fontSize: "clamp(17px, 1.35vw, 21px)", lineHeight: 1.65 }}
             >
-              A CLIMAEDU ajuda instituições públicas e organizações a preparar equipes,
-              orientar pessoas, padronizar rotinas e gerar <strong className="font-semibold text-primary-dark">evidências</strong> para
-              gestão, auditoria e prestação de contas.
+              A CLIMAEDU prepara órgãos públicos, empresas e redes de ensino para transformar
+              riscos climáticos em <strong className="font-semibold text-primary-dark">rotinas executáveis</strong>,
+              equipes capacitadas e evidências auditáveis.
             </p>
           </FadeIn>
 
@@ -64,17 +64,16 @@ export function HeroSection() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
 
               <Link
-                to="/"
-                hash="contato"
+                to="/demonstracao"
                 className="inline-flex h-14 items-center gap-2 rounded-lg bg-primary px-7 text-base font-semibold text-primary-foreground shadow-[0_14px_38px_-10px_rgba(132,154,116,0.65)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:scale-[1.02]"
               >
                 Agendar demonstração <ArrowRight size={18} />
               </Link>
               <Link
-                to="/como-funciona"
+                to="/orgaos-publicos"
                 className="inline-flex h-14 items-center gap-2 rounded-lg border-2 border-primary bg-background px-7 text-base font-semibold text-primary-dark transition-colors hover:bg-accent"
               >
-                Ver como funciona a plataforma
+                Conhecer soluções
               </Link>
             </div>
           </FadeIn>

@@ -1,8 +1,34 @@
+import type { CSSProperties } from "react";
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 import appCss from "../styles.css?url";
+
+type CSSVars = CSSProperties & Record<`--${string}`, string>;
+
+const climaeduTheme: CSSVars = {
+  "--background": "42 38% 96%",
+  "--foreground": "200 22% 12%",
+  "--card": "42 36% 98%",
+  "--muted": "42 24% 90%",
+
+  "--color-background": "#F7F1E7",
+  "--color-surface": "#EFE4D5",
+  "--color-card": "#FFFCF7",
+  "--color-border": "#D8CBBB",
+
+  "--color-primary": "#5F7A4F",
+  "--color-primary-dark": "#1A1E20",
+  "--color-primary-deep": "#3D5132",
+  "--color-primary-foreground": "#F5F2EA",
+  "--color-ring": "#5F7A4F",
+
+  "--color-olive": "#5F7A4F",
+  "--color-terracotta": "#9A4B42",
+
+  "--color-slate-blue": "#5F7A4F",
+};
 
 function NotFoundComponent() {
   return (
@@ -35,18 +61,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ClimaEdu — Capacitação climática para o setor público" },
+      { title: "CLIMAEDU — Capacitação climática para órgãos públicos, empresas e escolas" },
       {
         name: "description",
         content:
-          "Plataforma SaaS de capacitação climática para órgãos públicos e empresas. Trilhas, evidências e dashboards auditáveis.",
+          "Plataforma de capacitação climática aplicada. Trilhas por perfil, certificados, dashboards e evidências auditáveis para preparar instituições inteiras.",
       },
-      { name: "author", content: "ClimaEdu" },
-      { property: "og:title", content: "ClimaEdu — Capacitação climática para o setor público" },
+      { name: "author", content: "CLIMAEDU" },
+      { property: "og:title", content: "CLIMAEDU — Da reação à prevenção" },
       {
         property: "og:description",
         content:
-          "Da norma à evidência: trilhas por função, checklists com comprovação e dashboards prontos para auditoria.",
+          "Capacitação climática para colocar toda a instituição na mesma página: rotinas executáveis, equipes preparadas e evidências auditáveis.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -83,7 +109,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div
+      style={climaeduTheme}
+      className="flex min-h-screen flex-col bg-background text-foreground"
+    >
       <Header />
       <main className="flex-1 pb-16 md:pb-0">
         <Outlet />
@@ -92,8 +121,7 @@ function RootComponent() {
 
       {/* Sticky CTA mobile */}
       <Link
-        to="/"
-        hash="contato"
+        to="/demonstracao"
         className="fixed bottom-3 left-3 right-3 z-40 inline-flex h-12 items-center justify-center rounded-lg bg-primary text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-8px_rgba(132,154,116,0.7)] ring-1 ring-primary/40 md:hidden"
       >
         Agendar demonstração

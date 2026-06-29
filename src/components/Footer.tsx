@@ -4,23 +4,31 @@ import { Linkedin, Instagram } from "lucide-react";
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background text-foreground/80" style={{ fontSize: "15px" }}>
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-3">
-        <div>
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-4">
+        <div className="md:col-span-1">
           <img src="/logo.png" alt="CLIMAEDU" className="h-10" />
           <p className="mt-4 max-w-xs text-foreground/70" style={{ fontSize: "15px", lineHeight: 1.6 }}>
-            Capacitação climática que vira rotina e evidência.
+            Capacitação climática que vira rotina, evidência e resposta institucional.
           </p>
         </div>
 
         <div>
-          <h3 className="text-[13px] font-semibold uppercase tracking-[0.16em] text-primary-dark">Navegar</h3>
+          <h3 className="text-[13px] font-semibold uppercase tracking-[0.16em] text-primary-dark">Soluções</h3>
           <ul className="mt-4 space-y-2.5" style={{ fontSize: "15px" }}>
-            <li><Link to="/" hash="sobre" className="hover:text-primary-dark">Sobre</Link></li>
-            <li><Link to="/" hash="cursos" className="hover:text-primary-dark">Cursos</Link></li>
-            <li><Link to="/" hash="para-quem" className="hover:text-primary-dark">Para quem</Link></li>
-            <li><Link to="/" hash="inteligencia-artificial" className="hover:text-primary-dark">Inteligência Artificial</Link></li>
-            <li><Link to="/" hash="ecossistema" className="hover:text-primary-dark">Ecossistema</Link></li>
-            <li><Link to="/" hash="contato" className="hover:text-primary-dark">Contato</Link></li>
+            <li><Link to="/orgaos-publicos" className="hover:text-primary-dark">Órgãos públicos</Link></li>
+            <li><Link to="/empresas" className="hover:text-primary-dark">Empresas</Link></li>
+            <li><Link to="/escolas" className="hover:text-primary-dark">Escolas e redes</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-[13px] font-semibold uppercase tracking-[0.16em] text-primary-dark">Institucional</h3>
+          <ul className="mt-4 space-y-2.5" style={{ fontSize: "15px" }}>
+            <li><Link to="/plataforma" className="hover:text-primary-dark">Plataforma</Link></li>
+            <li><Link to="/cursos" className="hover:text-primary-dark">Cursos e trilhas</Link></li>
+            <li><Link to="/diferenciais" className="hover:text-primary-dark">Diferenciais</Link></li>
+            <li><Link to="/sobre" className="hover:text-primary-dark">Sobre</Link></li>
+            <li><Link to="/demonstracao" className="hover:text-primary-dark">Demonstração</Link></li>
           </ul>
         </div>
 
@@ -39,7 +47,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <p className="mx-auto max-w-6xl px-6 py-5 text-foreground/70" style={{ fontSize: "14px" }}>
-          © 2025 ClimaEdu — New EdTech · Florianópolis, SC
+          © 2026 CLIMAEDU — produto NewEdTech · Florianópolis, SC
         </p>
       </div>
     </footer>
