@@ -1,67 +1,31 @@
-import type { CSSProperties } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { SolutionSection } from "@/components/sections/SolutionSection";
-import { PlatformFeaturesSection } from "@/components/sections/PlatformFeaturesSection";
-import { AudienceSection } from "@/components/sections/AudienceSection";
-import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
-import { DifferentialsSection } from "@/components/sections/DifferentialsSection";
-import { AISection } from "@/components/sections/AISection";
-import { ClassroomSection } from "@/components/sections/ClassroomSection";
-import { TracksSection } from "@/components/sections/TracksSection";
-import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
-import { EcosystemSection } from "@/components/sections/EcosystemSection";
-import { SDGSection } from "@/components/sections/SDGSection";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { ContactSection } from "@/components/sections/ContactSection";
-
-type CSSVars = CSSProperties & Record<`--${string}`, string>;
-
-const climaeduTheme: CSSVars = {
-  "--background": "42 38% 96%",
-  "--foreground": "200 22% 12%",
-  "--card": "42 36% 98%",
-  "--muted": "42 24% 90%",
-
-  "--color-background": "#F7F1E7",
-  "--color-surface": "#EFE4D5",
-  "--color-card": "#FFFCF7",
-  "--color-border": "#D8CBBB",
-
-  "--color-primary": "#5F7A4F",
-  "--color-primary-dark": "#1A1E20",
-  "--color-primary-deep": "#3D5132",
-  "--color-primary-foreground": "#F5F2EA",
-  "--color-ring": "#5F7A4F",
-
-  "--color-olive": "#5F7A4F",
-  "--color-terracotta": "#9A4B42",
-
-  "--color-slate-blue": "#5F7A4F",
-};
+import { ContextSection } from "@/components/sections/ContextSection";
+import { JourneyCardsSection } from "@/components/sections/JourneyCardsSection";
+import { MethodStepsSection } from "@/components/sections/MethodStepsSection";
+import { CTASection } from "@/components/sections/CTASection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
         title:
-          "CLIMAEDU | Plataforma de aprendizagem online para capacitação climática",
+          "CLIMAEDU | Da reação à prevenção — capacitação climática institucional",
       },
       {
         name: "description",
         content:
-          "Ambiente de aprendizagem online white-label para capacitação climática, com trilhas, cursos, certificados, dashboards e relatórios para órgãos públicos e empresas.",
+          "Plataforma de capacitação climática para órgãos públicos, empresas e redes de ensino. Trilhas por perfil, certificados, dashboards e evidências auditáveis.",
       },
       {
         property: "og:title",
         content:
-          "CLIMAEDU | Plataforma de aprendizagem online para capacitação climática",
+          "CLIMAEDU | Da reação à prevenção",
       },
       {
         property: "og:description",
         content:
-          "LMS white-label com trilhas, certificados e dashboards para capacitar equipes públicas e corporativas.",
+          "Capacitação climática para colocar toda a instituição na mesma página: rotinas, equipes preparadas e evidências.",
       },
     ],
   }),
@@ -70,25 +34,15 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main
-      style={climaeduTheme}
-      className="min-h-screen bg-background text-foreground"
-    >
+    <>
       <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <ClassroomSection />
-      <PlatformFeaturesSection />
-      <TracksSection />
-      <ClimateImpactStrip />
-      <AudienceSection />
-      <DemoShowcaseSection />
-      <DifferentialsSection />
-      <AISection />
-      <EcosystemSection />
-      <SDGSection />
-      <AboutSection />
-      <ContactSection />
-    </main>
+      <ContextSection />
+      <JourneyCardsSection />
+      <MethodStepsSection />
+      <CTASection
+        title="Quando todos entendem seu papel, a instituição responde melhor."
+        subtitle="Agende uma demonstração e veja a CLIMAEDU aplicada à realidade do seu órgão, empresa ou rede de ensino."
+      />
+    </>
   );
 }
