@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
-import classroomHero from "@/assets/classroom-hero-v2.jpg.asset.json";
+import classroomHero from "@/assets/classroom-hero-v2.jpg";
 
 const cards = [
   {
@@ -57,7 +57,6 @@ const floatingTags = [
 export function ClassroomSection() {
   return (
     <section id="sala-de-aula" className="relative overflow-hidden scroll-mt-24">
-      {/* Layered background: warm sand → soft olive wash */}
       <div
         aria-hidden
         className="absolute inset-0"
@@ -76,7 +75,6 @@ export function ClassroomSection() {
       />
 
       <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
-        {/* Eyebrow chip */}
         <FadeIn>
           <div className="flex justify-center">
             <span
@@ -117,11 +115,9 @@ export function ClassroomSection() {
           </div>
         </FadeIn>
 
-        {/* Hero image with floating climate tags + supporting text */}
         <div className="mt-16 grid items-center gap-12 lg:grid-cols-12">
           <FadeIn className="lg:col-span-7">
             <div className="relative">
-              {/* Floating climate context tags */}
               {floatingTags.map((t, i) => (
                 <motion.div
                   key={t.label}
@@ -143,20 +139,18 @@ export function ClassroomSection() {
                 </motion.div>
               ))}
 
-              {/* Image frame */}
               <div
                 className="group relative overflow-hidden rounded-3xl border-2 shadow-2xl"
                 style={{ borderColor: "color-mix(in oklab, var(--color-olive) 28%, transparent)" }}
               >
                 <img
-                  src={classroomHero.url}
+                  src={classroomHero}
                   alt="Professora mediando atividade imersiva de educação climática com estudantes do ensino fundamental usando VR, tablets, mapas e livros"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   width={1536}
                   height={1024}
                   loading="lazy"
                 />
-                {/* Gradient veil for readability */}
                 <div
                   aria-hidden
                   className="absolute inset-0"
@@ -165,7 +159,6 @@ export function ClassroomSection() {
                       "linear-gradient(180deg, transparent 55%, color-mix(in oklab, var(--color-primary-dark) 38%, transparent) 100%)",
                   }}
                 />
-                {/* Corner badge */}
                 <div className="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-background/95 px-4 py-2 text-[12px] font-semibold text-primary-dark shadow-md backdrop-blur">
                   <Sprout size={14} aria-hidden style={{ color: "var(--color-olive)" }} />
                   Ensino Fundamental · Redes de Ensino
@@ -185,25 +178,10 @@ export function ClassroomSection() {
               <p className="mt-5 text-[17px] leading-[1.75] text-foreground/80 md:text-[18px]">
                 O livro e os materiais físicos ampliam essa experiência para além da escola, fortalecendo a aprendizagem e o vínculo com a família.
               </p>
-
-              {/* Mini stat row */}
-              <div className="mt-7 grid grid-cols-3 gap-3 border-t pt-6" style={{ borderColor: "color-mix(in oklab, var(--color-olive) 20%, transparent)" }}>
-                {[
-                  { k: "Imersão", v: "VR · Tablets" },
-                  { k: "Apoio", v: "Professor" },
-                  { k: "Conexão", v: "Território" },
-                ].map((s) => (
-                  <div key={s.k} className="text-center">
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-foreground/55">{s.k}</p>
-                    <p className="mt-1 text-[13px] font-bold text-primary-dark">{s.v}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </FadeIn>
         </div>
 
-        {/* Cards */}
         <div className="mt-20 grid gap-6 md:grid-cols-3">
           {cards.map((c, i) => (
             <FadeIn key={c.title} delay={i * 0.08}>
@@ -211,7 +189,6 @@ export function ClassroomSection() {
                 className="group relative h-full overflow-hidden rounded-2xl border bg-background p-7 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
                 style={{ borderColor: "color-mix(in oklab, var(--color-olive) 22%, transparent)" }}
               >
-                {/* Accent strip */}
                 <span
                   aria-hidden
                   className="absolute inset-x-0 top-0 h-1 transition-all duration-300 group-hover:h-1.5"
@@ -239,7 +216,6 @@ export function ClassroomSection() {
           ))}
         </div>
 
-        {/* Methodology strip */}
         <FadeIn delay={0.1}>
           <div className="mt-20">
             <p className="text-center text-[12px] font-semibold uppercase tracking-[0.22em] text-foreground/60">
@@ -268,7 +244,6 @@ export function ClassroomSection() {
           </div>
         </FadeIn>
 
-        {/* CTA */}
         <FadeIn delay={0.2}>
           <div
             className="mt-20 relative overflow-hidden rounded-3xl p-10 text-center md:p-12"
@@ -278,7 +253,6 @@ export function ClassroomSection() {
               border: "1px solid color-mix(in oklab, var(--color-olive) 28%, transparent)",
             }}
           >
-            {/* Decorative leaves */}
             <Leaf
               aria-hidden
               size={120}
