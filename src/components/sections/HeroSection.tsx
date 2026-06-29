@@ -42,10 +42,10 @@ export function HeroSection() {
               className="text-primary-dark"
               style={{ fontSize: "clamp(38px, 5.6vw, 72px)", lineHeight: 1.06, letterSpacing: "-0.018em", fontWeight: 600 }}
             >
-              Capacitação climática que vira{" "}
-             <span style={{ color: "#3D5132", fontWeight: 800 }}>
-  rotina, evidência e resposta pública
-</span>
+              Da reação à prevenção:{" "}
+              <span style={{ color: "#3D5132", fontWeight: 800 }}>
+                capacitação climática para colocar toda a instituição na mesma página
+              </span>
             </h1>
           </FadeIn>
 
@@ -54,9 +54,9 @@ export function HeroSection() {
               className="mt-8 max-w-xl text-foreground/80"
               style={{ fontSize: "clamp(17px, 1.35vw, 21px)", lineHeight: 1.65 }}
             >
-              A CLIMAEDU ajuda instituições públicas e organizações a preparar equipes,
-              orientar pessoas, padronizar rotinas e gerar <strong className="font-semibold text-primary-dark">evidências</strong> para
-              gestão, auditoria e prestação de contas.
+              A CLIMAEDU prepara órgãos públicos, empresas e redes de ensino para transformar
+              riscos climáticos em <strong className="font-semibold text-primary-dark">rotinas executáveis</strong>,
+              equipes capacitadas e evidências auditáveis.
             </p>
           </FadeIn>
 
