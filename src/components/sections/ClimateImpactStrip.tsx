@@ -51,8 +51,7 @@ export function ClimateImpactStrip() {
         <FadeIn delay={0.24}>
           <div className="mt-8 flex justify-center">
             <Link
-              to="/"
-              hash="contato"
+              to="/demonstracao"
               className="inline-flex h-12 items-center gap-2 rounded-lg bg-white px-6 text-[15px] font-semibold text-primary-dark shadow-lg transition-transform hover:scale-[1.02]"
             >
               Falar com a CLIMAEDU <ArrowRight size={16} />

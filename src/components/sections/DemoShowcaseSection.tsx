@@ -74,8 +74,7 @@ export function DemoShowcaseSection() {
         <FadeIn delay={0.3}>
           <div className="mt-12 flex justify-center">
             <Link
-              to="/"
-              hash="contato"
+              to="/demonstracao"
               className="inline-flex h-14 items-center gap-2 rounded-lg bg-primary px-8 text-base font-semibold text-primary-foreground shadow-[0_14px_38px_-10px_rgba(132,154,116,0.65)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:scale-[1.02]"
             >
               Agendar demonstração <ArrowRight size={18} />

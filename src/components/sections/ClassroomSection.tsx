@@ -303,7 +303,7 @@ export function ClassroomSection() {
                 size="lg"
                 className="rounded-full px-9 py-6 text-[15px] font-semibold shadow-lg hover:shadow-xl transition-shadow"
               >
-                <Link to="/" hash="contato" className="inline-flex items-center gap-2">
+                <Link to="/demonstracao" className="inline-flex items-center gap-2">
                   Agendar conversa <ArrowRight size={16} />
                 </Link>
               </Button>
