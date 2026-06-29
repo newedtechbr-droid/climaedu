@@ -8,10 +8,10 @@ import appCss from "../styles.css?url";
 type CSSVars = CSSProperties & Record<`--${string}`, string>;
 
 const climaeduTheme: CSSVars = {
-  "--background": "42 38% 96%",
-  "--foreground": "200 22% 12%",
-  "--card": "42 36% 98%",
-  "--muted": "42 24% 90%",
+  "--background": "#F7F1E7",
+  "--foreground": "#1A1E20",
+  "--card": "#FFFCF7",
+  "--muted": "#EFE4D5",
 
   "--color-background": "#F7F1E7",
   "--color-surface": "#EFE4D5",
