@@ -10,7 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as PlataformaRouteImport } from './routes/plataforma'
 import { Route as ParaQuemRouteImport } from './routes/para-quem'
+import { Route as OrgaosPublicosRouteImport } from './routes/orgaos-publicos'
+import { Route as EscolasRouteImport } from './routes/escolas'
+import { Route as EmpresasRouteImport } from './routes/empresas'
+import { Route as DiferenciaisRouteImport } from './routes/diferenciais'
+import { Route as DemonstracaoRouteImport } from './routes/demonstracao'
 import { Route as CursosRouteImport } from './routes/cursos'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
@@ -21,9 +27,39 @@ const SobreRoute = SobreRouteImport.update({
   path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlataformaRoute = PlataformaRouteImport.update({
+  id: '/plataforma',
+  path: '/plataforma',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ParaQuemRoute = ParaQuemRouteImport.update({
   id: '/para-quem',
   path: '/para-quem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrgaosPublicosRoute = OrgaosPublicosRouteImport.update({
+  id: '/orgaos-publicos',
+  path: '/orgaos-publicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EscolasRoute = EscolasRouteImport.update({
+  id: '/escolas',
+  path: '/escolas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpresasRoute = EmpresasRouteImport.update({
+  id: '/empresas',
+  path: '/empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiferenciaisRoute = DiferenciaisRouteImport.update({
+  id: '/diferenciais',
+  path: '/diferenciais',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemonstracaoRoute = DemonstracaoRouteImport.update({
+  id: '/demonstracao',
+  path: '/demonstracao',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CursosRoute = CursosRouteImport.update({
@@ -52,7 +88,13 @@ export interface FileRoutesByFullPath {
   '/como-funciona': typeof ComoFuncionaRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
+  '/demonstracao': typeof DemonstracaoRoute
+  '/diferenciais': typeof DiferenciaisRoute
+  '/empresas': typeof EmpresasRoute
+  '/escolas': typeof EscolasRoute
+  '/orgaos-publicos': typeof OrgaosPublicosRoute
   '/para-quem': typeof ParaQuemRoute
+  '/plataforma': typeof PlataformaRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
@@ -60,7 +102,13 @@ export interface FileRoutesByTo {
   '/como-funciona': typeof ComoFuncionaRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
+  '/demonstracao': typeof DemonstracaoRoute
+  '/diferenciais': typeof DiferenciaisRoute
+  '/empresas': typeof EmpresasRoute
+  '/escolas': typeof EscolasRoute
+  '/orgaos-publicos': typeof OrgaosPublicosRoute
   '/para-quem': typeof ParaQuemRoute
+  '/plataforma': typeof PlataformaRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
@@ -69,7 +117,13 @@ export interface FileRoutesById {
   '/como-funciona': typeof ComoFuncionaRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
+  '/demonstracao': typeof DemonstracaoRoute
+  '/diferenciais': typeof DiferenciaisRoute
+  '/empresas': typeof EmpresasRoute
+  '/escolas': typeof EscolasRoute
+  '/orgaos-publicos': typeof OrgaosPublicosRoute
   '/para-quem': typeof ParaQuemRoute
+  '/plataforma': typeof PlataformaRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
@@ -79,17 +133,41 @@ export interface FileRouteTypes {
     | '/como-funciona'
     | '/contato'
     | '/cursos'
+    | '/demonstracao'
+    | '/diferenciais'
+    | '/empresas'
+    | '/escolas'
+    | '/orgaos-publicos'
     | '/para-quem'
+    | '/plataforma'
     | '/sobre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/como-funciona' | '/contato' | '/cursos' | '/para-quem' | '/sobre'
+  to:
+    | '/'
+    | '/como-funciona'
+    | '/contato'
+    | '/cursos'
+    | '/demonstracao'
+    | '/diferenciais'
+    | '/empresas'
+    | '/escolas'
+    | '/orgaos-publicos'
+    | '/para-quem'
+    | '/plataforma'
+    | '/sobre'
   id:
     | '__root__'
     | '/'
     | '/como-funciona'
     | '/contato'
     | '/cursos'
+    | '/demonstracao'
+    | '/diferenciais'
+    | '/empresas'
+    | '/escolas'
+    | '/orgaos-publicos'
     | '/para-quem'
+    | '/plataforma'
     | '/sobre'
   fileRoutesById: FileRoutesById
 }
@@ -98,7 +176,13 @@ export interface RootRouteChildren {
   ComoFuncionaRoute: typeof ComoFuncionaRoute
   ContatoRoute: typeof ContatoRoute
   CursosRoute: typeof CursosRoute
+  DemonstracaoRoute: typeof DemonstracaoRoute
+  DiferenciaisRoute: typeof DiferenciaisRoute
+  EmpresasRoute: typeof EmpresasRoute
+  EscolasRoute: typeof EscolasRoute
+  OrgaosPublicosRoute: typeof OrgaosPublicosRoute
   ParaQuemRoute: typeof ParaQuemRoute
+  PlataformaRoute: typeof PlataformaRoute
   SobreRoute: typeof SobreRoute
 }
 
@@ -111,11 +195,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/plataforma': {
+      id: '/plataforma'
+      path: '/plataforma'
+      fullPath: '/plataforma'
+      preLoaderRoute: typeof PlataformaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/para-quem': {
       id: '/para-quem'
       path: '/para-quem'
       fullPath: '/para-quem'
       preLoaderRoute: typeof ParaQuemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orgaos-publicos': {
+      id: '/orgaos-publicos'
+      path: '/orgaos-publicos'
+      fullPath: '/orgaos-publicos'
+      preLoaderRoute: typeof OrgaosPublicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/escolas': {
+      id: '/escolas'
+      path: '/escolas'
+      fullPath: '/escolas'
+      preLoaderRoute: typeof EscolasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empresas': {
+      id: '/empresas'
+      path: '/empresas'
+      fullPath: '/empresas'
+      preLoaderRoute: typeof EmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diferenciais': {
+      id: '/diferenciais'
+      path: '/diferenciais'
+      fullPath: '/diferenciais'
+      preLoaderRoute: typeof DiferenciaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demonstracao': {
+      id: '/demonstracao'
+      path: '/demonstracao'
+      fullPath: '/demonstracao'
+      preLoaderRoute: typeof DemonstracaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cursos': {
@@ -154,7 +280,13 @@ const rootRouteChildren: RootRouteChildren = {
   ComoFuncionaRoute: ComoFuncionaRoute,
   ContatoRoute: ContatoRoute,
   CursosRoute: CursosRoute,
+  DemonstracaoRoute: DemonstracaoRoute,
+  DiferenciaisRoute: DiferenciaisRoute,
+  EmpresasRoute: EmpresasRoute,
+  EscolasRoute: EscolasRoute,
+  OrgaosPublicosRoute: OrgaosPublicosRoute,
   ParaQuemRoute: ParaQuemRoute,
+  PlataformaRoute: PlataformaRoute,
   SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
