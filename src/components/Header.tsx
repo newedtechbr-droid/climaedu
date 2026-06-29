@@ -29,9 +29,11 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-background transition-shadow ${
-        scrolled ? "shadow-[0_1px_8px_rgba(0,0,0,0.06)]" : ""
-      }`}
+      className={`sticky top-0 z-50 border-b border-transparent transition-all ${
+  scrolled
+    ? "border-border/70 bg-background/95 shadow-[0_1px_8px_rgba(0,0,0,0.06)] backdrop-blur"
+    : "bg-background"
+}`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link to="/" className="flex items-center" aria-label="CLIMAEDU - página inicial">
