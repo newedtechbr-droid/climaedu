@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHero } from "@/components/PageHero";
 import { PlatformFeaturesSection } from "@/components/sections/PlatformFeaturesSection";
 import { AISection } from "@/components/sections/AISection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -28,15 +27,12 @@ export const Route = createFileRoute("/plataforma")({
 function Plataforma() {
   return (
     <>
-      <PageHero
-        eyebrow="Plataforma"
-        title="Tecnologia para aprender, aplicar e evidenciar"
-      >
-        <div className="relative left-1/2 mt-12 h-[420px] w-screen -translate-x-1/2 overflow-hidden md:h-[520px]">
+      <section className="relative isolate overflow-hidden bg-primary-dark text-white">
+        <div className="relative min-h-[620px]">
           <img
             src={ecoTechBrain}
             alt="Cérebro verde conectado a circuitos digitais"
-            className="h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
 
           <div
@@ -44,11 +40,38 @@ function Plataforma() {
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(90deg, rgba(13,18,18,0.55) 0%, rgba(13,18,18,0.05) 42%, rgba(13,18,18,0.12) 100%)",
+                "linear-gradient(90deg, rgba(10,14,14,0.88) 0%, rgba(10,14,14,0.72) 28%, rgba(10,14,14,0.12) 62%, rgba(10,14,14,0.18) 100%)",
             }}
           />
+
+          <div className="relative mx-auto flex min-h-[620px] max-w-6xl items-center px-6 py-24">
+            <div className="max-w-2xl">
+              <p
+                className="mb-6 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] font-bold uppercase"
+                style={{
+                  backgroundColor: "rgba(154, 75, 66, 0.92)",
+                  color: "#FFFFFF",
+                  letterSpacing: "0.08em",
+                }}
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-white" />
+                Plataforma
+              </p>
+
+              <h1
+                className="text-white"
+                style={{
+                  fontSize: "clamp(42px, 6vw, 76px)",
+                  lineHeight: 1.02,
+                  fontWeight: 600,
+                }}
+              >
+                Tecnologia para aprender, aplicar e evidenciar
+              </h1>
+            </div>
+          </div>
         </div>
-      </PageHero>
+      </section>
 
       <PlatformFeaturesSection />
       <AISection />
