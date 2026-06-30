@@ -51,7 +51,7 @@ export function Header() {
 
         <Link
           to="/demonstracao"
-          className="hidden rounded-lg bg-primary px-6 py-3 text-[15px] font-semibold text-primary-foreground shadow-[0_8px_22px_-8px_rgba(95,122,79,0.6)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep md:inline-flex"
+          className="hidden rounded-lg bg-primary px-6 py-3 text-[15px] font-semibold text-primary-foreground shadow-[0_8px_22px_-8px_rgba(95,122,79,0.6)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:shadow-[0_12px_28px_-8px_rgba(61,81,50,0.7)] md:inline-flex"
         >
           Agendar demonstração
         </Link>
@@ -69,7 +69,7 @@ export function Header() {
 
       {open && (
         <div className="border-t border-border bg-background md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">
+          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4" aria-label="Navegação móvel">
             {nav.map((item) => (
               <Link
                 key={item.to}
@@ -80,11 +80,10 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-
             <Link
               to="/demonstracao"
               onClick={() => setOpen(false)}
-              className="mt-3 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
+              className="mt-3 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(132,154,116,0.55)]"
             >
               Agendar demonstração
             </Link>

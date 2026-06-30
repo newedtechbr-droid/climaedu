@@ -35,14 +35,12 @@ export function AboutSection() {
             Quem somos
           </p>
           <h2 className="text-primary-dark">
-            Tecnologia, educação e clima em um só produto
+            Da estratégia climática à rotina institucional
           </h2>
           <p className="mt-7 text-[18px] leading-[1.7] text-foreground/80">
-            A CLIMAEDU é um produto da{" "}
-            <strong className="font-semibold text-primary-dark">NewEdTech</strong>, criado para
-            fortalecer capacidades institucionais para <strong className="font-semibold text-primary-dark">ação climática</strong>. Combinamos educação,
-            tecnologia, IA e conhecimento ambiental para apoiar governos e organizações na
-            transformação de diretrizes em rotinas executáveis.
+            A CLIMAEDU organiza conteúdos, trilhas, atividades e evidências em uma jornada
+            aplicável ao dia a dia de governos, empresas e redes de ensino. O foco é ajudar
+            equipes a aprender, executar e demonstrar resultados com clareza.
           </p>
         </FadeIn>
       </div>

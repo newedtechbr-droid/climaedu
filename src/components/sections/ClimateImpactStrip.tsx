@@ -20,11 +20,11 @@ export function ClimateImpactStrip() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(180deg, color-mix(in oklab, var(--color-primary-dark) 78%, transparent) 0%, color-mix(in oklab, var(--color-primary-dark) 60%, transparent) 100%)",
+            "linear-gradient(180deg, rgba(10,16,16,0.82) 0%, rgba(10,16,16,0.68) 48%, rgba(10,16,16,0.86) 100%), radial-gradient(70% 70% at 50% 40%, rgba(95,122,79,0.18) 0%, transparent 70%)",
         }}
       />
 
-      <div className="mx-auto max-w-5xl px-6 py-28 md:py-36 text-center">
+      <div className="mx-auto max-w-5xl px-6 py-28 text-center md:py-40">
         <FadeIn>
           <p
             className="mb-4 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.18em] text-white"
@@ -37,7 +37,7 @@ export function ClimateImpactStrip() {
         <FadeIn delay={0.08}>
           <h2
             className="text-white"
-            style={{ fontSize: "clamp(28px, 3.4vw, 44px)", lineHeight: 1.12, letterSpacing: "-0.01em" }}
+            style={{ fontSize: "clamp(32px, 4vw, 54px)", lineHeight: 1.08, fontWeight: 600 }}
           >
             Eventos extremos exigem instituições preparadas.
           </h2>

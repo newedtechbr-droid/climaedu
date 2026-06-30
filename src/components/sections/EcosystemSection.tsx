@@ -66,7 +66,7 @@ export function EcosystemSection() {
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className={`w-auto object-contain opacity-70 grayscale transition-opacity duration-300 hover:opacity-100 ${imgH}`}
+                    className={`w-auto object-contain opacity-90 saturate-[1.08] contrast-[1.08] transition duration-300 hover:opacity-100 hover:saturate-[1.2] ${imgH}`}
                     loading="lazy"
                   />
                 </div>

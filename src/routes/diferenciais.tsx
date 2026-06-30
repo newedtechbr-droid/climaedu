@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { ComparisonTableSection } from "@/components/sections/ComparisonTableSection";
 import { CTASection } from "@/components/sections/CTASection";
-import platformHome from "@/assets/platform-home-real.png";
-import dashboardReal from "@/assets/dashboard-real.png";
+import mockupCursos from "@/assets/mockup-plataforma-cursos.png";
+import mockupRelatorios from "@/assets/mockup-climaedu.png";
 
 export const Route = createFileRoute("/diferenciais")({
   head: () => ({
@@ -33,17 +33,16 @@ function Diferenciais() {
         title="Conteúdo, plataforma e evidência no mesmo fluxo"
         subtitle="Menos peças soltas. Mais clareza para formar equipes, acompanhar progresso e comprovar execução."
       >
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid items-center gap-6 md:grid-cols-2">
           <img
-            src={platformHome}
-            alt="Tela inicial da plataforma CLIMAEDU"
-            className="aspect-[16/10] w-full rounded-2xl border border-border object-cover shadow-sm"
+            src={mockupCursos}
+            alt="Mockup de cursos e trilhas da plataforma"
+            className="h-full max-h-[420px] w-full object-contain drop-shadow-[0_24px_42px_rgba(20,30,40,0.22)]"
           />
-
           <img
-            src={dashboardReal}
-            alt="Dashboard da plataforma CLIMAEDU"
-            className="aspect-[16/10] w-full rounded-2xl border border-border object-cover shadow-sm"
+            src={mockupRelatorios}
+            alt="Mockup de relatórios e evidências da plataforma"
+            className="h-full max-h-[420px] w-full object-contain drop-shadow-[0_24px_42px_rgba(20,30,40,0.22)]"
           />
         </div>
       </PageHero>

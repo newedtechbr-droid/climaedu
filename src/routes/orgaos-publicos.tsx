@@ -3,7 +3,7 @@ import { TrilhasPorAreaSection } from "@/components/sections/TrilhasPorAreaSecti
 import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
-import dashboardImage from "@/assets/mockup-relatorios.png";
+import mockupRelatorios from "@/assets/mockup-climaedu.png";
 import {
   AlertTriangle,
   Users,
@@ -50,17 +50,15 @@ function OrgaosPublicos() {
   return (
     <>
       <section className="bg-background">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <SectionTitle
             eyebrow="O problema"
             title="Quando só uma área sabe agir, a resposta inteira perde força."
-            subtitle="A ação climática exige coordenação entre secretarias, equipes técnicas, compras, comunicação, educação e controle."
           />
-
-          <div className="mt-10 grid gap-4 md:grid-cols-4">
+          <div className="mt-10 grid gap-5 md:grid-cols-4">
             {problemas.map((p, i) => (
               <FadeIn key={p.text} delay={i * 0.04}>
-                <div className="h-full rounded-xl border border-border bg-card p-5">
+                <div className="h-full rounded-xl border border-border bg-card p-6 shadow-sm">
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-lg"
                     style={{
@@ -70,10 +68,7 @@ function OrgaosPublicos() {
                   >
                     <p.icon size={18} />
                   </div>
-
-                  <p className="mt-4 text-[16px] leading-[1.45] text-foreground/85">
-                    {p.text}
-                  </p>
+                  <p className="mt-4 text-[18px] leading-[1.45] text-foreground/88">{p.text}</p>
                 </div>
               </FadeIn>
             ))}
@@ -82,34 +77,29 @@ function OrgaosPublicos() {
       </section>
 
       <section className="bg-surface">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 md:grid-cols-[0.9fr_1.1fr] md:py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 md:grid-cols-[0.85fr_1.15fr] md:py-20">
           <FadeIn>
             <SectionTitle
               eyebrow="Na prática"
               title="Da capacitação ao relatório"
               subtitle="O aprendizado deixa rastro: quem participou, o que concluiu e quais evidências podem apoiar gestão, auditoria e controle."
             />
-
             <div className="mt-8 grid gap-3">
-              {solucao.map((s) => (
-                <div key={s.text} className="flex items-center gap-3 rounded-lg border border-border bg-background p-4">
+              {solucao.map((s, i) => (
+                <div key={s.text} className="flex items-center gap-3 rounded-lg border border-border bg-background p-4 shadow-sm">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary-deep">
                     <s.icon size={17} />
                   </span>
-
-                  <p className="text-[15.5px] leading-snug text-foreground/85">
-                    {s.text}
-                  </p>
+                  <p className="text-[16.5px] leading-snug text-foreground/85">{s.text}</p>
                 </div>
               ))}
             </div>
           </FadeIn>
-
-          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-[0_24px_60px_-30px_rgba(20,30,40,0.45)]">
+          <div className="relative">
             <img
-              src={dashboardImage}
-              alt="Relatórios e evidências da plataforma"
-              className="aspect-[16/11] w-full object-cover"
+              src={mockupRelatorios}
+              alt="Mockup de relatórios e evidências da plataforma"
+              className="w-full object-contain drop-shadow-[0_26px_46px_rgba(20,30,40,0.24)]"
             />
           </div>
         </div>

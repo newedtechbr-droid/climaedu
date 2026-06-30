@@ -55,26 +55,26 @@ export function JourneyCardsSection() {
           subtitle="Cada contexto tem gargalos próprios de capacitação, rotina e evidência. A CLIMAEDU se adapta ao seu."
         />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {journeys.map((j, i) => (
             <FadeIn key={j.to} delay={i * 0.05}>
               <Link
                 to={j.to}
-                className="group flex h-full flex-col rounded-xl border bg-card p-7 transition-all hover:border-primary hover:shadow-[0_18px_40px_-20px_rgba(95,122,79,0.4)]"
+                className="group flex h-full flex-col rounded-xl border bg-card p-7 transition-all hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_18px_40px_-20px_rgba(95,122,79,0.45)] md:p-8"
                 style={{ borderColor: "var(--color-border)" }}
               >
                 <div
                   className="inline-flex h-12 w-12 items-center justify-center rounded-lg"
                   style={{
-                    backgroundColor: "color-mix(in oklab, var(--color-olive) 14%, white)",
+                    backgroundColor: "color-mix(in oklab, var(--color-olive) 18%, white)",
                     color: "var(--color-primary-deep)",
                   }}
                 >
                   <j.icon size={22} />
                 </div>
-                <h3 className="mt-5 text-[22px] font-semibold text-primary-dark">{j.title}</h3>
-                <p className="mt-2 text-[16px] leading-[1.6] text-foreground/75">{j.description}</p>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-[14px] font-semibold text-primary group-hover:gap-2.5 transition-all">
+                <h3 className="mt-5 text-[24px] font-semibold leading-tight text-primary-dark">{j.title}</h3>
+                <p className="mt-3 text-[18px] leading-[1.55] text-foreground/82">{j.description}</p>
+                <span className="mt-7 inline-flex items-center gap-1.5 text-[15px] font-bold text-primary-deep transition-all group-hover:gap-2.5">
                   {j.cta} <ArrowRight size={15} />
                 </span>
               </Link>

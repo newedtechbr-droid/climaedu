@@ -34,22 +34,20 @@ function Plataforma() {
             alt="Cérebro verde conectado a circuitos digitais"
             className="absolute inset-0 h-full w-full object-cover"
           />
-
           <div
             aria-hidden
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(90deg, rgba(10,14,14,0.88) 0%, rgba(10,14,14,0.72) 28%, rgba(10,14,14,0.12) 62%, rgba(10,14,14,0.18) 100%)",
+                "linear-gradient(90deg, rgba(8,12,12,0.9) 0%, rgba(8,12,12,0.78) 30%, rgba(8,12,12,0.18) 66%, rgba(8,12,12,0.34) 100%)",
             }}
           />
-
           <div className="relative mx-auto flex min-h-[620px] max-w-6xl items-center px-6 py-24">
             <div className="max-w-2xl">
               <p
                 className="mb-6 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] font-bold uppercase"
                 style={{
-                  backgroundColor: "rgba(154, 75, 66, 0.92)",
+                  backgroundColor: "rgba(154, 75, 66, 0.94)",
                   color: "#FFFFFF",
                   letterSpacing: "0.08em",
                 }}
@@ -57,7 +55,6 @@ function Plataforma() {
                 <span className="h-1.5 w-1.5 rounded-full bg-white" />
                 Plataforma
               </p>
-
               <h1
                 className="text-white"
                 style={{

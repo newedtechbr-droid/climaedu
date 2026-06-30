@@ -16,7 +16,7 @@ const features = [
   { icon: BookOpen, title: "Trilhas e cursos climáticos aplicados", text: "Conteúdo técnico atualizado, conectado a normas, riscos e rotinas." },
   { icon: Award, title: "Certificados automáticos", text: "Emissão nominal a cada conclusão, com validação institucional." },
   { icon: BarChart3, title: "Dashboards de adesão, conclusão e proficiência", text: "Visão por unidade, perfil ou trilha, em tempo real." },
-  { icon: FileSpreadsheet, title: "Relatórios exportáveis", text: "Para gestão, auditoria e prestação de contas em PDF e planilhas." },
+  { icon: FileSpreadsheet, title: "Relatórios exportáveis", text: "Para gestão, auditoria e prestação de contas — em PDF e planilhas." },
   { icon: Sparkles, title: "IA para apoio à criação de conteúdos", text: "Aceleração de produção e atualização, sempre com curadoria humana especializada." },
   { icon: Users, title: "Perfis de acesso e gestão de usuários", text: "Hierarquia por secretaria, unidade ou área, com permissões claras." },
   { icon: Shield, title: "Acessibilidade, LGPD e exportação de dados", text: "Conformidade técnica e segurança institucional desde o primeiro acesso." },
@@ -35,10 +35,10 @@ export function PlatformFeaturesSection() {
           />
         </FadeIn>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => (
             <FadeIn key={f.title} delay={i * 0.05}>
-              <article className="h-full rounded-2xl border border-border bg-background p-6 transition-all hover:-translate-y-1 hover:shadow-md">
+              <article className="h-full rounded-2xl border border-border bg-background p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
                 <span
                   className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
                   style={{
@@ -48,18 +48,13 @@ export function PlatformFeaturesSection() {
                 >
                   <f.icon size={20} aria-hidden />
                 </span>
-
-                <h3 className="mt-5 text-[17px] font-bold leading-snug text-primary-dark">
-                  {f.title}
-                </h3>
-
-                <p className="mt-2.5 text-[14.5px] leading-[1.65] text-foreground/80">
-                  {f.text}
-                </p>
+                <h3 className="mt-5 text-[18px] font-bold leading-snug text-primary-dark">{f.title}</h3>
+                <p className="mt-2.5 text-[15.5px] leading-[1.65] text-foreground/82">{f.text}</p>
               </article>
             </FadeIn>
           ))}
         </div>
+
       </div>
     </section>
   );

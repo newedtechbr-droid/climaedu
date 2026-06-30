@@ -62,7 +62,7 @@ export function ClassroomSection() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, color-mix(in oklab, var(--color-olive) 10%, var(--color-background)) 0%, var(--color-surface) 55%, color-mix(in oklab, var(--color-terracotta) 8%, var(--color-background)) 100%)",
+            "linear-gradient(180deg, color-mix(in oklab, var(--color-olive) 8%, var(--color-background)) 0%, var(--color-surface) 58%, var(--color-background) 100%)",
         }}
       />
       <div
@@ -70,7 +70,7 @@ export function ClassroomSection() {
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
           background:
-            "radial-gradient(circle at 10% 8%, color-mix(in oklab, var(--color-olive) 22%, transparent) 0, transparent 38%), radial-gradient(circle at 90% 92%, color-mix(in oklab, var(--color-terracotta) 18%, transparent) 0, transparent 42%)",
+            "radial-gradient(circle at 10% 8%, color-mix(in oklab, var(--color-olive) 18%, transparent) 0, transparent 38%), radial-gradient(circle at 90% 92%, color-mix(in oklab, var(--color-slate-blue) 12%, transparent) 0, transparent 42%)",
         }}
       />
 
@@ -262,7 +262,7 @@ export function ClassroomSection() {
             className="mt-20 relative overflow-hidden rounded-3xl p-10 text-center md:p-12"
             style={{
               background:
-                "linear-gradient(135deg, color-mix(in oklab, var(--color-olive) 18%, var(--color-background)) 0%, color-mix(in oklab, var(--color-terracotta) 14%, var(--color-background)) 100%)",
+                "linear-gradient(135deg, color-mix(in oklab, var(--color-olive) 15%, var(--color-background)) 0%, color-mix(in oklab, var(--color-slate-blue) 10%, var(--color-background)) 100%)",
               border: "1px solid color-mix(in oklab, var(--color-olive) 28%, transparent)",
             }}
           >

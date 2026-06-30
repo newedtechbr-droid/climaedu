@@ -4,7 +4,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import teamMeeting from "@/assets/team-meeting.jpg";
-import dashboardImage from "@/assets/screen-dashboard.jpg";
+import mockupEmpresa from "@/assets/mockup-plataforma-viposa.png";
 import {
   Sparkles,
   Leaf,
@@ -49,17 +49,16 @@ function Empresas() {
         title="Capacitação ambiental que vira evidência"
         subtitle="Trilhas para ESG, RH e SSMA com acompanhamento por área, unidade e função."
       >
-        <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
+        <div className="grid items-center gap-5 md:grid-cols-[0.9fr_1.1fr]">
           <img
             src={teamMeeting}
             alt="Equipe analisando mapas e indicadores ambientais"
             className="h-full max-h-[360px] w-full rounded-2xl border border-border object-cover shadow-sm"
           />
-
           <img
-            src={dashboardImage}
-            alt="Dashboard de acompanhamento"
-            className="h-full max-h-[360px] w-full rounded-2xl border border-border object-cover shadow-sm"
+            src={mockupEmpresa}
+            alt="Mockup de plataforma corporativa com cursos e relatórios"
+            className="h-full max-h-[420px] w-full object-contain drop-shadow-[0_24px_42px_rgba(20,30,40,0.25)]"
           />
         </div>
       </PageHero>
@@ -70,11 +69,10 @@ function Empresas() {
             eyebrow="O que entregamos"
             title="O essencial por área"
           />
-
-          <div className="mt-10 grid gap-5 md:grid-cols-5">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
             {blocos.map((b, i) => (
               <FadeIn key={b.title} delay={i * 0.04}>
-                <div className="h-full rounded-xl border border-border bg-card p-6">
+                <div className="h-full rounded-xl border border-border bg-card p-6 shadow-sm">
                   <div
                     className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
                     style={{
@@ -84,14 +82,8 @@ function Empresas() {
                   >
                     <b.icon size={20} />
                   </div>
-
-                  <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">
-                    {b.title}
-                  </h3>
-
-                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">
-                    {b.text}
-                  </p>
+                  <h3 className="mt-4 text-[19px] font-semibold text-primary-dark">{b.title}</h3>
+                  <p className="mt-2 text-[16px] leading-[1.55] text-foreground/80">{b.text}</p>
                 </div>
               </FadeIn>
             ))}

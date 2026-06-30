@@ -8,7 +8,7 @@ import { CTASection } from "@/components/sections/CTASection";
 export const Route = createFileRoute("/sobre")({
   head: () => ({
     meta: [
-      { title: "Sobre | CLIMAEDU — Tecnologia, educação e clima em um só produto" },
+      { title: "Sobre | CLIMAEDU — Educação climática aplicada" },
       {
         name: "description",
         content:
@@ -30,8 +30,8 @@ function Sobre() {
     <>
       <PageHero
         eyebrow="Sobre a CLIMAEDU"
-        title="Tecnologia, educação e clima em um só produto"
-        subtitle="A CLIMAEDU é um produto da NewEdTech, criado para fortalecer capacidades institucionais para a ação climática. Combinamos educação, tecnologia, inteligência artificial e conhecimento ambiental para apoiar governos, empresas e redes de ensino na transformação de diretrizes climáticas em rotinas executáveis."
+        title="Educação climática aplicada para instituições que precisam agir"
+        subtitle="A CLIMAEDU ajuda governos, empresas e redes de ensino a transformar conhecimento climático em formação, rotinas, registros e evidências de execução."
       />
 
       <AboutSection />

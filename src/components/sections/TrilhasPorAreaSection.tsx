@@ -1,13 +1,7 @@
-import {
-  ShieldAlert,
-  ShoppingCart,
-  Trees,
-  GraduationCap,
-  Megaphone,
-  ClipboardCheck,
-} from "lucide-react";
+import { ShieldAlert, ShoppingCart, Trees, GraduationCap, Megaphone, ClipboardCheck } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
-import heroClimate from "@/assets/hero-climate.jpg";
+import { SectionTitle } from "@/components/SectionTitle";
+import heroField from "@/assets/hero-field.jpg";
 
 const areas = [
   {
@@ -33,7 +27,8 @@ const areas = [
   {
     icon: Megaphone,
     title: "Comunicação",
-    description: "Orientação da população antes, durante e depois dos eventos extremos.",
+    description:
+      "Orientação da população antes, durante e depois dos eventos extremos.",
   },
   {
     icon: ClipboardCheck,
@@ -45,41 +40,26 @@ const areas = [
 export function TrilhasPorAreaSection() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-        <FadeIn>
-          <div className="grid items-center gap-10 md:grid-cols-[0.95fr_1.05fr]">
-            <div>
-              <p className="mb-4 text-[12px] font-bold uppercase tracking-[0.2em] text-primary">
-                Trilhas por área
-              </p>
-
-              <h2
-                className="text-primary-dark"
-                style={{
-                  fontSize: "clamp(30px, 4vw, 52px)",
-                  lineHeight: 1.08,
-                  fontWeight: 600,
-                }}
-              >
-                Cada secretaria entende seu papel antes, durante e depois da crise.
-              </h2>
-
-              <p className="mt-5 text-[18px] leading-[1.65] text-foreground/75">
-                A CLIMAEDU organiza capacitação por função, área e responsabilidade,
-                conectando aprendizagem, rotina e evidências para gestão pública.
-              </p>
-            </div>
-
+      <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+        <div className="grid items-center gap-10 md:grid-cols-[0.95fr_1.05fr]">
+          <FadeIn>
+            <SectionTitle
+              eyebrow="Trilhas por área"
+              title="Cada secretaria entende seu papel antes, durante e depois da crise."
+              subtitle="A CLIMAEDU organiza capacitação por função, área e responsabilidade, conectando aprendizagem, rotina e evidências para gestão pública."
+            />
+          </FadeIn>
+          <FadeIn delay={0.08}>
             <div className="overflow-hidden rounded-2xl border border-border shadow-[0_24px_60px_-32px_rgba(20,30,40,0.45)]">
               <img
-                src={heroClimate}
-                alt="Equipe técnica atuando em ação climática no território"
+                src={heroField}
+                alt="Equipe técnica em ação climática no território"
                 className="aspect-[16/10] w-full object-cover"
                 loading="lazy"
               />
             </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {areas.map((a, i) => (
@@ -94,12 +74,8 @@ export function TrilhasPorAreaSection() {
                 >
                   <a.icon size={20} />
                 </div>
-
-                <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">
-                  {a.title}
-                </h3>
-
-                <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">
+                <h3 className="mt-4 text-[19px] font-semibold text-primary-dark">{a.title}</h3>
+                <p className="mt-2 text-[16px] leading-[1.55] text-foreground/80">
                   {a.description}
                 </p>
               </div>
