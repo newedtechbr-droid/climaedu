@@ -178,6 +178,19 @@ export function ClassroomSection() {
               <p className="mt-5 text-[17px] leading-[1.75] text-foreground/80 md:text-[18px]">
                 O livro e os materiais físicos ampliam essa experiência para além da escola, fortalecendo a aprendizagem e o vínculo com a família.
               </p>
+
+              <div className="mt-7 grid grid-cols-3 gap-3 border-t pt-6" style={{ borderColor: "color-mix(in oklab, var(--color-olive) 20%, transparent)" }}>
+                {[
+                  { k: "Imersão", v: "VR · Tablets" },
+                  { k: "Apoio", v: "Professor" },
+                  { k: "Conexão", v: "Território" },
+                ].map((s) => (
+                  <div key={s.k} className="text-center">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-foreground/55">{s.k}</p>
+                    <p className="mt-1 text-[13px] font-bold text-primary-dark">{s.v}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </FadeIn>
         </div>
