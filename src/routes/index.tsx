@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ContextSection } from "@/components/sections/ContextSection";
 import { JourneyCardsSection } from "@/components/sections/JourneyCardsSection";
 import { MethodStepsSection } from "@/components/sections/MethodStepsSection";
+import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const Route = createFileRoute("/")({
@@ -38,6 +39,7 @@ function Index() {
       <ContextSection />
       <MethodStepsSection />
       <JourneyCardsSection />
+      <EcosystemSection />
 
       <CTASection
         title="Quando todos entendem seu papel, a instituição responde melhor."
