@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ContextSection } from "@/components/sections/ContextSection";
 import { JourneyCardsSection } from "@/components/sections/JourneyCardsSection";
 import { MethodStepsSection } from "@/components/sections/MethodStepsSection";
-import { ClassroomSection } from "@/components/sections/ClassroomSection";
 import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
 import { TracksSection } from "@/components/sections/TracksSection";
 import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
@@ -42,11 +41,11 @@ function Index() {
       <HeroSection />
       <ContextSection />
       <MethodStepsSection />
-      <ClassroomSection />
       <DemoShowcaseSection />
       <TracksSection />
       <ClimateImpactStrip />
       <JourneyCardsSection />
+
       <CTASection
         title="Quando todos entendem seu papel, a instituição responde melhor."
         subtitle="Agende uma demonstração e veja a CLIMAEDU aplicada à realidade do seu órgão, empresa ou rede de ensino."
