@@ -1,6 +1,5 @@
 import { BookOpen, Wrench, BarChart3, FileCheck2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
-import { SectionTitle } from "@/components/SectionTitle";
 
 const steps = [
   {
@@ -27,15 +26,41 @@ const steps = [
 
 export function MethodStepsSection() {
   return (
-    <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        <SectionTitle
-          eyebrow="Método CLIMAEDU"
-          title="Aprender → Aplicar → Medir → Evidenciar"
-          subtitle="Transformamos conhecimento climático em prática institucional, acompanhamento contínuo e comprovação."
-        />
+    <section className="bg-surface" id="metodo">
+      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <FadeIn>
+          <div className="mx-auto max-w-5xl text-center">
+            <p
+              className="mb-5 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] font-bold uppercase"
+              style={{
+                backgroundColor: "color-mix(in oklab, var(--color-terracotta) 90%, transparent)",
+                color: "#FFFFFF",
+                letterSpacing: "0.08em",
+              }}
+            >
+              Método CLIMAEDU
+            </p>
 
-        <div className="relative mt-14 grid gap-6 md:grid-cols-4">
+            <h2
+              className="text-primary-dark"
+              style={{
+                fontSize: "clamp(34px, 5vw, 66px)",
+                lineHeight: 1.02,
+                fontWeight: 600,
+              }}
+            >
+              <span className="block whitespace-nowrap">
+                Aprender → Aplicar → Medir → Evidenciar
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-[18px] leading-[1.6] text-foreground/75">
+              Conhecimento climático vira rotina, acompanhamento e comprovação.
+            </p>
+          </div>
+        </FadeIn>
+
+        <div className="relative mt-10 grid gap-5 md:grid-cols-4">
           {steps.map((s, i) => (
             <FadeIn key={s.label} delay={i * 0.07}>
               <div className="relative h-full rounded-xl border border-border bg-card p-6">
@@ -45,6 +70,7 @@ export function MethodStepsSection() {
                 >
                   {i + 1}
                 </span>
+
                 <div
                   className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
                   style={{
@@ -54,7 +80,11 @@ export function MethodStepsSection() {
                 >
                   <s.icon size={20} />
                 </div>
-                <h3 className="mt-4 text-[19px] font-semibold text-primary-dark">{s.label}</h3>
+
+                <h3 className="mt-4 text-[19px] font-semibold text-primary-dark">
+                  {s.label}
+                </h3>
+
                 <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">
                   {s.description}
                 </p>
