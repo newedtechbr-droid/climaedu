@@ -62,4 +62,34 @@ export function ComparisonTableSection() {
                       </td>
 
                       {r.values.map((v, ci) => (
-                 
+                        <td
+                          key={ci}
+                          className="px-5 py-3.5 text-center"
+                          style={{
+                            borderBottom: "1px solid var(--color-border)",
+                            backgroundColor: ci === 0 ? "color-mix(in oklab, var(--color-olive) 6%, white)" : "transparent",
+                          }}
+                        >
+                          {v ? (
+                            <Check
+                              size={20}
+                              className="mx-auto"
+                              style={{ color: ci === 0 ? "var(--color-primary-deep)" : "var(--color-olive)" }}
+                              strokeWidth={2.5}
+                            />
+                          ) : (
+                            <X size={18} className="mx-auto text-foreground/30" />
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}
