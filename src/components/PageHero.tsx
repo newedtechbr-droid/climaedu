@@ -22,7 +22,8 @@ export function PageHero({
             "radial-gradient(55% 50% at 10% 10%, color-mix(in oklab, var(--color-olive) 14%, transparent) 0%, transparent 70%), radial-gradient(45% 40% at 95% 90%, color-mix(in oklab, var(--color-terracotta) 10%, transparent) 0%, transparent 75%)",
         }}
       />
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+
+      <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
         <FadeIn>
           {eyebrow && (
             <p
@@ -34,14 +35,21 @@ export function PageHero({
             </p>
           )}
         </FadeIn>
+
         <FadeIn delay={0.05}>
           <h1
             className="text-primary-dark"
-            style={{ fontSize: "clamp(34px, 4.8vw, 60px)", lineHeight: 1.08, letterSpacing: "-0.018em", fontWeight: 600 }}
+            style={{
+              fontSize: "clamp(34px, 4.8vw, 60px)",
+              lineHeight: 1.08,
+              letterSpacing: "-0.018em",
+              fontWeight: 600,
+            }}
           >
             {title}
           </h1>
         </FadeIn>
+
         {subtitle && (
           <FadeIn delay={0.15}>
             <p
@@ -52,7 +60,12 @@ export function PageHero({
             </p>
           </FadeIn>
         )}
-        {children && <FadeIn delay={0.25}><div className="mt-10">{children}</div></FadeIn>}
+
+        {children && (
+          <FadeIn delay={0.25}>
+            <div className="mt-10">{children}</div>
+          </FadeIn>
+        )}
       </div>
     </section>
   );
