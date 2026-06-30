@@ -4,6 +4,7 @@ import { PlatformFeaturesSection } from "@/components/sections/PlatformFeaturesS
 import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
 import { AISection } from "@/components/sections/AISection";
 import { CTASection } from "@/components/sections/CTASection";
+import ecoTechBrain from "@/assets/eco-tech-brain.png";
 import screenHome from "@/assets/screen-home.jpg";
 import screenTrack from "@/assets/screen-track.jpg";
 import screenDashboard from "@/assets/screen-dashboard.jpg";
@@ -33,10 +34,15 @@ function Plataforma() {
     <>
       <PageHero
         eyebrow="Plataforma"
-        title="Como funciona a plataforma CLIMAEDU"
-        subtitle="Uma operação simples para organizar capacitação, acompanhar progresso e gerar evidências."
+        title="Tecnologia para aprender, aplicar e evidenciar"
       >
-        <div className="grid gap-4 md:grid-cols-3">
+        <img
+          src={ecoTechBrain}
+          alt="Cérebro verde conectado a circuitos digitais"
+          className="max-h-[420px] w-full rounded-2xl border border-border object-cover shadow-[0_24px_70px_-32px_rgba(20,30,40,0.55)]"
+        />
+
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
           {[
             { src: screenHome, label: "Entrada white-label" },
             { src: screenTrack, label: "Trilhas e módulos" },
