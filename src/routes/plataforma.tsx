@@ -32,11 +32,22 @@ function Plataforma() {
         eyebrow="Plataforma"
         title="Tecnologia para aprender, aplicar e evidenciar"
       >
-        <img
-          src={ecoTechBrain}
-          alt="Cérebro verde conectado a circuitos digitais"
-          className="max-h-[420px] w-full rounded-2xl border border-border object-cover shadow-[0_24px_70px_-32px_rgba(20,30,40,0.55)]"
-        />
+        <div className="relative left-1/2 mt-12 h-[420px] w-screen -translate-x-1/2 overflow-hidden md:h-[520px]">
+          <img
+            src={ecoTechBrain}
+            alt="Cérebro verde conectado a circuitos digitais"
+            className="h-full w-full object-cover"
+          />
+
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(13,18,18,0.55) 0%, rgba(13,18,18,0.05) 42%, rgba(13,18,18,0.12) 100%)",
+            }}
+          />
+        </div>
       </PageHero>
 
       <PlatformFeaturesSection />
