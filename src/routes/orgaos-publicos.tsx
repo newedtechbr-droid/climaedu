@@ -3,7 +3,7 @@ import { TrilhasPorAreaSection } from "@/components/sections/TrilhasPorAreaSecti
 import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
-import dashboardImage from "@/assets/screen-dashboard.jpg";
+import dashboardImage from "@/assets/mockup-relatorios.png";
 import {
   AlertTriangle,
   Users,
@@ -108,7 +108,7 @@ function OrgaosPublicos() {
           <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-[0_24px_60px_-30px_rgba(20,30,40,0.45)]">
             <img
               src={dashboardImage}
-              alt="Dashboard de evidências da plataforma"
+              alt="Relatórios e evidências da plataforma"
               className="aspect-[16/11] w-full object-cover"
             />
           </div>
