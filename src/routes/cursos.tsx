@@ -48,12 +48,13 @@ function Cursos() {
       />
 
       <section className="bg-surface">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 pt-14 pb-8 md:pt-16 md:pb-10">
           <SectionTitle
             eyebrow="Categorias"
             title="10 áreas estruturantes de capacitação climática"
           />
-          <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {categorias.map((c, i) => (
               <FadeIn key={c} delay={i * 0.03}>
                 <div
@@ -69,7 +70,10 @@ function Cursos() {
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-[15.5px] font-medium text-foreground/90">{c}</span>
+
+                  <span className="text-[15.5px] font-medium text-foreground/90">
+                    {c}
+                  </span>
                 </div>
               </FadeIn>
             ))}
@@ -85,6 +89,7 @@ function Cursos() {
             eyebrow="Cada curso entrega"
             title="Estrutura padrão de cada trilha"
           />
+
           <ul className="mt-10 grid gap-3 sm:grid-cols-2">
             {[
               "Nome do curso",
