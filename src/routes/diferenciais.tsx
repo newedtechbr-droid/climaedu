@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { ComparisonTableSection } from "@/components/sections/ComparisonTableSection";
 import { CTASection } from "@/components/sections/CTASection";
+import platformHome from "@/assets/platform-home-real.png";
+import dashboardReal from "@/assets/dashboard-real.png";
 
 export const Route = createFileRoute("/diferenciais")({
   head: () => ({
@@ -28,9 +30,23 @@ function Diferenciais() {
     <>
       <PageHero
         eyebrow="Diferenciais"
-        title="O mercado entrega partes. A CLIMAEDU estrutura a jornada."
-        subtitle="Cursos avulsos entregam conteúdo. LMS genéricos entregam plataforma. Consultorias entregam apoio técnico. A CLIMAEDU integra conteúdo climático aplicado, plataforma white-label, metodologia, certificados, dashboards e evidências para apoiar a gestão institucional."
-      />
+        title="Conteúdo, plataforma e evidência no mesmo fluxo"
+        subtitle="Menos peças soltas. Mais clareza para formar equipes, acompanhar progresso e comprovar execução."
+      >
+        <div className="grid gap-4 md:grid-cols-2">
+          <img
+            src={platformHome}
+            alt="Tela inicial da plataforma CLIMAEDU"
+            className="aspect-[16/10] w-full rounded-2xl border border-border object-cover shadow-sm"
+          />
+
+          <img
+            src={dashboardReal}
+            alt="Dashboard da plataforma CLIMAEDU"
+            className="aspect-[16/10] w-full rounded-2xl border border-border object-cover shadow-sm"
+          />
+        </div>
+      </PageHero>
 
       <ComparisonTableSection />
 
