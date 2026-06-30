@@ -48,7 +48,7 @@ const courses: Course[] = [
 export function TracksSection() {
   return (
     <section id="trilhas" className="bg-surface scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6 pt-8 pb-16 md:pt-10 md:pb-20">
         <FadeIn>
           <SectionTitle
             eyebrow="Cursos"
@@ -58,8 +58,7 @@ export function TracksSection() {
           />
         </FadeIn>
 
-        <div className="mt-16 grid grid-cols-2 gap-6 lg:grid-cols-4">
-
+        <div className="mt-10 grid grid-cols-2 gap-6 lg:grid-cols-4">
           {courses.map((c, i) => (
             <FadeIn key={c.title} delay={i * 0.06}>
               <article
@@ -113,7 +112,6 @@ export function TracksSection() {
                     {c.title}
                   </h3>
                 </div>
-
               </article>
             </FadeIn>
           ))}
