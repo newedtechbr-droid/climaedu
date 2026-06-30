@@ -21,7 +21,7 @@ const rows: Row[] = [
 export function ComparisonTableSection() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
         <FadeIn>
           <div className="overflow-hidden rounded-xl border border-border bg-card shadow-[0_20px_50px_-30px_rgba(20,30,40,0.3)]">
             <div className="overflow-x-auto">
@@ -34,6 +34,7 @@ export function ComparisonTableSection() {
                     >
                       Recurso
                     </th>
+
                     {cols.map((c, i) => (
                       <th
                         key={c}
@@ -49,6 +50,7 @@ export function ComparisonTableSection() {
                     ))}
                   </tr>
                 </thead>
+
                 <tbody>
                   {rows.map((r, ri) => (
                     <tr key={r.feature} className={ri % 2 === 0 ? "bg-background/40" : ""}>
@@ -58,35 +60,6 @@ export function ComparisonTableSection() {
                       >
                         {r.feature}
                       </td>
+
                       {r.values.map((v, ci) => (
-                        <td
-                          key={ci}
-                          className="px-5 py-3.5 text-center"
-                          style={{
-                            borderBottom: "1px solid var(--color-border)",
-                            backgroundColor: ci === 0 ? "color-mix(in oklab, var(--color-olive) 6%, white)" : "transparent",
-                          }}
-                        >
-                          {v ? (
-                            <Check
-                              size={20}
-                              className="mx-auto"
-                              style={{ color: ci === 0 ? "var(--color-primary-deep)" : "var(--color-olive)" }}
-                              strokeWidth={2.5}
-                            />
-                          ) : (
-                            <X size={18} className="mx-auto text-foreground/30" />
-                          )}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </FadeIn>
-      </div>
-    </section>
-  );
-}
+                 
