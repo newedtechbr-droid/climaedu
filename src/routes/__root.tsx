@@ -8,15 +8,15 @@ import appCss from "../styles.css?url";
 type CSSVars = CSSProperties & Record<`--${string}`, string>;
 
 const climaeduTheme: CSSVars = {
-  "--background": "#F7F1E7",
+  "--background": "#F3F1EC",
   "--foreground": "#1A1E20",
-  "--card": "#FFFCF7",
-  "--muted": "#EFE4D5",
+  "--card": "#FFFFFF",
+  "--muted": "#ECE8DF",
 
-  "--color-background": "#F7F1E7",
-  "--color-surface": "#EFE4D5",
-  "--color-card": "#FFFCF7",
-  "--color-border": "#D8CBBB",
+  "--color-background": "#F3F1EC",
+  "--color-surface": "#E8ECEC",
+  "--color-card": "#FFFFFF",
+  "--color-border": "#CFD6D6",
 
   "--color-primary": "#5F7A4F",
   "--color-primary-dark": "#1A1E20",
@@ -25,11 +25,10 @@ const climaeduTheme: CSSVars = {
   "--color-ring": "#5F7A4F",
 
   "--color-olive": "#5F7A4F",
-  "--color-terracotta": "#9A4B42",
+  "--color-terracotta": "#8A5148",
 
-  "--color-slate-blue": "#5F7A4F",
+  "--color-slate-blue": "#485C68",
 };
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen flex-col">
