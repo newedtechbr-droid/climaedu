@@ -3,10 +3,6 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ContextSection } from "@/components/sections/ContextSection";
 import { JourneyCardsSection } from "@/components/sections/JourneyCardsSection";
 import { MethodStepsSection } from "@/components/sections/MethodStepsSection";
-import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
-import { TracksSection } from "@/components/sections/TracksSection";
-import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
-import { ClassroomSection } from "@/components/sections/ClassroomSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const Route = createFileRoute("/")({
@@ -23,8 +19,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content:
-          "CLIMAEDU | Da reação à prevenção",
+        content: "CLIMAEDU | Da reação à prevenção",
       },
       {
         property: "og:description",
@@ -42,11 +37,7 @@ function Index() {
       <HeroSection />
       <ContextSection />
       <MethodStepsSection />
-      <DemoShowcaseSection />
-      <TracksSection />
-      <ClimateImpactStrip />
       <JourneyCardsSection />
-      <ClassroomSection />
 
       <CTASection
         title="Quando todos entendem seu papel, a instituição responde melhor."
