@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHero } from "@/components/PageHero";
 import { ClassroomSection } from "@/components/sections/ClassroomSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/FadeIn";
@@ -29,7 +28,7 @@ export const Route = createFileRoute("/escolas")({
       {
         name: "description",
         content:
-          "Experiências, metodologias e recursos digitais para transformar educação climática em vivência prática, com o professor no centro.",
+          "Educação climática aplicada para escolas e redes de ensino, com trilhas, experiências, formação continuada e evidências.",
       },
       { property: "og:title", content: "CLIMAEDU para escolas e redes de ensino" },
       {
@@ -45,21 +44,16 @@ export const Route = createFileRoute("/escolas")({
 function Escolas() {
   return (
     <>
-      <PageHero
-        eyebrow="Solução para escolas e redes"
-        title="Educação climática aplicada à sala de aula"
-        subtitle="Experiências, metodologias e recursos digitais para transformar educação climática em vivência prática, com o professor no centro."
-      />
-
       <ClassroomSection />
 
       <section className="bg-background">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <SectionTitle
             eyebrow="O que entregamos"
             title="Pedagogia climática: do território à comunidade"
             subtitle="A tecnologia não substitui o professor, o livro ou a experiência presencial. Ela amplia."
           />
+
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {blocos.map((b, i) => (
               <FadeIn key={b.title} delay={i * 0.04}>
@@ -73,8 +67,14 @@ function Escolas() {
                   >
                     <b.icon size={20} />
                   </div>
-                  <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">{b.title}</h3>
-                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">{b.text}</p>
+
+                  <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">
+                    {b.title}
+                  </h3>
+
+                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">
+                    {b.text}
+                  </p>
                 </div>
               </FadeIn>
             ))}
