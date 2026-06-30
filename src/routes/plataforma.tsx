@@ -4,18 +4,9 @@ import { PlatformFeaturesSection } from "@/components/sections/PlatformFeaturesS
 import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
 import { AISection } from "@/components/sections/AISection";
 import { CTASection } from "@/components/sections/CTASection";
-import { FadeIn } from "@/components/FadeIn";
-import { SectionTitle } from "@/components/SectionTitle";
-import { Palette, Users, Route as RouteIcon, Award, BarChart3, FileText } from "lucide-react";
-
-const recursos = [
-  { icon: Palette, title: "Ambiente white-label", text: "Logo, cores, domínio e identidade da instituição." },
-  { icon: Users, title: "Gestão de usuários e perfis", text: "Administradores, gestores, tutores e aprendizes." },
-  { icon: RouteIcon, title: "Trilhas por perfil", text: "Conteúdos organizados por secretaria, área, função, risco ou público." },
-  { icon: Award, title: "Certificados", text: "Emissão automática e registro institucional." },
-  { icon: BarChart3, title: "Dashboards", text: "Adesão, conclusão, proficiência e aplicação prática." },
-  { icon: FileText, title: "Relatórios", text: "Exportação para gestão, controle interno, prestação de contas e auditoria." },
-];
+import screenHome from "@/assets/screen-home.jpg";
+import screenTrack from "@/assets/screen-track.jpg";
+import screenDashboard from "@/assets/screen-dashboard.jpg";
 
 export const Route = createFileRoute("/plataforma")({
   head: () => ({
@@ -43,33 +34,23 @@ function Plataforma() {
       <PageHero
         eyebrow="Plataforma"
         title="Como funciona a plataforma CLIMAEDU"
-        subtitle="Um ambiente de aprendizagem online com identidade institucional, trilhas aplicadas, certificados, dashboards e relatórios."
-      />
-
-      <section className="bg-surface">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-          <SectionTitle eyebrow="Recursos" title="Tudo no mesmo lugar" />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {recursos.map((r, i) => (
-              <FadeIn key={r.title} delay={i * 0.04}>
-                <div className="h-full rounded-xl border border-border bg-background p-6">
-                  <div
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
-                    style={{
-                      backgroundColor: "color-mix(in oklab, var(--color-olive) 14%, white)",
-                      color: "var(--color-primary-deep)",
-                    }}
-                  >
-                    <r.icon size={20} />
-                  </div>
-                  <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">{r.title}</h3>
-                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">{r.text}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+        subtitle="Uma operação simples para organizar capacitação, acompanhar progresso e gerar evidências."
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          {[
+            { src: screenHome, label: "Entrada white-label" },
+            { src: screenTrack, label: "Trilhas e módulos" },
+            { src: screenDashboard, label: "Evidências e relatórios" },
+          ].map((item) => (
+            <figure key={item.label} className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+              <img src={item.src} alt={item.label} className="aspect-[16/10] w-full object-cover" />
+              <figcaption className="px-4 py-3 text-[14px] font-semibold text-primary-dark">
+                {item.label}
+              </figcaption>
+            </figure>
+          ))}
         </div>
-      </section>
+      </PageHero>
 
       <PlatformFeaturesSection />
       <DemoShowcaseSection />
