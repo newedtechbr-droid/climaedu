@@ -3,24 +3,22 @@ import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
+import teamMeeting from "@/assets/team-meeting.jpg";
+import dashboardImage from "@/assets/screen-dashboard.jpg";
 import {
   Sparkles,
-  RefreshCw,
   Leaf,
   Recycle,
   HardHat,
   FileBarChart,
-  Award,
 } from "lucide-react";
 
 const blocos = [
-  { icon: Sparkles, title: "Onboarding ambiental", text: "Base comum para novos colaboradores em meio ambiente, riscos e ESG." },
-  { icon: RefreshCw, title: "Reciclagens periódicas", text: "Atualizações recorrentes por área, unidade ou função." },
-  { icon: Leaf, title: "ESG e mudanças climáticas", text: "Trilhas alinhadas a metas, relatórios e compromissos públicos." },
-  { icon: Recycle, title: "Gestão de resíduos", text: "PNRS, logística reversa e práticas operacionais." },
-  { icon: HardHat, title: "Saúde, segurança e meio ambiente", text: "Conteúdo SSMA aplicado às rotinas e protocolos da operação." },
-  { icon: FileBarChart, title: "Relatórios por área e unidade", text: "Acompanhamento por unidade, BU ou planta industrial." },
-  { icon: Award, title: "Certificados e dashboards", text: "Comprovação automática para auditorias internas e externas." },
+  { icon: Sparkles, title: "Onboarding ambiental", text: "Base comum para novos colaboradores." },
+  { icon: Leaf, title: "ESG e clima", text: "Trilhas alinhadas a metas e compromissos." },
+  { icon: Recycle, title: "Resíduos", text: "PNRS, logística reversa e rotina operacional." },
+  { icon: HardHat, title: "SSMA", text: "Conteúdo aplicado à segurança e operação." },
+  { icon: FileBarChart, title: "Evidências", text: "Relatórios por unidade, área ou função." },
 ];
 
 export const Route = createFileRoute("/empresas")({
@@ -48,27 +46,32 @@ function Empresas() {
     <>
       <PageHero
         eyebrow="Solução para empresas"
-        title="Academia ambiental corporativa para ESG, RH e SSMA"
-        subtitle="Trilhas ambientais com certificados, relatórios por área e evidências para apoiar metas, auditorias e cultura de sustentabilidade."
-      />
+        title="Capacitação ambiental que vira evidência"
+        subtitle="Trilhas para ESG, RH e SSMA com acompanhamento por área, unidade e função."
+      >
+        <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
+          <img
+            src={teamMeeting}
+            alt="Equipe analisando mapas e indicadores ambientais"
+            className="h-full max-h-[360px] w-full rounded-2xl border border-border object-cover shadow-sm"
+          />
 
-      <section className="bg-surface">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <p className="text-[18px] leading-[1.7] text-foreground/80">
-            Empresas precisam comprovar capacitação ambiental, engajar colaboradores e reduzir
-            riscos operacionais. A CLIMAEDU organiza trilhas por área, função, unidade ou risco,
-            com acompanhamento e evidências.
-          </p>
+          <img
+            src={dashboardImage}
+            alt="Dashboard de acompanhamento"
+            className="h-full max-h-[360px] w-full rounded-2xl border border-border object-cover shadow-sm"
+          />
         </div>
-      </section>
+      </PageHero>
 
       <section className="bg-background">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <SectionTitle
             eyebrow="O que entregamos"
-            title="Trilhas, evidências e dashboards por área"
+            title="O essencial por área"
           />
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-10 grid gap-5 md:grid-cols-5">
             {blocos.map((b, i) => (
               <FadeIn key={b.title} delay={i * 0.04}>
                 <div className="h-full rounded-xl border border-border bg-card p-6">
@@ -81,8 +84,14 @@ function Empresas() {
                   >
                     <b.icon size={20} />
                   </div>
-                  <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">{b.title}</h3>
-                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">{b.text}</p>
+
+                  <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">
+                    {b.title}
+                  </h3>
+
+                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">
+                    {b.text}
+                  </p>
                 </div>
               </FadeIn>
             ))}
