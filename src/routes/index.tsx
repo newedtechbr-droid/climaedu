@@ -6,6 +6,7 @@ import { MethodStepsSection } from "@/components/sections/MethodStepsSection";
 import { DemoShowcaseSection } from "@/components/sections/DemoShowcaseSection";
 import { TracksSection } from "@/components/sections/TracksSection";
 import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
+import { ClassroomSection } from "@/components/sections/ClassroomSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 export const Route = createFileRoute("/")({
@@ -45,6 +46,7 @@ function Index() {
       <TracksSection />
       <ClimateImpactStrip />
       <JourneyCardsSection />
+      <ClassroomSection />
 
       <CTASection
         title="Quando todos entendem seu papel, a instituição responde melhor."
