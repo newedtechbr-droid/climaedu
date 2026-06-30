@@ -1,10 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHero } from "@/components/PageHero";
 import { TrilhasPorAreaSection } from "@/components/sections/TrilhasPorAreaSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
-import heroCity from "@/assets/hero-city.jpg";
 import dashboardImage from "@/assets/screen-dashboard.jpg";
 import {
   AlertTriangle,
@@ -51,23 +49,12 @@ export const Route = createFileRoute("/orgaos-publicos")({
 function OrgaosPublicos() {
   return (
     <>
-      <PageHero
-        eyebrow="Solução para órgãos públicos"
-        title="Preparar equipes antes da próxima emergência"
-        subtitle="Trilhas por secretaria, registros de aprendizagem e evidências para prestação de contas."
-      >
-        <img
-          src={heroCity}
-          alt="Cidade verde em contexto de adaptação climática"
-          className="max-h-[360px] w-full rounded-2xl border border-border object-cover shadow-[0_24px_60px_-30px_rgba(20,30,40,0.45)]"
-        />
-      </PageHero>
-
       <section className="bg-background">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <SectionTitle
             eyebrow="O problema"
             title="Quando só uma área sabe agir, a resposta inteira perde força."
+            subtitle="A ação climática exige coordenação entre secretarias, equipes técnicas, compras, comunicação, educação e controle."
           />
 
           <div className="mt-10 grid gap-4 md:grid-cols-4">
