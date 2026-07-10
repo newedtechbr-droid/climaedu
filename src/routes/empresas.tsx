@@ -11,11 +11,9 @@ import {
   HardHat,
   FileBarChart,
   ShieldCheck,
-  Building2,
   ClipboardCheck,
   Users,
   AlertTriangle,
-  BarChart3,
   FileText,
   ExternalLink,
   CheckCircle2,
@@ -216,7 +214,7 @@ const webPageJsonLd = {
   inLanguage: "pt-BR",
   citation: referenciasCorporativas.map((reference) => reference.href),
   description:
-    "A CLIMAEDU é um ambiente de aprendizagem online para empresas que transforma diretrizes de ESG, clima, sustentabilidade, compliance ambiental, SSMA e gestão de riscos em aprendizagem aplicada, certificados, dashboards, relatórios e evidências de capacitação.",
+    "A CLIMAEDU é um ambiente de aprendizagem online para empresas que transforma ESG, clima, sustentabilidade, compliance ambiental, SSMA e gestão de riscos em aprendizagem aplicada, trilhas, certificados, dashboards, relatórios e evidências de capacitação.",
   about: [
     {
       "@type": "Thing",
@@ -355,8 +353,7 @@ export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
       {
-        title:
-          "Empresas | CLIMAEDU — ESG, sustentabilidade e evidências",
+        title: "Empresas | CLIMAEDU — ESG, sustentabilidade e evidências",
       },
       {
         name: "description",
@@ -391,7 +388,6 @@ export const Route = createFileRoute("/empresas")({
         property: "article:modified_time",
         content: "2026-07-10T00:00:00-03:00",
       },
-
       {
         property: "og:type",
         content: "website",
@@ -402,8 +398,7 @@ export const Route = createFileRoute("/empresas")({
       },
       {
         property: "og:title",
-        content:
-          "CLIMAEDU para empresas | ESG, sustentabilidade e evidências",
+        content: "CLIMAEDU para empresas | ESG, sustentabilidade e evidências",
       },
       {
         property: "og:description",
@@ -418,15 +413,13 @@ export const Route = createFileRoute("/empresas")({
         property: "og:image",
         content: "https://climaedu.com/og-image.png",
       },
-
       {
         name: "twitter:card",
         content: "summary_large_image",
       },
       {
         name: "twitter:title",
-        content:
-          "CLIMAEDU para empresas | ESG, sustentabilidade e evidências",
+        content: "CLIMAEDU para empresas | ESG, sustentabilidade e evidências",
       },
       {
         name: "twitter:description",
@@ -493,11 +486,11 @@ function Empresas() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
-                A CLIMAEDU é um ambiente de aprendizagem online para empresas
-                que transforma diretrizes de ESG, clima, sustentabilidade,
-                compliance ambiental, SSMA e gestão de riscos em aprendizagem
-                aplicada, trilhas por área ou função, certificados, dashboards,
-                relatórios e evidências de capacitação.
+                A CLIMAEDU é um ambiente de aprendizagem online para empresas.
+                A plataforma transforma diretrizes de ESG, clima,
+                sustentabilidade, compliance ambiental, SSMA e gestão de riscos
+                em aprendizagem aplicada, trilhas por área ou função,
+                certificados, dashboards, relatórios e evidências de capacitação.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
