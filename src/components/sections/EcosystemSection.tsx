@@ -1,28 +1,6 @@
-import { useState } from "react";
 import { FadeIn } from "@/components/FadeIn";
 
-const parceiros = [
-  "Global Impact Bootcamp",
-  "Governo de Santa Catarina",
-  "FAPESC",
-  "Impact Hub",
-  "TXM Methods",
-  "SebraeHub",
-  "Rede Midihub",
-  "Sebrae Startups",
-  "ACATE",
-  "uGlobally",
-  "UK Government",
-  "VIPOSA",
-  "Rede Catarinense de Centros de Inovação",
-  "Prefeitura de Caçador",
-  "Inova Contestado",
-  "I2EC",
-];
-
 export function EcosystemSection() {
-  const [logosFailed, setLogosFailed] = useState(false);
-
   return (
     <section id="ecossistema" className="bg-surface scroll-mt-24">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
@@ -59,29 +37,12 @@ export function EcosystemSection() {
 
         <FadeIn delay={0.1}>
           <div className="mt-12">
-            {!logosFailed ? (
-              <img
-                src="/ecossistema-logos.png"
-                alt="Logos de parceiros do ecossistema CLIMAEDU"
-                className="mx-auto h-auto w-full max-w-5xl object-contain"
-                loading="lazy"
-                onError={() => setLogosFailed(true)}
-              />
-            ) : (
-              <div
-                aria-label="Parceiros do ecossistema CLIMAEDU"
-                className="mx-auto grid max-w-5xl gap-3 sm:grid-cols-2 md:grid-cols-4"
-              >
-                {parceiros.map((parceiro) => (
-                  <div
-                    key={parceiro}
-                    className="flex min-h-[64px] items-center justify-center rounded-xl border border-border bg-card px-4 py-3 text-center text-sm font-medium text-foreground/75 shadow-sm"
-                  >
-                    {parceiro}
-                  </div>
-                ))}
-              </div>
-            )}
+            <img
+              src="/ecossistema-logos.png?v=20260710"
+              alt="Logos de parceiros do ecossistema CLIMAEDU"
+              className="mx-auto h-auto w-full max-w-5xl object-contain"
+              loading="lazy"
+            />
           </div>
         </FadeIn>
 
