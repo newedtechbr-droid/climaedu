@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import {
   Outlet,
   Link,
@@ -47,17 +47,28 @@ const organizationJsonLd = {
     "https://www.instagram.com/climaeduplataforma/",
   ],
   logo: "https://climaedu.com/favicon.png",
+  email: "contato@newedtech.com.br",
+  telephone: "+55 48 99160-6518",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Florianópolis",
+    addressRegion: "SC",
+    addressCountry: "BR",
+  },
   description:
     "A CLIMAEDU e uma plataforma GovTech/EdTech de aprendizagem aplicada para clima, sustentabilidade, gestao de riscos e desenvolvimento de competencias institucionais.",
   parentOrganization: {
     "@type": "Organization",
     name: "NEWEDTECH",
+    url: "https://newedtech.com.br/",
   },
   contactPoint: [
     {
       "@type": "ContactPoint",
       contactType: "Atendimento institucional",
       email: "contato@newedtech.com.br",
+      telephone: "+55 48 99160-6518",
+      areaServed: "BR",
       availableLanguage: ["Portuguese", "pt-BR"],
     },
   ],
@@ -67,12 +78,14 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "CLIMAEDU",
+  alternateName: "ClimaEdu",
   url: "https://climaedu.com/",
   description:
     "Aprendizagem aplicada para clima, sustentabilidade, gestao de riscos e capacidade institucional.",
   publisher: {
     "@type": "Organization",
     name: "CLIMAEDU",
+    url: "https://climaedu.com/",
   },
 };
 
@@ -194,7 +207,7 @@ export const Route = createRootRoute({
   notFoundComponent: NotFoundComponent,
 });
 
-function RootShell({ children }: { children: React.ReactNode }) {
+function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
