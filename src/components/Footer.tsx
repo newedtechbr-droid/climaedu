@@ -148,6 +148,13 @@ export function Footer() {
 >
   Política de Privacidade
 </a>
+        href="https://g.page/r/Cfg9US4Q3LU4EAI/review"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm text-foreground/60 transition hover:text-primary"
+>
+  Avalie a CLIMAEDU no Google
+</a>
       </div>
     </footer>
   );
