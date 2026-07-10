@@ -10,6 +10,57 @@ import { CTASection } from "@/components/sections/CTASection";
 const pagePublished = "2026-07-09";
 const pageModified = "2026-07-10";
 
+const institutionalReferences = [
+  {
+    title: "Lei nº 14.133/2021",
+    source: "Planalto",
+    label: "Licitações e contratos administrativos",
+    description:
+      "Referência normativa para planejamento, governança, sustentabilidade, gestão de riscos e contratações públicas.",
+    href: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+  },
+  {
+    title: "Guia Nacional de Contratações Sustentáveis",
+    source: "AGU",
+    label: "Contratações públicas sustentáveis",
+    description:
+      "Referência técnica para apoiar gestores públicos na incorporação de critérios de sustentabilidade nas contratações.",
+    href: "https://www.gov.br/agu/pt-br/assuntos-1/Publicacoes/cartilhas/guia-nacional-de-contratacoes-sustentaveis-2024.pdf",
+  },
+  {
+    title: "Lei nº 12.187/2009",
+    source: "Planalto",
+    label: "Política Nacional sobre Mudança do Clima",
+    description:
+      "Marco nacional relacionado à política climática, adaptação, mitigação e redução de vulnerabilidades.",
+    href: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12187.htm",
+  },
+  {
+    title: "Lei nº 12.608/2012",
+    source: "Planalto",
+    label: "Política Nacional de Proteção e Defesa Civil",
+    description:
+      "Referência para prevenção, preparação, resposta, recuperação e gestão de riscos de desastres.",
+    href: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm",
+  },
+  {
+    title: "Objetivos de Desenvolvimento Sustentável",
+    source: "ONU Brasil",
+    label: "Agenda 2030 e ODS",
+    description:
+      "Agenda global relacionada a educação, instituições eficazes, cidades sustentáveis, clima e meios de implementação.",
+    href: "https://brasil.un.org/pt-br/sdgs",
+  },
+  {
+    title: "AR6 Synthesis Report",
+    source: "IPCC",
+    label: "Ciência climática internacional",
+    description:
+      "Relatório de síntese sobre mudança climática, impactos, riscos, adaptação e mitigação.",
+    href: "https://www.ipcc.ch/report/ar6/syr/",
+  },
+];
+
 const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -18,6 +69,7 @@ const webPageJsonLd = {
   datePublished: pagePublished,
   dateModified: pageModified,
   inLanguage: "pt-BR",
+  citation: institutionalReferences.map((reference) => reference.href),
   isPartOf: {
     "@type": "WebSite",
     name: "CLIMAEDU",
@@ -109,6 +161,14 @@ export const Route = createFileRoute("/")({
       },
       {
         name: "date",
+        content: pageModified,
+      },
+      {
+        name: "datePublished",
+        content: pagePublished,
+      },
+      {
+        name: "dateModified",
         content: pageModified,
       },
       {
@@ -292,6 +352,64 @@ function Index() {
                 . A operação está localizada em Florianópolis, SC, Brasil.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        aria-label="Referências institucionais e técnicas"
+        className="bg-surface px-6 py-18 md:py-20"
+      >
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+              Referências institucionais
+            </p>
+
+            <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
+              Base técnica para aprendizagem aplicada
+            </h2>
+
+            <p className="mt-4 text-foreground/75">
+              A atuação da CLIMAEDU dialoga com agendas públicas e referências
+              técnicas relacionadas a sustentabilidade, gestão de riscos,
+              adaptação climática, compras públicas sustentáveis, defesa civil,
+              educação e desenvolvimento de capacidades institucionais.
+            </p>
+
+            <p className="mt-4 text-sm leading-relaxed text-foreground/60">
+              Fontes institucionais consultadas: Planalto, Advocacia-Geral da
+              União, ONU Brasil e IPCC. As referências abaixo não substituem
+              análise jurídica, técnica ou normativa do órgão contratante.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {institutionalReferences.map((reference) => (
+              <a
+                key={reference.href}
+                href={reference.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                  Fonte: {reference.source}
+                </p>
+
+                <h3 className="mt-3 text-lg font-semibold text-primary-dark group-hover:text-primary">
+                  {reference.title}
+                </h3>
+
+                <p className="mt-1 text-sm font-medium text-foreground/70">
+                  {reference.label}
+                </p>
+
+                <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+                  {reference.description}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </section>
