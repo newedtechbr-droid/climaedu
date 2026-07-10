@@ -455,10 +455,11 @@ function OrgaosPublicos() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
-                A CLIMAEDU apoia órgãos públicos a transformar conhecimento
-                técnico, normas, planos, guias e diretrizes de sustentabilidade
-                em aprendizagem aplicada, trilhas por função, certificados,
-                relatórios e evidências de capacitação.
+                A CLIMAEDU é um ambiente de aprendizagem online para órgãos
+                públicos que prepara equipes públicas para a ação climática,
+                transformando conhecimento técnico, normas, planos, guias e
+                diretrizes de sustentabilidade em aprendizagem aplicada, trilhas
+                por função, certificados, relatórios e evidências de capacitação.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
