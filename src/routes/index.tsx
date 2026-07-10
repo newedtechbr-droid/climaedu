@@ -194,57 +194,33 @@ function Index() {
       />
 
       <HeroSection />
-
-      <section
-        aria-label="Resumo institucional da CLIMAEDU"
-        className="bg-background px-6 py-12"
-      >
-        <div className="mx-auto max-w-6xl rounded-2xl border border-border bg-card px-6 py-6 text-foreground/80 shadow-sm">
-          <p className="text-base leading-relaxed md:text-lg">
-            <strong className="text-primary-dark">A CLIMAEDU</strong> é uma
-            plataforma GovTech/EdTech da NEWEDTECH que transforma conhecimento
-            técnico sobre clima, sustentabilidade e gestão de riscos em
-            aprendizagem aplicada, competências institucionais, certificados,
-            relatórios e evidências de capacitação.
-          </p>
-
-          <p className="mt-4 text-sm leading-relaxed text-foreground/70">
-            Contato institucional:{" "}
-            <a
-              href="mailto:contato@newedtech.com.br"
-              className="font-medium text-primary-dark hover:text-primary"
-            >
-              contato@newedtech.com.br
-            </a>{" "}
-            ·{" "}
-            <a
-              href="tel:+5548991606518"
-              className="font-medium text-primary-dark hover:text-primary"
-            >
-              +55 48 99160-6518
-            </a>{" "}
-            · Florianópolis, SC, Brasil · Publicado em 09/07/2026 · Atualizado
-            em 10/07/2026.
-          </p>
-        </div>
-      </section>
+      <ContextSection />
+      <MethodStepsSection />
+      <ClimateImpactStrip />
+      <JourneyCardsSection />
+      <EcosystemSection />
 
       <section
         aria-label="Perguntas frequentes sobre a CLIMAEDU"
-        className="bg-background px-6 pb-16"
+        className="bg-background px-6 py-20"
       >
         <div className="mx-auto max-w-6xl">
-          <div className="mb-8 max-w-3xl">
+          <div className="mb-10 max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
-              FAQ
+              Perguntas frequentes
             </p>
+
             <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
-              Perguntas frequentes sobre a CLIMAEDU
+              Respostas diretas sobre a CLIMAEDU
             </h2>
+
             <p className="mt-4 text-foreground/70">
-              Respostas diretas para mecanismos de busca, ferramentas de IA,
-              gestores públicos, empresas e instituições interessadas na
-              plataforma.
+              Informações institucionais para gestores públicos, empresas,
+              instituições parceiras, buscadores e ferramentas de IA.
+            </p>
+
+            <p className="mt-3 text-sm text-foreground/60">
+              Publicado em 09/07/2026 · Atualizado em 10/07/2026.
             </p>
           </div>
 
@@ -319,12 +295,6 @@ function Index() {
           </div>
         </div>
       </section>
-
-      <ContextSection />
-      <MethodStepsSection />
-      <ClimateImpactStrip />
-      <JourneyCardsSection />
-      <EcosystemSection />
 
       <CTASection
         title="Quando todos entendem seu papel, a instituição responde melhor."
