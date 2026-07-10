@@ -12,22 +12,68 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "CLIMAEDU | Da reação à prevenção — capacitação climática institucional",
+          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
       },
       {
         name: "description",
         content:
-          "Plataforma de capacitação climática para órgãos públicos, empresas e redes de ensino. Trilhas por perfil, certificados, dashboards e evidências auditáveis.",
+          "A CLIMAEDU transforma conhecimento tecnico sobre clima, sustentabilidade e gestao de riscos em aprendizagem aplicada, competencias institucionais, certificados, relatorios e evidencias de capacitacao.",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
+
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:site_name",
+        content: "CLIMAEDU",
       },
       {
         property: "og:title",
         content:
-          "CLIMAEDU | Da reação à prevenção",
+          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
       },
       {
         property: "og:description",
         content:
-          "Capacitação climática para colocar toda a instituição na mesma página: rotinas, equipes preparadas e evidências.",
+          "Conhecimento tecnico transformado em aprendizagem aplicada, capacidade institucional e evidencias de capacitacao.",
+      },
+      {
+        property: "og:url",
+        content: "https://climaedu.com/",
+      },
+      {
+        property: "og:image",
+        content: "https://climaedu.com/og-image.png",
+      },
+
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "A CLIMAEDU transforma conhecimento tecnico em aprendizagem aplicada, competencias institucionais e evidencias de capacitacao.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://climaedu.com/og-image.png",
+      },
+    ],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://climaedu.com/",
       },
     ],
   }),
