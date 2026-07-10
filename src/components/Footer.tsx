@@ -142,6 +142,12 @@ export function Footer() {
         >
           © 2026 CLIMAEDU — produto NewEdTech · Florianópolis, SC, Brasil
         </p>
+        <a
+  href="/politica-de-privacidade"
+  className="text-sm text-foreground/60 transition hover:text-primary"
+>
+  Política de Privacidade
+</a>
       </div>
     </footer>
   );
