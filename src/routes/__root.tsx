@@ -1,5 +1,11 @@
 import type { CSSProperties } from "react";
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import {
+  Outlet,
+  Link,
+  createRootRoute,
+  HeadContent,
+  Scripts,
+} from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -29,6 +35,43 @@ const climaeduTheme: CSSVars = {
 
   "--color-slate-blue": "#485C68",
 };
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "CLIMAEDU",
+  alternateName: "ClimaEdu",
+  url: "https://climaedu.com/",
+  logo: "https://climaedu.com/favicon.png",
+  description:
+    "A CLIMAEDU e uma plataforma GovTech/EdTech de aprendizagem aplicada para clima, sustentabilidade, gestao de riscos e desenvolvimento de competencias institucionais.",
+  parentOrganization: {
+    "@type": "Organization",
+    name: "NEWEDTECH",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "Atendimento institucional",
+      email: "contato@newedtech.com.br",
+      availableLanguage: ["Portuguese", "pt-BR"],
+    },
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "CLIMAEDU",
+  url: "https://climaedu.com/",
+  description:
+    "Aprendizagem aplicada para clima, sustentabilidade, gestao de riscos e capacidade institucional.",
+  publisher: {
+    "@type": "Organization",
+    name: "CLIMAEDU",
+  },
+};
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -60,26 +103,81 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "CLIMAEDU — Capacitação climática para órgãos públicos, empresas e escolas" },
+
+      {
+        title:
+          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+      },
+
       {
         name: "description",
         content:
-          "Plataforma de capacitação climática aplicada. Trilhas por perfil, certificados, dashboards e evidências auditáveis para preparar instituições inteiras.",
+          "A CLIMAEDU transforma conhecimento tecnico sobre clima, sustentabilidade e gestao de riscos em aprendizagem aplicada, competencias institucionais, certificados, relatorios e evidencias de capacitacao.",
       },
+
+      { name: "robots", content: "index, follow" },
       { name: "author", content: "CLIMAEDU" },
-      { property: "og:title", content: "CLIMAEDU — Da reação à prevenção" },
+
+      {
+        property: "og:type",
+        content: "website",
+      },
+      {
+        property: "og:site_name",
+        content: "CLIMAEDU",
+      },
+      {
+        property: "og:title",
+        content:
+          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+      },
       {
         property: "og:description",
         content:
-          "Capacitação climática para colocar toda a instituição na mesma página: rotinas executáveis, equipes preparadas e evidências auditáveis.",
+          "Conhecimento tecnico transformado em aprendizagem aplicada, capacidade institucional e evidencias de capacitacao.",
       },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      {
+        property: "og:url",
+        content: "https://climaedu.com/",
+      },
+      {
+        property: "og:image",
+        content: "https://climaedu.com/og-image.png",
+      },
+
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        name: "twitter:title",
+        content:
+          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "A CLIMAEDU transforma conhecimento tecnico em aprendizagem aplicada, competencias institucionais e evidencias de capacitacao.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://climaedu.com/og-image.png",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+
+      {
+        rel: "canonical",
+        href: "https://climaedu.com/",
+      },
+
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap",
@@ -97,6 +195,18 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="pt-BR">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
       </head>
       <body>
         {children}
