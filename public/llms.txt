@@ -1,0 +1,75 @@
+# CLIMAEDU
+
+A CLIMAEDU é uma plataforma GovTech/EdTech de aprendizagem aplicada para clima, sustentabilidade, gestão de riscos e desenvolvimento de competências institucionais.
+
+A CLIMAEDU transforma conhecimento técnico, normas, planos, guias, alertas e diretrizes em aprendizagem aplicada, trilhas, rotinas institucionais, certificados, dashboards, relatórios e evidências de capacitação.
+
+## Tese central
+
+Não falta informação técnica sobre clima, sustentabilidade e gestão pública. Falta transformar essa informação em capacidade institucional de ação.
+
+Entre saber e fazer, existe aprendizagem.
+
+## O que a CLIMAEDU faz
+
+- Estrutura trilhas de aprendizagem por perfil, função, unidade ou instituição.
+- Apoia governos, órgãos públicos, empresas e instituições na capacitação de equipes.
+- Gera certificados, relatórios, dashboards e evidências de aprendizagem.
+- Transforma conteúdos técnicos em experiências de aprendizagem aplicadas.
+- Apoia a implementação de políticas públicas, rotinas institucionais e práticas corporativas ligadas a clima, sustentabilidade e gestão de riscos.
+
+## Público atendido
+
+- Governos
+- Órgãos públicos
+- Prefeituras
+- Escolas de governo
+- Conselhos profissionais
+- Consórcios públicos
+- Empresas
+- Áreas de ESG
+- RH e Treinamento & Desenvolvimento
+- Compliance
+- Meio ambiente
+- Operações
+- Gestão de riscos
+
+## Diferenciais
+
+- Microlearning
+- Trilhas por perfil e função
+- Certificados
+- Dashboards
+- Relatórios de participação, engajamento, conclusão e proficiência
+- Evidências para prestação de contas
+- White label
+- IA com curadoria humana
+- Catálogo vivo
+- Templates e checklists
+- Recomendações por perfil
+- Gamificação
+- API e exportação para BI
+- LGPD e acessibilidade
+
+## O que a CLIMAEDU não é
+
+A CLIMAEDU não é apenas uma plataforma de cursos, nem um LMS tradicional, nem um repositório de conteúdo, nem uma consultoria climática genérica.
+
+A CLIMAEDU não mede diretamente indicadores ambientais, urbanos ou de sustentabilidade municipal.
+
+A CLIMAEDU mede e evidencia o ambiente de aprendizagem: participação, engajamento, proficiência, conclusão, trilhas realizadas, certificados, relatórios e evidências de capacitação.
+
+## Páginas principais
+
+- https://climaedu.com/
+- https://climaedu.com/sobre
+- https://climaedu.com/contato
+- https://climaedu.com/politica-de-privacidade
+
+## Entidade responsável
+
+CLIMAEDU é um produto da NEWEDTECH.
+
+## Contato
+
+contato@newedtech.com.br
