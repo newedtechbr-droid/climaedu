@@ -1,22 +1,5 @@
 import { useState } from "react";
 import { FadeIn } from "@/components/FadeIn";
-import ecossistemaLogosAsset from "@/assets/partners/ecossistema-logos.png.asset.json";
-
-type AssetWithUrl = {
-  url?: string;
-  src?: string;
-  href?: string;
-  default?: string;
-};
-
-const ecossistemaLogos = ecossistemaLogosAsset as AssetWithUrl;
-
-const ecossistemaLogosUrl =
-  ecossistemaLogos.url ??
-  ecossistemaLogos.src ??
-  ecossistemaLogos.href ??
-  ecossistemaLogos.default ??
-  "";
 
 const parceiros = [
   "Global Impact Bootcamp",
@@ -38,7 +21,7 @@ const parceiros = [
 ];
 
 export function EcosystemSection() {
-  const [logosFailed, setLogosFailed] = useState(!ecossistemaLogosUrl);
+  const [logosFailed, setLogosFailed] = useState(false);
 
   return (
     <section id="ecossistema" className="bg-surface scroll-mt-24">
@@ -78,7 +61,7 @@ export function EcosystemSection() {
           <div className="mt-12">
             {!logosFailed ? (
               <img
-                src={ecossistemaLogosUrl}
+                src="/ecossistema-logos.png"
                 alt="Logos de parceiros do ecossistema CLIMAEDU"
                 className="mx-auto h-auto w-full max-w-5xl object-contain"
                 loading="lazy"
