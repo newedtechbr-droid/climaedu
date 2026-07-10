@@ -42,6 +42,10 @@ const organizationJsonLd = {
   name: "CLIMAEDU",
   alternateName: "ClimaEdu",
   url: "https://climaedu.com/",
+  sameAs: [
+    "https://www.linkedin.com/company/clima-edu/",
+    "https://www.instagram.com/climaeduplataforma/",
+  ],
   logo: "https://climaedu.com/favicon.png",
   description:
     "A CLIMAEDU e uma plataforma GovTech/EdTech de aprendizagem aplicada para clima, sustentabilidade, gestao de riscos e desenvolvimento de competencias institucionais.",
