@@ -64,7 +64,7 @@ export function Footer() {
 
             <div className="mt-6 rounded-2xl border border-white/12 bg-white/[0.04] p-5">
               <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-white">
-                Contato
+                Contato e responsável legal
               </h2>
 
               <dl className="mt-4 space-y-4">
@@ -102,6 +102,24 @@ export function Footer() {
                   </dt>
                   <dd className="mt-1 text-base font-medium text-white">
                     Florianópolis, SC, Brasil
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
+                    Empresa responsável
+                  </dt>
+                  <dd className="mt-1 text-base font-medium text-white">
+                    NEW TECNOLOGIA E INOVAÇÃO EDUCACIONAL LTDA
+                  </dd>
+                </div>
+
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
+                    CNPJ
+                  </dt>
+                  <dd className="mt-1 text-base font-medium text-white">
+                    50.443.417/0001-05
                   </dd>
                 </div>
               </dl>
@@ -153,8 +171,9 @@ export function Footer() {
 
         <div className="mt-10 border-t border-white/12 pt-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <p className="text-sm text-white/62">
-              © 2026 CLIMAEDU — produto NewEdTech · Florianópolis, SC, Brasil
+            <p className="text-sm leading-relaxed text-white/62">
+              © 2026 CLIMAEDU — produto da NewEdTech · Florianópolis, SC,
+              Brasil
             </p>
 
             <a
