@@ -66,10 +66,7 @@ export function Footer() {
                     E-mail
                   </dt>
                   <dd className="mt-1">
-                    
-                      href="mailto:contato@newedtech.com.br"
-                      className="text-base font-medium text-white transition hover:text-white/80"
-                    >
+                    <a href="mailto:contato@newedtech.com.br" className="text-base font-medium text-white transition hover:text-white/80">
                       contato@newedtech.com.br
                     </a>
                   </dd>
@@ -80,10 +77,7 @@ export function Footer() {
                     Telefone
                   </dt>
                   <dd className="mt-1">
-                    
-                      href="tel:+5548991606518"
-                      className="text-base font-medium text-white transition hover:text-white/80"
-                    >
+                    <a href="tel:+5548991606518" className="text-base font-medium text-white transition hover:text-white/80">
                       +55 48 99160-6518
                     </a>
                   </dd>
@@ -123,13 +117,7 @@ export function Footer() {
 
               <div className="mt-4 flex flex-wrap gap-3">
                 {socialLinks.map((link) => (
-                  
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-white/18 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-primary-dark"
-                  >
+                  <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full border border-white/18 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-primary-dark">
                     {link.label}
                   </a>
                 ))}
@@ -146,11 +134,7 @@ export function Footer() {
 
                 <nav className="mt-4 flex flex-col gap-3">
                   {group.links.map((link) => (
-                    
-                      key={link.href}
-                      href={link.href}
-                      className="text-sm text-white/72 transition hover:text-white"
-                    >
+                    <a key={link.href} href={link.href} className="text-sm text-white/72 transition hover:text-white">
                       {link.label}
                     </a>
                   ))}
@@ -166,10 +150,7 @@ export function Footer() {
               © 2026 CLIMAEDU — produto da NewEdTech · Florianópolis, SC, Brasil
             </p>
 
-            
-              href="/politica-de-privacidade"
-              className="text-sm font-medium text-white/72 transition hover:text-white"
-            >
+            <a href="/politica-de-privacidade" className="text-sm font-medium text-white/72 transition hover:text-white">
               Política de Privacidade
             </a>
           </div>
