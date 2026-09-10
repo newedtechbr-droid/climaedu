@@ -774,13 +774,7 @@ function Empresas() {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {referenciasCorporativas.map((reference) => (
-              
-                key={reference.href}
-                href={reference.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
-              >
+              <a key={reference.href} href={reference.href} target="_blank" rel="noopener noreferrer" className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                     Fonte: {reference.source}
