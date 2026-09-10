@@ -40,7 +40,12 @@ export function HeroSection() {
           <FadeIn delay={0.08}>
             <h1
               className="text-primary-dark"
-              style={{ fontSize: "clamp(38px, 5.6vw, 72px)", lineHeight: 1.06, letterSpacing: "-0.018em", fontWeight: 600 }}
+              style={{
+                fontSize: "clamp(38px, 5.6vw, 72px)",
+                lineHeight: 1.06,
+                letterSpacing: "-0.018em",
+                fontWeight: 600,
+              }}
             >
               Da reação à prevenção:{" "}
               <span style={{ color: "#3D5132", fontWeight: 800 }}>
@@ -54,27 +59,28 @@ export function HeroSection() {
               className="mt-8 max-w-xl text-foreground/80"
               style={{ fontSize: "clamp(17px, 1.35vw, 21px)", lineHeight: 1.65 }}
             >
-              A CLIMAEDU prepara órgãos públicos, empresas e redes de ensino para transformar
-              riscos climáticos em <strong className="font-semibold text-primary-dark">rotinas executáveis</strong>,
-              equipes capacitadas e evidências auditáveis.
+              Ter planos, normas e especialistas não garante que as pessoas saibam como agir. A
+              CLIMAEDU transforma esse conhecimento técnico em{" "}
+              <strong className="font-semibold text-primary-dark">aprendizagem aplicada</strong>,
+              preparando equipes de órgãos públicos e indústrias reguladas para agir — com a
+              organização acompanhando essa aprendizagem.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.26}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-
               <Link
                 to="/demonstracao"
                 className="inline-flex h-14 items-center gap-2 rounded-lg bg-primary px-7 text-base font-semibold text-primary-foreground shadow-[0_14px_38px_-10px_rgba(132,154,116,0.65)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:scale-[1.02]"
               >
                 Agendar demonstração <ArrowRight size={18} />
               </Link>
-              <Link
-                to="/orgaos-publicos"
+              
+                href="#solucoes"
                 className="inline-flex h-14 items-center gap-2 rounded-lg border-2 border-primary bg-background px-7 text-base font-semibold text-primary-dark transition-colors hover:bg-accent"
               >
                 Conhecer soluções
-              </Link>
+              </a>
             </div>
           </FadeIn>
 
@@ -84,7 +90,9 @@ export function HeroSection() {
                 <li
                   key={b.label}
                   className="inline-flex items-center gap-2 rounded-full border bg-card px-3.5 py-2 text-[13px] font-semibold text-foreground/85"
-                  style={{ borderColor: "color-mix(in oklab, var(--color-olive) 35%, var(--color-border))" }}
+                  style={{
+                    borderColor: "color-mix(in oklab, var(--color-olive) 35%, var(--color-border))",
+                  }}
                 >
                   <b.icon size={15} style={{ color: "var(--color-olive)" }} aria-hidden />
                   {b.label}
@@ -119,7 +127,9 @@ function PlatformMockup() {
       {/* Mockup principal — sugerido, não literal */}
       <div
         className="relative mx-auto w-full max-w-[520px] overflow-hidden rounded-2xl border bg-card shadow-[0_30px_70px_-22px_rgba(20,30,40,0.4)] animate-fade-in"
-        style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 25%, var(--color-border))" }}
+        style={{
+          borderColor: "color-mix(in oklab, var(--color-slate-blue) 25%, var(--color-border))",
+        }}
       >
         {/* barra superior estilo navegador */}
         <div
@@ -152,39 +162,45 @@ function PlatformMockup() {
             className="block h-auto w-full"
           />
           {/* Véu leve para reduzir 'spoiler' da plataforma */}
-<div
-  aria-hidden
-  className="pointer-events-none absolute inset-0"
-  style={{
-    background:
-      "linear-gradient(180deg, transparent 72%, color-mix(in oklab, var(--color-background) 18%, transparent))",
-  }}
-/>
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, transparent 72%, color-mix(in oklab, var(--color-background) 18%, transparent))",
+            }}
+          />
         </div>
       </div>
 
       {/* Chip flutuante — trilha por perfil */}
       <div
-     className="absolute -left-3 top-6 hidden rounded-full border bg-white px-3 py-1.5 text-[11px] font-semibold shadow-xl sm:flex items-center gap-1.5 animate-fade-in"
+        className="absolute -left-3 top-6 hidden rounded-full border bg-white px-3 py-1.5 text-[11px] font-semibold shadow-xl sm:flex items-center gap-1.5 animate-fade-in"
         style={{
           borderColor: "color-mix(in oklab, var(--color-olive) 35%, var(--color-border))",
           color: "var(--color-primary-deep)",
           animation: "fade-in 0.6s ease-out 0.3s both, float 6s ease-in-out 1s infinite",
         }}
       >
-        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-olive)" }} />
+        <span
+          className="h-1.5 w-1.5 rounded-full"
+          style={{ backgroundColor: "var(--color-olive)" }}
+        />
         Trilha por perfil
       </div>
 
       {/* Card flutuante — certificado */}
       <div
-     className="absolute -bottom-5 -left-5 hidden w-[195px] rotate-[-3deg] rounded-lg border bg-white p-3 shadow-xl sm:block"
+        className="absolute -bottom-5 -left-5 hidden w-[195px] rotate-[-3deg] rounded-lg border bg-white p-3 shadow-xl sm:block"
         style={{
           borderColor: "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))",
           animation: "fade-in 0.6s ease-out 0.5s both, float 7s ease-in-out infinite",
         }}
       >
-        <p className="text-[10px] font-bold uppercase tracking-wider" style={{ color: "var(--color-terracotta)" }}>
+        <p
+          className="text-[10px] font-bold uppercase tracking-wider"
+          style={{ color: "var(--color-terracotta)" }}
+        >
           Certificado emitido
         </p>
         <p className="mt-1 text-[12px] font-semibold leading-snug text-primary-dark">
@@ -195,13 +211,16 @@ function PlatformMockup() {
 
       {/* Card flutuante — dashboard de adesão */}
       <div
-       className="absolute -right-4 -top-4 hidden w-[180px] rotate-[2deg] rounded-lg border bg-white p-3 shadow-xl md:block"
+        className="absolute -right-4 -top-4 hidden w-[180px] rotate-[2deg] rounded-lg border bg-white p-3 shadow-xl md:block"
         style={{
           borderColor: "color-mix(in oklab, var(--color-olive) 45%, var(--color-border))",
           animation: "fade-in 0.6s ease-out 0.7s both, float 8s ease-in-out 0.5s infinite",
         }}
       >
-        <p className="text-[10px] font-bold uppercase tracking-wider" style={{ color: "var(--color-olive)" }}>
+        <p
+          className="text-[10px] font-bold uppercase tracking-wider"
+          style={{ color: "var(--color-olive)" }}
+        >
           Adesão por secretaria
         </p>
         <div className="mt-2 space-y-1.5">
@@ -229,18 +248,21 @@ function PlatformMockup() {
         </div>
       </div>
 
-    {/* Chip flutuante — white-label */}
-<div
-  className="absolute -bottom-2 right-2 hidden rounded-full border bg-white px-3 py-1.5 text-[11px] font-semibold shadow-xl md:flex items-center gap-1.5"
-  style={{
-    borderColor: "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))",
-    color: "var(--color-primary-deep)",
-    animation: "fade-in 0.6s ease-out 0.9s both, float 6.5s ease-in-out 1.5s infinite",
-  }}
->
-  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
-  Identidade institucional
-</div>
+      {/* Chip flutuante — white-label */}
+      <div
+        className="absolute -bottom-2 right-2 hidden rounded-full border bg-white px-3 py-1.5 text-[11px] font-semibold shadow-xl md:flex items-center gap-1.5"
+        style={{
+          borderColor: "color-mix(in oklab, var(--color-terracotta) 45%, var(--color-border))",
+          color: "var(--color-primary-deep)",
+          animation: "fade-in 0.6s ease-out 0.9s both, float 6.5s ease-in-out 1.5s infinite",
+        }}
+      >
+        <span
+          className="h-1.5 w-1.5 rounded-full"
+          style={{ backgroundColor: "var(--color-terracotta)" }}
+        />
+        Identidade institucional
+      </div>
 
       <style>{`
         @keyframes float {
@@ -251,4 +273,3 @@ function PlatformMockup() {
     </div>
   );
 }
-
