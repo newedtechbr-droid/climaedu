@@ -12,7 +12,7 @@ export const Route = createFileRoute("/sobre")({
       {
         name: "description",
         content:
-          "Produto da NewEdTech, a CLIMAEDU une educação, tecnologia, IA e conhecimento ambiental para apoiar governos, empresas e redes de ensino.",
+          "A CLIMAEDU é a solução da Newedtech especializada em conhecimentos climáticos e socioambientais. A Newedtech transforma conhecimentos técnicos e complexos em experiências de aprendizagem aplicadas para governos, empresas e redes de ensino.",
       },
       { property: "og:title", content: "Sobre a CLIMAEDU" },
       {
@@ -31,7 +31,7 @@ function Sobre() {
       <PageHero
         eyebrow="Sobre a CLIMAEDU"
         title="Educação climática aplicada para instituições que precisam agir"
-        subtitle="A CLIMAEDU ajuda governos, empresas e redes de ensino a transformar conhecimento climático em formação, rotinas, registros e evidências de execução."
+        subtitle="A CLIMAEDU ajuda governos, empresas de setores regulados e redes de ensino a transformar conhecimento climático em formação, rotinas, registros e evidências de execução."
       />
 
       <AboutSection />
