@@ -3,24 +3,22 @@ const navigationLinks = [
     title: "Para quem",
     links: [
       { label: "Órgãos públicos", href: "/orgaos-publicos" },
-      { label: "Empresas", href: "/empresas" },
+      { label: "Empresas e indústria", href: "/empresas" },
       { label: "Escolas e redes", href: "/escolas" },
     ],
   },
   {
     title: "Plataforma",
     links: [
-      { label: "Como funciona", href: "/como-funciona" },
+      { label: "Como funciona", href: "/plataforma" },
       { label: "Cursos e trilhas", href: "/cursos" },
       { label: "Diferenciais", href: "/diferenciais" },
-      { label: "Plataforma", href: "/plataforma" },
     ],
   },
   {
     title: "Institucional",
     links: [
       { label: "Sobre", href: "/sobre" },
-      { label: "Contato", href: "/contato" },
       { label: "Demonstração", href: "/demonstracao" },
       { label: "Política de Privacidade", href: "/politica-de-privacidade" },
     ],
@@ -49,17 +47,12 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.25fr_1.75fr]">
           <div>
             <a href="/" aria-label="Página inicial da CLIMAEDU">
-              <img
-                src="/logo.png"
-                alt="CLIMAEDU"
-                className="h-12 w-auto brightness-0 invert"
-              />
+              <img src="/logo.png" alt="CLIMAEDU" className="h-12 w-auto brightness-0 invert" />
             </a>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/78">
-              A CLIMAEDU é um ambiente de aprendizagem online para clima,
-              sustentabilidade, ESG, gestão de riscos e evidências de
-              capacitação.
+              A CLIMAEDU é um ambiente de aprendizagem online para clima, sustentabilidade, ESG,
+              gestão de riscos e evidências de capacitação.
             </p>
 
             <div className="mt-6 rounded-2xl border border-white/12 bg-white/[0.04] p-5">
@@ -73,7 +66,7 @@ export function Footer() {
                     E-mail
                   </dt>
                   <dd className="mt-1">
-                    <a
+                    
                       href="mailto:contato@newedtech.com.br"
                       className="text-base font-medium text-white transition hover:text-white/80"
                     >
@@ -87,7 +80,7 @@ export function Footer() {
                     Telefone
                   </dt>
                   <dd className="mt-1">
-                    <a
+                    
                       href="tel:+5548991606518"
                       className="text-base font-medium text-white transition hover:text-white/80"
                     >
@@ -118,9 +111,7 @@ export function Footer() {
                   <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
                     CNPJ
                   </dt>
-                  <dd className="mt-1 text-base font-medium text-white">
-                    50.443.417/0001-05
-                  </dd>
+                  <dd className="mt-1 text-base font-medium text-white">50.443.417/0001-05</dd>
                 </div>
               </dl>
             </div>
@@ -132,7 +123,7 @@ export function Footer() {
 
               <div className="mt-4 flex flex-wrap gap-3">
                 {socialLinks.map((link) => (
-                  <a
+                  
                     key={link.href}
                     href={link.href}
                     target="_blank"
@@ -155,7 +146,7 @@ export function Footer() {
 
                 <nav className="mt-4 flex flex-col gap-3">
                   {group.links.map((link) => (
-                    <a
+                    
                       key={link.href}
                       href={link.href}
                       className="text-sm text-white/72 transition hover:text-white"
@@ -172,11 +163,10 @@ export function Footer() {
         <div className="mt-10 border-t border-white/12 pt-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-sm leading-relaxed text-white/62">
-              © 2026 CLIMAEDU — produto da NewEdTech · Florianópolis, SC,
-              Brasil
+              © 2026 CLIMAEDU — produto da NewEdTech · Florianópolis, SC, Brasil
             </p>
 
-            <a
+            
               href="/politica-de-privacidade"
               className="text-sm font-medium text-white/72 transition hover:text-white"
             >
