@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as PlataformaRouteImport } from './routes/plataforma'
 import { Route as ParaQuemRouteImport } from './routes/para-quem'
 import { Route as OrgaosPublicosRouteImport } from './routes/orgaos-publicos'
@@ -25,6 +26,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlataformaRoute = PlataformaRouteImport.update({
@@ -95,6 +101,7 @@ export interface FileRoutesByFullPath {
   '/orgaos-publicos': typeof OrgaosPublicosRoute
   '/para-quem': typeof ParaQuemRoute
   '/plataforma': typeof PlataformaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
@@ -109,6 +116,7 @@ export interface FileRoutesByTo {
   '/orgaos-publicos': typeof OrgaosPublicosRoute
   '/para-quem': typeof ParaQuemRoute
   '/plataforma': typeof PlataformaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
@@ -124,6 +132,7 @@ export interface FileRoutesById {
   '/orgaos-publicos': typeof OrgaosPublicosRoute
   '/para-quem': typeof ParaQuemRoute
   '/plataforma': typeof PlataformaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
@@ -140,6 +149,7 @@ export interface FileRouteTypes {
     | '/orgaos-publicos'
     | '/para-quem'
     | '/plataforma'
+    | '/politica-de-privacidade'
     | '/sobre'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -154,6 +164,7 @@ export interface FileRouteTypes {
     | '/orgaos-publicos'
     | '/para-quem'
     | '/plataforma'
+    | '/politica-de-privacidade'
     | '/sobre'
   id:
     | '__root__'
@@ -168,6 +179,7 @@ export interface FileRouteTypes {
     | '/orgaos-publicos'
     | '/para-quem'
     | '/plataforma'
+    | '/politica-de-privacidade'
     | '/sobre'
   fileRoutesById: FileRoutesById
 }
@@ -183,6 +195,7 @@ export interface RootRouteChildren {
   OrgaosPublicosRoute: typeof OrgaosPublicosRoute
   ParaQuemRoute: typeof ParaQuemRoute
   PlataformaRoute: typeof PlataformaRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   SobreRoute: typeof SobreRoute
 }
 
@@ -193,6 +206,13 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/plataforma': {
@@ -287,8 +307,18 @@ const rootRouteChildren: RootRouteChildren = {
   OrgaosPublicosRoute: OrgaosPublicosRoute,
   ParaQuemRoute: ParaQuemRoute,
   PlataformaRoute: PlataformaRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
