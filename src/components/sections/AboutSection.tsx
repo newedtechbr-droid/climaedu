@@ -8,7 +8,9 @@ export function AboutSection() {
         <FadeIn>
           <div
             className="relative overflow-hidden rounded-2xl border shadow-[0_24px_60px_-24px_rgba(20,30,40,0.35)]"
-            style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 22%, var(--color-border))" }}
+            style={{
+              borderColor: "color-mix(in oklab, var(--color-slate-blue) 22%, var(--color-border))",
+            }}
           >
             <img
               src={teamImage}
@@ -34,17 +36,20 @@ export function AboutSection() {
           >
             Quem somos
           </p>
-          <h2 className="text-primary-dark">
-            Da estratégia climática à rotina institucional
-          </h2>
+          <h2 className="text-primary-dark">Do conhecimento à ação</h2>
           <p className="mt-7 text-[18px] leading-[1.7] text-foreground/80">
-            A CLIMAEDU organiza conteúdos, trilhas, atividades e evidências em uma jornada
-            aplicável ao dia a dia de governos, empresas e redes de ensino. O foco é ajudar
-            equipes a aprender, executar e demonstrar resultados com clareza.
+            A Newedtech transforma conhecimentos técnicos e complexos em experiências de
+            aprendizagem aplicadas. A CLIMAEDU é a solução da Newedtech especializada em
+            conhecimentos climáticos e socioambientais.
+          </p>
+          <p className="mt-4 text-[18px] leading-[1.7] text-foreground/80">
+            Ter planos, normas e especialistas não garante que as pessoas saibam como agir. A
+            CLIMAEDU transforma esse conhecimento técnico em aprendizagem aplicada — para governos,
+            empresas e redes de ensino — preparando pessoas para agir e permitindo que a organização
+            acompanhe essa aprendizagem.
           </p>
         </FadeIn>
       </div>
-
     </section>
   );
 }
