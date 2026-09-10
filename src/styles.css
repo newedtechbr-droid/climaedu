@@ -1,4 +1,3 @@
-
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -44,16 +43,16 @@
 :root {
   --radius: 0.5rem;
 
-  /* ClimaEdu — Identidade Visual Oficial
-     Calcário #F3F1EC · Ônix #202427 · Ardósia #485C68 · Terracota #9A4B42 · Oliva mineral #849A74 */
-  --background: #F3F1EC;            /* Calcário */
-  --foreground: #1A1E20;            /* Ônix com mais contraste */
+  /* ClimaEdu â€” Identidade Visual Oficial
+     CalcÃ¡rio #F3F1EC Â· Ã”nix #202427 Â· ArdÃ³sia #485C68 Â· Terracota #9A4B42 Â· Oliva mineral #849A74 */
+  --background: #F3F1EC;            /* CalcÃ¡rio */
+  --foreground: #1A1E20;            /* Ã”nix com mais contraste */
   --card: #FFFFFF;
   --card-foreground: #1A1E20;
   --popover: #FFFFFF;
   --popover-foreground: #1A1E20;
 
-  /* Verde musgo profundo — CTA institucional, mais vivo e sofisticado */
+  /* Verde musgo profundo â€” CTA institucional, mais vivo e sofisticado */
   --primary: #5F7A4F;
   --primary-foreground: #F5F2EA;
   --primary-dark: #1A1E20;
@@ -66,7 +65,7 @@
   --surface-dark: #2A3942;
 
   --muted: #ECE8DF;
-  --muted-foreground: #3F4F5A;      /* Ardósia mais escura */
+  --muted-foreground: #3F4F5A;      /* ArdÃ³sia mais escura */
 
   --accent: #DDE4E8;
   --accent-foreground: #2A3942;
@@ -161,5 +160,31 @@
   :focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .climaedu-floating-mockup {
+    animation: climaedu-float 7s ease-in-out infinite;
+    background: transparent;
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  @keyframes climaedu-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+      transform: translate3d(0, -12px, 0) rotate(0.35deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .climaedu-floating-mockup {
+      animation: none;
+    }
   }
 }
