@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Award, BarChart3, Brain, CheckCircle2, Palette } from "lucide-react";
+import { ArrowRight, Award, BarChart3, Brain, CheckCircle2, Gamepad2, Palette } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import { CTASection } from "@/components/sections/CTASection";
@@ -27,7 +27,12 @@ const technology = [
   {
     icon: Award,
     title: "Certificados",
-    text: "Registros individuais ajudam a comprovar participação e conclusão das jornadas.",
+    text: "Registros individuais ajudam a comprovar participação e conclusão das jornadas, sem posicionar a CLIMAEDU como certificadora técnica.",
+  },
+  {
+    icon: Gamepad2,
+    title: "Gamificação",
+    text: "Quizzes, desafios, checkpoints e atividades aplicadas tornam a aprendizagem mais simples e envolvente.",
   },
   {
     icon: BarChart3,
@@ -39,13 +44,13 @@ const technology = [
 export const Route = createFileRoute("/plataforma")({
   head: () => ({
     meta: [
-      { title: "Como funciona | CLIMAEDU — Do conhecimento à ação" },
+      { title: "Plataforma | CLIMAEDU — Aprendizagem online aplicada" },
       {
         name: "description",
         content:
-          "Entenda como a NewEdTech estrutura jornadas CLIMAEDU para transformar conhecimento técnico em aprendizagem aplicada.",
+          "Conheça a plataforma de aprendizagem online da CLIMAEDU: trilhas, conteúdo gamificado, certificados, dashboards e relatórios.",
       },
-      { property: "og:title", content: "Como funciona a CLIMAEDU" },
+      { property: "og:title", content: "Plataforma CLIMAEDU" },
       {
         property: "og:description",
         content:
@@ -64,15 +69,15 @@ function Plataforma() {
           <FadeIn>
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
-                Como funciona
+                Plataforma
               </p>
               <h1 className="mt-4 text-primary-dark">
-                Metodologia para transformar conhecimento técnico em aprendizagem aplicada.
+                Aprendizagem online para temas técnicos que precisam chegar à prática.
               </h1>
               <p className="mt-6 text-xl leading-relaxed text-foreground/78">
-                A CLIMAEDU começa pelo conteúdo e pelo contexto da organização. A tecnologia entra
-                para sustentar a experiência, distribuir a jornada e acompanhar o desenvolvimento
-                das pessoas.
+                A CLIMAEDU reúne trilhas, aulas, vídeos, quizzes, atividades gamificadas,
+                certificados, dashboards e relatórios para simplificar o processo de aprendizagem
+                em temas climáticos, ambientais e socioambientais.
               </p>
               <Link
                 to="/demonstracao"
@@ -121,7 +126,7 @@ function Plataforma() {
           <SectionTitle
             eyebrow="Tecnologia que sustenta a experiência"
             title="Recursos digitais a serviço da aprendizagem."
-            subtitle="White-label, inteligência artificial, certificados, dashboards e relatórios aparecem como suporte para entregar, acompanhar e comprovar a jornada."
+            subtitle="White-label, inteligência artificial, gamificação, certificados, dashboards e relatórios aparecem como suporte para entregar, acompanhar e comprovar a jornada."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">

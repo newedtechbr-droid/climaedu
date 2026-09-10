@@ -45,8 +45,8 @@ const desafios = [
 const blocos = [
   {
     icon: Sparkles,
-    title: "Onboarding ambiental",
-    text: "Base comum para novos colaboradores, terceiros e equipes recém-integradas.",
+    title: "Universidade corporativa",
+    text: "Trilhas online para novos colaboradores, terceiros, lideranças e equipes de operação.",
   },
   {
     icon: Leaf,
@@ -65,8 +65,8 @@ const blocos = [
   },
   {
     icon: FileBarChart,
-    title: "Acompanhamento",
-    text: "Indicadores de aprendizagem por unidade, área, função ou turma.",
+    title: "Certificados e dados",
+    text: "Indicadores, certificados e relatórios por unidade, área, função ou turma.",
   },
 ];
 
@@ -91,6 +91,13 @@ const aplicacoes = [
     title: "Operações e SSMA",
     text: "Levar conhecimento aplicado para áreas operacionais, segurança, saúde, meio ambiente, manutenção e unidades produtivas.",
   },
+];
+
+const experienciaOnline = [
+  "Trilhas por função, unidade, turma, tema ou ciclo de reciclagem.",
+  "Conteúdo em linguagem simples, com vídeos, aulas curtas, quizzes e atividades gamificadas.",
+  "Certificados e relatórios para apoiar RH, ESG, SSMA, compliance e auditorias internas.",
+  "Dashboards para acompanhar participação, conclusão, engajamento e lacunas de aprendizagem.",
 ];
 
 const evidencias = [
@@ -480,23 +487,23 @@ function Empresas() {
               </p>
 
               <h1 className="mt-4 text-4xl font-medium leading-[1.05] text-primary-dark md:text-6xl">
-                Conhecimento ambiental e climático aplicado às equipes.
+                Plataforma de aprendizagem para levar conhecimento técnico à operação.
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
                 A CLIMAEDU transforma normas, políticas, compromissos e conhecimentos técnicos da
-                empresa em jornadas de aprendizagem adequadas a cada área e função.
+                empresa em jornadas online de aprendizagem adequadas a cada área e função.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
-                Da liderança à operação, cada público recebe o conteúdo necessário para compreender
-                e aplicar o conhecimento no trabalho.
+                Da liderança à operação, cada público recebe conteúdo simplificado, atividades
+                gamificadas e checkpoints para compreender e aplicar o conhecimento no trabalho.
               </p>
 
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/62">
-                A empresa acompanha a aprendizagem e mantém os registros necessários para gestão,
-                auditorias e melhoria contínua. A CLIMAEDU não substitui certificadoras,
-                consultorias, auditorias ou sistemas de gestão ambiental.
+                A empresa acompanha a aprendizagem e mantém registros úteis para gestão, auditorias,
+                programas internos e rotinas de certificação. A CLIMAEDU não substitui
+                certificadoras, consultorias, auditorias ou sistemas de gestão ambiental.
               </p>
             </div>
           </FadeIn>
@@ -602,8 +609,8 @@ function Empresas() {
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <SectionTitle
             eyebrow="O que entregamos"
-            title="O essencial por área, unidade ou função"
-            subtitle="A CLIMAEDU organiza jornadas de aprendizagem aplicadas à realidade corporativa, conectando ESG, RH/T&D, SSMA, compliance e operação."
+            title="Uma experiência online para aprendizagem corporativa"
+            subtitle="A CLIMAEDU organiza jornadas aplicadas à realidade corporativa, conectando ESG, RH/T&D, SSMA, compliance, liderança e operação."
           />
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
@@ -625,6 +632,15 @@ function Empresas() {
                   <p className="mt-2 text-[16px] leading-[1.55] text-foreground/80">{item.text}</p>
                 </div>
               </FadeIn>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {experienciaOnline.map((item) => (
+              <div key={item} className="flex gap-3 rounded-lg border border-border bg-card p-5">
+                <CheckCircle2 size={20} className="mt-1 shrink-0 text-primary" aria-hidden />
+                <p className="text-base leading-relaxed text-foreground/76">{item}</p>
+              </div>
             ))}
           </div>
         </div>

@@ -5,7 +5,9 @@ import {
   BarChart3,
   BookOpen,
   CheckCircle2,
+  ClipboardCheck,
   Factory,
+  Gamepad2,
   Landmark,
   LineChart,
   PlayCircle,
@@ -25,12 +27,12 @@ const steps = [
   {
     icon: BookOpen,
     title: "Aprender",
-    text: "Conteúdo técnico transformado em uma experiência clara e adequada a cada público.",
+    text: "Conteúdos online em linguagem clara, com trilhas, vídeos, quizzes e atividades.",
   },
   {
     icon: PlayCircle,
     title: "Aplicar",
-    text: "Situações, decisões e atividades conectadas à realidade do trabalho.",
+    text: "Situações gamificadas e decisões conectadas à rotina de cada público.",
   },
   {
     icon: LineChart,
@@ -45,10 +47,28 @@ const steps = [
 ];
 
 const deliverables = [
-  "Jornadas de aprendizagem por perfil e função",
-  "Conteúdos técnicos em diferentes formatos",
-  "Atividades conectadas à realidade do público",
+  "Plataforma de aprendizagem online com trilhas por perfil e função",
+  "Conteúdos simplificados em vídeos, aulas, quizzes e atividades gamificadas",
+  "Processo de aprendizagem mais leve, guiado e aplicável à rotina",
   "Acompanhamento da aprendizagem por dados",
+];
+
+const platformHighlights = [
+  {
+    icon: BookOpen,
+    title: "Aprendizagem online",
+    text: "Uma plataforma para organizar conteúdos, turmas, trilhas e certificados em um só ambiente.",
+  },
+  {
+    icon: Gamepad2,
+    title: "Conteúdo gamificado",
+    text: "Quizzes, desafios e atividades aplicadas ajudam a transformar temas técnicos em prática.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Mais simples de acompanhar",
+    text: "O gestor visualiza participação, conclusão, desempenho e lacunas sem depender de planilhas soltas.",
+  },
 ];
 
 const webPageJsonLd = {
@@ -141,18 +161,17 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-20">
           <FadeIn>
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
                 UMA SOLUÇÃO NEWEDTECH
               </p>
 
               <h1 className="mt-5 max-w-3xl text-primary-dark">
-                Conhecimento técnico que prepara pessoas para agir.
+                Plataforma de aprendizagem online para transformar conhecimento técnico em ação.
               </h1>
 
               <p className="mt-7 max-w-2xl text-xl leading-relaxed text-foreground/80">
-                Ter planos, normas e especialistas não garante que as pessoas saibam como agir. A
-                CLIMAEDU transforma esse conhecimento técnico em aprendizagem aplicada, adequada à
-                realidade de cada organização.
+                A CLIMAEDU organiza trilhas, conteúdos simplificados, experiências gamificadas,
+                certificados e dashboards para temas climáticos, ambientais e socioambientais.
               </p>
 
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/72">
@@ -183,7 +202,7 @@ function Index() {
           </FadeIn>
 
           <FadeIn delay={0.08}>
-            <div className="climaedu-floating-mockup relative">
+            <div className="climaedu-floating-mockup relative mx-auto -my-6 w-full max-w-[620px] md:-mr-10 md:scale-110">
               <img
                 src={platformDevices}
                 alt="Plataforma CLIMAEDU apresentada em notebook, tablet e celular"
@@ -201,7 +220,7 @@ function Index() {
         aria-label="Relação entre NewEdTech e CLIMAEDU"
       >
         <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
+          <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-8">
             <div className="shrink-0">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground/54">
                 Uma solução
@@ -211,20 +230,47 @@ function Index() {
                 alt="New EdTech"
                 width={723}
                 height={233}
-                className="mt-3 h-auto w-[190px] max-w-full"
+                className="mt-3 h-auto w-[132px] max-w-full"
                 loading="lazy"
               />
             </div>
 
-            <p className="max-w-4xl text-2xl leading-snug text-primary-dark md:text-3xl">
-              A CLIMAEDU é a primeira solução especializada da NewEdTech, criada para transformar
-              conhecimentos climáticos e socioambientais em aprendizagem aplicada.
+            <p className="max-w-3xl text-lg leading-relaxed text-primary-dark md:text-xl">
+              A CLIMAEDU é uma solução especializada da NewEdTech para aprendizagem aplicada em
+              temas climáticos, ambientais e socioambientais.
             </p>
           </div>
         </div>
       </section>
 
       <section className="bg-background px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+              A solução
+            </p>
+            <h2 className="mt-4 text-primary-dark">
+              Uma jornada digital para aprender, praticar e acompanhar.
+            </h2>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {platformHighlights.map((item, index) => (
+              <FadeIn key={item.title} delay={index * 0.04}>
+                <article className="h-full rounded-lg border border-border bg-card p-6 shadow-sm">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary-deep">
+                    <item.icon size={20} aria-hidden />
+                  </div>
+                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
+                  <p className="mt-3 text-base leading-relaxed text-foreground/72">{item.text}</p>
+                </article>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface px-6 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">O problema</p>
@@ -240,7 +286,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="como-funciona" className="scroll-mt-24 bg-surface px-6 py-16 md:py-20">
+      <section id="como-funciona" className="scroll-mt-24 bg-background px-6 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl">
@@ -270,7 +316,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-16 md:py-20">
+      <section className="bg-surface px-6 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">Para quem</p>

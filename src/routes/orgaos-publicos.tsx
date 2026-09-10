@@ -35,7 +35,7 @@ const problemas = [
   },
   {
     icon: FileWarning,
-    text: "Dados de aprendizagem ajudam a acompanhar avanços e necessidades de formação.",
+    text: "Certificados, relatórios e dados de aprendizagem ajudam a acompanhar avanços e necessidades de formação.",
   },
 ];
 
@@ -50,7 +50,7 @@ const solucao = [
   },
   {
     icon: BarChart3,
-    text: "Dados para acompanhar aprendizagem, conclusão e lacunas de desenvolvimento.",
+    text: "Dados para acompanhar participação, conclusão, certificados e lacunas de desenvolvimento.",
   },
 ];
 
@@ -72,8 +72,8 @@ const aplicacoes = [
   },
   {
     icon: FileText,
-    title: "Acompanhamento da aprendizagem",
-    text: "Registrar participação, conclusão, proficiência, certificados e relatórios como apoio à gestão da aprendizagem.",
+    title: "Certificados e evidências",
+    text: "Registrar participação, conclusão, proficiência e certificados como apoio à gestão da aprendizagem e a processos de prestação de contas.",
   },
 ];
 
@@ -446,18 +446,18 @@ function OrgaosPublicos() {
               </p>
 
               <h1 className="mt-4 text-4xl font-medium leading-[1.05] text-primary-dark md:text-6xl">
-                Conhecimento técnico preparado para chegar a quem precisa agir.
+                Plataforma de aprendizagem para preparar equipes públicas.
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
                 A CLIMAEDU apoia escolas de governo e áreas técnicas na transformação de planos,
-                normas, protocolos e conhecimentos já existentes em jornadas de aprendizagem para
-                diferentes equipes.
+                normas, protocolos e conhecimentos já existentes em jornadas online de
+                aprendizagem para diferentes equipes.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
-                A solução fortalece as estruturas públicas existentes e ajuda servidores a
-                compreender como o conhecimento técnico se conecta às suas funções.
+                A solução combina conteúdos simplificados, atividades aplicadas, recursos
+                gamificados, certificados e dashboards para apoiar a capacitação institucional.
               </p>
 
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/62">
@@ -472,10 +472,10 @@ function OrgaosPublicos() {
             <FadeIn delay={0.04}>
               <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  Preparação
+                Aprendizagem online
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Equipes públicas mais preparadas para agir diante da agenda climática.
+                  Trilhas digitais para secretarias, escolas de governo e equipes técnicas.
                 </p>
               </div>
             </FadeIn>
@@ -483,10 +483,10 @@ function OrgaosPublicos() {
             <FadeIn delay={0.08}>
               <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  Aplicação
+                Aplicação prática
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Trilhas que conectam normas, guias e políticas públicas à rotina institucional.
+                  Atividades e checkpoints que conectam normas e políticas públicas à rotina.
                 </p>
               </div>
             </FadeIn>
@@ -494,10 +494,10 @@ function OrgaosPublicos() {
             <FadeIn delay={0.12}>
               <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  Evidência
+                Evidências
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Certificados, dashboards e relatórios para acompanhar a capacitação.
+                  Certificados, dashboards e relatórios para apoiar a gestão da aprendizagem.
                 </p>
               </div>
             </FadeIn>
@@ -541,7 +541,7 @@ function OrgaosPublicos() {
             <SectionTitle
               eyebrow="Na prática"
               title="Da aprendizagem ao acompanhamento"
-              subtitle="Primeiro, a organização leva o conhecimento às pessoas. Depois, acompanha avanços, conclusão e lacunas de aprendizagem."
+            subtitle="Primeiro, a organização leva o conhecimento às pessoas. Depois, acompanha avanços, conclusão e lacunas de aprendizagem."
             />
 
             <div className="mt-8 grid gap-3">
@@ -586,7 +586,9 @@ function OrgaosPublicos() {
             <p className="mt-4 text-foreground/75">
               A legislação, os guias técnicos e as agendas de sustentabilidade ampliam a necessidade
               de planejamento, gestão de riscos, capacitação de equipes, documentação e prestação de
-              contas. A CLIMAEDU apoia essa agenda pelo caminho da aprendizagem aplicada.
+              contas. A CLIMAEDU apoia essa agenda pelo caminho da aprendizagem aplicada e das
+              evidências de capacitação. Ela não substitui certificadoras, mas ajuda a organizar
+              registros que podem apoiar processos internos, auditorias e programas de certificação.
             </p>
           </div>
 
