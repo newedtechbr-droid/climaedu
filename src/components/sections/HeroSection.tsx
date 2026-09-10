@@ -75,10 +75,7 @@ export function HeroSection() {
               >
                 Agendar demonstração <ArrowRight size={18} />
               </Link>
-              
-                href="#solucoes"
-                className="inline-flex h-14 items-center gap-2 rounded-lg border-2 border-primary bg-background px-7 text-base font-semibold text-primary-dark transition-colors hover:bg-accent"
-              >
+              <a href="#solucoes" className="inline-flex h-14 items-center gap-2 rounded-lg border-2 border-primary bg-background px-7 text-base font-semibold text-primary-dark transition-colors hover:bg-accent">
                 Conhecer soluções
               </a>
             </div>
