@@ -12,13 +12,13 @@ export const Route = createFileRoute("/sobre")({
       {
         name: "description",
         content:
-          "A CLIMAEDU é a solução da Newedtech especializada em conhecimentos climáticos e socioambientais. A Newedtech transforma conhecimentos técnicos e complexos em experiências de aprendizagem aplicadas para governos, empresas e redes de ensino.",
+          "NewEdTech é a empresa de tecnologia e inovação educacional responsável pela CLIMAEDU, solução especializada em aprendizagem aplicada para temas climáticos e socioambientais.",
       },
       { property: "og:title", content: "Sobre a CLIMAEDU" },
       {
         property: "og:description",
         content:
-          "Fortalecer capacidades institucionais para a ação climática — com autoridade técnica e visão de impacto.",
+          "Conheça a arquitetura NewEdTech e CLIMAEDU: tecnologia educacional aplicada a conhecimentos climáticos e socioambientais.",
       },
     ],
   }),
@@ -30,8 +30,8 @@ function Sobre() {
     <>
       <PageHero
         eyebrow="Sobre a CLIMAEDU"
-        title="Educação climática aplicada para instituições que precisam agir"
-        subtitle="A CLIMAEDU ajuda governos, empresas de setores regulados e redes de ensino a transformar conhecimento climático em formação, rotinas, registros e evidências de execução."
+        title="NewEdTech e CLIMAEDU: tecnologia educacional para conhecimento aplicado"
+        subtitle="NewEdTech é a empresa de tecnologia e inovação educacional responsável pela CLIMAEDU. A CLIMAEDU é sua primeira solução especializada, voltada à aprendizagem aplicada em temas climáticos e socioambientais."
       />
 
       <AboutSection />
@@ -39,9 +39,9 @@ function Sobre() {
       <SDGSection />
 
       <CTASection
-        title="Falar com a CLIMAEDU"
+        title="Falar com a NewEdTech"
         subtitle="Conte seu contexto. Em 48 horas úteis, retornamos com uma proposta inicial."
-        ctaLabel="Falar com a equipe"
+        ctaLabel="Agendar uma conversa"
       />
     </>
   );

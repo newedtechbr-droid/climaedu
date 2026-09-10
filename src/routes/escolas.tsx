@@ -3,22 +3,39 @@ import { ClassroomSection } from "@/components/sections/ClassroomSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
-import {
-  Lightbulb,
-  Gamepad2,
-  Sparkles,
-  Map,
-  Users,
-  Droplets,
-} from "lucide-react";
+import { Lightbulb, Gamepad2, Sparkles, Map, Users, Droplets } from "lucide-react";
 
 const blocos = [
-  { icon: Lightbulb, title: "Aprendizagem baseada em projetos", text: "Conteúdo aplicado a problemas reais do território da escola." },
-  { icon: Gamepad2, title: "Gamificação", text: "Engajamento de estudantes com desafios, conquistas e progresso visível." },
-  { icon: Sparkles, title: "Ambientes imersivos", text: "Experiências digitais para vivenciar climas, ecossistemas e riscos." },
-  { icon: Map, title: "Trilhas por competência", text: "Conteúdo organizado por ano, ciclo e habilidade da BNCC." },
-  { icon: Users, title: "Formação continuada de professores", text: "Apoio pedagógico, materiais editáveis e atualização constante." },
-  { icon: Droplets, title: "Clima, água, resíduos, biodiversidade, território e eventos extremos", text: "Temas estruturantes da educação climática aplicada." },
+  {
+    icon: Lightbulb,
+    title: "Aprendizagem baseada em projetos",
+    text: "Conteúdo aplicado a problemas reais do território da escola.",
+  },
+  {
+    icon: Gamepad2,
+    title: "Gamificação",
+    text: "Engajamento de estudantes com desafios, conquistas e progresso visível.",
+  },
+  {
+    icon: Sparkles,
+    title: "Ambientes imersivos",
+    text: "Experiências digitais para vivenciar climas, ecossistemas e riscos.",
+  },
+  {
+    icon: Map,
+    title: "Trilhas por competência",
+    text: "Conteúdo organizado por ano, ciclo e habilidade da BNCC.",
+  },
+  {
+    icon: Users,
+    title: "Formação continuada de professores",
+    text: "Apoio pedagógico, materiais editáveis e atualização constante.",
+  },
+  {
+    icon: Droplets,
+    title: "Clima, água, resíduos, biodiversidade, território e eventos extremos",
+    text: "Temas estruturantes da educação climática aplicada.",
+  },
 ];
 
 export const Route = createFileRoute("/escolas")({
@@ -68,13 +85,9 @@ function Escolas() {
                     <b.icon size={20} />
                   </div>
 
-                  <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">
-                    {b.title}
-                  </h3>
+                  <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">{b.title}</h3>
 
-                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">
-                    {b.text}
-                  </p>
+                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">{b.text}</p>
                 </div>
               </FadeIn>
             ))}

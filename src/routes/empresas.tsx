@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CTASection } from "@/components/sections/CTASection";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
-import teamMeeting from "@/assets/team-meeting.jpg";
+import industrialCourseRating from "@/assets/industrial-course-rating.png";
 import mockupEmpresa from "@/assets/mockup-plataforma-viposa.png";
 import {
   Sparkles,
@@ -26,19 +26,19 @@ const pageModified = "2026-07-10";
 const desafios = [
   {
     icon: AlertTriangle,
-    text: "Treinamentos ambientais dispersos, sem histórico consolidado por área ou unidade.",
+    text: "Normas, políticas e compromissos precisam ser compreendidos por diferentes áreas e funções.",
   },
   {
     icon: Users,
-    text: "Baixa conexão entre ESG, RH/T&D, compliance, SSMA e operação.",
+    text: "ESG, RH/T&D, compliance, SSMA e operação dependem de uma base comum de aprendizagem.",
   },
   {
     icon: FileText,
-    text: "Dificuldade de comprovar capacitação em auditorias, relatórios e processos internos.",
+    text: "Equipes aprendem melhor quando o conteúdo conversa com decisões e situações do trabalho.",
   },
   {
     icon: Network,
-    text: "Cadeia de valor, fornecedores e equipes operacionais com níveis diferentes de compreensão.",
+    text: "Dados e registros apoiam gestão, auditorias e melhoria contínua depois da aprendizagem.",
   },
 ];
 
@@ -65,16 +65,16 @@ const blocos = [
   },
   {
     icon: FileBarChart,
-    title: "Evidências",
-    text: "Certificados, relatórios e dashboards por unidade, área, função ou turma.",
+    title: "Acompanhamento",
+    text: "Indicadores de aprendizagem por unidade, área, função ou turma.",
   },
 ];
 
 const aplicacoes = [
   {
     icon: Leaf,
-    title: "ESG com evidências",
-    text: "Transformar diretrizes e compromissos de sustentabilidade em trilhas, certificados, relatórios e registros de capacitação.",
+    title: "ESG aplicado",
+    text: "Transformar diretrizes e compromissos de sustentabilidade em jornadas de aprendizagem conectadas ao trabalho.",
   },
   {
     icon: ShieldCheck,
@@ -218,7 +218,7 @@ const webPageJsonLd = {
   about: [
     {
       "@type": "Thing",
-      name: "ESG com evidências",
+      name: "ESG aplicado",
     },
     {
       "@type": "Thing",
@@ -275,7 +275,7 @@ const serviceJsonLd = {
   "@type": "Service",
   name: "CLIMAEDU para empresas",
   serviceType:
-    "Ambiente de aprendizagem online para ESG, sustentabilidade, compliance e evidências de capacitação",
+    "Ambiente de aprendizagem online para ESG, sustentabilidade, compliance e aprendizagem aplicada",
   provider: {
     "@type": "Organization",
     name: "CLIMAEDU",
@@ -318,7 +318,7 @@ const faqJsonLd = {
       name: "Como a CLIMAEDU apoia empresas?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A CLIMAEDU apoia empresas ao transformar diretrizes de ESG, clima, sustentabilidade, compliance ambiental, SSMA e gestão de riscos em aprendizagem aplicada, trilhas por área ou função, certificados, relatórios e evidências de capacitação.",
+        text: "A CLIMAEDU apoia empresas ao transformar diretrizes de ESG, clima, sustentabilidade, compliance ambiental, SSMA e gestão de riscos em aprendizagem aplicada por área ou função.",
       },
     },
     {
@@ -352,12 +352,12 @@ export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
       {
-        title: "Indústria regulada | CLIMAEDU — ESG, sustentabilidade e evidências",
+        title: "Indústrias | CLIMAEDU — Aprendizagem ambiental e climática aplicada",
       },
       {
         name: "description",
         content:
-          "Ambiente de aprendizagem online para indústrias reguladas (química, papel e celulose, metalurgia, alimentos, agroindústria, couro) em ESG, sustentabilidade, compliance, SSMA, RH/T&D e evidências de capacitação.",
+          "A CLIMAEDU transforma normas, políticas, compromissos e conhecimentos técnicos da empresa em aprendizagem aplicada para diferentes áreas e funções.",
       },
       {
         name: "robots",
@@ -397,12 +397,12 @@ export const Route = createFileRoute("/empresas")({
       },
       {
         property: "og:title",
-        content: "CLIMAEDU para indústria regulada | ESG, sustentabilidade e evidências",
+        content: "CLIMAEDU para indústrias | Aprendizagem ambiental e climática aplicada",
       },
       {
         property: "og:description",
         content:
-          "Ambiente de aprendizagem online para transformar ESG, clima e sustentabilidade em trilhas, certificados, relatórios e evidências de capacitação.",
+          "Solução da NewEdTech para transformar conhecimentos ambientais, climáticos e socioambientais em aprendizagem aplicada.",
       },
       {
         property: "og:url",
@@ -418,7 +418,7 @@ export const Route = createFileRoute("/empresas")({
       },
       {
         name: "twitter:title",
-        content: "CLIMAEDU para indústria regulada | ESG, sustentabilidade e evidências",
+        content: "CLIMAEDU para indústrias | Aprendizagem ambiental e climática aplicada",
       },
       {
         name: "twitter:description",
@@ -476,33 +476,27 @@ function Empresas() {
           <FadeIn>
             <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-                Indústria regulada
+                Indústrias
               </p>
 
               <h1 className="mt-4 text-4xl font-medium leading-[1.05] text-primary-dark md:text-6xl">
-                Ambiente de aprendizagem online para indústrias reguladas transformarem ESG e
-                sustentabilidade em evidências
+                Conhecimento ambiental e climático aplicado às equipes.
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
-                A CLIMAEDU é um ambiente de aprendizagem online para empresas de setores regulados —
-                química, papel e celulose, metalurgia, alimentos, agroindústria e couro. A
-                plataforma transforma diretrizes de ESG, clima, sustentabilidade, compliance
-                ambiental, SSMA e gestão de riscos em aprendizagem aplicada, trilhas por área ou
-                função, certificados, dashboards, relatórios e evidências de capacitação.
+                A CLIMAEDU transforma normas, políticas, compromissos e conhecimentos técnicos da
+                empresa em jornadas de aprendizagem adequadas a cada área e função.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
-                Do onboarding ambiental à reciclagem periódica de equipes, a plataforma ajuda
-                empresas a conectar RH/T&D, ESG, compliance, meio ambiente, SSMA e operações em uma
-                base comum de aprendizagem, rotina e evidência.
+                Da liderança à operação, cada público recebe o conteúdo necessário para compreender
+                e aplicar o conhecimento no trabalho.
               </p>
 
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/62">
-                A CLIMAEDU não substitui auditorias, consultorias, pareceres técnicos, análise
-                jurídica ou sistemas de gestão ambiental. Ela fortalece o ambiente de aprendizagem
-                corporativo para apoiar cultura, capacitação, gestão e prestação de contas sobre
-                aprendizagem.
+                A empresa acompanha a aprendizagem e mantém os registros necessários para gestão,
+                auditorias e melhoria contínua. A CLIMAEDU não substitui certificadoras,
+                consultorias, auditorias ou sistemas de gestão ambiental.
               </p>
             </div>
           </FadeIn>
@@ -510,11 +504,11 @@ function Empresas() {
           <FadeIn delay={0.02}>
             <div className="mt-8 max-w-3xl rounded-2xl border border-border bg-surface p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                Piloto em andamento
+                Cliente industrial
               </p>
               <p className="mt-2 text-base leading-relaxed text-foreground/80">
-                POC em andamento desde julho de 2026 com a Viposa, indústria do setor de couro, para
-                validar a aplicação da solução no setor industrial.
+                A CLIMAEDU apoia jornadas de aprendizagem em ambiente industrial, com conteúdo
+                aplicado à realidade das equipes e lideranças.
               </p>
             </div>
           </FadeIn>
@@ -522,8 +516,8 @@ function Empresas() {
           <div className="mt-10 grid items-center gap-6 md:grid-cols-[0.9fr_1.1fr]">
             <FadeIn delay={0.04}>
               <img
-                src={teamMeeting}
-                alt="Equipe corporativa analisando mapas, indicadores e temas de sustentabilidade"
+                src={industrialCourseRating}
+                alt="Tela da plataforma CLIMAEDU com unidade de curso industrial e avaliação de aprendizagem"
                 className="h-full max-h-[360px] w-full rounded-2xl border border-border object-cover shadow-sm"
               />
             </FadeIn>
@@ -541,10 +535,10 @@ function Empresas() {
             <FadeIn delay={0.04}>
               <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  ESG
+                  Aprendizagem
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Diretrizes transformadas em trilhas e evidências de capacitação.
+                  Conhecimentos técnicos transformados em jornadas por função.
                 </p>
               </div>
             </FadeIn>
@@ -563,10 +557,10 @@ function Empresas() {
             <FadeIn delay={0.12}>
               <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  Evidência
+                  Acompanhamento
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Certificados, dashboards e relatórios para gestão e auditorias.
+                  Dados e registros depois da experiência de aprendizagem.
                 </p>
               </div>
             </FadeIn>
@@ -578,8 +572,8 @@ function Empresas() {
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <SectionTitle
             eyebrow="O desafio"
-            title="ESG não se sustenta apenas em política, meta ou relatório."
-            subtitle="Compromissos corporativos só ganham consistência quando chegam às pessoas em formato compreensível, aplicável e acompanhado."
+            title="Conhecimento corporativo precisa chegar à prática."
+            subtitle="Compromissos e políticas ganham força quando as equipes compreendem como aplicá-los em suas funções."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-4">
@@ -774,7 +768,13 @@ function Empresas() {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {referenciasCorporativas.map((reference) => (
-              <a key={reference.href} href={reference.href} target="_blank" rel="noopener noreferrer" className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
+              <a
+                key={reference.href}
+                href={reference.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
+              >
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                     Fonte: {reference.source}
@@ -813,8 +813,8 @@ function Empresas() {
             </h2>
 
             <p className="mt-4 text-foreground/70">
-              Informações institucionais para áreas de ESG, RH/T&D, compliance, SSMA, operações,
-              gestão de riscos e ferramentas de busca ou IA.
+              Informações institucionais para áreas de ESG, RH/T&D, compliance, SSMA, operações e
+              gestão de riscos.
             </p>
 
             <p className="mt-3 text-sm text-foreground/60">
@@ -899,8 +899,9 @@ function Empresas() {
       </section>
 
       <CTASection
-        title="Agendar demonstração para empresa"
-        subtitle="Veja exemplos de trilhas, certificados, dashboards e relatórios por unidade aplicados ao seu negócio."
+        title="Levar conhecimento ambiental e climático à operação"
+        subtitle="Converse com a NewEdTech sobre como transformar conteúdos técnicos em aprendizagem aplicada para as equipes."
+        ctaLabel="Agendar uma conversa"
       />
     </>
   );

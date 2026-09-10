@@ -30,8 +30,7 @@ export const Route = createFileRoute("/cursos")({
       { property: "og:title", content: "Trilhas climáticas CLIMAEDU" },
       {
         property: "og:description",
-        content:
-          "10 categorias de trilhas aplicadas para preparar equipes, comunidades e gestão.",
+        content: "10 categorias de trilhas aplicadas para preparar equipes, comunidades e gestão.",
       },
     ],
   }),
@@ -71,9 +70,7 @@ function Cursos() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
-                  <span className="text-[15.5px] font-medium text-foreground/90">
-                    {c}
-                  </span>
+                  <span className="text-[15.5px] font-medium text-foreground/90">{c}</span>
                 </div>
               </FadeIn>
             ))}
@@ -85,10 +82,7 @@ function Cursos() {
 
       <section className="bg-background">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
-          <SectionTitle
-            eyebrow="Cada curso entrega"
-            title="Estrutura padrão de cada trilha"
-          />
+          <SectionTitle eyebrow="Cada curso entrega" title="Estrutura padrão de cada trilha" />
 
           <ul className="mt-10 grid gap-3 sm:grid-cols-2">
             {[

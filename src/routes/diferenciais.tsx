@@ -17,8 +17,7 @@ export const Route = createFileRoute("/diferenciais")({
       { property: "og:title", content: "Diferenciais da CLIMAEDU" },
       {
         property: "og:description",
-        content:
-          "O mercado entrega partes. A CLIMAEDU estrutura a jornada climática completa.",
+        content: "O mercado entrega partes. A CLIMAEDU estrutura a jornada climática completa.",
       },
     ],
   }),

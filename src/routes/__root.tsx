@@ -1,11 +1,5 @@
 import type { CSSProperties, ReactNode } from "react";
-import {
-  Outlet,
-  Link,
-  createRootRoute,
-  HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -122,8 +116,7 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1" },
 
       {
-        title:
-          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        title: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
       },
 
       {
@@ -145,8 +138,7 @@ export const Route = createRootRoute({
       },
       {
         property: "og:title",
-        content:
-          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        content: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
       },
       {
         property: "og:description",
@@ -168,13 +160,12 @@ export const Route = createRootRoute({
       },
       {
         name: "twitter:title",
-        content:
-          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        content: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
       },
       {
         name: "twitter:description",
         content:
-          "A CLIMAEDU transforma conhecimento tecnico em aprendizagem aplicada, competencias institucionais e evidencias de capacitacao.",
+          "A CLIMAEDU transforma conhecimento técnico em aprendizagem aplicada para temas climáticos e socioambientais.",
       },
       {
         name: "twitter:image",
@@ -235,10 +226,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   return (
-    <div
-      style={climaeduTheme}
-      className="flex min-h-screen flex-col bg-background text-foreground"
-    >
+    <div style={climaeduTheme} className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
       <main className="flex-1 pb-16 md:pb-0">
         <Outlet />
@@ -250,7 +238,7 @@ function RootComponent() {
         to="/demonstracao"
         className="fixed bottom-3 left-3 right-3 z-40 inline-flex h-12 items-center justify-center rounded-lg bg-primary text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-8px_rgba(132,154,116,0.7)] ring-1 ring-primary/40 md:hidden"
       >
-        Agendar demonstração
+        Agendar conversa
       </Link>
     </div>
   );

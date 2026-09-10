@@ -2,15 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import { CTASection } from "@/components/sections/CTASection";
-import {
-  ShieldCheck,
-  UserCheck,
-  FileText,
-  Lock,
-  Mail,
-  Clock,
-  CheckCircle2,
-} from "lucide-react";
+import { ShieldCheck, UserCheck, FileText, Lock, Mail, Clock, CheckCircle2 } from "lucide-react";
 
 const pagePublished = "2026-07-10";
 const pageModified = "2026-07-10";
@@ -196,8 +188,7 @@ export const Route = createFileRoute("/politica-de-privacidade")({
       },
       {
         name: "twitter:description",
-        content:
-          "Política de Privacidade da CLIMAEDU sobre dados pessoais, LGPD e contato.",
+        content: "Política de Privacidade da CLIMAEDU sobre dados pessoais, LGPD e contato.",
       },
       {
         name: "twitter:image",
@@ -243,15 +234,15 @@ function PoliticaDePrivacidade() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
-              Esta Política de Privacidade explica como a CLIMAEDU, produto da
-              NewEdTech, trata dados pessoais em seu site, canais de contato,
-              solicitações comerciais, demonstrações e interações institucionais.
+              Esta Política de Privacidade explica como a CLIMAEDU, produto da NewEdTech, trata
+              dados pessoais em seu site, canais de contato, solicitações comerciais, demonstrações
+              e interações institucionais.
             </p>
 
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/70">
-              A CLIMAEDU respeita a privacidade dos titulares de dados e busca
-              tratar informações pessoais de forma transparente, segura e
-              compatível com a Lei Geral de Proteção de Dados Pessoais — LGPD.
+              A CLIMAEDU respeita a privacidade dos titulares de dados e busca tratar informações
+              pessoais de forma transparente, segura e compatível com a Lei Geral de Proteção de
+              Dados Pessoais — LGPD.
             </p>
 
             <p className="mt-4 text-sm text-foreground/60">
@@ -281,14 +272,13 @@ function PoliticaDePrivacidade() {
                 </h2>
 
                 <p className="mt-3 text-foreground/75">
-                  Para fins desta Política de Privacidade, a NewEdTech, por meio
-                  da CLIMAEDU, é responsável pelo tratamento de dados pessoais
-                  coletados em seus canais digitais e institucionais.
+                  Para fins desta Política de Privacidade, a NewEdTech, por meio da CLIMAEDU, é
+                  responsável pelo tratamento de dados pessoais coletados em seus canais digitais e
+                  institucionais.
                 </p>
 
                 <p className="mt-3 text-foreground/75">
-                  Canal para solicitações relacionadas à privacidade, proteção de
-                  dados e LGPD:
+                  Canal para solicitações relacionadas à privacidade, proteção de dados e LGPD:
                 </p>
 
                 <a
@@ -319,13 +309,9 @@ function PoliticaDePrivacidade() {
                     <FileText size={20} />
                   </div>
 
-                  <h2 className="mt-5 text-xl font-semibold text-primary-dark">
-                    {item.title}
-                  </h2>
+                  <h2 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h2>
 
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-                    {item.text}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">{item.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -345,10 +331,7 @@ function PoliticaDePrivacidade() {
             <ul className="space-y-4">
               {finalidades.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    size={20}
-                    className="mt-1 shrink-0 text-primary"
-                  />
+                  <CheckCircle2 size={20} className="mt-1 shrink-0 text-primary" />
 
                   <span className="text-foreground/76">{item}</span>
                 </li>
@@ -368,12 +351,11 @@ function PoliticaDePrivacidade() {
 
           <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
             <p className="leading-relaxed text-foreground/75">
-              Dados pessoais podem ser compartilhados com fornecedores de
-              tecnologia, hospedagem, segurança, comunicação, atendimento,
-              ferramentas administrativas ou parceiros operacionais estritamente
-              necessários para as finalidades informadas. Também poderá haver
-              compartilhamento para cumprimento de obrigação legal, regulatória,
-              ordem de autoridade competente ou defesa de direitos.
+              Dados pessoais podem ser compartilhados com fornecedores de tecnologia, hospedagem,
+              segurança, comunicação, atendimento, ferramentas administrativas ou parceiros
+              operacionais estritamente necessários para as finalidades informadas. Também poderá
+              haver compartilhamento para cumprimento de obrigação legal, regulatória, ordem de
+              autoridade competente ou defesa de direitos.
             </p>
           </div>
         </div>
@@ -391,10 +373,7 @@ function PoliticaDePrivacidade() {
             <ul className="space-y-4">
               {direitos.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <UserCheck
-                    size={20}
-                    className="mt-1 shrink-0 text-primary"
-                  />
+                  <UserCheck size={20} className="mt-1 shrink-0 text-primary" />
 
                   <span className="text-foreground/76">{item}</span>
                 </li>
@@ -402,9 +381,8 @@ function PoliticaDePrivacidade() {
             </ul>
 
             <p className="mt-6 text-sm leading-relaxed text-foreground/65">
-              As solicitações serão avaliadas conforme a legislação aplicável e
-              poderão exigir confirmação de identidade do solicitante para
-              proteção do próprio titular.
+              As solicitações serão avaliadas conforme a legislação aplicável e poderão exigir
+              confirmação de identidade do solicitante para proteção do próprio titular.
             </p>
           </div>
         </div>
@@ -426,13 +404,9 @@ function PoliticaDePrivacidade() {
                     <item.icon size={20} />
                   </div>
 
-                  <h2 className="mt-5 text-xl font-semibold text-primary-dark">
-                    {item.title}
-                  </h2>
+                  <h2 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h2>
 
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-                    {item.text}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">{item.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -450,12 +424,11 @@ function PoliticaDePrivacidade() {
 
           <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
             <p className="leading-relaxed text-foreground/75">
-              O site da CLIMAEDU pode utilizar cookies técnicos necessários ao
-              funcionamento, segurança e melhoria da navegação. Caso sejam
-              utilizados cookies analíticos, publicitários ou tecnologias de
-              rastreamento não essenciais, a CLIMAEDU poderá adotar mecanismos
-              específicos de aviso, consentimento ou preferência, conforme a
-              legislação aplicável.
+              O site da CLIMAEDU pode utilizar cookies técnicos necessários ao funcionamento,
+              segurança e melhoria da navegação. Caso sejam utilizados cookies analíticos,
+              publicitários ou tecnologias de rastreamento não essenciais, a CLIMAEDU poderá adotar
+              mecanismos específicos de aviso, consentimento ou preferência, conforme a legislação
+              aplicável.
             </p>
           </div>
         </div>

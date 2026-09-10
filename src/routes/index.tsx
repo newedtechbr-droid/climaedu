@@ -1,76 +1,64 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ContextSection } from "@/components/sections/ContextSection";
-import { JourneyCardsSection } from "@/components/sections/JourneyCardsSection";
-import { MethodStepsSection } from "@/components/sections/MethodStepsSection";
-import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
-import { EcosystemSection } from "@/components/sections/EcosystemSection";
-import { SDGSection } from "@/components/sections/SDGSection";
-import { CTASection } from "@/components/sections/CTASection";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import {
+  ArrowRight,
+  Award,
+  BarChart3,
+  BookOpen,
+  CheckCircle2,
+  Factory,
+  Landmark,
+  LineChart,
+  PlayCircle,
+  ShieldCheck,
+  Sparkles,
+  Users,
+} from "lucide-react";
+import { FadeIn } from "@/components/FadeIn";
+import platformDevices from "@/assets/climaedu-platform-devices.png";
+import newedtechLogo from "@/assets/newedtech-logo.png";
+import viposaLogo from "@/assets/partners/viposa.png";
 
 const pagePublished = "2026-07-09";
-const pageModified = "2026-07-10";
+const pageModified = "2026-09-09";
 
-const institutionalReferences = [
+const steps = [
   {
-    title: "Lei nº 14.133/2021",
-    source: "Planalto",
-    label: "Licitações e contratos administrativos",
-    description:
-      "Referência normativa para planejamento, governança, sustentabilidade, gestão de riscos e contratações públicas.",
-    href: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+    icon: BookOpen,
+    title: "Aprender",
+    text: "Conteúdo técnico transformado em uma experiência clara e adequada a cada público.",
   },
   {
-    title: "Guia Nacional de Contratações Sustentáveis",
-    source: "AGU",
-    label: "Contratações públicas sustentáveis",
-    description:
-      "Referência técnica para apoiar gestores públicos na incorporação de critérios de sustentabilidade nas contratações.",
-    href: "https://www.gov.br/agu/pt-br/assuntos-1/Publicacoes/cartilhas/guia-nacional-de-contratacoes-sustentaveis-2024.pdf",
+    icon: PlayCircle,
+    title: "Aplicar",
+    text: "Situações, decisões e atividades conectadas à realidade do trabalho.",
   },
   {
-    title: "Lei nº 12.187/2009",
-    source: "Planalto",
-    label: "Política Nacional sobre Mudança do Clima",
-    description:
-      "Marco nacional relacionado à política climática, adaptação, mitigação e redução de vulnerabilidades.",
-    href: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12187.htm",
+    icon: LineChart,
+    title: "Acompanhar",
+    text: "A organização identifica avanços e lacunas de aprendizagem.",
   },
   {
-    title: "Lei nº 12.608/2012",
-    source: "Planalto",
-    label: "Política Nacional de Proteção e Defesa Civil",
-    description:
-      "Referência para prevenção, preparação, resposta, recuperação e gestão de riscos de desastres.",
-    href: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm",
+    icon: ShieldCheck,
+    title: "Comprovar",
+    text: "Dados e registros demonstram o desenvolvimento das equipes.",
   },
-  {
-    title: "Objetivos de Desenvolvimento Sustentável",
-    source: "ONU Brasil",
-    label: "Agenda 2030 e ODS",
-    description:
-      "Agenda global relacionada a educação, instituições eficazes, cidades sustentáveis, clima e meios de implementação.",
-    href: "https://brasil.un.org/pt-br/sdgs",
-  },
-  {
-    title: "AR6 Synthesis Report",
-    source: "IPCC",
-    label: "Ciência climática internacional",
-    description:
-      "Relatório de síntese sobre mudança climática, impactos, riscos, adaptação e mitigação.",
-    href: "https://www.ipcc.ch/report/ar6/syr/",
-  },
+];
+
+const deliverables = [
+  "Jornadas de aprendizagem por perfil e função",
+  "Conteúdos técnicos em diferentes formatos",
+  "Atividades conectadas à realidade do público",
+  "Acompanhamento da aprendizagem por dados",
 ];
 
 const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+  name: "CLIMAEDU | Conhecimento técnico em aprendizagem aplicada",
   url: "https://climaedu.com/",
   datePublished: pagePublished,
   dateModified: pageModified,
   inLanguage: "pt-BR",
-  citation: institutionalReferences.map((reference) => reference.href),
   isPartOf: {
     "@type": "WebSite",
     name: "CLIMAEDU",
@@ -78,7 +66,7 @@ const webPageJsonLd = {
   },
   publisher: {
     "@type": "Organization",
-    name: "CLIMAEDU",
+    name: "NewEdTech",
     url: "https://climaedu.com/",
     email: "contato@newedtech.com.br",
     telephone: "+55 48 99160-6518",
@@ -90,146 +78,53 @@ const webPageJsonLd = {
     },
   },
   description:
-    "A CLIMAEDU transforma conhecimento técnico sobre clima, sustentabilidade e gestão de riscos em aprendizagem aplicada, competências institucionais, certificados, relatórios e evidências de capacitação.",
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "O que é a CLIMAEDU?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A CLIMAEDU é uma plataforma GovTech/EdTech de aprendizagem aplicada para clima, sustentabilidade, gestão de riscos e desenvolvimento de competências institucionais.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "A CLIMAEDU é apenas uma plataforma de cursos?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Não. A CLIMAEDU transforma conhecimento técnico em trilhas, rotinas, certificados, dashboards, relatórios e evidências de capacitação para apoiar a capacidade institucional.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Quem a CLIMAEDU atende?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A CLIMAEDU atende governos, órgãos públicos, prefeituras, escolas de governo, conselhos profissionais e consórcios públicos, além de indústrias reguladas (química, papel e celulose, metalurgia, alimentos, agroindústria e couro) em áreas de ESG, RH, compliance e SSMA.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "A CLIMAEDU mede indicadores ambientais diretamente?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Não. A CLIMAEDU mede e evidencia o ambiente de aprendizagem, como participação, engajamento, proficiência, conclusão, certificados, relatórios e evidências de capacitação.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Como entrar em contato com a CLIMAEDU?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "O contato institucional da CLIMAEDU é contato@newedtech.com.br e o telefone é +55 48 99160-6518. A operação está localizada em Florianópolis, SC, Brasil.",
-      },
-    },
-  ],
+    "A CLIMAEDU, solução da NewEdTech, transforma conhecimentos climáticos e socioambientais em aprendizagem aplicada para órgãos públicos e indústrias.",
 };
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        title: "CLIMAEDU | Conhecimento técnico em aprendizagem aplicada",
       },
       {
         name: "description",
         content:
-          "A CLIMAEDU transforma conhecimento técnico sobre clima, sustentabilidade e gestão de riscos em aprendizagem aplicada, trilhas, certificados e evidências.",
+          "A CLIMAEDU, solução da NewEdTech, transforma conhecimentos climáticos e socioambientais em aprendizagem aplicada para órgãos públicos e indústrias.",
       },
-      {
-        name: "robots",
-        content: "index, follow",
-      },
-      {
-        name: "author",
-        content: "CLIMAEDU",
-      },
-      {
-        name: "date",
-        content: pageModified,
-      },
-      {
-        name: "datePublished",
-        content: pagePublished,
-      },
-      {
-        name: "dateModified",
-        content: pageModified,
-      },
-      {
-        property: "article:published_time",
-        content: "2026-07-09T00:00:00-03:00",
-      },
-      {
-        property: "article:modified_time",
-        content: "2026-07-10T00:00:00-03:00",
-      },
-
-      {
-        property: "og:type",
-        content: "website",
-      },
-      {
-        property: "og:site_name",
-        content: "CLIMAEDU",
-      },
+      { name: "robots", content: "index, follow" },
+      { name: "author", content: "NewEdTech" },
+      { name: "date", content: pageModified },
+      { name: "datePublished", content: pagePublished },
+      { name: "dateModified", content: pageModified },
+      { property: "article:published_time", content: "2026-07-09T00:00:00-03:00" },
+      { property: "article:modified_time", content: "2026-09-09T00:00:00-03:00" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "CLIMAEDU" },
       {
         property: "og:title",
-        content: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        content: "CLIMAEDU | Conhecimento técnico em aprendizagem aplicada",
       },
       {
         property: "og:description",
         content:
-          "Conhecimento técnico transformado em aprendizagem aplicada, capacidade institucional e evidências de capacitação.",
+          "Do conhecimento à ação: aprendizagem aplicada para temas climáticos e socioambientais.",
       },
-      {
-        property: "og:url",
-        content: "https://climaedu.com/",
-      },
-      {
-        property: "og:image",
-        content: "https://climaedu.com/og-image.png",
-      },
-
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
+      { property: "og:url", content: "https://climaedu.com/" },
+      { property: "og:image", content: "https://climaedu.com/og-image.png" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        content: "CLIMAEDU | Conhecimento técnico em aprendizagem aplicada",
       },
       {
         name: "twitter:description",
         content:
-          "A CLIMAEDU transforma conhecimento técnico em aprendizagem aplicada, competências institucionais e evidências de capacitação.",
+          "A CLIMAEDU transforma conhecimentos climáticos e socioambientais em aprendizagem aplicada.",
       },
-      {
-        name: "twitter:image",
-        content: "https://climaedu.com/og-image.png",
-      },
+      { name: "twitter:image", content: "https://climaedu.com/og-image.png" },
     ],
-    links: [
-      {
-        rel: "canonical",
-        href: "https://climaedu.com/",
-      },
-    ],
+    links: [{ rel: "canonical", href: "https://climaedu.com/" }],
   }),
   component: Index,
 });
@@ -239,160 +134,276 @@ function Index() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd),
-        }}
-      />
-
-      <HeroSection />
-      <ContextSection />
-      <MethodStepsSection />
-      <ClimateImpactStrip />
-      <JourneyCardsSection />
-      <EcosystemSection />
-      <SDGSection />
-
-      <section
-        aria-label="Perguntas frequentes sobre a CLIMAEDU"
-        className="bg-background px-6 py-20"
-      >
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
-              Perguntas frequentes
-            </p>
-
-            <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
-              Respostas diretas sobre a CLIMAEDU
-            </h2>
-
-            <p className="mt-4 text-foreground/70">
-              Informações institucionais para gestores públicos, empresas, instituições parceiras,
-              buscadores e ferramentas de IA.
-            </p>
-
-            <p className="mt-3 text-sm text-foreground/60">
-              Publicado em 09/07/2026 · Atualizado em 10/07/2026.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2">
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-primary-dark">O que é a CLIMAEDU?</h3>
-              <p className="mt-3 text-foreground/75">
-                A CLIMAEDU é uma plataforma GovTech/EdTech de aprendizagem aplicada para clima,
-                sustentabilidade, gestão de riscos e desenvolvimento de competências institucionais.
+      <section className="bg-background">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-20">
+          <FadeIn>
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+                UMA SOLUÇÃO NEWEDTECH
               </p>
-            </article>
 
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-primary-dark">
-                A CLIMAEDU é apenas uma plataforma de cursos?
-              </h3>
-              <p className="mt-3 text-foreground/75">
-                Não. A CLIMAEDU transforma conhecimento técnico em trilhas, rotinas, certificados,
-                dashboards, relatórios e evidências de capacitação para apoiar a capacidade
-                institucional.
-              </p>
-            </article>
+              <h1 className="mt-5 max-w-3xl text-primary-dark">
+                Conhecimento técnico que prepara pessoas para agir.
+              </h1>
 
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-primary-dark">Quem a CLIMAEDU atende?</h3>
-              <p className="mt-3 text-foreground/75">
-                A CLIMAEDU atende governos, órgãos públicos, prefeituras, escolas de governo,
-                conselhos profissionais e consórcios públicos, além de indústrias reguladas —
-                química, papel e celulose, metalurgia, alimentos, agroindústria e couro — em áreas
-                de ESG, RH, compliance e SSMA.
+              <p className="mt-7 max-w-2xl text-xl leading-relaxed text-foreground/80">
+                Ter planos, normas e especialistas não garante que as pessoas saibam como agir. A
+                CLIMAEDU transforma esse conhecimento técnico em aprendizagem aplicada, adequada à
+                realidade de cada organização.
               </p>
-            </article>
 
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-primary-dark">
-                A CLIMAEDU mede indicadores ambientais diretamente?
-              </h3>
-              <p className="mt-3 text-foreground/75">
-                Não. A CLIMAEDU mede e evidencia o ambiente de aprendizagem: participação,
-                engajamento, proficiência, conclusão, certificados, relatórios e evidências de
-                capacitação.
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/72">
+                Para órgãos públicos e indústrias que precisam levar conhecimentos climáticos e
+                socioambientais até as pessoas responsáveis por aplicá-los.
               </p>
-            </article>
 
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm md:col-span-2">
-              <h3 className="text-xl font-semibold text-primary-dark">
-                Como entrar em contato com a CLIMAEDU?
-              </h3>
-              <p className="mt-3 text-foreground/75">
-                O contato institucional da CLIMAEDU é{" "}
-                <a href="mailto:contato@newedtech.com.br" className="font-medium text-primary-dark hover:text-primary">contato@newedtech.com.br</a>{" "}
-                e o telefone é{" "}
-                <a href="tel:+5548991606518" className="font-medium text-primary-dark hover:text-primary">+55 48 99160-6518</a>
-                . A operação está localizada em Florianópolis, SC, Brasil.
+              <p className="mt-6 text-base font-semibold text-primary-deep">
+                Do conhecimento à ação.
               </p>
-            </article>
-          </div>
+
+              <div className="mt-9 flex flex-wrap gap-4">
+                <a
+                  href="#como-funciona"
+                  className="inline-flex min-h-14 items-center gap-2 rounded-lg bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-[0_12px_30px_-12px_rgba(95,122,79,0.7)] ring-1 ring-primary/30 transition hover:bg-primary-deep"
+                >
+                  Conhecer a CLIMAEDU <ArrowRight size={18} />
+                </a>
+
+                <Link
+                  to="/demonstracao"
+                  className="inline-flex min-h-14 items-center rounded-lg border-2 border-primary bg-background px-7 py-3 text-base font-semibold text-primary-dark transition hover:bg-accent"
+                >
+                  Agendar uma conversa
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.08}>
+            <div className="climaedu-floating-mockup relative">
+              <img
+                src={platformDevices}
+                alt="Plataforma CLIMAEDU apresentada em notebook, tablet e celular"
+                width={1890}
+                height={1890}
+                className="block aspect-square w-full object-contain"
+              />
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       <section
-        aria-label="Referências institucionais e técnicas"
-        className="bg-surface px-6 py-18 md:py-20"
+        className="bg-surface px-6 py-14 md:py-16"
+        aria-label="Relação entre NewEdTech e CLIMAEDU"
       >
         <div className="mx-auto max-w-6xl">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
-              Referências institucionais
-            </p>
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-10">
+            <div className="shrink-0">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground/54">
+                Uma solução
+              </p>
+              <img
+                src={newedtechLogo}
+                alt="New EdTech"
+                width={723}
+                height={233}
+                className="mt-3 h-auto w-[190px] max-w-full"
+                loading="lazy"
+              />
+            </div>
 
-            <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
-              Base técnica para aprendizagem aplicada
+            <p className="max-w-4xl text-2xl leading-snug text-primary-dark md:text-3xl">
+              A CLIMAEDU é a primeira solução especializada da NewEdTech, criada para transformar
+              conhecimentos climáticos e socioambientais em aprendizagem aplicada.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">O problema</p>
+            <h2 className="mt-4 text-primary-dark">
+              O conhecimento existe. O desafio é fazê-lo chegar a quem precisa agir.
             </h2>
-
-            <p className="mt-4 text-foreground/75">
-              A atuação da CLIMAEDU dialoga com agendas públicas e referências técnicas relacionadas
-              a sustentabilidade, gestão de riscos, adaptação climática, compras públicas
-              sustentáveis, defesa civil, educação e desenvolvimento de capacidades institucionais.
+            <p className="mt-6 text-lg leading-relaxed text-foreground/78">
+              Planos, normas, pesquisas e conhecimentos técnicos costumam estar em documentos ou
+              concentrados em especialistas. A CLIMAEDU transforma esse conteúdo em experiências de
+              aprendizagem adequadas a diferentes funções e realidades.
             </p>
+          </div>
+        </div>
+      </section>
 
-            <p className="mt-4 text-sm leading-relaxed text-foreground/60">
-              Fontes institucionais consultadas: Planalto, Advocacia-Geral da União, ONU Brasil e
-              IPCC. As referências abaixo não substituem análise jurídica, técnica ou normativa do
-              órgão contratante.
+      <section id="como-funciona" className="scroll-mt-24 bg-surface px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+                Como funciona
+              </p>
+              <h2 className="mt-4 text-primary-dark">Do conhecimento à ação</h2>
+            </div>
+            <p className="text-base font-semibold text-primary-deep">
+              Aprender → Aplicar → Acompanhar → Comprovar
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {institutionalReferences.map((reference) => (
-              <a key={reference.href} href={reference.href} target="_blank" rel="noopener noreferrer" className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  Fonte: {reference.source}
-                </p>
-
-                <h3 className="mt-3 text-lg font-semibold text-primary-dark group-hover:text-primary">
-                  {reference.title}
-                </h3>
-
-                <p className="mt-1 text-sm font-medium text-foreground/70">{reference.label}</p>
-
-                <p className="mt-3 text-sm leading-relaxed text-foreground/65">
-                  {reference.description}
-                </p>
-              </a>
+          <div className="mt-10 grid gap-5 md:grid-cols-4">
+            {steps.map((step, index) => (
+              <FadeIn key={step.title} delay={index * 0.04}>
+                <article className="h-full rounded-lg border border-border bg-card p-6 shadow-sm">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary-deep">
+                    <step.icon size={20} aria-hidden />
+                  </div>
+                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{step.title}</h3>
+                  <p className="mt-3 text-base leading-relaxed text-foreground/72">{step.text}</p>
+                </article>
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      <CTASection
-        title="Quando todos entendem seu papel, a instituição responde melhor."
-        subtitle="Agende uma demonstração e veja a CLIMAEDU aplicada à realidade do seu órgão, empresa ou rede de ensino."
-      />
+      <section className="bg-background px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">Para quem</p>
+            <h2 className="mt-4 text-primary-dark">Conhecimento aplicado a diferentes contextos</h2>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <article className="rounded-lg border border-border bg-card p-7 shadow-sm">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary-deep">
+                <Landmark size={22} aria-hidden />
+              </div>
+              <h3 className="mt-5 text-2xl font-semibold text-primary-dark">Órgãos públicos</h3>
+              <p className="mt-4 text-base leading-relaxed text-foreground/75">
+                Transforme planos, normas, protocolos e conhecimentos técnicos já existentes em
+                jornadas de aprendizagem para diferentes áreas e equipes.
+              </p>
+              <Link
+                to="/orgaos-publicos"
+                className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-primary-deep hover:text-primary"
+              >
+                CLIMAEDU para órgãos públicos <ArrowRight size={17} />
+              </Link>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-7 shadow-sm">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary-deep">
+                <Factory size={22} aria-hidden />
+              </div>
+              <h3 className="mt-5 text-2xl font-semibold text-primary-dark">Indústrias</h3>
+              <p className="mt-4 text-base leading-relaxed text-foreground/75">
+                Transforme conhecimentos ambientais, climáticos e socioambientais em aprendizagem
+                aplicada às funções e à realidade da operação.
+              </p>
+              <Link
+                to="/empresas"
+                className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-primary-deep hover:text-primary"
+              >
+                CLIMAEDU para indústrias <ArrowRight size={17} />
+              </Link>
+            </article>
+          </div>
+
+          <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/68">
+            Também desenvolvemos projetos com universidades, consultorias, organizações e redes de
+            conhecimento.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-surface px-6 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+              O que a CLIMAEDU entrega
+            </p>
+            <h2 className="mt-4 text-primary-dark">
+              Aprendizagem estruturada para diferentes perfis e responsabilidades.
+            </h2>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {deliverables.map((item) => (
+              <div key={item} className="flex gap-3 rounded-lg border border-border bg-card p-5">
+                <CheckCircle2 size={20} className="mt-1 shrink-0 text-primary" aria-hidden />
+                <p className="text-base leading-relaxed text-foreground/78">{item}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/68">
+            Certificados, dashboards e relatórios ajudam a organização a acompanhar e comprovar a
+            aprendizagem.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-background px-6 py-16 md:py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-center">
+          <FadeIn>
+            <div className="max-w-xl">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
+                Case industrial
+              </p>
+              <h2 className="mt-4 text-primary-dark">Case UC Viposa</h2>
+              <p className="mt-6 text-lg leading-relaxed text-foreground/78">
+                Universidade corporativa levando conhecimento climático e socioambiental para mais
+                perto das equipes e do chão de fábrica.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.08}>
+            <div className="rounded-lg border border-border bg-card p-8 shadow-sm">
+              <div className="flex flex-col gap-6 md:flex-row md:items-center">
+                <img
+                  src={viposaLogo}
+                  alt="Logo VIPOSA"
+                  className="h-16 w-auto object-contain md:h-20"
+                  loading="lazy"
+                />
+                <div>
+                  <p className="text-base font-semibold text-primary-dark">
+                    Do conteúdo técnico à rotina da operação.
+                  </p>
+                  <p className="mt-2 text-base leading-relaxed text-foreground/68">
+                    Trilhas digitais organizam a aprendizagem para lideranças e equipes, sem
+                    depender de linguagem excessivamente técnica.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="bg-primary-dark px-6 py-16 text-white md:py-20">
+        <div className="mx-auto max-w-5xl text-center">
+          <Sparkles size={28} className="mx-auto text-white/75" aria-hidden />
+          <h2 className="mt-5 text-white">
+            Que conhecimento precisa chegar à prática na sua organização?
+          </h2>
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/76">
+            Converse com a NewEdTech e conheça como a CLIMAEDU pode transformar conteúdos técnicos
+            em uma jornada de aprendizagem aplicada.
+          </p>
+          <Link
+            to="/demonstracao"
+            className="mt-9 inline-flex min-h-14 items-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-semibold text-primary-foreground transition hover:bg-white hover:text-primary-dark"
+          >
+            Agendar uma conversa <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

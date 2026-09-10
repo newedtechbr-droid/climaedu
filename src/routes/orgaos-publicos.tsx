@@ -23,34 +23,34 @@ const pageModified = "2026-07-10";
 const problemas = [
   {
     icon: Users,
-    text: "Capacitação fragmentada entre secretarias, unidades e equipes.",
+    text: "Conhecimentos técnicos precisam chegar a áreas, unidades e equipes com linguagens adequadas.",
   },
   {
     icon: AlertTriangle,
-    text: "Papéis, fluxos e rotinas pouco compreendidos diante de riscos climáticos.",
+    text: "Planos e protocolos ganham força quando cada público compreende como aplicá-los.",
   },
   {
     icon: ShoppingCart,
-    text: "Compras, planos, respostas e providências institucionais podem atrasar.",
+    text: "Escolas de governo e áreas técnicas precisam de jornadas conectadas às funções dos servidores.",
   },
   {
     icon: FileWarning,
-    text: "Faltam evidências consolidadas de preparação, participação e conclusão.",
+    text: "Dados de aprendizagem ajudam a acompanhar avanços e necessidades de formação.",
   },
 ];
 
 const solucao = [
   {
     icon: Users,
-    text: "Trilhas por perfil, função, secretaria, unidade ou grupo de atuação.",
-  },
-  {
-    icon: BarChart3,
-    text: "Dashboards de participação, engajamento, conclusão e proficiência.",
+    text: "Jornadas por perfil, função, secretaria, unidade ou grupo de atuação.",
   },
   {
     icon: FileText,
-    text: "Relatórios exportáveis para gestão, controle preventivo e prestação de contas.",
+    text: "Conteúdos técnicos transformados em experiências claras e aplicáveis.",
+  },
+  {
+    icon: BarChart3,
+    text: "Dados para acompanhar aprendizagem, conclusão e lacunas de desenvolvimento.",
   },
 ];
 
@@ -72,8 +72,8 @@ const aplicacoes = [
   },
   {
     icon: FileText,
-    title: "Evidências de capacitação",
-    text: "Registrar participação, conclusão, proficiência, certificados e relatórios para gestão e prestação de contas.",
+    title: "Acompanhamento da aprendizagem",
+    text: "Registrar participação, conclusão, proficiência, certificados e relatórios como apoio à gestão da aprendizagem.",
   },
 ];
 
@@ -179,7 +179,7 @@ const webPageJsonLd = {
   inLanguage: "pt-BR",
   citation: referenciasInstitucionais.map((reference) => reference.href),
   description:
-    "A CLIMAEDU é um ambiente de aprendizagem online que prepara equipes públicas para a ação climática, transformando normas, planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem aplicada, certificados, relatórios e evidências de capacitação.",
+    "A CLIMAEDU apoia escolas de governo e áreas técnicas na transformação de planos, normas, protocolos e conhecimentos já existentes em jornadas de aprendizagem aplicada.",
   about: [
     {
       "@type": "Thing",
@@ -239,8 +239,7 @@ const serviceJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "CLIMAEDU para órgãos públicos",
-  serviceType:
-    "Ambiente de aprendizagem online para preparação institucional e ação climática",
+  serviceType: "Ambiente de aprendizagem online para preparação institucional e ação climática",
   provider: {
     "@type": "Organization",
     name: "CLIMAEDU",
@@ -283,7 +282,7 @@ const faqJsonLd = {
       name: "Como a CLIMAEDU prepara equipes públicas para a ação climática?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A CLIMAEDU prepara equipes públicas para a ação climática ao transformar normas, planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem aplicada, trilhas por função, certificados, relatórios e evidências de capacitação.",
+        text: "A CLIMAEDU apoia equipes públicas ao transformar normas, planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem aplicada, com jornadas adequadas a diferentes funções.",
       },
     },
     {
@@ -317,13 +316,12 @@ export const Route = createFileRoute("/orgaos-publicos")({
   head: () => ({
     meta: [
       {
-        title:
-          "Órgãos públicos | CLIMAEDU — Preparação para ação climática",
+        title: "Órgãos públicos | CLIMAEDU — Preparação para ação climática",
       },
       {
         name: "description",
         content:
-          "Ambiente de aprendizagem online para preparar equipes públicas para ação climática, compras sustentáveis, gestão de riscos e evidências.",
+          "Jornadas de aprendizagem aplicada para órgãos públicos que precisam transformar planos, normas, protocolos e conhecimentos técnicos em prática.",
       },
       {
         name: "robots",
@@ -364,13 +362,12 @@ export const Route = createFileRoute("/orgaos-publicos")({
       },
       {
         property: "og:title",
-        content:
-          "CLIMAEDU para órgãos públicos | Preparação para ação climática",
+        content: "CLIMAEDU para órgãos públicos | Preparação para ação climática",
       },
       {
         property: "og:description",
         content:
-          "Ambiente de aprendizagem online para transformar normas, guias e conhecimento técnico em trilhas, certificados, relatórios e evidências.",
+          "Solução da NewEdTech para transformar normas, guias e conhecimento técnico em aprendizagem aplicada para equipes públicas.",
       },
       {
         property: "og:url",
@@ -387,13 +384,12 @@ export const Route = createFileRoute("/orgaos-publicos")({
       },
       {
         name: "twitter:title",
-        content:
-          "CLIMAEDU para órgãos públicos | Preparação para ação climática",
+        content: "CLIMAEDU para órgãos públicos | Preparação para ação climática",
       },
       {
         name: "twitter:description",
         content:
-          "Ambiente de aprendizagem online para capacitar equipes públicas e gerar evidências de preparação institucional.",
+          "Aprendizagem aplicada para escolas de governo, áreas técnicas e equipes públicas.",
       },
       {
         name: "twitter:image",
@@ -450,30 +446,24 @@ function OrgaosPublicos() {
               </p>
 
               <h1 className="mt-4 text-4xl font-medium leading-[1.05] text-primary-dark md:text-6xl">
-                Ambiente de aprendizagem online para preparar equipes públicas
-                para a ação climática
+                Conhecimento técnico preparado para chegar a quem precisa agir.
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
-                A CLIMAEDU é um ambiente de aprendizagem online para órgãos
-                públicos que prepara equipes públicas para a ação climática,
-                transformando conhecimento técnico, normas, planos, guias e
-                diretrizes de sustentabilidade em aprendizagem aplicada, trilhas
-                por função, certificados, relatórios e evidências de capacitação.
+                A CLIMAEDU apoia escolas de governo e áreas técnicas na transformação de planos,
+                normas, protocolos e conhecimentos já existentes em jornadas de aprendizagem para
+                diferentes equipes.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
-                Da compra pública sustentável ao planejamento urbano resiliente,
-                a plataforma ajuda equipes públicas a compreenderem seu papel,
-                aplicarem conhecimento técnico na rotina e registrarem
-                evidências de preparação, participação, conclusão e proficiência.
+                A solução fortalece as estruturas públicas existentes e ajuda servidores a
+                compreender como o conhecimento técnico se conecta às suas funções.
               </p>
 
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/62">
-                A CLIMAEDU não substitui consultorias, pareceres técnicos,
-                análise jurídica ou decisão administrativa. Ela fortalece o
-                ambiente de aprendizagem institucional para apoiar
-                implementação, gestão e prestação de contas sobre capacitação.
+                Órgãos públicos já contam com áreas técnicas, especialistas, planos, protocolos,
+                escolas de governo e estruturas de capacitação. A CLIMAEDU atua como solução
+                complementar para transformar esse conhecimento em aprendizagem aplicada.
               </p>
             </div>
           </FadeIn>
@@ -485,8 +475,7 @@ function OrgaosPublicos() {
                   Preparação
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Equipes públicas mais preparadas para agir diante da agenda
-                  climática.
+                  Equipes públicas mais preparadas para agir diante da agenda climática.
                 </p>
               </div>
             </FadeIn>
@@ -497,8 +486,7 @@ function OrgaosPublicos() {
                   Aplicação
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Trilhas que conectam normas, guias e políticas públicas à
-                  rotina institucional.
+                  Trilhas que conectam normas, guias e políticas públicas à rotina institucional.
                 </p>
               </div>
             </FadeIn>
@@ -509,8 +497,7 @@ function OrgaosPublicos() {
                   Evidência
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Certificados, dashboards e relatórios para acompanhar a
-                  capacitação.
+                  Certificados, dashboards e relatórios para acompanhar a capacitação.
                 </p>
               </div>
             </FadeIn>
@@ -522,8 +509,8 @@ function OrgaosPublicos() {
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <SectionTitle
             eyebrow="O desafio"
-            title="A ação climática depende de equipes que entendem o que fazer na rotina."
-            subtitle="Leis, planos, guias, alertas e metas só geram valor quando chegam às equipes em formato compreensível, aplicável e acompanhado."
+            title="O conhecimento técnico ganha alcance quando vira aprendizagem."
+            subtitle="Planos, normas, protocolos e pesquisas podem ser transformados em experiências adequadas a diferentes funções e realidades."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-4">
@@ -533,17 +520,14 @@ function OrgaosPublicos() {
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-lg"
                     style={{
-                      backgroundColor:
-                        "color-mix(in oklab, var(--color-terracotta) 14%, white)",
+                      backgroundColor: "color-mix(in oklab, var(--color-terracotta) 14%, white)",
                       color: "var(--color-terracotta)",
                     }}
                   >
                     <p.icon size={18} />
                   </div>
 
-                  <p className="mt-4 text-[17px] leading-[1.45] text-foreground/88">
-                    {p.text}
-                  </p>
+                  <p className="mt-4 text-[17px] leading-[1.45] text-foreground/88">{p.text}</p>
                 </div>
               </FadeIn>
             ))}
@@ -556,8 +540,8 @@ function OrgaosPublicos() {
           <FadeIn>
             <SectionTitle
               eyebrow="Na prática"
-              title="Da capacitação ao relatório"
-              subtitle="O aprendizado deixa rastro: quem participou, o que concluiu, quais competências foram trabalhadas e quais evidências podem apoiar gestão, auditoria, controle e prestação de contas."
+              title="Da aprendizagem ao acompanhamento"
+              subtitle="Primeiro, a organização leva o conhecimento às pessoas. Depois, acompanha avanços, conclusão e lacunas de aprendizagem."
             />
 
             <div className="mt-8 grid gap-3">
@@ -570,9 +554,7 @@ function OrgaosPublicos() {
                     <s.icon size={17} />
                   </span>
 
-                  <p className="text-[16.5px] leading-snug text-foreground/85">
-                    {s.text}
-                  </p>
+                  <p className="text-[16.5px] leading-snug text-foreground/85">{s.text}</p>
                 </div>
               ))}
             </div>
@@ -602,10 +584,9 @@ function OrgaosPublicos() {
             </h2>
 
             <p className="mt-4 text-foreground/75">
-              A legislação, os guias técnicos e as agendas de sustentabilidade
-              ampliam a necessidade de planejamento, gestão de riscos,
-              capacitação de equipes, documentação e prestação de contas. A
-              CLIMAEDU apoia essa agenda pelo caminho da aprendizagem aplicada.
+              A legislação, os guias técnicos e as agendas de sustentabilidade ampliam a necessidade
+              de planejamento, gestão de riscos, capacitação de equipes, documentação e prestação de
+              contas. A CLIMAEDU apoia essa agenda pelo caminho da aprendizagem aplicada.
             </p>
           </div>
 
@@ -617,13 +598,9 @@ function OrgaosPublicos() {
                     <item.icon size={20} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">
-                    {item.title}
-                  </h3>
+                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
 
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-                    {item.text}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">{item.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -643,10 +620,9 @@ function OrgaosPublicos() {
             </h2>
 
             <p className="mt-4 text-foreground/75">
-              A CLIMAEDU dialoga com diferentes Objetivos de Desenvolvimento
-              Sustentável, especialmente quando a instituição precisa formar
-              equipes, organizar rotinas, documentar capacitação e fortalecer
-              sua capacidade de implementação.
+              A CLIMAEDU dialoga com diferentes Objetivos de Desenvolvimento Sustentável,
+              especialmente quando a instituição precisa formar equipes, organizar rotinas,
+              documentar capacitação e fortalecer sua capacidade de implementação.
             </p>
           </div>
 
@@ -660,13 +636,9 @@ function OrgaosPublicos() {
                   {ods.number}
                 </p>
 
-                <h3 className="mt-3 text-lg font-semibold text-primary-dark">
-                  {ods.title}
-                </h3>
+                <h3 className="mt-3 text-lg font-semibold text-primary-dark">{ods.title}</h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-                  {ods.text}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70">{ods.text}</p>
               </article>
             ))}
           </div>
@@ -687,16 +659,15 @@ function OrgaosPublicos() {
             </h2>
 
             <p className="mt-4 text-foreground/75">
-              A atuação da CLIMAEDU dialoga com agendas públicas e referências
-              técnicas relacionadas a sustentabilidade, gestão de riscos,
-              adaptação climática, defesa civil, educação, compras públicas
-              sustentáveis e desenvolvimento de capacidades institucionais.
+              A atuação da CLIMAEDU dialoga com agendas públicas e referências técnicas relacionadas
+              a sustentabilidade, gestão de riscos, adaptação climática, defesa civil, educação,
+              compras públicas sustentáveis e desenvolvimento de capacidades institucionais.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-foreground/60">
-              Fontes institucionais consultadas: Planalto, Advocacia-Geral da
-              União, ONU Brasil e IPCC. As referências abaixo não substituem
-              análise jurídica, técnica ou normativa do órgão contratante.
+              Fontes institucionais consultadas: Planalto, Advocacia-Geral da União, ONU Brasil e
+              IPCC. As referências abaixo não substituem análise jurídica, técnica ou normativa do
+              órgão contratante.
             </p>
           </div>
 
@@ -724,9 +695,7 @@ function OrgaosPublicos() {
                   {reference.title}
                 </h3>
 
-                <p className="mt-1 text-sm font-medium text-foreground/70">
-                  {reference.label}
-                </p>
+                <p className="mt-1 text-sm font-medium text-foreground/70">{reference.label}</p>
 
                 <p className="mt-3 text-sm leading-relaxed text-foreground/65">
                   {reference.description}
@@ -749,9 +718,8 @@ function OrgaosPublicos() {
             </h2>
 
             <p className="mt-4 text-foreground/70">
-              Informações institucionais para gestores públicos, equipes
-              técnicas, escolas de governo, consórcios públicos e ferramentas de
-              busca ou IA.
+              Informações institucionais para gestores públicos, equipes técnicas, escolas de
+              governo e consórcios públicos.
             </p>
 
             <p className="mt-3 text-sm text-foreground/60">
@@ -762,22 +730,18 @@ function OrgaosPublicos() {
           <div className="grid gap-5 md:grid-cols-2">
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start gap-3">
-                <CheckCircle2
-                  size={21}
-                  className="mt-1 shrink-0 text-primary"
-                />
+                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
 
                 <div>
                   <h3 className="text-xl font-semibold text-primary-dark">
-                    Como a CLIMAEDU prepara equipes públicas para a ação
-                    climática?
+                    Como a CLIMAEDU prepara equipes públicas para a ação climática?
                   </h3>
 
                   <p className="mt-3 text-foreground/75">
-                    A CLIMAEDU prepara equipes públicas para a ação climática ao
-                    transformar normas, planos, guias técnicos e diretrizes de
-                    sustentabilidade em aprendizagem aplicada, trilhas por
-                    função, certificados, relatórios e evidências de capacitação.
+                    A CLIMAEDU prepara equipes públicas para a ação climática ao transformar normas,
+                    planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem
+                    aplicada, trilhas por função, certificados, relatórios e evidências de
+                    capacitação.
                   </p>
                 </div>
               </div>
@@ -785,10 +749,7 @@ function OrgaosPublicos() {
 
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start gap-3">
-                <CheckCircle2
-                  size={21}
-                  className="mt-1 shrink-0 text-primary"
-                />
+                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
 
                 <div>
                   <h3 className="text-xl font-semibold text-primary-dark">
@@ -796,10 +757,9 @@ function OrgaosPublicos() {
                   </h3>
 
                   <p className="mt-3 text-foreground/75">
-                    Sim. A CLIMAEDU apoia a capacitação de equipes públicas para
-                    compreender temas relacionados a compras públicas
-                    sustentáveis, critérios de sustentabilidade, planejamento,
-                    gestão de riscos e documentação da aprendizagem.
+                    Sim. A CLIMAEDU apoia a capacitação de equipes públicas para compreender temas
+                    relacionados a compras públicas sustentáveis, critérios de sustentabilidade,
+                    planejamento, gestão de riscos e documentação da aprendizagem.
                   </p>
                 </div>
               </div>
@@ -807,10 +767,7 @@ function OrgaosPublicos() {
 
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start gap-3">
-                <CheckCircle2
-                  size={21}
-                  className="mt-1 shrink-0 text-primary"
-                />
+                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
 
                 <div>
                   <h3 className="text-xl font-semibold text-primary-dark">
@@ -818,10 +775,9 @@ function OrgaosPublicos() {
                   </h3>
 
                   <p className="mt-3 text-foreground/75">
-                    Não. A CLIMAEDU não substitui consultorias, pareceres
-                    técnicos, análise jurídica ou decisão administrativa. A
-                    plataforma apoia a capacitação e a geração de evidências de
-                    aprendizagem.
+                    Não. A CLIMAEDU não substitui consultorias, pareceres técnicos, análise jurídica
+                    ou decisão administrativa. A plataforma apoia a capacitação e a geração de
+                    evidências de aprendizagem.
                   </p>
                 </div>
               </div>
@@ -829,10 +785,7 @@ function OrgaosPublicos() {
 
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start gap-3">
-                <CheckCircle2
-                  size={21}
-                  className="mt-1 shrink-0 text-primary"
-                />
+                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
 
                 <div>
                   <h3 className="text-xl font-semibold text-primary-dark">
@@ -840,9 +793,8 @@ function OrgaosPublicos() {
                   </h3>
 
                   <p className="mt-3 text-foreground/75">
-                    A CLIMAEDU gera evidências de aprendizagem, como
-                    participação, engajamento, conclusão, proficiência,
-                    certificados, relatórios e dashboards. Ela não mede
+                    A CLIMAEDU gera evidências de aprendizagem, como participação, engajamento,
+                    conclusão, proficiência, certificados, relatórios e dashboards. Ela não mede
                     diretamente indicadores ambientais ou urbanos.
                   </p>
                 </div>
@@ -853,8 +805,9 @@ function OrgaosPublicos() {
       </section>
 
       <CTASection
-        title="Agendar demonstração para órgão público"
-        subtitle="Veja exemplos de trilhas, certificados, dashboards e relatórios aplicados à preparação institucional para a ação climática."
+        title="Levar conhecimento técnico à prática no setor público"
+        subtitle="Converse com a NewEdTech sobre como transformar conteúdos técnicos em jornadas de aprendizagem aplicada para equipes públicas."
+        ctaLabel="Agendar uma conversa"
       />
     </>
   );
