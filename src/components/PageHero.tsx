@@ -37,7 +37,12 @@ export function PageHero({
         <FadeIn delay={0.05}>
           <h1
             className="text-primary-dark"
-            style={{ fontSize: "clamp(34px, 4.8vw, 60px)", lineHeight: 1.08, letterSpacing: "-0.018em", fontWeight: 600 }}
+            style={{
+              fontSize: "clamp(34px, 4.8vw, 60px)",
+              lineHeight: 1.08,
+              letterSpacing: "-0.018em",
+              fontWeight: 600,
+            }}
           >
             {title}
           </h1>
@@ -52,7 +57,11 @@ export function PageHero({
             </p>
           </FadeIn>
         )}
-        {children && <FadeIn delay={0.25}><div className="mt-10">{children}</div></FadeIn>}
+        {children && (
+          <FadeIn delay={0.25}>
+            <div className="mt-10">{children}</div>
+          </FadeIn>
+        )}
       </div>
     </section>
   );
