@@ -5,6 +5,7 @@ import { JourneyCardsSection } from "@/components/sections/JourneyCardsSection";
 import { MethodStepsSection } from "@/components/sections/MethodStepsSection";
 import { ClimateImpactStrip } from "@/components/sections/ClimateImpactStrip";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
+import { SDGSection } from "@/components/sections/SDGSection";
 import { CTASection } from "@/components/sections/CTASection";
 
 const pagePublished = "2026-07-09";
@@ -117,7 +118,7 @@ const faqJsonLd = {
       name: "Quem a CLIMAEDU atende?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A CLIMAEDU atende governos, órgãos públicos, prefeituras, escolas de governo, conselhos profissionais, consórcios públicos, empresas, áreas de ESG, RH, compliance, meio ambiente, operações e gestão de riscos.",
+        text: "A CLIMAEDU atende governos, órgãos públicos, prefeituras, escolas de governo, conselhos profissionais e consórcios públicos, além de indústrias reguladas (química, papel e celulose, metalurgia, alimentos, agroindústria e couro) em áreas de ESG, RH, compliance e SSMA.",
       },
     },
     {
@@ -143,8 +144,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title:
-          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        title: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
       },
       {
         name: "description",
@@ -190,8 +190,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content:
-          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        content: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
       },
       {
         property: "og:description",
@@ -213,8 +212,7 @@ export const Route = createFileRoute("/")({
       },
       {
         name: "twitter:title",
-        content:
-          "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
+        content: "CLIMAEDU | Aprendizagem aplicada para capacidade institucional",
       },
       {
         name: "twitter:description",
@@ -259,6 +257,7 @@ function Index() {
       <ClimateImpactStrip />
       <JourneyCardsSection />
       <EcosystemSection />
+      <SDGSection />
 
       <section
         aria-label="Perguntas frequentes sobre a CLIMAEDU"
@@ -275,8 +274,8 @@ function Index() {
             </h2>
 
             <p className="mt-4 text-foreground/70">
-              Informações institucionais para gestores públicos, empresas,
-              instituições parceiras, buscadores e ferramentas de IA.
+              Informações institucionais para gestores públicos, empresas, instituições parceiras,
+              buscadores e ferramentas de IA.
             </p>
 
             <p className="mt-3 text-sm text-foreground/60">
@@ -286,13 +285,10 @@ function Index() {
 
           <div className="grid gap-5 md:grid-cols-2">
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-primary-dark">
-                O que é a CLIMAEDU?
-              </h3>
+              <h3 className="text-xl font-semibold text-primary-dark">O que é a CLIMAEDU?</h3>
               <p className="mt-3 text-foreground/75">
-                A CLIMAEDU é uma plataforma GovTech/EdTech de aprendizagem
-                aplicada para clima, sustentabilidade, gestão de riscos e
-                desenvolvimento de competências institucionais.
+                A CLIMAEDU é uma plataforma GovTech/EdTech de aprendizagem aplicada para clima,
+                sustentabilidade, gestão de riscos e desenvolvimento de competências institucionais.
               </p>
             </article>
 
@@ -301,21 +297,19 @@ function Index() {
                 A CLIMAEDU é apenas uma plataforma de cursos?
               </h3>
               <p className="mt-3 text-foreground/75">
-                Não. A CLIMAEDU transforma conhecimento técnico em trilhas,
-                rotinas, certificados, dashboards, relatórios e evidências de
-                capacitação para apoiar a capacidade institucional.
+                Não. A CLIMAEDU transforma conhecimento técnico em trilhas, rotinas, certificados,
+                dashboards, relatórios e evidências de capacitação para apoiar a capacidade
+                institucional.
               </p>
             </article>
 
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-primary-dark">
-                Quem a CLIMAEDU atende?
-              </h3>
+              <h3 className="text-xl font-semibold text-primary-dark">Quem a CLIMAEDU atende?</h3>
               <p className="mt-3 text-foreground/75">
-                A CLIMAEDU atende governos, órgãos públicos, prefeituras,
-                escolas de governo, conselhos profissionais, consórcios
-                públicos, empresas, áreas de ESG, RH, compliance, meio ambiente,
-                operações e gestão de riscos.
+                A CLIMAEDU atende governos, órgãos públicos, prefeituras, escolas de governo,
+                conselhos profissionais e consórcios públicos, além de indústrias reguladas —
+                química, papel e celulose, metalurgia, alimentos, agroindústria e couro — em áreas
+                de ESG, RH, compliance e SSMA.
               </p>
             </article>
 
@@ -324,9 +318,9 @@ function Index() {
                 A CLIMAEDU mede indicadores ambientais diretamente?
               </h3>
               <p className="mt-3 text-foreground/75">
-                Não. A CLIMAEDU mede e evidencia o ambiente de aprendizagem:
-                participação, engajamento, proficiência, conclusão,
-                certificados, relatórios e evidências de capacitação.
+                Não. A CLIMAEDU mede e evidencia o ambiente de aprendizagem: participação,
+                engajamento, proficiência, conclusão, certificados, relatórios e evidências de
+                capacitação.
               </p>
             </article>
 
@@ -336,14 +330,14 @@ function Index() {
               </h3>
               <p className="mt-3 text-foreground/75">
                 O contato institucional da CLIMAEDU é{" "}
-                <a
+                
                   href="mailto:contato@newedtech.com.br"
                   className="font-medium text-primary-dark hover:text-primary"
                 >
                   contato@newedtech.com.br
                 </a>{" "}
                 e o telefone é{" "}
-                <a
+                
                   href="tel:+5548991606518"
                   className="font-medium text-primary-dark hover:text-primary"
                 >
@@ -371,22 +365,21 @@ function Index() {
             </h2>
 
             <p className="mt-4 text-foreground/75">
-              A atuação da CLIMAEDU dialoga com agendas públicas e referências
-              técnicas relacionadas a sustentabilidade, gestão de riscos,
-              adaptação climática, compras públicas sustentáveis, defesa civil,
-              educação e desenvolvimento de capacidades institucionais.
+              A atuação da CLIMAEDU dialoga com agendas públicas e referências técnicas relacionadas
+              a sustentabilidade, gestão de riscos, adaptação climática, compras públicas
+              sustentáveis, defesa civil, educação e desenvolvimento de capacidades institucionais.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-foreground/60">
-              Fontes institucionais consultadas: Planalto, Advocacia-Geral da
-              União, ONU Brasil e IPCC. As referências abaixo não substituem
-              análise jurídica, técnica ou normativa do órgão contratante.
+              Fontes institucionais consultadas: Planalto, Advocacia-Geral da União, ONU Brasil e
+              IPCC. As referências abaixo não substituem análise jurídica, técnica ou normativa do
+              órgão contratante.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {institutionalReferences.map((reference) => (
-              <a
+              
                 key={reference.href}
                 href={reference.href}
                 target="_blank"
@@ -401,9 +394,7 @@ function Index() {
                   {reference.title}
                 </h3>
 
-                <p className="mt-1 text-sm font-medium text-foreground/70">
-                  {reference.label}
-                </p>
+                <p className="mt-1 text-sm font-medium text-foreground/70">{reference.label}</p>
 
                 <p className="mt-3 text-sm leading-relaxed text-foreground/65">
                   {reference.description}
