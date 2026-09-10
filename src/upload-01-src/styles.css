@@ -1,0 +1,191 @@
+
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Source Sans 3", system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", "Source Sans 3", serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-institutional: var(--institutional);
+  --color-terracotta: var(--terracotta);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-dark: var(--surface-dark);
+  --color-primary-deep: var(--primary-deep);
+  --color-olive: var(--olive);
+  --color-slate-blue: var(--slate-blue);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* ClimaEdu — Identidade Visual Oficial
+     Calcário #F3F1EC · Ônix #202427 · Ardósia #485C68 · Terracota #9A4B42 · Oliva mineral #849A74 */
+  --background: #F3F1EC;            /* Calcário */
+  --foreground: #1A1E20;            /* Ônix com mais contraste */
+  --card: #FFFFFF;
+  --card-foreground: #1A1E20;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1E20;
+
+  /* Verde musgo profundo — CTA institucional, mais vivo e sofisticado */
+  --primary: #5F7A4F;
+  --primary-foreground: #F5F2EA;
+  --primary-dark: #1A1E20;
+  --primary-deep: #3D5132;
+
+  --secondary: #E7E3DA;
+  --secondary-foreground: #1A1E20;
+
+  --surface: #E8ECEC;
+  --surface-dark: #2A3942;
+
+  --muted: #ECE8DF;
+  --muted-foreground: #3F4F5A;      /* Ardósia mais escura */
+
+  --accent: #DDE4E8;
+  --accent-foreground: #2A3942;
+  --olive: #5F7A4F;                 /* Musgo profundo */
+  --slate-blue: #485C68;
+
+  --institutional: #485C68;
+  --terracotta: #9A4B42;
+  --destructive: #9A4B42;
+  --destructive-foreground: #F5F2EA;
+
+  --border: #CFD6D6;
+  --input: #CFD6D6;
+  --ring: #5F7A4F;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    background-image:
+      radial-gradient(at 12% 8%, color-mix(in oklab, var(--color-olive) 6%, transparent) 0, transparent 45%),
+      radial-gradient(at 88% 92%, color-mix(in oklab, var(--color-terracotta) 5%, transparent) 0, transparent 50%),
+      linear-gradient(180deg, color-mix(in oklab, var(--color-surface) 35%, var(--color-background)) 0%, var(--color-background) 60%);
+    background-attachment: fixed;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--color-foreground);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-foreground);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 44px;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+  }
+  @media (min-width: 768px) {
+    h1 { font-size: 68px; }
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 1.08;
+    letter-spacing: -0.014em;
+    font-weight: 600;
+  }
+  @media (min-width: 768px) {
+    h2 { font-size: 50px; }
+  }
+
+
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+
+  h4, h5, h6 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .climaedu-floating-mockup {
+    animation: climaedu-float 7s ease-in-out infinite;
+    background: transparent;
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  @keyframes climaedu-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+      transform: translate3d(0, -12px, 0) rotate(0.35deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .climaedu-floating-mockup {
+      animation: none;
+    }
+  }
+}
