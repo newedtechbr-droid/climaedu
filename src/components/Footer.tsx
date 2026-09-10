@@ -10,7 +10,7 @@ const navigationLinks = [
   {
     title: "Plataforma",
     links: [
-      { label: "Como funciona", href: "/plataforma" },
+      { label: "A solução", href: "/plataforma" },
       { label: "Cursos e trilhas", href: "/cursos" },
     ],
   },
@@ -50,8 +50,8 @@ export function Footer() {
             </a>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/78">
-              A CLIMAEDU é uma solução da NewEdTech para transformar conhecimentos climáticos,
-              ambientais e socioambientais em aprendizagem aplicada.
+              A CLIMAEDU é uma plataforma de aprendizagem online da NewEdTech para transformar
+              conhecimentos climáticos, ambientais e socioambientais em aprendizagem aplicada.
             </p>
 
             <div className="mt-6 rounded-2xl border border-white/12 bg-white/[0.04] p-5">

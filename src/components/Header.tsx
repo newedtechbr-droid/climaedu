@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 
 const nav = [
-  { to: "/plataforma", label: "Como funciona" },
+  { to: "/plataforma", label: "Plataforma" },
   { to: "/orgaos-publicos", label: "Órgãos públicos" },
   { to: "/empresas", label: "Indústrias" },
   { to: "/cursos", label: "Cursos" },
@@ -34,12 +34,12 @@ export function Header() {
           <img src="/logo.png" alt="CLIMAEDU" className="h-11 md:h-14" />
         </Link>
 
-        <nav className="hidden items-center gap-4 md:flex" aria-label="Navegação principal">
+        <nav className="hidden items-center gap-5 md:flex" aria-label="Navegação principal">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="inline-flex h-11 items-center rounded-md px-1 text-[14px] font-semibold text-foreground/85 transition-colors hover:text-primary"
+              className="inline-flex h-11 items-center rounded-md px-1 text-[15.5px] font-semibold text-foreground/88 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
             >
               {item.label}
