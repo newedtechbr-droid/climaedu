@@ -7,7 +7,6 @@ const nav = [
   { to: "/plataforma", label: "Como funciona" },
   { to: "/orgaos-publicos", label: "Órgãos públicos" },
   { to: "/empresas", label: "Empresas" },
-  { to: "/escolas", label: "Escolas" },
   { to: "/cursos", label: "Cursos" },
   { to: "/diferenciais", label: "Diferenciais" },
 ] as const;
@@ -51,45 +50,4 @@ export function Header() {
 
         <Link
           to="/demonstracao"
-          className="hidden rounded-lg bg-primary px-6 py-3 text-[15px] font-semibold text-primary-foreground shadow-[0_8px_22px_-8px_rgba(95,122,79,0.6)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:shadow-[0_12px_28px_-8px_rgba(61,81,50,0.7)] md:inline-flex"
-        >
-          Agendar demonstração
-        </Link>
-
-        <button
-          type="button"
-          className="md:hidden"
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </div>
-
-      {open && (
-        <div className="border-t border-border bg-background md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4" aria-label="Navegação móvel">
-            {nav.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-2.5 text-[16px] font-semibold text-foreground/85 hover:bg-surface"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              to="/demonstracao"
-              onClick={() => setOpen(false)}
-              className="mt-3 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(132,154,116,0.55)]"
-            >
-              Agendar demonstração
-            </Link>
-          </nav>
-        </div>
-      )}
-    </header>
-  );
-}
+          className="hidden
