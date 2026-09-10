@@ -15,6 +15,7 @@ import {
   ShieldCheck,
   ExternalLink,
   CheckCircle2,
+  Brain,
 } from "lucide-react";
 
 const pagePublished = "2026-07-09";
@@ -23,7 +24,7 @@ const pageModified = "2026-07-10";
 const problemas = [
   {
     icon: Users,
-    text: "Conhecimentos técnicos precisam chegar a áreas, unidades e equipes com linguagens adequadas.",
+    text: "Documentos, planos e orientações precisam virar aprendizagem acessível para áreas, unidades e equipes.",
   },
   {
     icon: AlertTriangle,
@@ -45,8 +46,8 @@ const solucao = [
     text: "Jornadas por perfil, função, secretaria, unidade ou grupo de atuação.",
   },
   {
-    icon: FileText,
-    text: "Conteúdos técnicos transformados em experiências claras e aplicáveis.",
+    icon: Brain,
+    text: "Motor de inteligência artificial para extrair, organizar e transformar conteúdos institucionais em aprendizagem.",
   },
   {
     icon: BarChart3,
@@ -279,10 +280,10 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Como a CLIMAEDU prepara equipes públicas para a ação climática?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A CLIMAEDU apoia equipes públicas ao transformar normas, planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem aplicada, com jornadas adequadas a diferentes funções.",
+    name: "Como a CLIMAEDU prepara equipes públicas para a ação climática?",
+    acceptedAnswer: {
+      "@type": "Answer",
+        text: "A CLIMAEDU apoia equipes públicas ao transformar normas, planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem aplicada, com apoio de inteligência artificial, curadoria humana e jornadas adequadas a diferentes funções.",
       },
     },
     {
@@ -451,19 +452,21 @@ function OrgaosPublicos() {
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
                 A CLIMAEDU apoia escolas de governo e áreas técnicas na transformação de planos,
-                normas, protocolos e conhecimentos já existentes em jornadas online de
+                normas, protocolos, documentos e conhecimentos já existentes em jornadas online de
                 aprendizagem para diferentes equipes.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
-                A solução combina conteúdos simplificados, atividades aplicadas, recursos
-                gamificados, certificados e dashboards para apoiar a capacitação institucional.
+                A solução combina inteligência artificial com curadoria NewEdTech para extrair o
+                conteúdo institucional e transformar em aulas, atividades aplicadas, recursos
+                gamificados, certificados e dashboards.
               </p>
 
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/62">
                 Órgãos públicos já contam com áreas técnicas, especialistas, planos, protocolos,
                 escolas de governo e estruturas de capacitação. A CLIMAEDU atua como solução
-                complementar para transformar esse conhecimento em aprendizagem aplicada.
+                complementar para fazer esse conhecimento circular em formato de aprendizagem
+                aplicada, sem substituir a atuação técnica já existente.
               </p>
             </div>
           </FadeIn>
@@ -472,10 +475,10 @@ function OrgaosPublicos() {
             <FadeIn delay={0.04}>
               <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                Aprendizagem online
+                IA aplicada
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Trilhas digitais para secretarias, escolas de governo e equipes técnicas.
+                  Materiais institucionais transformados em jornadas digitais com curadoria.
                 </p>
               </div>
             </FadeIn>
@@ -510,7 +513,7 @@ function OrgaosPublicos() {
           <SectionTitle
             eyebrow="O desafio"
             title="O conhecimento técnico ganha alcance quando vira aprendizagem."
-            subtitle="Planos, normas, protocolos e pesquisas podem ser transformados em experiências adequadas a diferentes funções e realidades."
+            subtitle="Planos, normas, protocolos e pesquisas podem ser convertidos em experiências adequadas a diferentes funções e realidades, sem partir do zero."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-4">
@@ -541,7 +544,7 @@ function OrgaosPublicos() {
             <SectionTitle
               eyebrow="Na prática"
               title="Da aprendizagem ao acompanhamento"
-            subtitle="Primeiro, a organização leva o conhecimento às pessoas. Depois, acompanha avanços, conclusão e lacunas de aprendizagem."
+            subtitle="Primeiro, a organização transforma seus próprios conteúdos em aprendizagem online. Depois, acompanha avanços, conclusão e lacunas."
             />
 
             <div className="mt-8 grid gap-3">

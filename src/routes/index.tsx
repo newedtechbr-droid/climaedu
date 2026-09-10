@@ -4,6 +4,7 @@ import {
   Award,
   BarChart3,
   BookOpen,
+  Brain,
   CheckCircle2,
   ClipboardCheck,
   Factory,
@@ -25,35 +26,41 @@ const pageModified = "2026-09-09";
 
 const steps = [
   {
+    icon: Brain,
+    title: "Transformar",
+    text: "Materiais e documentos viram jornadas online com apoio de inteligência artificial e curadoria.",
+  },
+  {
     icon: BookOpen,
     title: "Aprender",
-    text: "Conteúdos online em linguagem clara, com trilhas, vídeos, quizzes e atividades.",
+    text: "Conteúdos em linguagem clara, com vídeos, quizzes, desafios e atividades gamificadas.",
   },
   {
     icon: PlayCircle,
     title: "Aplicar",
-    text: "Situações gamificadas e decisões conectadas à rotina de cada público.",
+    text: "Situações práticas conectam o conteúdo institucional à rotina de cada público.",
   },
   {
     icon: LineChart,
     title: "Acompanhar",
-    text: "A organização identifica avanços e lacunas de aprendizagem.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Comprovar",
-    text: "Dados e registros demonstram o desenvolvimento das equipes.",
+    text: "Dados e registros mostram avanços, conclusão e lacunas de aprendizagem.",
   },
 ];
 
 const deliverables = [
   "Plataforma de aprendizagem online com trilhas por perfil e função",
+  "Motor de inteligência artificial para transformar materiais em experiências de aprendizagem",
   "Conteúdos simplificados em vídeos, aulas, quizzes e atividades gamificadas",
   "Processo de aprendizagem mais leve, guiado e aplicável à rotina",
   "Acompanhamento da aprendizagem por dados",
 ];
 
 const platformHighlights = [
+  {
+    icon: Brain,
+    title: "IA que transforma conteúdo",
+    text: "Documentos, normas, protocolos e materiais institucionais ganham estrutura de aprendizagem com curadoria NewEdTech.",
+  },
   {
     icon: BookOpen,
     title: "Aprendizagem online",
@@ -63,11 +70,6 @@ const platformHighlights = [
     icon: Gamepad2,
     title: "Conteúdo gamificado",
     text: "Quizzes, desafios e atividades aplicadas ajudam a transformar temas técnicos em prática.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Mais simples de acompanhar",
-    text: "O gestor visualiza participação, conclusão, desempenho e lacunas sem depender de planilhas soltas.",
   },
 ];
 
@@ -170,8 +172,9 @@ function Index() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-xl leading-relaxed text-foreground/80">
-                A CLIMAEDU organiza trilhas, conteúdos simplificados, experiências gamificadas,
-                certificados e dashboards para temas climáticos, ambientais e socioambientais.
+                A CLIMAEDU usa inteligência artificial com curadoria para transformar materiais,
+                documentos e conteúdos institucionais em trilhas, aulas, experiências gamificadas,
+                certificados e dashboards.
               </p>
 
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/72">
@@ -236,8 +239,8 @@ function Index() {
             </div>
 
             <p className="max-w-3xl text-lg leading-relaxed text-primary-dark md:text-xl">
-              A CLIMAEDU é uma solução especializada da NewEdTech para aprendizagem aplicada em
-              temas climáticos, ambientais e socioambientais.
+              A CLIMAEDU é uma solução especializada da NewEdTech para transformar conhecimento
+              técnico em aprendizagem online aplicada.
             </p>
           </div>
         </div>
@@ -278,9 +281,10 @@ function Index() {
               O conhecimento existe. O desafio é fazê-lo chegar a quem precisa agir.
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-foreground/78">
-              Planos, normas, pesquisas e conhecimentos técnicos costumam estar em documentos ou
-              concentrados em especialistas. A CLIMAEDU transforma esse conteúdo em experiências de
-              aprendizagem adequadas a diferentes funções e realidades.
+              Planos, normas, pesquisas e conhecimentos técnicos costumam estar em documentos,
+              apresentações, guias ou concentrados em especialistas. A CLIMAEDU extrai e organiza
+              esse conteúdo por meio de um motor de inteligência artificial, com curadoria humana,
+              para criar experiências de aprendizagem adequadas a diferentes funções e realidades.
             </p>
           </div>
         </div>
@@ -296,7 +300,7 @@ function Index() {
               <h2 className="mt-4 text-primary-dark">Do conhecimento à ação</h2>
             </div>
             <p className="text-base font-semibold text-primary-deep">
-              Aprender → Aplicar → Acompanhar → Comprovar
+              Transformar → Aprender → Aplicar → Acompanhar
             </p>
           </div>
 
@@ -330,7 +334,7 @@ function Index() {
               </div>
               <h3 className="mt-5 text-2xl font-semibold text-primary-dark">Órgãos públicos</h3>
               <p className="mt-4 text-base leading-relaxed text-foreground/75">
-                Transforme planos, normas, protocolos e conhecimentos técnicos já existentes em
+                Transforme planos, normas, protocolos e materiais institucionais já existentes em
                 jornadas de aprendizagem para diferentes áreas e equipes.
               </p>
               <Link
@@ -347,7 +351,7 @@ function Index() {
               </div>
               <h3 className="mt-5 text-2xl font-semibold text-primary-dark">Indústrias</h3>
               <p className="mt-4 text-base leading-relaxed text-foreground/75">
-                Transforme conhecimentos ambientais, climáticos e socioambientais em aprendizagem
+                Transforme documentos, políticas e conhecimentos ambientais em aprendizagem
                 aplicada às funções e à realidade da operação.
               </p>
               <Link
@@ -388,7 +392,7 @@ function Index() {
 
           <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/68">
             Certificados, dashboards e relatórios ajudam a organização a acompanhar e comprovar a
-            aprendizagem.
+            aprendizagem, sem substituir certificadoras ou auditorias técnicas.
           </p>
         </div>
       </section>

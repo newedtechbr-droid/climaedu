@@ -18,6 +18,7 @@ import {
   ExternalLink,
   CheckCircle2,
   Network,
+  Brain,
 } from "lucide-react";
 
 const pagePublished = "2026-07-09";
@@ -26,7 +27,7 @@ const pageModified = "2026-07-10";
 const desafios = [
   {
     icon: AlertTriangle,
-    text: "Normas, políticas e compromissos precisam ser compreendidos por diferentes áreas e funções.",
+    text: "Normas, políticas, procedimentos e compromissos precisam virar aprendizagem clara para diferentes áreas e funções.",
   },
   {
     icon: Users,
@@ -64,6 +65,11 @@ const blocos = [
     text: "Conteúdo aplicado à segurança, meio ambiente, riscos e continuidade operacional.",
   },
   {
+    icon: Brain,
+    title: "IA para estruturar conteúdo",
+    text: "Materiais, documentos e procedimentos internos transformados em trilhas de aprendizagem com curadoria.",
+  },
+  {
     icon: FileBarChart,
     title: "Certificados e dados",
     text: "Indicadores, certificados e relatórios por unidade, área, função ou turma.",
@@ -95,6 +101,7 @@ const aplicacoes = [
 
 const experienciaOnline = [
   "Trilhas por função, unidade, turma, tema ou ciclo de reciclagem.",
+  "Motor de inteligência artificial para transformar documentos e materiais internos em aprendizagem.",
   "Conteúdo em linguagem simples, com vídeos, aulas curtas, quizzes e atividades gamificadas.",
   "Certificados e relatórios para apoiar RH, ESG, SSMA, compliance e auditorias internas.",
   "Dashboards para acompanhar participação, conclusão, engajamento e lacunas de aprendizagem.",
@@ -491,13 +498,15 @@ function Empresas() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
-                A CLIMAEDU transforma normas, políticas, compromissos e conhecimentos técnicos da
-                empresa em jornadas online de aprendizagem adequadas a cada área e função.
+                A CLIMAEDU transforma normas, políticas, procedimentos, materiais e conhecimentos
+                técnicos da empresa em jornadas online de aprendizagem adequadas a cada área e
+                função.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
-                Da liderança à operação, cada público recebe conteúdo simplificado, atividades
-                gamificadas e checkpoints para compreender e aplicar o conhecimento no trabalho.
+                Da liderança à operação, um motor de inteligência artificial organiza o conteúdo e
+                a curadoria NewEdTech transforma esse material em conteúdo simplificado, atividades
+                gamificadas e checkpoints para aplicar no trabalho.
               </p>
 
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/62">
@@ -580,7 +589,7 @@ function Empresas() {
           <SectionTitle
             eyebrow="O desafio"
             title="Conhecimento corporativo precisa chegar à prática."
-            subtitle="Compromissos e políticas ganham força quando as equipes compreendem como aplicá-los em suas funções."
+            subtitle="Compromissos, políticas e documentos internos ganham força quando viram aprendizagem simples, aplicada e compreensível para cada função."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-4">
@@ -610,10 +619,10 @@ function Empresas() {
           <SectionTitle
             eyebrow="O que entregamos"
             title="Uma experiência online para aprendizagem corporativa"
-            subtitle="A CLIMAEDU organiza jornadas aplicadas à realidade corporativa, conectando ESG, RH/T&D, SSMA, compliance, liderança e operação."
+            subtitle="A CLIMAEDU usa inteligência artificial com curadoria para transformar materiais em jornadas digitais aplicadas à realidade corporativa."
           />
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {blocos.map((item, index) => (
               <FadeIn key={item.title} delay={index * 0.04}>
                 <div className="h-full rounded-xl border border-border bg-card p-6 shadow-sm">
@@ -659,8 +668,9 @@ function Empresas() {
 
             <p className="mt-4 text-foreground/75">
               Relatórios, políticas, códigos internos e compromissos de sustentabilidade precisam
-              chegar às equipes. A CLIMAEDU apoia essa tradução por meio de trilhas, conteúdos
-              aplicados, certificados, dashboards e evidências de capacitação.
+              chegar às equipes. A CLIMAEDU apoia essa tradução por meio de inteligência
+              artificial, metodologia NewEdTech, trilhas, conteúdos aplicados, certificados,
+              dashboards e evidências de capacitação.
             </p>
           </div>
 

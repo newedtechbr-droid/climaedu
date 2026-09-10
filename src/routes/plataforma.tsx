@@ -6,10 +6,10 @@ import { CTASection } from "@/components/sections/CTASection";
 import platformImage from "@/assets/platform-home-real.png";
 
 const flow = [
-  "A organização compartilha seus conteúdos, documentos ou necessidade de capacitação.",
-  "A NewEdTech estrutura a jornada de aprendizagem.",
-  "A CLIMAEDU entrega o conteúdo em formatos adequados ao público.",
-  "As pessoas aprendem e realizam atividades aplicadas.",
+  "A organização compartilha documentos, normas, políticas, materiais ou necessidades de capacitação.",
+  "O motor de inteligência artificial extrai e organiza o conteúdo em uma estrutura de aprendizagem.",
+  "A NewEdTech faz a curadoria, ajusta linguagem, contexto, atividades e metodologia.",
+  "A CLIMAEDU entrega trilhas online com aulas, quizzes, desafios e experiências gamificadas.",
   "A organização acompanha a evolução da aprendizagem.",
 ];
 
@@ -22,7 +22,7 @@ const technology = [
   {
     icon: Brain,
     title: "Inteligência artificial com curadoria",
-    text: "Apoio à estruturação de conteúdos, sempre com revisão humana e aderência técnica.",
+    text: "Um motor de IA transforma documentos e conteúdos institucionais em jornadas de aprendizagem, sempre com revisão humana e aderência técnica.",
   },
   {
     icon: Award,
@@ -102,8 +102,8 @@ function Plataforma() {
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Fluxo de trabalho"
-            title="Da necessidade de capacitação à evolução acompanhada."
-            subtitle="A jornada é desenhada para que conteúdos técnicos cheguem às pessoas certas em uma linguagem útil para a prática."
+            title="Do material institucional à aprendizagem aplicada."
+            subtitle="A jornada é desenhada para transformar documentos, normas, protocolos e conteúdos técnicos em experiências online simples, úteis e aplicáveis."
           />
 
           <div className="mt-10 grid gap-4">
@@ -126,7 +126,7 @@ function Plataforma() {
           <SectionTitle
             eyebrow="Tecnologia que sustenta a experiência"
             title="Recursos digitais a serviço da aprendizagem."
-            subtitle="White-label, inteligência artificial, gamificação, certificados, dashboards e relatórios aparecem como suporte para entregar, acompanhar e comprovar a jornada."
+            subtitle="White-label, inteligência artificial, gamificação, certificados, dashboards e relatórios aparecem como suporte para transformar conteúdo, entregar a jornada e acompanhar resultados."
           />
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -157,6 +157,7 @@ function Plataforma() {
           </div>
           <div className="grid gap-4">
             {[
+              "Motor de inteligência artificial para extrair conhecimento de materiais e documentos.",
               "Estruturação pedagógica feita pela NewEdTech antes da configuração tecnológica.",
               "Conteúdos adaptados por perfil, função e contexto de aplicação.",
               "Acompanhamento por dados sem transformar a experiência em controle burocrático.",
