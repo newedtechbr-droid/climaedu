@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Building2, Briefcase, GraduationCap, Handshake, ArrowRight } from "lucide-react";
+import { Building2, Briefcase, Handshake, ArrowRight, GraduationCap } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
@@ -15,31 +15,22 @@ const journeys: Journey[] = [
   {
     icon: Building2,
     title: "Órgãos públicos",
-    description:
-      "Prefeituras, secretarias, Defesa Civil, escolas de governo e consórcios.",
+    description: "Prefeituras, secretarias, Defesa Civil, escolas de governo e consórcios.",
     to: "/orgaos-publicos",
     cta: "Ver solução para órgão público",
   },
   {
     icon: Briefcase,
-    title: "Empresas",
-    description: "ESG, sustentabilidade, RH/T&D, SSMA e compliance ambiental.",
+    title: "Indústria regulada",
+    description:
+      "Química, papel e celulose, metalurgia, alimentos, agroindústria e couro. ESG, SSMA e compliance ambiental — com um piloto em andamento com a Viposa.",
     to: "/empresas",
     cta: "Ver solução para empresa",
   },
   {
-    icon: GraduationCap,
-    title: "Escolas e redes de ensino",
-    description:
-      "Educação climática aplicada à sala de aula, com o professor no centro.",
-    to: "/escolas",
-    cta: "Ver solução para escola",
-  },
-  {
     icon: Handshake,
     title: "Parceiros institucionais",
-    description:
-      "Consultorias, universidades, OSCs e redes que desejam operar trilhas climáticas.",
+    description: "Consultorias, universidades, OSCs e redes que desejam operar trilhas climáticas.",
     to: "/sobre",
     cta: "Conhecer ecossistema",
   },
@@ -55,7 +46,7 @@ export function JourneyCardsSection() {
           subtitle="Cada contexto tem gargalos próprios de capacitação, rotina e evidência. A CLIMAEDU se adapta ao seu."
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {journeys.map((j, i) => (
             <FadeIn key={j.to} delay={i * 0.05}>
               <Link
@@ -72,8 +63,12 @@ export function JourneyCardsSection() {
                 >
                   <j.icon size={22} />
                 </div>
-                <h3 className="mt-5 text-[24px] font-semibold leading-tight text-primary-dark">{j.title}</h3>
-                <p className="mt-3 text-[18px] leading-[1.55] text-foreground/82">{j.description}</p>
+                <h3 className="mt-5 text-[24px] font-semibold leading-tight text-primary-dark">
+                  {j.title}
+                </h3>
+                <p className="mt-3 text-[18px] leading-[1.55] text-foreground/82">
+                  {j.description}
+                </p>
                 <span className="mt-7 inline-flex items-center gap-1.5 text-[15px] font-bold text-primary-deep transition-all group-hover:gap-2.5">
                   {j.cta} <ArrowRight size={15} />
                 </span>
@@ -81,6 +76,14 @@ export function JourneyCardsSection() {
             </FadeIn>
           ))}
         </div>
+
+        <p className="mt-8 flex items-center gap-2 text-[15px] text-foreground/65">
+          <GraduationCap size={16} className="shrink-0 text-foreground/50" />
+          Também atendemos escolas e redes de ensino.{" "}
+          <Link to="/escolas" className="font-semibold text-primary-deep hover:underline">
+            Saiba mais
+          </Link>
+        </p>
       </div>
     </section>
   );
