@@ -43,7 +43,9 @@ export function ProblemSection() {
             <FadeIn key={it.title} delay={i * 0.07}>
               <article
                 className="h-full rounded-2xl border bg-background p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 20%, transparent)" }}
+                style={{
+                  borderColor: "color-mix(in oklab, var(--color-slate-blue) 20%, transparent)",
+                }}
               >
                 <span
                   className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
@@ -60,7 +62,6 @@ export function ProblemSection() {
             </FadeIn>
           ))}
         </div>
-
       </div>
     </section>
   );

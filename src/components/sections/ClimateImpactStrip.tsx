@@ -5,10 +5,7 @@ import cityImage from "@/assets/hero-city.jpg";
 
 export function ClimateImpactStrip() {
   return (
-    <section
-      aria-label="Contexto climático"
-      className="relative isolate overflow-hidden"
-    >
+    <section aria-label="Contexto climático" className="relative isolate overflow-hidden">
       <img
         src={cityImage}
         alt="Vista aérea de cidade impactada por eventos climáticos extremos"
@@ -28,7 +25,9 @@ export function ClimateImpactStrip() {
         <FadeIn>
           <p
             className="mb-4 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.18em] text-white"
-            style={{ backgroundColor: "color-mix(in oklab, var(--color-terracotta) 90%, transparent)" }}
+            style={{
+              backgroundColor: "color-mix(in oklab, var(--color-terracotta) 90%, transparent)",
+            }}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-white" />
             Emergência climática

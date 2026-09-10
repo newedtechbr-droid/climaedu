@@ -1,4 +1,11 @@
-import { ShieldAlert, ShoppingCart, Trees, GraduationCap, Megaphone, ClipboardCheck } from "lucide-react";
+import {
+  ShieldAlert,
+  ShoppingCart,
+  Trees,
+  GraduationCap,
+  Megaphone,
+  ClipboardCheck,
+} from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import heroField from "@/assets/hero-field.jpg";
@@ -27,8 +34,7 @@ const areas = [
   {
     icon: Megaphone,
     title: "Comunicação",
-    description:
-      "Orientação da população antes, durante e depois dos eventos extremos.",
+    description: "Orientação da população antes, durante e depois dos eventos extremos.",
   },
   {
     icon: ClipboardCheck,

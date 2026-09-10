@@ -72,10 +72,9 @@ const schema = z.object({
   cargo: z.string().trim().min(2, "Informe seu cargo").max(80),
   email: z.string().trim().email("E-mail inválido").max(160),
   whatsapp: z.string().trim().max(30).optional().or(z.literal("")),
-  instituicao: z.enum(
-    ["Órgão público", "Empresa", "Parceiro", "Outro"],
-    { message: "Selecione o tipo de instituição" },
-  ),
+  instituicao: z.enum(["Órgão público", "Empresa", "Parceiro", "Outro"], {
+    message: "Selecione o tipo de instituição",
+  }),
   tipo: z.enum(
     ["Enchentes", "Queimadas", "Resíduos", "Licenciamento", "ESG", "Defesa civil", "Outro"],
     { message: "Selecione o principal desafio" },
@@ -103,16 +102,13 @@ export function ContactSection() {
       reset();
     } catch (err) {
       console.error("Erro ao enviar formulário:", err);
-      setErrorMsg(
-        "Ocorreu um erro no envio. Por favor, tente pelo WhatsApp: (48) 99160-6518",
-      );
+      setErrorMsg("Ocorreu um erro no envio. Por favor, tente pelo WhatsApp: (48) 99160-6518");
     }
   };
 
   return (
     <section className="bg-surface scroll-mt-24" id="contato">
       <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
             <span
@@ -126,7 +122,10 @@ export function ContactSection() {
               <span className="h-1.5 w-1.5 rounded-full bg-white" />
               Demonstrações institucionais abertas
             </span>
-            <h2 className="text-primary-dark" style={{ fontSize: "clamp(28px, 3.2vw, 40px)", lineHeight: 1.1 }}>
+            <h2
+              className="text-primary-dark"
+              style={{ fontSize: "clamp(28px, 3.2vw, 40px)", lineHeight: 1.1 }}
+            >
               Quer ver a CLIMAEDU aplicada à realidade da sua instituição?
             </h2>
             <p className="mt-3 text-[16px] leading-relaxed text-foreground/75">
@@ -161,7 +160,9 @@ export function ContactSection() {
                 </Field>
                 <Field label="Tipo de instituição" error={errors.instituicao?.message}>
                   <select className="input" defaultValue="" {...register("instituicao")}>
-                    <option value="" disabled>Selecione…</option>
+                    <option value="" disabled>
+                      Selecione…
+                    </option>
                     <option>Órgão público</option>
                     <option>Empresa</option>
                     <option>Parceiro</option>
@@ -170,7 +171,9 @@ export function ContactSection() {
                 </Field>
                 <Field label="Principal desafio" error={errors.tipo?.message}>
                   <select className="input" defaultValue="" {...register("tipo")}>
-                    <option value="" disabled>Selecione…</option>
+                    <option value="" disabled>
+                      Selecione…
+                    </option>
                     <option>Enchentes</option>
                     <option>Queimadas</option>
                     <option>Resíduos</option>
@@ -222,7 +225,8 @@ export function ContactSection() {
                   className="mt-4 inline-flex items-center gap-2 rounded-md bg-accent px-3 py-2 text-primary-dark"
                   style={{ fontSize: "15px" }}
                 >
-                  <CheckCircle2 size={16} /> Recebemos sua solicitação! Entraremos em contato em até 48 horas.
+                  <CheckCircle2 size={16} /> Recebemos sua solicitação! Entraremos em contato em até
+                  48 horas.
                 </p>
               )}
 
@@ -261,18 +265,22 @@ export function ContactSection() {
             <aside
               className="h-full rounded-xl border bg-background p-6 md:p-7"
               style={{
-                borderColor: "color-mix(in oklab, var(--color-terracotta) 30%, var(--color-border))",
+                borderColor:
+                  "color-mix(in oklab, var(--color-terracotta) 30%, var(--color-border))",
               }}
             >
-              <p className="text-[12px] font-bold uppercase tracking-[0.18em]" style={{ color: "var(--color-terracotta)" }}>
+              <p
+                className="text-[12px] font-bold uppercase tracking-[0.18em]"
+                style={{ color: "var(--color-terracotta)" }}
+              >
                 Prioridade
               </p>
               <h3 className="mt-2 text-xl font-bold text-primary-dark">
                 Prioridade para órgãos em fase de planejamento ou capacitação
               </h3>
               <p className="mt-3 text-[15px] text-foreground/75">
-                Atendemos prefeituras, secretarias estaduais, empresas com obrigações ambientais
-                e canais agregadores.
+                Atendemos prefeituras, secretarias estaduais, empresas com obrigações ambientais e
+                canais agregadores.
               </p>
 
               <a
@@ -287,7 +295,12 @@ export function ContactSection() {
               </a>
 
               <div className="mt-6 border-t border-border pt-5">
-                <p className="uppercase tracking-[0.18em] text-muted-foreground" style={{ fontSize: "12px", fontWeight: 600 }}>Resposta</p>
+                <p
+                  className="uppercase tracking-[0.18em] text-muted-foreground"
+                  style={{ fontSize: "12px", fontWeight: 600 }}
+                >
+                  Resposta
+                </p>
                 <p className="mt-1.5 text-foreground/80" style={{ fontSize: "15px" }}>
                   Em até 48 horas úteis, com proposta inicial alinhada ao seu contexto.
                 </p>
@@ -311,9 +324,18 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-foreground/90" style={{ fontSize: "16px", fontWeight: 500 }}>{label}</span>
+      <span
+        className="mb-1.5 block text-foreground/90"
+        style={{ fontSize: "16px", fontWeight: 500 }}
+      >
+        {label}
+      </span>
       {children}
-      {error && <span className="mt-1 block text-destructive" style={{ fontSize: "13px" }}>{error}</span>}
+      {error && (
+        <span className="mt-1 block text-destructive" style={{ fontSize: "13px" }}>
+          {error}
+        </span>
+      )}
     </label>
   );
 }

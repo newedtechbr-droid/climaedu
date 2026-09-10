@@ -38,15 +38,15 @@ export function AboutSection() {
           </p>
           <h2 className="text-primary-dark">Do conhecimento à ação</h2>
           <p className="mt-7 text-[18px] leading-[1.7] text-foreground/80">
-            A Newedtech transforma conhecimentos técnicos e complexos em experiências de
-            aprendizagem aplicadas. A CLIMAEDU é a solução da Newedtech especializada em
-            conhecimentos climáticos e socioambientais.
+            NewEdTech é a empresa de tecnologia e inovação educacional responsável pela CLIMAEDU. A
+            CLIMAEDU é sua primeira solução especializada, voltada à aprendizagem aplicada em temas
+            climáticos e socioambientais.
           </p>
           <p className="mt-4 text-[18px] leading-[1.7] text-foreground/80">
             Ter planos, normas e especialistas não garante que as pessoas saibam como agir. A
-            CLIMAEDU transforma esse conhecimento técnico em aprendizagem aplicada — para governos,
-            empresas e redes de ensino — preparando pessoas para agir e permitindo que a organização
-            acompanhe essa aprendizagem.
+            CLIMAEDU transforma esse conhecimento técnico em aprendizagem aplicada para órgãos
+            públicos, indústrias e instituições parceiras, preparando pessoas para aplicar o
+            conhecimento em seus contextos.
           </p>
         </FadeIn>
       </div>

@@ -28,8 +28,8 @@ export function CtaBannerSection() {
                   Veja a ClimaEdu aplicada ao seu contexto institucional
                 </h3>
                 <p className="mt-3 text-base text-white/85 md:text-lg">
-                  Uma demonstração orientada à realidade do seu órgão ou empresa, com exemplos
-                  reais de trilhas, evidências e dashboards.
+                  Uma demonstração orientada à realidade do seu órgão ou empresa, com exemplos reais
+                  de trilhas, evidências e dashboards.
                 </p>
               </div>
               <Link

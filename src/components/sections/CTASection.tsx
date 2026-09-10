@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/FadeIn";
 export function CTASection({
   title,
   subtitle,
-  ctaLabel = "Agendar demonstração",
+  ctaLabel = "Agendar uma conversa",
   ctaTo = "/demonstracao",
 }: {
   title: string;

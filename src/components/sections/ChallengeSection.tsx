@@ -130,13 +130,13 @@ export function ChallengeSection() {
                   className="inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-[15px] font-semibold transition-all"
                   style={{
                     backgroundColor: isActive ? "var(--color-olive)" : "var(--color-background)",
-                    color: isActive ? "var(--color-primary-foreground)" : "var(--color-primary-dark)",
+                    color: isActive
+                      ? "var(--color-primary-foreground)"
+                      : "var(--color-primary-dark)",
                     borderColor: isActive
                       ? "var(--color-olive)"
                       : "color-mix(in oklab, var(--color-slate-blue) 25%, transparent)",
-                    boxShadow: isActive
-                      ? "0 10px 24px -10px rgba(132,154,116,0.55)"
-                      : "none",
+                    boxShadow: isActive ? "0 10px 24px -10px rgba(132,154,116,0.55)" : "none",
                   }}
                 >
                   <c.icon size={16} />

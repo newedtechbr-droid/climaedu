@@ -87,7 +87,10 @@ export function OutcomesSection() {
                   color: "var(--color-terracotta)",
                 }}
               >
-                <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
+                <span
+                  className="h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: "var(--color-terracotta)" }}
+                />
                 O que chamamos de rastreabilidade
               </span>
               <div className="flex-1 min-w-[260px]">

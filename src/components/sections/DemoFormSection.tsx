@@ -76,10 +76,9 @@ const schema = z.object({
     { message: "Selecione o tipo de instituição" },
   ),
   desafio: z.string().trim().min(3, "Descreva brevemente o desafio").max(300),
-  pessoas: z.enum(
-    ["Até 50", "50 a 200", "200 a 1.000", "1.000 a 5.000", "Mais de 5.000"],
-    { message: "Selecione a faixa" },
-  ),
+  pessoas: z.enum(["Até 50", "50 a 200", "200 a 1.000", "1.000 a 5.000", "Mais de 5.000"], {
+    message: "Selecione a faixa",
+  }),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -102,9 +101,7 @@ export function DemoFormSection() {
       reset();
     } catch (err) {
       console.error("Erro ao enviar formulário:", err);
-      setErrorMsg(
-        "Ocorreu um erro no envio. Por favor, tente pelo WhatsApp: (48) 99160-6518",
-      );
+      setErrorMsg("Ocorreu um erro no envio. Por favor, tente pelo WhatsApp: (48) 99160-6518");
     }
   };
 
@@ -118,7 +115,9 @@ export function DemoFormSection() {
               noValidate
               className="rounded-xl border border-border bg-background p-6 md:p-8"
             >
-              <h2 className="text-[24px] font-semibold text-primary-dark">Solicitar demonstração</h2>
+              <h2 className="text-[24px] font-semibold text-primary-dark">
+                Solicitar demonstração
+              </h2>
               <p className="mt-1 text-[15px] text-foreground/70">
                 Preencha em 1 minuto. Retorno em até 48 horas úteis.
               </p>
@@ -141,7 +140,9 @@ export function DemoFormSection() {
                 </Field>
                 <Field label="Tipo de instituição" error={errors.tipo?.message}>
                   <select className="input" defaultValue="" {...register("tipo")}>
-                    <option value="" disabled>Selecione…</option>
+                    <option value="" disabled>
+                      Selecione…
+                    </option>
                     <option>Órgão público</option>
                     <option>Empresa</option>
                     <option>Escola / Rede de ensino</option>
@@ -149,9 +150,14 @@ export function DemoFormSection() {
                     <option>Outro</option>
                   </select>
                 </Field>
-                <Field label="Número aproximado de pessoas a capacitar" error={errors.pessoas?.message}>
+                <Field
+                  label="Número aproximado de pessoas a capacitar"
+                  error={errors.pessoas?.message}
+                >
                   <select className="input" defaultValue="" {...register("pessoas")}>
-                    <option value="" disabled>Selecione…</option>
+                    <option value="" disabled>
+                      Selecione…
+                    </option>
                     <option>Até 50</option>
                     <option>50 a 200</option>
                     <option>200 a 1.000</option>
@@ -235,19 +241,32 @@ export function DemoFormSection() {
             <aside
               className="h-full rounded-xl border bg-background p-6 md:p-7"
               style={{
-                borderColor: "color-mix(in oklab, var(--color-terracotta) 30%, var(--color-border))",
+                borderColor:
+                  "color-mix(in oklab, var(--color-terracotta) 30%, var(--color-border))",
               }}
             >
-              <p className="text-[12px] font-bold uppercase tracking-[0.18em]" style={{ color: "var(--color-terracotta)" }}>
+              <p
+                className="text-[12px] font-bold uppercase tracking-[0.18em]"
+                style={{ color: "var(--color-terracotta)" }}
+              >
                 Próximos passos
               </p>
               <h3 className="mt-2 text-[20px] font-semibold text-primary-dark">
                 Em até 48 horas úteis, retornamos com uma sugestão inicial
               </h3>
               <ul className="mt-4 space-y-3 text-[15px] text-foreground/80">
-                <li className="flex gap-2"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" /> Trilha sugerida para o seu contexto</li>
-                <li className="flex gap-2"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" /> Formato de implantação institucional</li>
-                <li className="flex gap-2"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" /> Demonstração de 20 minutos</li>
+                <li className="flex gap-2">
+                  <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" /> Trilha
+                  sugerida para o seu contexto
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" /> Formato de
+                  implantação institucional
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" /> Demonstração
+                  de 20 minutos
+                </li>
               </ul>
               <a
                 href="https://wa.me/5548991606518"
@@ -278,9 +297,18 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-foreground/90" style={{ fontSize: "15px", fontWeight: 500 }}>{label}</span>
+      <span
+        className="mb-1.5 block text-foreground/90"
+        style={{ fontSize: "15px", fontWeight: 500 }}
+      >
+        {label}
+      </span>
       {children}
-      {error && <span className="mt-1 block text-destructive" style={{ fontSize: "13px" }}>{error}</span>}
+      {error && (
+        <span className="mt-1 block text-destructive" style={{ fontSize: "13px" }}>
+          {error}
+        </span>
+      )}
     </label>
   );
 }

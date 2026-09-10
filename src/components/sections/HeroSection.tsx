@@ -33,7 +33,7 @@ export function HeroSection() {
               style={{ backgroundColor: "#9A4B42", color: "#FFFFFF", letterSpacing: "0.04em" }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-white" />
-              Ambiente de aprendizagem online para ação climática
+              Uma solução NewEdTech
             </p>
           </FadeIn>
 
@@ -47,10 +47,8 @@ export function HeroSection() {
                 fontWeight: 600,
               }}
             >
-              Da reação à prevenção:{" "}
-              <span style={{ color: "#3D5132", fontWeight: 800 }}>
-                capacitação climática para colocar toda a instituição na mesma página
-              </span>
+              Conhecimento técnico que{" "}
+              <span style={{ color: "#3D5132", fontWeight: 800 }}>prepara pessoas para agir</span>
             </h1>
           </FadeIn>
 
@@ -62,8 +60,7 @@ export function HeroSection() {
               Ter planos, normas e especialistas não garante que as pessoas saibam como agir. A
               CLIMAEDU transforma esse conhecimento técnico em{" "}
               <strong className="font-semibold text-primary-dark">aprendizagem aplicada</strong>,
-              preparando equipes de órgãos públicos e indústrias reguladas para agir — com a
-              organização acompanhando essa aprendizagem.
+              adequada à realidade de cada organização.
             </p>
           </FadeIn>
 
@@ -73,10 +70,13 @@ export function HeroSection() {
                 to="/demonstracao"
                 className="inline-flex h-14 items-center gap-2 rounded-lg bg-primary px-7 text-base font-semibold text-primary-foreground shadow-[0_14px_38px_-10px_rgba(132,154,116,0.65)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:scale-[1.02]"
               >
-                Agendar demonstração <ArrowRight size={18} />
+                Agendar uma conversa <ArrowRight size={18} />
               </Link>
-              <a href="#solucoes" className="inline-flex h-14 items-center gap-2 rounded-lg border-2 border-primary bg-background px-7 text-base font-semibold text-primary-dark transition-colors hover:bg-accent">
-                Conhecer soluções
+              <a
+                href="#solucoes"
+                className="inline-flex h-14 items-center gap-2 rounded-lg border-2 border-primary bg-background px-7 text-base font-semibold text-primary-dark transition-colors hover:bg-accent"
+              >
+                Conhecer a CLIMAEDU
               </a>
             </div>
           </FadeIn>
@@ -198,12 +198,12 @@ function PlatformMockup() {
           className="text-[10px] font-bold uppercase tracking-wider"
           style={{ color: "var(--color-terracotta)" }}
         >
-          Certificado emitido
+          Demonstração ilustrativa
         </p>
         <p className="mt-1 text-[12px] font-semibold leading-snug text-primary-dark">
-          Trilha de Resíduos Sólidos
+          Jornada de aprendizagem aplicada
         </p>
-        <p className="mt-0.5 text-[10px] text-foreground/60">320 servidores · 18h</p>
+        <p className="mt-0.5 text-[10px] text-foreground/60">Exemplo visual sem dados reais</p>
       </div>
 
       {/* Card flutuante — dashboard de adesão */}
@@ -218,7 +218,7 @@ function PlatformMockup() {
           className="text-[10px] font-bold uppercase tracking-wider"
           style={{ color: "var(--color-olive)" }}
         >
-          Adesão por secretaria
+          Acompanhamento
         </p>
         <div className="mt-2 space-y-1.5">
           {[

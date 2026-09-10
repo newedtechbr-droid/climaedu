@@ -12,14 +12,46 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 
 const features = [
-  { icon: Palette, title: "Ambiente online com identidade da instituição", text: "Logo, cores e domínio próprios. A plataforma fala em nome do órgão ou empresa." },
-  { icon: BookOpen, title: "Trilhas e cursos climáticos aplicados", text: "Conteúdo técnico atualizado, conectado a normas, riscos e rotinas." },
-  { icon: Award, title: "Certificados automáticos", text: "Emissão nominal a cada conclusão, com validação institucional." },
-  { icon: BarChart3, title: "Dashboards de adesão, conclusão e proficiência", text: "Visão por unidade, perfil ou trilha, em tempo real." },
-  { icon: FileSpreadsheet, title: "Relatórios exportáveis", text: "Para gestão, auditoria e prestação de contas — em PDF e planilhas." },
-  { icon: Sparkles, title: "IA para apoio à criação de conteúdos", text: "Aceleração de produção e atualização, sempre com curadoria humana especializada." },
-  { icon: Users, title: "Perfis de acesso e gestão de usuários", text: "Hierarquia por secretaria, unidade ou área, com permissões claras." },
-  { icon: Shield, title: "Acessibilidade, LGPD e exportação de dados", text: "Conformidade técnica e segurança institucional desde o primeiro acesso." },
+  {
+    icon: Palette,
+    title: "Ambiente online com identidade da instituição",
+    text: "Logo, cores e domínio próprios. A plataforma fala em nome do órgão ou empresa.",
+  },
+  {
+    icon: BookOpen,
+    title: "Trilhas e cursos climáticos aplicados",
+    text: "Conteúdo técnico atualizado, conectado a normas, riscos e rotinas.",
+  },
+  {
+    icon: Award,
+    title: "Certificados automáticos",
+    text: "Emissão nominal a cada conclusão, com validação institucional.",
+  },
+  {
+    icon: BarChart3,
+    title: "Dashboards de adesão, conclusão e proficiência",
+    text: "Visão por unidade, perfil ou trilha, em tempo real.",
+  },
+  {
+    icon: FileSpreadsheet,
+    title: "Relatórios exportáveis",
+    text: "Para gestão, auditoria e prestação de contas — em PDF e planilhas.",
+  },
+  {
+    icon: Sparkles,
+    title: "IA para apoio à criação de conteúdos",
+    text: "Aceleração de produção e atualização, sempre com curadoria humana especializada.",
+  },
+  {
+    icon: Users,
+    title: "Perfis de acesso e gestão de usuários",
+    text: "Hierarquia por secretaria, unidade ou área, com permissões claras.",
+  },
+  {
+    icon: Shield,
+    title: "Acessibilidade, LGPD e exportação de dados",
+    text: "Conformidade técnica e segurança institucional desde o primeiro acesso.",
+  },
 ];
 
 export function PlatformFeaturesSection() {
@@ -48,13 +80,14 @@ export function PlatformFeaturesSection() {
                 >
                   <f.icon size={20} aria-hidden />
                 </span>
-                <h3 className="mt-5 text-[18px] font-bold leading-snug text-primary-dark">{f.title}</h3>
+                <h3 className="mt-5 text-[18px] font-bold leading-snug text-primary-dark">
+                  {f.title}
+                </h3>
                 <p className="mt-2.5 text-[15.5px] leading-[1.65] text-foreground/82">{f.text}</p>
               </article>
             </FadeIn>
           ))}
         </div>
-
       </div>
     </section>
   );

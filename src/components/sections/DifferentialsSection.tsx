@@ -21,7 +21,10 @@ function MarkIcon({ m }: { m: Mark }) {
     return (
       <span
         className="inline-flex h-7 w-7 items-center justify-center rounded-full"
-        style={{ backgroundColor: "color-mix(in oklab, var(--color-olive) 22%, transparent)", color: "var(--color-primary-deep)" }}
+        style={{
+          backgroundColor: "color-mix(in oklab, var(--color-olive) 22%, transparent)",
+          color: "var(--color-primary-deep)",
+        }}
         aria-label="Sim"
       >
         <Check size={16} strokeWidth={3} />
@@ -31,7 +34,10 @@ function MarkIcon({ m }: { m: Mark }) {
     return (
       <span
         className="inline-flex h-7 w-7 items-center justify-center rounded-full"
-        style={{ backgroundColor: "color-mix(in oklab, var(--color-terracotta) 18%, transparent)", color: "var(--color-terracotta)" }}
+        style={{
+          backgroundColor: "color-mix(in oklab, var(--color-terracotta) 18%, transparent)",
+          color: "var(--color-terracotta)",
+        }}
         aria-label="Parcial"
       >
         <Minus size={16} strokeWidth={3} />
@@ -61,19 +67,24 @@ export function DifferentialsSection() {
 
         <FadeIn delay={0.1}>
           <div className="mt-14 overflow-x-auto">
-
             <table
               className="w-full min-w-[680px] overflow-hidden rounded-xl border bg-background text-left"
               style={{ borderColor: "var(--color-border)" }}
             >
               <thead>
-                <tr style={{ backgroundColor: "color-mix(in oklab, var(--color-olive) 12%, transparent)" }}>
+                <tr
+                  style={{
+                    backgroundColor: "color-mix(in oklab, var(--color-olive) 12%, transparent)",
+                  }}
+                >
                   <th className="px-5 py-4 text-[14px] font-bold text-primary-dark">Recursos</th>
                   {columns.map((c, i) => (
                     <th
                       key={c}
                       className="px-5 py-4 text-center text-[14px] font-bold"
-                      style={{ color: i === 0 ? "var(--color-primary-deep)" : "var(--color-foreground)" }}
+                      style={{
+                        color: i === 0 ? "var(--color-primary-deep)" : "var(--color-foreground)",
+                      }}
                     >
                       {c}
                     </th>
@@ -83,7 +94,9 @@ export function DifferentialsSection() {
               <tbody>
                 {rows.map((row, idx) => (
                   <tr key={row.label} className={idx % 2 === 0 ? "bg-background" : "bg-surface/50"}>
-                    <td className="px-5 py-4 text-[15px] font-medium text-foreground/85">{row.label}</td>
+                    <td className="px-5 py-4 text-[15px] font-medium text-foreground/85">
+                      {row.label}
+                    </td>
                     {row.values.map((v, i) => (
                       <td key={i} className="px-5 py-4 text-center">
                         <MarkIcon m={v} />

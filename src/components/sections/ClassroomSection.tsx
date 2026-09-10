@@ -47,7 +47,14 @@ const methods = [
   { label: "Sala de aula invertida", icon: Sprout },
 ];
 
-const floatingTags = [
+const floatingTags: Array<{
+  icon: typeof Cloud;
+  label: string;
+  top: string;
+  left?: string;
+  right?: string;
+  delay: number;
+}> = [
   { icon: Cloud, label: "Clima", top: "8%", left: "-3%", delay: 0 },
   { icon: Droplets, label: "Água", top: "62%", left: "-5%", delay: 0.4 },
   { icon: Leaf, label: "Biodiversidade", top: "6%", right: "-4%", delay: 0.2 },
@@ -81,7 +88,8 @@ export function ClassroomSection() {
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.22em]"
               style={{
                 borderColor: "color-mix(in oklab, var(--color-terracotta) 35%, transparent)",
-                backgroundColor: "color-mix(in oklab, var(--color-terracotta) 10%, var(--color-background))",
+                backgroundColor:
+                  "color-mix(in oklab, var(--color-terracotta) 10%, var(--color-background))",
                 color: "var(--color-terracotta)",
               }}
             >
@@ -99,14 +107,19 @@ export function ClassroomSection() {
                 <>
                   <span
                     className="block text-foreground/90"
-                    style={{ fontSize: "clamp(24px, 3.2vw, 34px)", lineHeight: 1.2, fontWeight: 700 }}
+                    style={{
+                      fontSize: "clamp(24px, 3.2vw, 34px)",
+                      lineHeight: 1.2,
+                      fontWeight: 700,
+                    }}
                   >
                     A experiência climática começa na escola.
                   </span>
                   <span className="mt-5 block text-[17px] md:text-[19px] leading-[1.7] text-foreground/80">
                     Tecnologia, metodologias imersivas e conteúdos aplicados para transformar a
-                    educação climática em uma <strong className="text-primary-dark">vivência real</strong> —
-                    com o <strong className="text-primary-dark">professor no centro</strong>.
+                    educação climática em uma{" "}
+                    <strong className="text-primary-dark">vivência real</strong> — com o{" "}
+                    <strong className="text-primary-dark">professor no centro</strong>.
                   </span>
                 </>
               }
@@ -128,8 +141,8 @@ export function ClassroomSection() {
                   className="absolute z-10 hidden md:flex items-center gap-2 rounded-full bg-background/95 px-3.5 py-2 text-[12px] font-semibold shadow-lg backdrop-blur ring-1 ring-black/5"
                   style={{
                     top: t.top,
-                    left: (t as any).left,
-                    right: (t as any).right,
+                    left: t.left,
+                    right: t.right,
                     color: i % 2 === 0 ? "var(--color-primary-deep)" : "var(--color-terracotta)",
                     animation: `float 6s ease-in-out ${t.delay}s infinite`,
                   }}
@@ -173,20 +186,33 @@ export function ClassroomSection() {
               style={{ borderColor: "var(--color-terracotta)" }}
             >
               <p className="text-[18px] leading-[1.75] text-foreground/85 md:text-[19px]">
-                A CLIMAEDU transforma a sala de aula em <strong className="text-primary-dark">espaço de descoberta, experimentação e ação</strong>. A tecnologia apoia momentos de <strong className="text-primary-dark">imersão coletiva</strong>, em que os alunos exploram questões climáticas e ambientais de forma prática, colaborativa e conectada ao território.
+                A CLIMAEDU transforma a sala de aula em{" "}
+                <strong className="text-primary-dark">
+                  espaço de descoberta, experimentação e ação
+                </strong>
+                . A tecnologia apoia momentos de{" "}
+                <strong className="text-primary-dark">imersão coletiva</strong>, em que os alunos
+                exploram questões climáticas e ambientais de forma prática, colaborativa e conectada
+                ao território.
               </p>
               <p className="mt-5 text-[17px] leading-[1.75] text-foreground/80 md:text-[18px]">
-                O livro e os materiais físicos ampliam essa experiência para além da escola, fortalecendo a aprendizagem e o vínculo com a família.
+                O livro e os materiais físicos ampliam essa experiência para além da escola,
+                fortalecendo a aprendizagem e o vínculo com a família.
               </p>
 
-              <div className="mt-7 grid grid-cols-3 gap-3 border-t pt-6" style={{ borderColor: "color-mix(in oklab, var(--color-olive) 20%, transparent)" }}>
+              <div
+                className="mt-7 grid grid-cols-3 gap-3 border-t pt-6"
+                style={{ borderColor: "color-mix(in oklab, var(--color-olive) 20%, transparent)" }}
+              >
                 {[
                   { k: "Imersão", v: "VR · Tablets" },
                   { k: "Apoio", v: "Professor" },
                   { k: "Conexão", v: "Território" },
                 ].map((s) => (
                   <div key={s.k} className="text-center">
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-foreground/55">{s.k}</p>
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-foreground/55">
+                      {s.k}
+                    </p>
                     <p className="mt-1 text-[13px] font-bold text-primary-dark">{s.v}</p>
                   </div>
                 ))}
@@ -221,9 +247,7 @@ export function ClassroomSection() {
                 <h3 className="mt-5 text-[19px] font-bold leading-snug text-primary-dark">
                   {c.title}
                 </h3>
-                <p className="mt-3 text-[15.5px] leading-[1.7] text-foreground/80">
-                  {c.text}
-                </p>
+                <p className="mt-3 text-[15.5px] leading-[1.7] text-foreground/80">{c.text}</p>
               </article>
             </FadeIn>
           ))}

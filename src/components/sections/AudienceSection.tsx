@@ -37,7 +37,9 @@ export function AudienceSection() {
             <FadeIn key={a.title} delay={i * 0.08}>
               <article
                 className="h-full rounded-2xl border bg-surface p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 22%, transparent)" }}
+                style={{
+                  borderColor: "color-mix(in oklab, var(--color-slate-blue) 22%, transparent)",
+                }}
               >
                 <span
                   className="inline-flex h-13 w-13 items-center justify-center rounded-xl"
@@ -56,7 +58,6 @@ export function AudienceSection() {
             </FadeIn>
           ))}
         </div>
-
       </div>
     </section>
   );

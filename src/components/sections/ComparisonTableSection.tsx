@@ -42,7 +42,10 @@ export function ComparisonTableSection() {
                         style={{
                           borderBottom: "1px solid var(--color-border)",
                           color: i === 0 ? "var(--color-primary-deep)" : "var(--color-foreground)",
-                          backgroundColor: i === 0 ? "color-mix(in oklab, var(--color-olive) 10%, white)" : "transparent",
+                          backgroundColor:
+                            i === 0
+                              ? "color-mix(in oklab, var(--color-olive) 10%, white)"
+                              : "transparent",
                         }}
                       >
                         {c}
@@ -67,14 +70,20 @@ export function ComparisonTableSection() {
                           className="px-5 py-3.5 text-center"
                           style={{
                             borderBottom: "1px solid var(--color-border)",
-                            backgroundColor: ci === 0 ? "color-mix(in oklab, var(--color-olive) 6%, white)" : "transparent",
+                            backgroundColor:
+                              ci === 0
+                                ? "color-mix(in oklab, var(--color-olive) 6%, white)"
+                                : "transparent",
                           }}
                         >
                           {v ? (
                             <Check
                               size={20}
                               className="mx-auto"
-                              style={{ color: ci === 0 ? "var(--color-primary-deep)" : "var(--color-olive)" }}
+                              style={{
+                                color:
+                                  ci === 0 ? "var(--color-primary-deep)" : "var(--color-olive)",
+                              }}
                               strokeWidth={2.5}
                             />
                           ) : (

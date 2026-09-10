@@ -14,12 +14,12 @@ const steps = [
   },
   {
     icon: BarChart3,
-    label: "Medir",
+    label: "Acompanhar",
     description: "Dashboards de adesão, conclusão e proficiência por área.",
   },
   {
     icon: FileCheck2,
-    label: "Evidenciar",
+    label: "Comprovar",
     description: "Certificados e relatórios auditáveis para gestão e controle.",
   },
 ];
@@ -49,7 +49,7 @@ export function MethodStepsSection() {
               }}
             >
               <span className="mx-auto block max-w-[980px] whitespace-normal text-balance md:whitespace-nowrap">
-                Aprender → Aplicar → Medir → Evidenciar
+                Aprender → Aplicar → Acompanhar → Comprovar
               </span>
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-[18px] leading-[1.6] text-foreground/80">

@@ -45,11 +45,17 @@ export function DemoShowcaseSection() {
             <FadeIn key={s.title} delay={i * 0.06}>
               <article
                 className="group h-full overflow-hidden rounded-2xl border bg-card transition-all hover:-translate-y-1 hover:shadow-md"
-                style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 20%, var(--color-border))" }}
+                style={{
+                  borderColor:
+                    "color-mix(in oklab, var(--color-slate-blue) 20%, var(--color-border))",
+                }}
               >
                 <div
                   className="aspect-[16/10] overflow-hidden border-b"
-                  style={{ borderColor: "color-mix(in oklab, var(--color-slate-blue) 15%, var(--color-border))" }}
+                  style={{
+                    borderColor:
+                      "color-mix(in oklab, var(--color-slate-blue) 15%, var(--color-border))",
+                  }}
                 >
                   <img
                     src={s.image}
@@ -70,14 +76,13 @@ export function DemoShowcaseSection() {
           ))}
         </div>
 
-
         <FadeIn delay={0.3}>
           <div className="mt-12 flex justify-center">
             <Link
               to="/demonstracao"
               className="inline-flex h-14 items-center gap-2 rounded-lg bg-primary px-8 text-base font-semibold text-primary-foreground shadow-[0_14px_38px_-10px_rgba(132,154,116,0.65)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:scale-[1.02]"
             >
-              Agendar demonstração <ArrowRight size={18} />
+              Agendar uma conversa <ArrowRight size={18} />
             </Link>
           </div>
         </FadeIn>

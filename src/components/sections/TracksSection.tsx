@@ -64,8 +64,7 @@ export function TracksSection() {
               <article
                 className="group relative flex h-full flex-col overflow-hidden rounded-xl border bg-background shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
-                  borderColor:
-                    "color-mix(in oklab, var(--color-olive) 22%, var(--color-border))",
+                  borderColor: "color-mix(in oklab, var(--color-olive) 22%, var(--color-border))",
                 }}
               >
                 <div className="relative aspect-[4/5] overflow-hidden">
@@ -79,8 +78,7 @@ export function TracksSection() {
                   <span
                     className="absolute left-2.5 top-2.5 inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10.5px] font-bold backdrop-blur"
                     style={{
-                      backgroundColor:
-                        "color-mix(in oklab, white 82%, transparent)",
+                      backgroundColor: "color-mix(in oklab, white 82%, transparent)",
                       color: "var(--color-primary-deep)",
                     }}
                   >
@@ -94,9 +92,7 @@ export function TracksSection() {
                         "linear-gradient(180deg, transparent 30%, color-mix(in oklab, var(--color-primary-dark) 88%, transparent))",
                     }}
                   >
-                    <p className="text-[12.5px] leading-relaxed text-white/95">
-                      {c.description}
-                    </p>
+                    <p className="text-[12.5px] leading-relaxed text-white/95">{c.description}</p>
                   </div>
                 </div>
 

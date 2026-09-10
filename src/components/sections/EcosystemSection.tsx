@@ -9,8 +9,7 @@ export function EcosystemSection() {
             <span
               className="mb-3 inline-flex items-center gap-2 rounded-md px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.18em]"
               style={{
-                backgroundColor:
-                  "color-mix(in oklab, var(--color-terracotta) 14%, transparent)",
+                backgroundColor: "color-mix(in oklab, var(--color-terracotta) 14%, transparent)",
                 color: "var(--color-terracotta)",
               }}
             >
@@ -29,8 +28,8 @@ export function EcosystemSection() {
             </h2>
 
             <p className="mt-3 text-[16px] leading-relaxed text-foreground/75">
-              A CLIMAEDU conecta educação, tecnologia, gestão pública e
-              sustentabilidade para fortalecer capacidades institucionais.
+              A CLIMAEDU conecta educação, tecnologia, gestão pública e sustentabilidade para
+              fortalecer capacidades institucionais.
             </p>
           </div>
         </FadeIn>
@@ -48,8 +47,8 @@ export function EcosystemSection() {
 
         <FadeIn delay={0.2}>
           <p className="mx-auto mt-10 max-w-2xl text-center text-[15px] text-foreground/70">
-            Desenvolvemos soluções com parceiros para fortalecer instituições e
-            acelerar a resposta climática nos territórios.
+            Desenvolvemos soluções com parceiros para fortalecer instituições e acelerar a resposta
+            climática nos territórios.
           </p>
         </FadeIn>
       </div>

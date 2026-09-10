@@ -1,7 +1,6 @@
 import { GraduationCap, Wrench, BarChart3, FileCheck2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 
-
 const steps = [
   {
     icon: GraduationCap,
@@ -31,7 +30,11 @@ const steps = [
 
 export function SolutionSection() {
   return (
-    <section id="como-funciona" className="relative overflow-hidden scroll-mt-24" style={{ backgroundColor: "var(--color-primary-dark)" }}>
+    <section
+      id="como-funciona"
+      className="relative overflow-hidden scroll-mt-24"
+      style={{ backgroundColor: "var(--color-primary-dark)" }}
+    >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
         style={{
@@ -49,19 +52,26 @@ export function SolutionSection() {
                 color: "#fff",
               }}
             >
-              <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "var(--color-terracotta)" }} />
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ backgroundColor: "var(--color-terracotta)" }}
+              />
               O método ClimaEdu
             </span>
-            <h2 className="text-white" style={{ fontSize: "clamp(32px, 4.2vw, 54px)", lineHeight: 1.05, fontWeight: 700 }}>
-              Aprender <span style={{ color: "var(--color-terracotta)" }}>→</span> Aplicar <span style={{ color: "var(--color-terracotta)" }}>→</span> Medir <span style={{ color: "var(--color-terracotta)" }}>→</span> Evidenciar
+            <h2
+              className="text-white"
+              style={{ fontSize: "clamp(32px, 4.2vw, 54px)", lineHeight: 1.05, fontWeight: 700 }}
+            >
+              Aprender <span style={{ color: "var(--color-terracotta)" }}>→</span> Aplicar{" "}
+              <span style={{ color: "var(--color-terracotta)" }}>→</span> Medir{" "}
+              <span style={{ color: "var(--color-terracotta)" }}>→</span> Evidenciar
             </h2>
             <p className="mt-5 text-[17px] leading-relaxed text-white/75">
-              A CLIMAEDU transforma conteúdo climático em aprendizagem aplicada,
-              acompanhamento institucional e registros úteis para a gestão.
+              A CLIMAEDU transforma conteúdo climático em aprendizagem aplicada, acompanhamento
+              institucional e registros úteis para a gestão.
             </p>
           </div>
         </FadeIn>
-
 
         <ol className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((s, i) => (
@@ -72,7 +82,9 @@ export function SolutionSection() {
               >
                 <span
                   className="absolute -top-4 left-7 inline-flex h-10 items-center justify-center rounded-full px-3 text-[13px] font-bold text-white shadow-md"
-                  style={{ backgroundColor: i === 3 ? "var(--color-terracotta)" : "var(--color-olive)" }}
+                  style={{
+                    backgroundColor: i === 3 ? "var(--color-terracotta)" : "var(--color-olive)",
+                  }}
                 >
                   Etapa {i + 1}
                 </span>
@@ -88,7 +100,12 @@ export function SolutionSection() {
                 >
                   <s.icon size={28} aria-hidden />
                 </span>
-                <p className="mt-5 text-[13px] font-bold uppercase tracking-[0.22em]" style={{ color: i === 3 ? "var(--color-terracotta)" : "var(--color-primary-deep)" }}>
+                <p
+                  className="mt-5 text-[13px] font-bold uppercase tracking-[0.22em]"
+                  style={{
+                    color: i === 3 ? "var(--color-terracotta)" : "var(--color-primary-deep)",
+                  }}
+                >
                   {s.label}
                 </p>
                 <h3 className="mt-2 text-[20px] font-bold leading-snug text-primary-dark">
@@ -103,4 +120,3 @@ export function SolutionSection() {
     </section>
   );
 }
-

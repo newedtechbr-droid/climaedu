@@ -23,7 +23,7 @@ const journeys: Journey[] = [
     icon: Briefcase,
     title: "Indústria regulada",
     description:
-      "Química, papel e celulose, metalurgia, alimentos, agroindústria e couro. ESG, SSMA e compliance ambiental — com um piloto em andamento com a Viposa.",
+      "Química, papel e celulose, metalurgia, alimentos, agroindústria e couro. ESG, SSMA e compliance ambiental aplicados à rotina das equipes.",
     to: "/empresas",
     cta: "Ver solução para empresa",
   },
