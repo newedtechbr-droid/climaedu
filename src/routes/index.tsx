@@ -330,19 +330,9 @@ function Index() {
               </h3>
               <p className="mt-3 text-foreground/75">
                 O contato institucional da CLIMAEDU é{" "}
-                
-                  href="mailto:contato@newedtech.com.br"
-                  className="font-medium text-primary-dark hover:text-primary"
-                >
-                  contato@newedtech.com.br
-                </a>{" "}
+                <a href="mailto:contato@newedtech.com.br" className="font-medium text-primary-dark hover:text-primary">contato@newedtech.com.br</a>{" "}
                 e o telefone é{" "}
-                
-                  href="tel:+5548991606518"
-                  className="font-medium text-primary-dark hover:text-primary"
-                >
-                  +55 48 99160-6518
-                </a>
+                <a href="tel:+5548991606518" className="font-medium text-primary-dark hover:text-primary">+55 48 99160-6518</a>
                 . A operação está localizada em Florianópolis, SC, Brasil.
               </p>
             </article>
@@ -379,13 +369,7 @@ function Index() {
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {institutionalReferences.map((reference) => (
-              
-                key={reference.href}
-                href={reference.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
-              >
+              <a key={reference.href} href={reference.href} target="_blank" rel="noopener noreferrer" className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                   Fonte: {reference.source}
                 </p>
