@@ -248,7 +248,7 @@ const webPageJsonLd = {
   audience: {
     "@type": "Audience",
     audienceType:
-      "Empresas, áreas de ESG, RH, treinamento e desenvolvimento, compliance, meio ambiente, SSMA, operações e gestão de riscos",
+      "Indústrias reguladas (química, papel e celulose, metalurgia, alimentos, agroindústria, couro), áreas de ESG, RH, treinamento e desenvolvimento, compliance, meio ambiente, SSMA, operações e gestão de riscos",
   },
   isPartOf: {
     "@type": "WebSite",
@@ -284,8 +284,7 @@ const serviceJsonLd = {
   areaServed: "BR",
   audience: {
     "@type": "BusinessAudience",
-    audienceType:
-      "Empresas, áreas de ESG, RH/T&D, compliance, SSMA e operações",
+    audienceType: "Indústrias reguladas, áreas de ESG, RH/T&D, compliance, SSMA e operações",
   },
   description:
     "Ambiente de aprendizagem online para capacitar equipes corporativas, organizar trilhas por área ou função, emitir certificados, acompanhar participação e gerar evidências de capacitação.",
@@ -353,12 +352,12 @@ export const Route = createFileRoute("/empresas")({
   head: () => ({
     meta: [
       {
-        title: "Empresas | CLIMAEDU — ESG, sustentabilidade e evidências",
+        title: "Indústria regulada | CLIMAEDU — ESG, sustentabilidade e evidências",
       },
       {
         name: "description",
         content:
-          "Ambiente de aprendizagem online para ESG, sustentabilidade, compliance, SSMA, RH/T&D, auditorias e evidências de capacitação.",
+          "Ambiente de aprendizagem online para indústrias reguladas (química, papel e celulose, metalurgia, alimentos, agroindústria, couro) em ESG, sustentabilidade, compliance, SSMA, RH/T&D e evidências de capacitação.",
       },
       {
         name: "robots",
@@ -398,7 +397,7 @@ export const Route = createFileRoute("/empresas")({
       },
       {
         property: "og:title",
-        content: "CLIMAEDU para empresas | ESG, sustentabilidade e evidências",
+        content: "CLIMAEDU para indústria regulada | ESG, sustentabilidade e evidências",
       },
       {
         property: "og:description",
@@ -419,7 +418,7 @@ export const Route = createFileRoute("/empresas")({
       },
       {
         name: "twitter:title",
-        content: "CLIMAEDU para empresas | ESG, sustentabilidade e evidências",
+        content: "CLIMAEDU para indústria regulada | ESG, sustentabilidade e evidências",
       },
       {
         name: "twitter:description",
@@ -477,35 +476,45 @@ function Empresas() {
           <FadeIn>
             <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-                Empresas
+                Indústria regulada
               </p>
 
               <h1 className="mt-4 text-4xl font-medium leading-[1.05] text-primary-dark md:text-6xl">
-                Ambiente de aprendizagem online para transformar ESG e
+                Ambiente de aprendizagem online para indústrias reguladas transformarem ESG e
                 sustentabilidade em evidências
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
-                A CLIMAEDU é um ambiente de aprendizagem online para empresas.
-                A plataforma transforma diretrizes de ESG, clima,
-                sustentabilidade, compliance ambiental, SSMA e gestão de riscos
-                em aprendizagem aplicada, trilhas por área ou função,
-                certificados, dashboards, relatórios e evidências de capacitação.
+                A CLIMAEDU é um ambiente de aprendizagem online para empresas de setores regulados —
+                química, papel e celulose, metalurgia, alimentos, agroindústria e couro. A
+                plataforma transforma diretrizes de ESG, clima, sustentabilidade, compliance
+                ambiental, SSMA e gestão de riscos em aprendizagem aplicada, trilhas por área ou
+                função, certificados, dashboards, relatórios e evidências de capacitação.
               </p>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
-                Do onboarding ambiental à reciclagem periódica de equipes, a
-                plataforma ajuda empresas a conectar RH/T&D, ESG, compliance,
-                meio ambiente, SSMA e operações em uma base comum de
-                aprendizagem, rotina e evidência.
+                Do onboarding ambiental à reciclagem periódica de equipes, a plataforma ajuda
+                empresas a conectar RH/T&D, ESG, compliance, meio ambiente, SSMA e operações em uma
+                base comum de aprendizagem, rotina e evidência.
               </p>
 
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/62">
-                A CLIMAEDU não substitui auditorias, consultorias, pareceres
-                técnicos, análise jurídica ou sistemas de gestão ambiental. Ela
-                fortalece o ambiente de aprendizagem corporativo para apoiar
-                cultura, capacitação, gestão e prestação de contas sobre
+                A CLIMAEDU não substitui auditorias, consultorias, pareceres técnicos, análise
+                jurídica ou sistemas de gestão ambiental. Ela fortalece o ambiente de aprendizagem
+                corporativo para apoiar cultura, capacitação, gestão e prestação de contas sobre
                 aprendizagem.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.02}>
+            <div className="mt-8 max-w-3xl rounded-2xl border border-border bg-surface p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                Piloto em andamento
+              </p>
+              <p className="mt-2 text-base leading-relaxed text-foreground/80">
+                POC em andamento desde julho de 2026 com a Viposa, indústria do setor de couro, para
+                validar a aplicação da solução no setor industrial.
               </p>
             </div>
           </FadeIn>
@@ -535,8 +544,7 @@ function Empresas() {
                   ESG
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Diretrizes transformadas em trilhas e evidências de
-                  capacitação.
+                  Diretrizes transformadas em trilhas e evidências de capacitação.
                 </p>
               </div>
             </FadeIn>
@@ -547,8 +555,7 @@ function Empresas() {
                   RH/T&D
                 </p>
                 <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Jornadas por área, unidade, função, turma ou ciclo de
-                  reciclagem.
+                  Jornadas por área, unidade, função, turma ou ciclo de reciclagem.
                 </p>
               </div>
             </FadeIn>
@@ -582,17 +589,14 @@ function Empresas() {
                   <div
                     className="flex h-10 w-10 items-center justify-center rounded-lg"
                     style={{
-                      backgroundColor:
-                        "color-mix(in oklab, var(--color-terracotta) 14%, white)",
+                      backgroundColor: "color-mix(in oklab, var(--color-terracotta) 14%, white)",
                       color: "var(--color-terracotta)",
                     }}
                   >
                     <item.icon size={18} />
                   </div>
 
-                  <p className="mt-4 text-[17px] leading-[1.45] text-foreground/88">
-                    {item.text}
-                  </p>
+                  <p className="mt-4 text-[17px] leading-[1.45] text-foreground/88">{item.text}</p>
                 </div>
               </FadeIn>
             ))}
@@ -615,21 +619,16 @@ function Empresas() {
                   <div
                     className="inline-flex h-11 w-11 items-center justify-center rounded-lg"
                     style={{
-                      backgroundColor:
-                        "color-mix(in oklab, var(--color-olive) 14%, white)",
+                      backgroundColor: "color-mix(in oklab, var(--color-olive) 14%, white)",
                       color: "var(--color-primary-deep)",
                     }}
                   >
                     <item.icon size={20} />
                   </div>
 
-                  <h3 className="mt-4 text-[19px] font-semibold text-primary-dark">
-                    {item.title}
-                  </h3>
+                  <h3 className="mt-4 text-[19px] font-semibold text-primary-dark">{item.title}</h3>
 
-                  <p className="mt-2 text-[16px] leading-[1.55] text-foreground/80">
-                    {item.text}
-                  </p>
+                  <p className="mt-2 text-[16px] leading-[1.55] text-foreground/80">{item.text}</p>
                 </div>
               </FadeIn>
             ))}
@@ -645,15 +644,13 @@ function Empresas() {
             </p>
 
             <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
-              Da diretriz corporativa à rotina: onde a capacitação precisa
-              chegar
+              Da diretriz corporativa à rotina: onde a capacitação precisa chegar
             </h2>
 
             <p className="mt-4 text-foreground/75">
-              Relatórios, políticas, códigos internos e compromissos de
-              sustentabilidade precisam chegar às equipes. A CLIMAEDU apoia essa
-              tradução por meio de trilhas, conteúdos aplicados, certificados,
-              dashboards e evidências de capacitação.
+              Relatórios, políticas, códigos internos e compromissos de sustentabilidade precisam
+              chegar às equipes. A CLIMAEDU apoia essa tradução por meio de trilhas, conteúdos
+              aplicados, certificados, dashboards e evidências de capacitação.
             </p>
           </div>
 
@@ -665,13 +662,9 @@ function Empresas() {
                     <item.icon size={20} />
                   </div>
 
-                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">
-                    {item.title}
-                  </h3>
+                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
 
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-                    {item.text}
-                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">{item.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -691,10 +684,9 @@ function Empresas() {
             </h2>
 
             <p className="mt-4 text-foreground/75">
-              A CLIMAEDU não mede diretamente indicadores ambientais ou de
-              sustentabilidade da empresa. Ela mede e evidencia o ambiente de
-              aprendizagem: participação, engajamento, conclusão, proficiência,
-              certificados e relatórios de capacitação.
+              A CLIMAEDU não mede diretamente indicadores ambientais ou de sustentabilidade da
+              empresa. Ela mede e evidencia o ambiente de aprendizagem: participação, engajamento,
+              conclusão, proficiência, certificados e relatórios de capacitação.
             </p>
           </div>
 
@@ -705,19 +697,12 @@ function Empresas() {
                 className="rounded-2xl border border-border bg-card p-5 shadow-sm"
               >
                 <div className="flex items-start gap-3">
-                  <CheckCircle2
-                    size={20}
-                    className="mt-1 shrink-0 text-primary"
-                  />
+                  <CheckCircle2 size={20} className="mt-1 shrink-0 text-primary" />
 
                   <div>
-                    <h3 className="text-lg font-semibold text-primary-dark">
-                      {item.title}
-                    </h3>
+                    <h3 className="text-lg font-semibold text-primary-dark">{item.title}</h3>
 
-                    <p className="mt-2 text-sm leading-relaxed text-foreground/70">
-                      {item.text}
-                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-foreground/70">{item.text}</p>
                   </div>
                 </div>
               </article>
@@ -738,10 +723,9 @@ function Empresas() {
             </h2>
 
             <p className="mt-4 text-foreground/75">
-              A CLIMAEDU dialoga com diferentes Objetivos de Desenvolvimento
-              Sustentável quando empresas precisam formar equipes, organizar
-              rotinas, fortalecer cultura, documentar capacitação e apoiar
-              compromissos de sustentabilidade.
+              A CLIMAEDU dialoga com diferentes Objetivos de Desenvolvimento Sustentável quando
+              empresas precisam formar equipes, organizar rotinas, fortalecer cultura, documentar
+              capacitação e apoiar compromissos de sustentabilidade.
             </p>
           </div>
 
@@ -755,13 +739,9 @@ function Empresas() {
                   {ods.number}
                 </p>
 
-                <h3 className="mt-3 text-lg font-semibold text-primary-dark">
-                  {ods.title}
-                </h3>
+                <h3 className="mt-3 text-lg font-semibold text-primary-dark">{ods.title}</h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-foreground/70">
-                  {ods.text}
-                </p>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/70">{ods.text}</p>
               </article>
             ))}
           </div>
@@ -780,22 +760,21 @@ function Empresas() {
             </h2>
 
             <p className="mt-4 text-foreground/75">
-              A atuação da CLIMAEDU dialoga com referências relacionadas a
-              relato de sustentabilidade, riscos climáticos, gestão ambiental,
-              saúde e segurança, resíduos, Agenda 2030 e desenvolvimento de
-              capacidades corporativas.
+              A atuação da CLIMAEDU dialoga com referências relacionadas a relato de
+              sustentabilidade, riscos climáticos, gestão ambiental, saúde e segurança, resíduos,
+              Agenda 2030 e desenvolvimento de capacidades corporativas.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-foreground/60">
-              Fontes institucionais consultadas: GRI, IFRS/ISSB, ISO, Planalto e
-              ONU Brasil. As referências abaixo não substituem análise jurídica,
-              técnica, normativa, auditoria ou sistema de gestão da empresa.
+              Fontes institucionais consultadas: GRI, IFRS/ISSB, ISO, Planalto e ONU Brasil. As
+              referências abaixo não substituem análise jurídica, técnica, normativa, auditoria ou
+              sistema de gestão da empresa.
             </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {referenciasCorporativas.map((reference) => (
-              <a
+              
                 key={reference.href}
                 href={reference.href}
                 target="_blank"
@@ -817,9 +796,7 @@ function Empresas() {
                   {reference.title}
                 </h3>
 
-                <p className="mt-1 text-sm font-medium text-foreground/70">
-                  {reference.label}
-                </p>
+                <p className="mt-1 text-sm font-medium text-foreground/70">{reference.label}</p>
 
                 <p className="mt-3 text-sm leading-relaxed text-foreground/65">
                   {reference.description}
@@ -842,8 +819,8 @@ function Empresas() {
             </h2>
 
             <p className="mt-4 text-foreground/70">
-              Informações institucionais para áreas de ESG, RH/T&D, compliance,
-              SSMA, operações, gestão de riscos e ferramentas de busca ou IA.
+              Informações institucionais para áreas de ESG, RH/T&D, compliance, SSMA, operações,
+              gestão de riscos e ferramentas de busca ou IA.
             </p>
 
             <p className="mt-3 text-sm text-foreground/60">
@@ -854,10 +831,7 @@ function Empresas() {
           <div className="grid gap-5 md:grid-cols-2">
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start gap-3">
-                <CheckCircle2
-                  size={21}
-                  className="mt-1 shrink-0 text-primary"
-                />
+                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
 
                 <div>
                   <h3 className="text-xl font-semibold text-primary-dark">
@@ -865,10 +839,10 @@ function Empresas() {
                   </h3>
 
                   <p className="mt-3 text-foreground/75">
-                    A CLIMAEDU apoia empresas ao transformar diretrizes de ESG,
-                    clima, sustentabilidade, compliance ambiental, SSMA e gestão
-                    de riscos em aprendizagem aplicada, trilhas por área ou
-                    função, certificados, relatórios e evidências de capacitação.
+                    A CLIMAEDU apoia empresas ao transformar diretrizes de ESG, clima,
+                    sustentabilidade, compliance ambiental, SSMA e gestão de riscos em aprendizagem
+                    aplicada, trilhas por área ou função, certificados, relatórios e evidências de
+                    capacitação.
                   </p>
                 </div>
               </div>
@@ -876,10 +850,7 @@ function Empresas() {
 
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start gap-3">
-                <CheckCircle2
-                  size={21}
-                  className="mt-1 shrink-0 text-primary"
-                />
+                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
 
                 <div>
                   <h3 className="text-xl font-semibold text-primary-dark">
@@ -887,10 +858,9 @@ function Empresas() {
                   </h3>
 
                   <p className="mt-3 text-foreground/75">
-                    Não. A CLIMAEDU não substitui auditorias, consultorias,
-                    pareceres técnicos, análise jurídica ou sistemas de gestão
-                    ambiental. Ela apoia a capacitação de equipes e a geração de
-                    evidências de aprendizagem.
+                    Não. A CLIMAEDU não substitui auditorias, consultorias, pareceres técnicos,
+                    análise jurídica ou sistemas de gestão ambiental. Ela apoia a capacitação de
+                    equipes e a geração de evidências de aprendizagem.
                   </p>
                 </div>
               </div>
@@ -898,10 +868,7 @@ function Empresas() {
 
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start gap-3">
-                <CheckCircle2
-                  size={21}
-                  className="mt-1 shrink-0 text-primary"
-                />
+                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
 
                 <div>
                   <h3 className="text-xl font-semibold text-primary-dark">
@@ -909,9 +876,8 @@ function Empresas() {
                   </h3>
 
                   <p className="mt-3 text-foreground/75">
-                    A CLIMAEDU pode apoiar áreas de ESG, RH/T&D, compliance,
-                    meio ambiente, SSMA, operações, comunicação interna,
-                    qualidade, gestão de riscos e cadeia de valor.
+                    A CLIMAEDU pode apoiar áreas de ESG, RH/T&D, compliance, meio ambiente, SSMA,
+                    operações, comunicação interna, qualidade, gestão de riscos e cadeia de valor.
                   </p>
                 </div>
               </div>
@@ -919,10 +885,7 @@ function Empresas() {
 
             <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start gap-3">
-                <CheckCircle2
-                  size={21}
-                  className="mt-1 shrink-0 text-primary"
-                />
+                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
 
                 <div>
                   <h3 className="text-xl font-semibold text-primary-dark">
@@ -930,10 +893,9 @@ function Empresas() {
                   </h3>
 
                   <p className="mt-3 text-foreground/75">
-                    A CLIMAEDU gera evidências de aprendizagem, como
-                    participação, engajamento, conclusão, proficiência,
-                    certificados, relatórios e dashboards por área, unidade,
-                    função, turma ou período.
+                    A CLIMAEDU gera evidências de aprendizagem, como participação, engajamento,
+                    conclusão, proficiência, certificados, relatórios e dashboards por área,
+                    unidade, função, turma ou período.
                   </p>
                 </div>
               </div>
