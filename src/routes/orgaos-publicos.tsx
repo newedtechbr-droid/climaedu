@@ -5,10 +5,8 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionTitle } from "@/components/SectionTitle";
 import mockupRelatorios from "@/assets/mockup-climaedu.png";
 import {
-  AlertTriangle,
   Users,
   ShoppingCart,
-  FileWarning,
   BarChart3,
   FileText,
   Landmark,
@@ -19,26 +17,7 @@ import {
 } from "lucide-react";
 
 const pagePublished = "2026-07-09";
-const pageModified = "2026-07-10";
-
-const problemas = [
-  {
-    icon: Users,
-    text: "Documentos, planos e orientações precisam virar aprendizagem acessível para áreas, unidades e equipes.",
-  },
-  {
-    icon: AlertTriangle,
-    text: "Planos e protocolos ganham força quando cada público compreende como aplicá-los.",
-  },
-  {
-    icon: ShoppingCart,
-    text: "Escolas de governo e áreas técnicas precisam de jornadas conectadas às funções dos servidores.",
-  },
-  {
-    icon: FileWarning,
-    text: "Certificados, relatórios e dados de aprendizagem ajudam a acompanhar avanços e necessidades de formação.",
-  },
-];
+const pageModified = "2026-10-29";
 
 const solucao = [
   {
@@ -451,22 +430,9 @@ function OrgaosPublicos() {
               </h1>
 
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/85 md:text-xl">
-                A CLIMAEDU apoia escolas de governo e áreas técnicas na transformação de planos,
-                normas, protocolos, documentos e conhecimentos já existentes em jornadas online de
-                aprendizagem para diferentes equipes.
-              </p>
-
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/80">
-                A solução combina inteligência artificial com curadoria NewEdTech para extrair o
-                conteúdo institucional e transformar em aulas, atividades aplicadas, recursos
-                gamificados, certificados e dashboards.
-              </p>
-
-              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/80">
-                Órgãos públicos já contam com áreas técnicas, especialistas, planos, protocolos,
-                escolas de governo e estruturas de capacitação. A CLIMAEDU atua como solução
-                complementar para fazer esse conhecimento circular em formato de aprendizagem
-                aplicada, sem substituir a atuação técnica já existente.
+                A CLIMAEDU transforma planos, normas e protocolos que o órgão já tem em trilhas
+                online para cada equipe, com inteligência artificial e curadoria NewEdTech.
+                Complementa as áreas técnicas e escolas de governo, sem substituí-las.
               </p>
             </div>
           </FadeIn>
@@ -508,30 +474,36 @@ function OrgaosPublicos() {
         </div>
       </section>
 
-      <section className="bg-surface">
-        <div className="container-brand py-16 md:py-24">
-          <SectionTitle
-            eyebrow="O desafio"
-            title="O conhecimento técnico ganha alcance quando vira aprendizagem."
-            subtitle="Planos, normas, protocolos e pesquisas podem ser convertidos em experiências adequadas a diferentes funções e realidades, sem partir do zero."
-          />
+      <section className="bg-surface py-20">
+        <div className="container-brand">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+              O desafio
+            </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-4">
-            {problemas.map((p, i) => (
-              <FadeIn key={p.text} delay={i * 0.04}>
-                <div className="h-full rounded-xl border border-border bg-card p-6 shadow-sm">
-                  <div
-                    className="flex h-10 w-10 items-center justify-center rounded-lg"
-                    style={{
-                      backgroundColor: "color-mix(in oklab, var(--color-terracotta) 14%, white)",
-                      color: "var(--color-terracotta)",
-                    }}
-                  >
-                    <p.icon size={18} />
+            <h2 className="mt-3 text-primary-dark">
+              Da norma à ação climática: onde a capacitação precisa chegar
+            </h2>
+
+            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
+              Leis, guias técnicos e agendas de sustentabilidade exigem equipes preparadas e registro
+              dessa preparação. A CLIMAEDU capacita as equipes e organiza as evidências, sem
+              substituir certificadoras.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-4">
+            {aplicacoes.map((item, index) => (
+              <FadeIn key={item.title} delay={index * 0.04}>
+                <article className="h-full rounded-2xl border border-border bg-card p-6 shadow-sm">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary-deep">
+                    <item.icon size={20} />
                   </div>
 
-                  <p className="mt-4 text-[17px] leading-[1.45] text-foreground/88">{p.text}</p>
-                </div>
+                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
+
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/80">{item.text}</p>
+                </article>
               </FadeIn>
             ))}
           </div>
@@ -576,44 +548,6 @@ function OrgaosPublicos() {
       </section>
 
       <section className="bg-surface py-20">
-        <div className="container-brand">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Capacidade institucional
-            </p>
-
-            <h2 className="mt-3 text-primary-dark">
-              Da norma à ação climática: onde a capacitação precisa chegar
-            </h2>
-
-            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
-              A legislação, os guias técnicos e as agendas de sustentabilidade ampliam a necessidade
-              de planejamento, gestão de riscos, capacitação de equipes, documentação e prestação de
-              contas. A CLIMAEDU apoia essa agenda pelo caminho da aprendizagem aplicada e das
-              evidências de capacitação. Ela não substitui certificadoras, mas ajuda a organizar
-              registros que podem apoiar processos internos, auditorias e programas de certificação.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-4">
-            {aplicacoes.map((item, index) => (
-              <FadeIn key={item.title} delay={index * 0.04}>
-                <article className="h-full rounded-2xl border border-border bg-card p-6 shadow-sm">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary-deep">
-                    <item.icon size={20} />
-                  </div>
-
-                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
-
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/80">{item.text}</p>
-                </article>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background py-20">
         <div className="container-brand">
           <div className="mb-10 max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
@@ -664,15 +598,12 @@ function OrgaosPublicos() {
             </h2>
 
             <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
-              A atuação da CLIMAEDU dialoga com agendas públicas e referências técnicas relacionadas
-              a sustentabilidade, gestão de riscos, adaptação climática, defesa civil, educação,
-              compras públicas sustentáveis e desenvolvimento de capacidades institucionais.
+              Agendas e referências técnicas com as quais a CLIMAEDU trabalha.
             </p>
 
-            <p className="mt-4 text-sm leading-relaxed text-foreground/80">
-              Fontes institucionais consultadas: Planalto, Advocacia-Geral da União, ONU Brasil e
-              IPCC. As referências abaixo não substituem análise jurídica, técnica ou normativa do
-              órgão contratante.
+            <p className="mt-4 text-sm italic leading-relaxed text-foreground/80">
+              Fontes: Planalto, AGU, ONU Brasil e IPCC. Não substituem a análise jurídica ou técnica
+              do órgão.
             </p>
           </div>
 
