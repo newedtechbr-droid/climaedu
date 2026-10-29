@@ -18,7 +18,6 @@ import {
 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import platformDevices from "@/assets/climaedu-platform-devices.png";
-import newedtechLogo from "@/assets/newedtech-logo.png";
 import viposaLogo from "@/assets/partners/viposa.png";
 
 const pagePublished = "2026-07-09";
@@ -218,35 +217,7 @@ function Index() {
         </div>
       </section>
 
-      <section
-        className="bg-surface py-14 md:py-16"
-        aria-label="Relação entre NewEdTech e CLIMAEDU"
-      >
-        <div className="container-brand">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-8">
-            <div className="shrink-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground/80">
-                Uma solução
-              </p>
-              <img
-                src={newedtechLogo}
-                alt="New EdTech"
-                width={723}
-                height={233}
-                className="mt-3 h-auto w-[132px] max-w-full"
-                loading="lazy"
-              />
-            </div>
-
-            <p className="max-w-3xl text-lg leading-relaxed text-primary-dark md:text-xl">
-              A CLIMAEDU é uma solução especializada da NewEdTech para transformar conhecimento
-              técnico em aprendizagem online aplicada.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background py-16 md:py-20">
+      <section className="bg-surface py-16 md:py-20">
         <div className="container-brand">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
@@ -273,7 +244,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-surface py-16 md:py-20">
+      <section className="bg-background py-16 md:py-20">
         <div className="container-brand">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">O problema</p>
@@ -290,7 +261,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="como-funciona" className="scroll-mt-24 bg-background py-16 md:py-20">
+      <section id="como-funciona" className="scroll-mt-24 bg-surface py-16 md:py-20">
         <div className="container-brand">
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl">
@@ -320,7 +291,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-surface py-16 md:py-20">
+      <section className="bg-background py-16 md:py-20">
         <div className="container-brand">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">Para quem</p>
