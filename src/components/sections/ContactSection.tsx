@@ -114,8 +114,8 @@ export function ContactSection() {
             <span
               className="mb-3 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12.5px] font-semibold uppercase"
               style={{
-                backgroundColor: "#9A4B42",
-                color: "#FFFFFF",
+                backgroundColor: "var(--color-terracotta)",
+                color: "var(--color-background)",
                 letterSpacing: "0.02em",
               }}
             >

@@ -30,7 +30,7 @@ export function HeroSection() {
           <FadeIn>
             <p
               className="mb-7 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12.5px] font-semibold uppercase"
-              style={{ backgroundColor: "#9A4B42", color: "#FFFFFF", letterSpacing: "0.04em" }}
+              style={{ backgroundColor: "var(--color-terracotta)", color: "var(--color-background)", letterSpacing: "0.04em" }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-white" />
               Uma solução NewEdTech
@@ -41,14 +41,14 @@ export function HeroSection() {
             <h1
               className="text-primary-dark"
               style={{
-                fontSize: "clamp(38px, 5.6vw, 72px)",
+                fontSize: "clamp(38px, 5vw, 60px)",
                 lineHeight: 1.06,
                 letterSpacing: "-0.018em",
                 fontWeight: 600,
               }}
             >
               Conhecimento técnico que{" "}
-              <span style={{ color: "#3D5132", fontWeight: 800 }}>prepara pessoas para agir</span>
+              <span style={{ color: "var(--color-olive)", fontWeight: 700 }}>prepara pessoas para agir</span>
             </h1>
           </FadeIn>
 
@@ -136,9 +136,9 @@ function PlatformMockup() {
             backgroundColor: "color-mix(in oklab, var(--color-surface) 60%, white)",
           }}
         >
-          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#E2B7B3" }} />
-          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#E7D9A8" }} />
-          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "#B9CDB0" }} />
+          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "color-mix(in oklab, var(--color-terracotta) 40%, white)" }} />
+          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "color-mix(in oklab, var(--color-slate-blue) 35%, white)" }} />
+          <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "color-mix(in oklab, var(--color-olive) 40%, white)" }} />
           <span
             className="ml-3 rounded px-2 py-0.5 text-[10px] font-semibold"
             style={{

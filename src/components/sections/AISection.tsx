@@ -61,7 +61,7 @@ export function AISection() {
                   className="inline-flex h-12 w-12 items-center justify-center rounded-xl"
                   style={{
                     backgroundColor: "color-mix(in oklab, var(--color-olive) 35%, transparent)",
-                    color: "#F3F1EC",
+                    color: "var(--color-background)",
                   }}
                 >
                   <f.icon size={22} />

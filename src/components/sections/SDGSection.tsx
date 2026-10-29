@@ -48,7 +48,7 @@ const sdgs = [
 
 export function SDGSection() {
   return (
-    <section className="border-t border-border" style={{ backgroundColor: "#F5F3EE" }}>
+    <section className="border-t border-border" style={{ backgroundColor: "var(--color-muted)" }}>
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <FadeIn>
           <SectionTitle
@@ -62,7 +62,7 @@ export function SDGSection() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {sdgs.map((sdg, i) => (
             <FadeIn key={sdg.number} delay={i * 0.06}>
-              <article className="flex h-full items-center gap-4 rounded-xl border border-[#E0DDD8] bg-white p-5 transition-shadow hover:shadow-md">
+              <article className="flex h-full items-center gap-4 rounded-xl border border-border bg-white p-5 transition-shadow hover:shadow-md">
                 <img
                   src={sdg.icon}
                   alt={`ODS ${sdg.number}`}

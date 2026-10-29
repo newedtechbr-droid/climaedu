@@ -8,26 +8,26 @@ import appCss from "../styles.css?url";
 type CSSVars = CSSProperties & Record<`--${string}`, string>;
 
 const climaeduTheme: CSSVars = {
-  "--background": "#F3F1EC",
-  "--foreground": "#1A1E20",
+  "--background": "#F7F4EC",
+  "--foreground": "#182126",
   "--card": "#FFFFFF",
-  "--muted": "#ECE8DF",
+  "--muted": "#EFECE4",
 
-  "--color-background": "#F3F1EC",
-  "--color-surface": "#E8ECEC",
+  "--color-background": "#F7F4EC",
+  "--color-surface": "#E7E9E5",
   "--color-card": "#FFFFFF",
-  "--color-border": "#CFD6D6",
+  "--color-border": "#D5D9D5",
 
-  "--color-primary": "#5F7A4F",
-  "--color-primary-dark": "#1A1E20",
-  "--color-primary-deep": "#3D5132",
-  "--color-primary-foreground": "#F5F2EA",
-  "--color-ring": "#5F7A4F",
+  "--color-primary": "#516D3C",
+  "--color-primary-dark": "#182126",
+  "--color-primary-deep": "#3F5530",
+  "--color-primary-foreground": "#F7F4EC",
+  "--color-ring": "#516D3C",
 
-  "--color-olive": "#5F7A4F",
-  "--color-terracotta": "#8A5148",
+  "--color-olive": "#516D3C",
+  "--color-terracotta": "#993B30",
 
-  "--color-slate-blue": "#485C68",
+  "--color-slate-blue": "#2E5764",
 };
 
 const organizationJsonLd = {
@@ -188,7 +188,7 @@ export const Route = createRootRoute({
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap",
       },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
