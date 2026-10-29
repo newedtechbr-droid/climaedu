@@ -10,13 +10,13 @@ type CSSVars = CSSProperties & Record<`--${string}`, string>;
 const climaeduTheme: CSSVars = {
   "--background": "#F7F4EC",
   "--foreground": "#182126",
-  "--card": "#FFFFFF",
+  "--card": "#FBFAF6",
   "--muted": "#EFECE4",
 
   "--color-background": "#F7F4EC",
-  "--color-surface": "#E7E9E5",
-  "--color-card": "#FFFFFF",
-  "--color-border": "#D5D9D5",
+  "--color-surface": "#ECE9E1",
+  "--color-card": "#FBFAF6",
+  "--color-border": "#D7D4CD",
 
   "--color-primary": "#516D3C",
   "--color-primary-dark": "#182126",
@@ -236,7 +236,7 @@ function RootComponent() {
       {/* Sticky CTA mobile */}
       <Link
         to="/demonstracao"
-        className="fixed bottom-3 left-3 right-3 z-40 inline-flex h-12 items-center justify-center rounded-lg bg-primary text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-8px_rgba(132,154,116,0.7)] ring-1 ring-primary/40 md:hidden"
+        className="fixed bottom-3 left-3 right-3 z-40 inline-flex h-12 items-center justify-center rounded-lg bg-primary text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-8px_rgba(81,109,60,0.7)] ring-1 ring-primary/40 md:hidden"
       >
         Agendar conversa
       </Link>

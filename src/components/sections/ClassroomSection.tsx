@@ -81,11 +81,11 @@ export function ClassroomSection() {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <div className="container-brand relative py-24 md:py-32">
         <FadeIn>
           <div className="flex justify-center">
             <span
-              className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.22em]"
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-[14px] font-semibold uppercase tracking-[0.22em]"
               style={{
                 borderColor: "color-mix(in oklab, var(--color-terracotta) 35%, transparent)",
                 backgroundColor:
@@ -138,7 +138,7 @@ export function ClassroomSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.6, delay: t.delay }}
-                  className="absolute z-10 hidden md:flex items-center gap-2 rounded-full bg-background/95 px-3.5 py-2 text-[12px] font-semibold shadow-lg backdrop-blur ring-1 ring-black/5"
+                  className="absolute z-10 hidden md:flex items-center gap-2 rounded-full bg-background/95 px-3.5 py-2 text-[14px] font-semibold shadow-lg backdrop-blur ring-1 ring-black/5"
                   style={{
                     top: t.top,
                     left: t.left,
@@ -172,7 +172,7 @@ export function ClassroomSection() {
                       "linear-gradient(180deg, transparent 55%, color-mix(in oklab, var(--color-primary-dark) 38%, transparent) 100%)",
                   }}
                 />
-                <div className="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-background/95 px-4 py-2 text-[12px] font-semibold text-primary-dark shadow-md backdrop-blur">
+                <div className="absolute bottom-5 left-5 flex items-center gap-2 rounded-full bg-background/95 px-4 py-2 text-[14px] font-semibold text-primary-dark shadow-md backdrop-blur">
                   <Sprout size={14} aria-hidden style={{ color: "var(--color-olive)" }} />
                   Ensino Fundamental · Redes de Ensino
                 </div>
@@ -210,10 +210,10 @@ export function ClassroomSection() {
                   { k: "Conexão", v: "Território" },
                 ].map((s) => (
                   <div key={s.k} className="text-center">
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-foreground/55">
+                    <p className="text-[14px] font-semibold uppercase tracking-wider text-foreground/80">
                       {s.k}
                     </p>
-                    <p className="mt-1 text-[13px] font-bold text-primary-dark">{s.v}</p>
+                    <p className="mt-1 text-[14px] font-bold text-primary-dark">{s.v}</p>
                   </div>
                 ))}
               </div>
@@ -247,7 +247,7 @@ export function ClassroomSection() {
                 <h3 className="mt-5 text-[19px] font-bold leading-snug text-primary-dark">
                   {c.title}
                 </h3>
-                <p className="mt-3 text-[15.5px] leading-[1.7] text-foreground/80">{c.text}</p>
+                <p className="mt-3 text-[16px] leading-[1.7] text-foreground/80">{c.text}</p>
               </article>
             </FadeIn>
           ))}
@@ -255,7 +255,7 @@ export function ClassroomSection() {
 
         <FadeIn delay={0.1}>
           <div className="mt-20">
-            <p className="text-center text-[12px] font-semibold uppercase tracking-[0.22em] text-foreground/60">
+            <p className="text-center text-[14px] font-semibold uppercase tracking-[0.22em] text-foreground/80">
               Metodologias aplicadas
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -266,7 +266,7 @@ export function ClassroomSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-[13px] font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-[14px] font-semibold shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
                   style={{
                     backgroundColor: "var(--color-background)",
                     color: "var(--color-primary-deep)",
@@ -305,14 +305,14 @@ export function ClassroomSection() {
             <p className="relative text-[20px] font-bold leading-snug text-primary-dark md:text-[24px]">
               Quer levar a educação climática para sua escola ou rede?
             </p>
-            <p className="relative mt-3 text-[15px] text-foreground/75 md:text-[16px]">
+            <p className="relative mt-3 text-[16px] text-foreground/85 md:text-[16px]">
               Conheça a CLIMAEDU para gestores educacionais, escolas públicas e professores.
             </p>
             <div className="relative mt-7 flex justify-center">
               <Button
                 asChild
                 size="lg"
-                className="rounded-full px-9 py-6 text-[15px] font-semibold shadow-lg hover:shadow-xl transition-shadow"
+                className="rounded-full px-9 py-6 text-[16px] font-semibold shadow-lg hover:shadow-xl transition-shadow"
               >
                 <Link to="/demonstracao" className="inline-flex items-center gap-2">
                   Agendar conversa <ArrowRight size={16} />

@@ -29,7 +29,7 @@ export function Header() {
           : "bg-background"
       }`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+      <div className="container-brand flex items-center justify-between py-5">
         <Link to="/" className="flex items-center" aria-label="CLIMAEDU - página inicial">
           <img src="/logo.png" alt="CLIMAEDU" className="h-11 md:h-14" />
         </Link>
@@ -39,7 +39,7 @@ export function Header() {
             <Link
               key={item.to}
               to={item.to}
-              className="inline-flex h-11 items-center rounded-md px-1 text-[15.5px] font-semibold text-foreground/88 transition-colors hover:text-primary"
+              className="inline-flex h-11 items-center rounded-md px-1 text-[16px] font-semibold text-foreground/88 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
             >
               {item.label}
@@ -49,7 +49,7 @@ export function Header() {
 
         <Link
           to="/demonstracao"
-          className="hidden rounded-lg bg-primary px-6 py-3 text-[15px] font-semibold text-primary-foreground shadow-[0_8px_22px_-8px_rgba(95,122,79,0.6)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:shadow-[0_12px_28px_-8px_rgba(61,81,50,0.7)] md:inline-flex"
+          className="hidden rounded-lg bg-primary px-6 py-3 text-[16px] font-semibold text-primary-foreground shadow-[0_8px_22px_-8px_rgba(81,109,60,0.6)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:shadow-[0_12px_28px_-8px_rgba(63,85,48,0.7)] md:inline-flex"
         >
           Agendar conversa
         </Link>
@@ -68,7 +68,7 @@ export function Header() {
       {open && (
         <div className="border-t border-border bg-background md:hidden">
           <nav
-            className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4"
+            className="container-brand flex flex-col gap-1 py-4"
             aria-label="Navegação móvel"
           >
             {nav.map((item) => (
@@ -84,7 +84,7 @@ export function Header() {
             <Link
               to="/demonstracao"
               onClick={() => setOpen(false)}
-              className="mt-3 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(132,154,116,0.55)]"
+              className="mt-3 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(81,109,60,0.55)]"
             >
               Agendar conversa
             </Link>

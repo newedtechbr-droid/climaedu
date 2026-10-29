@@ -48,7 +48,7 @@ const courses: Course[] = [
 export function TracksSection() {
   return (
     <section id="trilhas" className="bg-surface scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 pt-8 pb-16 md:pt-10 md:pb-20">
+      <div className="container-brand pt-8 pb-16 md:pt-10 md:pb-20">
         <FadeIn>
           <SectionTitle
             eyebrow="Cursos"
@@ -76,7 +76,7 @@ export function TracksSection() {
                   />
 
                   <span
-                    className="absolute left-2.5 top-2.5 inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[10.5px] font-bold backdrop-blur"
+                    className="absolute left-2.5 top-2.5 inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-[14px] font-bold backdrop-blur"
                     style={{
                       backgroundColor: "color-mix(in oklab, white 82%, transparent)",
                       color: "var(--color-primary-deep)",
@@ -92,19 +92,19 @@ export function TracksSection() {
                         "linear-gradient(180deg, transparent 30%, color-mix(in oklab, var(--color-primary-dark) 88%, transparent))",
                     }}
                   >
-                    <p className="text-[12.5px] leading-relaxed text-white/95">{c.description}</p>
+                    <p className="text-[14px] leading-relaxed text-white/95">{c.description}</p>
                   </div>
                 </div>
 
                 <div className="flex flex-1 flex-col p-5">
                   <p
-                    className="text-[10.5px] font-bold uppercase tracking-[0.14em]"
+                    className="text-[14px] font-bold uppercase tracking-[0.14em]"
                     style={{ color: "var(--color-terracotta)" }}
                   >
                     {c.category}
                   </p>
 
-                  <h3 className="mt-2 text-[15.5px] font-bold leading-snug text-primary-dark">
+                  <h3 className="mt-2 text-[16px] font-bold leading-snug text-primary-dark">
                     {c.title}
                   </h3>
                 </div>

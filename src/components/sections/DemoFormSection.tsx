@@ -107,7 +107,7 @@ export function DemoFormSection() {
 
   return (
     <section className="bg-surface">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+      <div className="container-brand py-20 md:py-24">
         <div className="grid gap-8 lg:grid-cols-5">
           <FadeIn className="lg:col-span-3">
             <form
@@ -118,7 +118,7 @@ export function DemoFormSection() {
               <h2 className="text-[24px] font-semibold text-primary-dark">
                 Solicitar demonstração
               </h2>
-              <p className="mt-1 text-[15px] text-foreground/70">
+              <p className="mt-1 text-[16px] text-foreground/80">
                 Preencha em 1 minuto. Retorno em até 48 horas úteis.
               </p>
 
@@ -182,7 +182,7 @@ export function DemoFormSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-10px_rgba(95,122,79,0.7)] ring-1 ring-primary/40 transition-all hover:bg-primary-deep hover:scale-[1.02] disabled:opacity-60"
+                  className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-10px_rgba(81,109,60,0.7)] ring-1 ring-primary/40 transition-all hover:bg-primary-deep hover:scale-[1.02] disabled:opacity-60"
                 >
                   {isSubmitting ? "Enviando…" : "Solicitar demonstração"}
                 </button>
@@ -246,7 +246,7 @@ export function DemoFormSection() {
               }}
             >
               <p
-                className="text-[12px] font-bold uppercase tracking-[0.18em]"
+                className="text-[14px] font-bold uppercase tracking-[0.18em]"
                 style={{ color: "var(--color-terracotta)" }}
               >
                 Próximos passos
@@ -254,7 +254,7 @@ export function DemoFormSection() {
               <h3 className="mt-2 text-[20px] font-semibold text-primary-dark">
                 Em até 48 horas úteis, retornamos com uma sugestão inicial
               </h3>
-              <ul className="mt-4 space-y-3 text-[15px] text-foreground/80">
+              <ul className="mt-4 space-y-3 text-[16px] text-foreground/80">
                 <li className="flex gap-2">
                   <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-primary" /> Trilha
                   sugerida para o seu contexto
@@ -305,7 +305,7 @@ function Field({
       </span>
       {children}
       {error && (
-        <span className="mt-1 block text-destructive" style={{ fontSize: "13px" }}>
+        <span className="mt-1 block text-destructive" style={{ fontSize: "14px" }}>
           {error}
         </span>
       )}

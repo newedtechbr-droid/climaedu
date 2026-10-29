@@ -42,7 +42,7 @@ const socialLinks = [
 export function Footer() {
   return (
     <footer className="border-t border-border bg-primary-dark text-white">
-      <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <div className="container-brand py-12 md:py-16">
         <div className="grid gap-10 lg:grid-cols-[1.25fr_1.75fr]">
           <div>
             <a href="/" aria-label="Página inicial da CLIMAEDU">
@@ -61,7 +61,7 @@ export function Footer() {
 
               <dl className="mt-4 space-y-4">
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/75">
                     E-mail
                   </dt>
                   <dd className="mt-1">
@@ -75,7 +75,7 @@ export function Footer() {
                 </div>
 
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/75">
                     Telefone
                   </dt>
                   <dd className="mt-1">
@@ -89,7 +89,7 @@ export function Footer() {
                 </div>
 
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/75">
                     Localização
                   </dt>
                   <dd className="mt-1 text-base font-medium text-white">
@@ -98,7 +98,7 @@ export function Footer() {
                 </div>
 
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/75">
                     Empresa responsável
                   </dt>
                   <dd className="mt-1 text-base font-medium text-white">
@@ -107,7 +107,7 @@ export function Footer() {
                 </div>
 
                 <div>
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
+                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-white/75">
                     CNPJ
                   </dt>
                   <dd className="mt-1 text-base font-medium text-white">50.443.417/0001-05</dd>
@@ -127,7 +127,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-white/18 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-primary-dark"
+                    className="inline-flex items-center justify-center rounded-full border border-white/18 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-white transition hover:bg-card hover:text-primary-dark"
                   >
                     {link.label}
                   </a>
@@ -148,7 +148,7 @@ export function Footer() {
                     <a
                       key={link.href}
                       href={link.href}
-                      className="text-sm text-white/72 transition hover:text-white"
+                      className="text-sm text-white/80 transition hover:text-white"
                     >
                       {link.label}
                     </a>
@@ -161,13 +161,13 @@ export function Footer() {
 
         <div className="mt-10 border-t border-white/12 pt-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <p className="text-sm leading-relaxed text-white/62">
+            <p className="text-sm leading-relaxed text-white/75">
               © 2026 CLIMAEDU — produto da NewEdTech · Florianópolis, SC, Brasil
             </p>
 
             <a
               href="/politica-de-privacidade"
-              className="text-sm font-medium text-white/72 transition hover:text-white"
+              className="text-sm font-medium text-white/80 transition hover:text-white"
             >
               Política de Privacidade
             </a>

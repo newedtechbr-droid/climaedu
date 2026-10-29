@@ -439,7 +439,7 @@ function OrgaosPublicos() {
       />
 
       <section className="bg-background">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+        <div className="container-brand py-16 md:py-24">
           <FadeIn>
             <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
@@ -450,19 +450,19 @@ function OrgaosPublicos() {
                 Plataforma de aprendizagem para preparar equipes públicas.
               </h1>
 
-              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/78 md:text-xl">
+              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/85 md:text-xl">
                 A CLIMAEDU apoia escolas de governo e áreas técnicas na transformação de planos,
                 normas, protocolos, documentos e conhecimentos já existentes em jornadas online de
                 aprendizagem para diferentes equipes.
               </p>
 
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/72">
+              <p className="mt-4 max-w-3xl text-base leading-relaxed text-foreground/80">
                 A solução combina inteligência artificial com curadoria NewEdTech para extrair o
                 conteúdo institucional e transformar em aulas, atividades aplicadas, recursos
                 gamificados, certificados e dashboards.
               </p>
 
-              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/62">
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-foreground/80">
                 Órgãos públicos já contam com áreas técnicas, especialistas, planos, protocolos,
                 escolas de governo e estruturas de capacitação. A CLIMAEDU atua como solução
                 complementar para fazer esse conhecimento circular em formato de aprendizagem
@@ -509,7 +509,7 @@ function OrgaosPublicos() {
       </section>
 
       <section className="bg-surface">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+        <div className="container-brand py-16 md:py-24">
           <SectionTitle
             eyebrow="O desafio"
             title="O conhecimento técnico ganha alcance quando vira aprendizagem."
@@ -539,7 +539,7 @@ function OrgaosPublicos() {
       </section>
 
       <section className="bg-background">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-6 py-16 md:grid-cols-[0.85fr_1.15fr] md:py-20">
+        <div className="container-brand grid items-center gap-10 py-16 md:grid-cols-[0.85fr_1.15fr] md:py-20">
           <FadeIn>
             <SectionTitle
               eyebrow="Na prática"
@@ -575,18 +575,18 @@ function OrgaosPublicos() {
         </div>
       </section>
 
-      <section className="bg-surface px-6 py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-surface py-20">
+        <div className="container-brand">
           <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
               Capacidade institucional
             </p>
 
-            <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
+            <h2 className="mt-3 text-primary-dark">
               Da norma à ação climática: onde a capacitação precisa chegar
             </h2>
 
-            <p className="mt-4 text-foreground/75">
+            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
               A legislação, os guias técnicos e as agendas de sustentabilidade ampliam a necessidade
               de planejamento, gestão de riscos, capacitação de equipes, documentação e prestação de
               contas. A CLIMAEDU apoia essa agenda pelo caminho da aprendizagem aplicada e das
@@ -605,7 +605,7 @@ function OrgaosPublicos() {
 
                   <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
 
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/70">{item.text}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/80">{item.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -613,18 +613,18 @@ function OrgaosPublicos() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-background py-20">
+        <div className="container-brand">
           <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
               Agenda 2030
             </p>
 
-            <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
+            <h2 className="mt-3 text-primary-dark">
               Aderência a ODS por aprendizagem, rotina e evidência
             </h2>
 
-            <p className="mt-4 text-foreground/75">
+            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
               A CLIMAEDU dialoga com diferentes Objetivos de Desenvolvimento Sustentável,
               especialmente quando a instituição precisa formar equipes, organizar rotinas,
               documentar capacitação e fortalecer sua capacidade de implementação.
@@ -643,7 +643,7 @@ function OrgaosPublicos() {
 
                 <h3 className="mt-3 text-lg font-semibold text-primary-dark">{ods.title}</h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-foreground/70">{ods.text}</p>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/80">{ods.text}</p>
               </article>
             ))}
           </div>
@@ -652,24 +652,24 @@ function OrgaosPublicos() {
 
       <TrilhasPorAreaSection />
 
-      <section className="bg-surface px-6 py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-surface py-20">
+        <div className="container-brand">
           <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
               Referências institucionais
             </p>
 
-            <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
+            <h2 className="mt-3 text-primary-dark">
               Base técnica relacionada à atuação pública
             </h2>
 
-            <p className="mt-4 text-foreground/75">
+            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
               A atuação da CLIMAEDU dialoga com agendas públicas e referências técnicas relacionadas
               a sustentabilidade, gestão de riscos, adaptação climática, defesa civil, educação,
               compras públicas sustentáveis e desenvolvimento de capacidades institucionais.
             </p>
 
-            <p className="mt-4 text-sm leading-relaxed text-foreground/60">
+            <p className="mt-4 text-sm leading-relaxed text-foreground/80">
               Fontes institucionais consultadas: Planalto, Advocacia-Geral da União, ONU Brasil e
               IPCC. As referências abaixo não substituem análise jurídica, técnica ou normativa do
               órgão contratante.
@@ -700,9 +700,9 @@ function OrgaosPublicos() {
                   {reference.title}
                 </h3>
 
-                <p className="mt-1 text-sm font-medium text-foreground/70">{reference.label}</p>
+                <p className="mt-1 text-sm font-medium text-foreground/80">{reference.label}</p>
 
-                <p className="mt-3 text-sm leading-relaxed text-foreground/65">
+                <p className="mt-3 text-sm leading-relaxed text-foreground/80">
                   {reference.description}
                 </p>
               </a>
@@ -711,23 +711,23 @@ function OrgaosPublicos() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-background py-20">
+        <div className="container-brand">
           <div className="mb-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
               Perguntas frequentes
             </p>
 
-            <h2 className="mt-3 text-3xl font-medium text-primary-dark md:text-4xl">
+            <h2 className="mt-3 text-primary-dark">
               Respostas diretas para órgãos públicos
             </h2>
 
-            <p className="mt-4 text-foreground/70">
+            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
               Informações institucionais para gestores públicos, equipes técnicas, escolas de
               governo e consórcios públicos.
             </p>
 
-            <p className="mt-3 text-sm text-foreground/60">
+            <p className="mt-3 text-sm text-foreground/80">
               Publicado em 09/07/2026 · Atualizado em 10/07/2026.
             </p>
           </div>
@@ -742,7 +742,7 @@ function OrgaosPublicos() {
                     Como a CLIMAEDU prepara equipes públicas para a ação climática?
                   </h3>
 
-                  <p className="mt-3 text-foreground/75">
+                  <p className="mt-3 text-foreground/85">
                     A CLIMAEDU prepara equipes públicas para a ação climática ao transformar normas,
                     planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem
                     aplicada, trilhas por função, certificados, relatórios e evidências de
@@ -761,7 +761,7 @@ function OrgaosPublicos() {
                     A CLIMAEDU apoia compras públicas sustentáveis?
                   </h3>
 
-                  <p className="mt-3 text-foreground/75">
+                  <p className="mt-3 text-foreground/85">
                     Sim. A CLIMAEDU apoia a capacitação de equipes públicas para compreender temas
                     relacionados a compras públicas sustentáveis, critérios de sustentabilidade,
                     planejamento, gestão de riscos e documentação da aprendizagem.
@@ -779,7 +779,7 @@ function OrgaosPublicos() {
                     A CLIMAEDU substitui consultorias ou pareceres técnicos?
                   </h3>
 
-                  <p className="mt-3 text-foreground/75">
+                  <p className="mt-3 text-foreground/85">
                     Não. A CLIMAEDU não substitui consultorias, pareceres técnicos, análise jurídica
                     ou decisão administrativa. A plataforma apoia a capacitação e a geração de
                     evidências de aprendizagem.
@@ -797,7 +797,7 @@ function OrgaosPublicos() {
                     Que evidências a CLIMAEDU gera?
                   </h3>
 
-                  <p className="mt-3 text-foreground/75">
+                  <p className="mt-3 text-foreground/85">
                     A CLIMAEDU gera evidências de aprendizagem, como participação, engajamento,
                     conclusão, proficiência, certificados, relatórios e dashboards. Ela não mede
                     diretamente indicadores ambientais ou urbanos.

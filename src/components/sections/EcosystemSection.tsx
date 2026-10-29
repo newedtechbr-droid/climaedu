@@ -3,11 +3,11 @@ import { FadeIn } from "@/components/FadeIn";
 export function EcosystemSection() {
   return (
     <section id="ecossistema" className="bg-surface scroll-mt-24">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="container-brand py-20 md:py-28">
         <FadeIn>
           <div className="mx-auto max-w-2xl text-center">
             <span
-              className="mb-3 inline-flex items-center gap-2 rounded-md px-2.5 py-1 text-[12px] font-bold uppercase tracking-[0.18em]"
+              className="mb-3 inline-flex items-center gap-2 rounded-md px-2.5 py-1 text-[14px] font-bold uppercase tracking-[0.18em]"
               style={{
                 backgroundColor: "color-mix(in oklab, var(--color-terracotta) 14%, transparent)",
                 color: "var(--color-terracotta)",
@@ -27,7 +27,7 @@ export function EcosystemSection() {
               Um ecossistema para acelerar a ação climática
             </h2>
 
-            <p className="mt-3 text-[16px] leading-relaxed text-foreground/75">
+            <p className="mt-3 text-[16px] leading-relaxed text-foreground/85">
               A CLIMAEDU conecta educação, tecnologia, gestão pública e sustentabilidade para
               fortalecer capacidades institucionais.
             </p>
@@ -46,7 +46,7 @@ export function EcosystemSection() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="mx-auto mt-10 max-w-2xl text-center text-[15px] text-foreground/70">
+          <p className="mx-auto mt-10 max-w-2xl text-center text-[16px] text-foreground/80">
             Desenvolvemos soluções com parceiros para fortalecer instituições e acelerar a resposta
             climática nos territórios.
           </p>

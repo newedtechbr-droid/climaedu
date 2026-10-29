@@ -65,7 +65,7 @@ function Plataforma() {
   return (
     <>
       <section className="bg-background">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1fr_0.95fr] md:py-24">
+        <div className="container-brand grid items-center gap-12 py-16 md:grid-cols-[1fr_0.95fr] md:py-24">
           <FadeIn>
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
@@ -74,7 +74,7 @@ function Plataforma() {
               <h1 className="mt-4 text-primary-dark">
                 Aprendizagem online para temas técnicos que precisam chegar à prática.
               </h1>
-              <p className="mt-6 text-xl leading-relaxed text-foreground/78">
+              <p className="mt-6 text-xl leading-relaxed text-foreground/85">
                 A CLIMAEDU reúne trilhas, aulas, vídeos, quizzes, atividades gamificadas,
                 certificados, dashboards e relatórios para simplificar o processo de aprendizagem
                 em temas climáticos, ambientais e socioambientais.
@@ -98,8 +98,8 @@ function Plataforma() {
         </div>
       </section>
 
-      <section className="bg-surface px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-surface py-16 md:py-20">
+        <div className="container-brand">
           <SectionTitle
             eyebrow="Fluxo de trabalho"
             title="Do material institucional à aprendizagem aplicada."
@@ -113,7 +113,7 @@ function Plataforma() {
                   <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-primary/10 text-xl font-semibold text-primary-deep">
                     {index + 1}
                   </div>
-                  <p className="text-lg leading-relaxed text-foreground/78">{item}</p>
+                  <p className="text-lg leading-relaxed text-foreground/85">{item}</p>
                 </div>
               </FadeIn>
             ))}
@@ -121,8 +121,8 @@ function Plataforma() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-background py-16 md:py-20">
+        <div className="container-brand">
           <SectionTitle
             eyebrow="Tecnologia que sustenta a experiência"
             title="Recursos digitais a serviço da aprendizagem."
@@ -137,7 +137,7 @@ function Plataforma() {
                     <item.icon size={20} aria-hidden />
                   </div>
                   <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-foreground/72">{item.text}</p>
+                  <p className="mt-3 text-base leading-relaxed text-foreground/80">{item.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -145,8 +145,8 @@ function Plataforma() {
         </div>
       </section>
 
-      <section className="bg-surface px-6 py-16 md:py-20">
-        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+      <section className="bg-surface py-16 md:py-20">
+        <div className="container-brand grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-center">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
               Diferenciais incorporados
@@ -164,7 +164,7 @@ function Plataforma() {
             ].map((item) => (
               <div key={item} className="flex gap-3 rounded-lg border border-border bg-card p-5">
                 <CheckCircle2 size={20} className="mt-1 shrink-0 text-primary" aria-hidden />
-                <p className="text-base leading-relaxed text-foreground/76">{item}</p>
+                <p className="text-base leading-relaxed text-foreground/85">{item}</p>
               </div>
             ))}
           </div>
