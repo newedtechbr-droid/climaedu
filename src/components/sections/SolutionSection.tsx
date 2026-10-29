@@ -49,7 +49,7 @@ export function SolutionSection() {
               className="mb-4 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12px] font-bold uppercase tracking-[0.22em]"
               style={{
                 backgroundColor: "color-mix(in oklab, var(--color-terracotta) 22%, transparent)",
-                color: "#fff",
+                color: "var(--color-background)",
               }}
             >
               <span

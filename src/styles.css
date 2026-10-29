@@ -43,43 +43,50 @@
 :root {
   --radius: 0.5rem;
 
-  /* ClimaEdu â€” Identidade Visual Oficial
-     CalcÃ¡rio #F3F1EC Â· Ã”nix #202427 Â· ArdÃ³sia #485C68 Â· Terracota #9A4B42 Â· Oliva mineral #849A74 */
-  --background: #F3F1EC;            /* CalcÃ¡rio */
-  --foreground: #1A1E20;            /* Ã”nix com mais contraste */
+  /* Paleta oficial (Manual de Identidade Visual CLIMAEDU)
+     Calcário Vivo #F7F4EC · Ônix Profundo #182126 · Ardósia Viva #2E5764
+     Terracota Viva #993B30 · Oliva Vivo #516D3C
+     Os demais tokens são apenas tints/shades dessas cinco cores. */
+  --calcario: #F7F4EC;
+  --onix: #182126;
+  --ardosia: #2E5764;
+  --terracota: #993B30;
+  --oliva: #516D3C;
+
+  --background: var(--calcario);
+  --foreground: var(--onix);
   --card: #FFFFFF;
-  --card-foreground: #1A1E20;
+  --card-foreground: var(--onix);
   --popover: #FFFFFF;
-  --popover-foreground: #1A1E20;
+  --popover-foreground: var(--onix);
 
-  /* Verde musgo profundo â€” CTA institucional, mais vivo e sofisticado */
-  --primary: #5F7A4F;
-  --primary-foreground: #F5F2EA;
-  --primary-dark: #1A1E20;
-  --primary-deep: #3D5132;
+  --primary: var(--oliva);
+  --primary-foreground: var(--calcario);
+  --primary-dark: var(--onix);
+  --primary-deep: color-mix(in oklab, var(--oliva) 75%, var(--onix));
 
-  --secondary: #E7E3DA;
-  --secondary-foreground: #1A1E20;
+  --secondary: color-mix(in oklab, var(--calcario) 88%, var(--onix));
+  --secondary-foreground: var(--onix);
 
-  --surface: #E8ECEC;
-  --surface-dark: #2A3942;
+  --surface: color-mix(in oklab, var(--calcario) 90%, var(--ardosia));
+  --surface-dark: var(--onix);
 
-  --muted: #ECE8DF;
-  --muted-foreground: #3F4F5A;      /* ArdÃ³sia mais escura */
+  --muted: color-mix(in oklab, var(--calcario) 94%, var(--onix));
+  --muted-foreground: var(--ardosia);
 
-  --accent: #DDE4E8;
-  --accent-foreground: #2A3942;
-  --olive: #5F7A4F;                 /* Musgo profundo */
-  --slate-blue: #485C68;
+  --accent: color-mix(in oklab, var(--calcario) 86%, var(--ardosia));
+  --accent-foreground: var(--ardosia);
+  --olive: var(--oliva);
+  --slate-blue: var(--ardosia);
 
-  --institutional: #485C68;
-  --terracotta: #9A4B42;
-  --destructive: #9A4B42;
-  --destructive-foreground: #F5F2EA;
+  --institutional: var(--ardosia);
+  --terracotta: var(--terracota);
+  --destructive: var(--terracota);
+  --destructive-foreground: var(--calcario);
 
-  --border: #CFD6D6;
-  --input: #CFD6D6;
-  --ring: #5F7A4F;
+  --border: color-mix(in oklab, var(--calcario) 80%, var(--ardosia));
+  --input: color-mix(in oklab, var(--calcario) 80%, var(--ardosia));
+  --ring: var(--oliva);
 }
 
 @layer base {
@@ -94,16 +101,11 @@
 
   body {
     background-color: var(--color-background);
-    background-image:
-      radial-gradient(at 12% 8%, color-mix(in oklab, var(--color-olive) 6%, transparent) 0, transparent 45%),
-      radial-gradient(at 88% 92%, color-mix(in oklab, var(--color-terracotta) 5%, transparent) 0, transparent 50%),
-      linear-gradient(180deg, color-mix(in oklab, var(--color-surface) 35%, var(--color-background)) 0%, var(--color-background) 60%);
-    background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 19px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -129,7 +131,7 @@
     font-weight: 600;
   }
   @media (min-width: 768px) {
-    h1 { font-size: 68px; }
+    h1 { font-size: 60px; }
   }
 
   h2 {
@@ -139,7 +141,7 @@
     font-weight: 600;
   }
   @media (min-width: 768px) {
-    h2 { font-size: 50px; }
+    h2 { font-size: 48px; }
   }
 
 

@@ -27,7 +27,7 @@ export function PageHero({
           {eyebrow && (
             <p
               className="mb-6 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12.5px] font-semibold uppercase"
-              style={{ backgroundColor: "#9A4B42", color: "#FFFFFF", letterSpacing: "0.04em" }}
+              style={{ backgroundColor: "var(--color-terracotta)", color: "var(--color-background)", letterSpacing: "0.04em" }}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-white" />
               {eyebrow}
