@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 
 const nav = [
+  { to: "/", label: "Início" },
   { to: "/plataforma", label: "Plataforma" },
   { to: "/orgaos-publicos", label: "Órgãos públicos" },
   { to: "/empresas", label: "Indústrias" },
@@ -41,6 +42,7 @@ export function Header() {
               to={item.to}
               className="inline-flex h-11 items-center rounded-md px-1 text-[16px] font-semibold text-foreground/88 transition-colors hover:text-primary"
               activeProps={{ className: "text-primary" }}
+              activeOptions={{ exact: item.to === "/" }}
             >
               {item.label}
             </Link>
