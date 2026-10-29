@@ -26,10 +26,10 @@ export function PageHero({
         <FadeIn>
           {eyebrow && (
             <p
-              className="mb-6 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[12.5px] font-semibold uppercase"
+              className="mb-6 inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-[14px] font-semibold uppercase"
               style={{ backgroundColor: "var(--color-terracotta)", color: "var(--color-background)", letterSpacing: "0.04em" }}
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-white" />
+              <span className="h-1.5 w-1.5 rounded-full bg-card" />
               {eyebrow}
             </p>
           )}

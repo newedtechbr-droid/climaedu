@@ -4,7 +4,7 @@ import teamImage from "@/assets/team-meeting.jpg";
 export function AboutSection() {
   return (
     <section id="sobre" className="bg-background scroll-mt-24">
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-2 md:gap-16 md:py-32">
+      <div className="container-brand grid items-center gap-14 py-24 md:grid-cols-2 md:gap-16 md:py-32">
         <FadeIn>
           <div
             className="relative overflow-hidden rounded-2xl border shadow-[0_24px_60px_-24px_rgba(20,30,40,0.35)]"
@@ -32,7 +32,7 @@ export function AboutSection() {
         <FadeIn delay={0.1}>
           <p
             className="mb-5 font-semibold uppercase tracking-[0.22em] text-primary"
-            style={{ fontSize: "13px" }}
+            style={{ fontSize: "14px" }}
           >
             Quem somos
           </p>

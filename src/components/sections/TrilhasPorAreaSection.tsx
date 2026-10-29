@@ -46,7 +46,7 @@ const areas = [
 export function TrilhasPorAreaSection() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div className="container-brand py-16 md:py-24">
         <div className="grid items-center gap-10 md:grid-cols-[0.95fr_1.05fr]">
           <FadeIn>
             <SectionTitle

@@ -160,7 +160,7 @@ function Index() {
       />
 
       <section className="bg-background">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-20">
+        <div className="container-brand grid items-center gap-12 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-20">
           <FadeIn>
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
@@ -177,7 +177,7 @@ function Index() {
                 certificados e dashboards.
               </p>
 
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/72">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/80">
                 Para órgãos públicos e indústrias que precisam levar conhecimentos climáticos e
                 socioambientais até as pessoas responsáveis por aplicá-los.
               </p>
@@ -189,7 +189,7 @@ function Index() {
               <div className="mt-9 flex flex-wrap gap-4">
                 <a
                   href="#como-funciona"
-                  className="inline-flex min-h-14 items-center gap-2 rounded-lg bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-[0_12px_30px_-12px_rgba(95,122,79,0.7)] ring-1 ring-primary/30 transition hover:bg-primary-deep"
+                  className="inline-flex min-h-14 items-center gap-2 rounded-lg bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-[0_12px_30px_-12px_rgba(81,109,60,0.7)] ring-1 ring-primary/30 transition hover:bg-primary-deep"
                 >
                   Conhecer a CLIMAEDU <ArrowRight size={18} />
                 </a>
@@ -205,7 +205,7 @@ function Index() {
           </FadeIn>
 
           <FadeIn delay={0.08}>
-            <div className="climaedu-floating-mockup relative mx-auto -my-6 w-full max-w-[620px] md:-mr-10 md:scale-110">
+            <div className="climaedu-floating-mockup relative mx-auto -my-6 w-full max-w-[620px] md:scale-105">
               <img
                 src={platformDevices}
                 alt="Plataforma CLIMAEDU apresentada em notebook, tablet e celular"
@@ -219,13 +219,13 @@ function Index() {
       </section>
 
       <section
-        className="bg-surface px-6 py-14 md:py-16"
+        className="bg-surface py-14 md:py-16"
         aria-label="Relação entre NewEdTech e CLIMAEDU"
       >
-        <div className="mx-auto max-w-6xl">
+        <div className="container-brand">
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-8">
             <div className="shrink-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground/54">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground/80">
                 Uma solução
               </p>
               <img
@@ -246,8 +246,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-background py-16 md:py-20">
+        <div className="container-brand">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
               A solução
@@ -265,7 +265,7 @@ function Index() {
                     <item.icon size={20} aria-hidden />
                   </div>
                   <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-foreground/72">{item.text}</p>
+                  <p className="mt-3 text-base leading-relaxed text-foreground/80">{item.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -273,14 +273,14 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-surface px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-surface py-16 md:py-20">
+        <div className="container-brand">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">O problema</p>
             <h2 className="mt-4 text-primary-dark">
               O conhecimento existe. O desafio é fazê-lo chegar a quem precisa agir.
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/78">
+            <p className="mt-6 text-lg leading-relaxed text-foreground/85">
               Planos, normas, pesquisas e conhecimentos técnicos costumam estar em documentos,
               apresentações, guias ou concentrados em especialistas. A CLIMAEDU extrai e organiza
               esse conteúdo por meio de um motor de inteligência artificial, com curadoria humana,
@@ -290,8 +290,8 @@ function Index() {
         </div>
       </section>
 
-      <section id="como-funciona" className="scroll-mt-24 bg-background px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
+      <section id="como-funciona" className="scroll-mt-24 bg-background py-16 md:py-20">
+        <div className="container-brand">
           <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
@@ -312,7 +312,7 @@ function Index() {
                     <step.icon size={20} aria-hidden />
                   </div>
                   <h3 className="mt-5 text-xl font-semibold text-primary-dark">{step.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-foreground/72">{step.text}</p>
+                  <p className="mt-3 text-base leading-relaxed text-foreground/80">{step.text}</p>
                 </article>
               </FadeIn>
             ))}
@@ -320,8 +320,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-surface px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-surface py-16 md:py-20">
+        <div className="container-brand">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">Para quem</p>
             <h2 className="mt-4 text-primary-dark">Conhecimento aplicado a diferentes contextos</h2>
@@ -333,7 +333,7 @@ function Index() {
                 <Landmark size={22} aria-hidden />
               </div>
               <h3 className="mt-5 text-2xl font-semibold text-primary-dark">Órgãos públicos</h3>
-              <p className="mt-4 text-base leading-relaxed text-foreground/75">
+              <p className="mt-4 text-base leading-relaxed text-foreground/85">
                 Transforme planos, normas, protocolos e materiais institucionais já existentes em
                 jornadas de aprendizagem para diferentes áreas e equipes.
               </p>
@@ -350,7 +350,7 @@ function Index() {
                 <Factory size={22} aria-hidden />
               </div>
               <h3 className="mt-5 text-2xl font-semibold text-primary-dark">Indústrias</h3>
-              <p className="mt-4 text-base leading-relaxed text-foreground/75">
+              <p className="mt-4 text-base leading-relaxed text-foreground/85">
                 Transforme documentos, políticas e conhecimentos ambientais em aprendizagem
                 aplicada às funções e à realidade da operação.
               </p>
@@ -363,15 +363,15 @@ function Index() {
             </article>
           </div>
 
-          <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/68">
+          <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/80">
             Também desenvolvemos projetos com universidades, consultorias, organizações e redes de
             conhecimento.
           </p>
         </div>
       </section>
 
-      <section className="bg-surface px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
+      <section className="bg-surface py-16 md:py-20">
+        <div className="container-brand">
           <div className="max-w-3xl">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
               O que a CLIMAEDU entrega
@@ -385,27 +385,27 @@ function Index() {
             {deliverables.map((item) => (
               <div key={item} className="flex gap-3 rounded-lg border border-border bg-card p-5">
                 <CheckCircle2 size={20} className="mt-1 shrink-0 text-primary" aria-hidden />
-                <p className="text-base leading-relaxed text-foreground/78">{item}</p>
+                <p className="text-base leading-relaxed text-foreground/85">{item}</p>
               </div>
             ))}
           </div>
 
-          <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/68">
+          <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/80">
             Certificados, dashboards e relatórios ajudam a organização a acompanhar e comprovar a
             aprendizagem, sem substituir certificadoras ou auditorias técnicas.
           </p>
         </div>
       </section>
 
-      <section className="bg-background px-6 py-16 md:py-20">
-        <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-center">
+      <section className="bg-background py-16 md:py-20">
+        <div className="container-brand grid gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-center">
           <FadeIn>
             <div className="max-w-xl">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
                 Case industrial
               </p>
               <h2 className="mt-4 text-primary-dark">Case UC Viposa</h2>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/78">
+              <p className="mt-6 text-lg leading-relaxed text-foreground/85">
                 Universidade corporativa levando conhecimento climático e socioambiental para mais
                 perto das equipes e do chão de fábrica.
               </p>
@@ -425,7 +425,7 @@ function Index() {
                   <p className="text-base font-semibold text-primary-dark">
                     Do conteúdo técnico à rotina da operação.
                   </p>
-                  <p className="mt-2 text-base leading-relaxed text-foreground/68">
+                  <p className="mt-2 text-base leading-relaxed text-foreground/80">
                     Trilhas digitais organizam a aprendizagem para lideranças e equipes, sem
                     depender de linguagem excessivamente técnica.
                   </p>
@@ -448,7 +448,7 @@ function Index() {
           </p>
           <Link
             to="/demonstracao"
-            className="mt-9 inline-flex min-h-14 items-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-semibold text-primary-foreground transition hover:bg-white hover:text-primary-dark"
+            className="mt-9 inline-flex min-h-14 items-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-semibold text-primary-foreground transition hover:bg-card hover:text-primary-dark"
           >
             Agendar uma conversa <ArrowRight size={18} />
           </Link>

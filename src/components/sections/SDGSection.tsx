@@ -49,7 +49,7 @@ const sdgs = [
 export function SDGSection() {
   return (
     <section className="border-t border-border" style={{ backgroundColor: "var(--color-muted)" }}>
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="container-brand py-20 md:py-28">
         <FadeIn>
           <SectionTitle
             eyebrow="Agenda 2030"
@@ -62,7 +62,7 @@ export function SDGSection() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {sdgs.map((sdg, i) => (
             <FadeIn key={sdg.number} delay={i * 0.06}>
-              <article className="flex h-full items-center gap-4 rounded-xl border border-border bg-white p-5 transition-shadow hover:shadow-md">
+              <article className="flex h-full items-center gap-4 rounded-xl border border-border bg-card p-5 transition-shadow hover:shadow-md">
                 <img
                   src={sdg.icon}
                   alt={`ODS ${sdg.number}`}
@@ -73,7 +73,7 @@ export function SDGSection() {
                 />
                 <div>
                   <p
-                    className="text-[12px] font-semibold uppercase tracking-[0.16em]"
+                    className="text-[14px] font-semibold uppercase tracking-[0.16em]"
                     style={{ color: sdg.color }}
                   >
                     ODS {sdg.number}
@@ -81,7 +81,7 @@ export function SDGSection() {
                   <h3 className="mt-0.5 text-base font-bold leading-tight text-foreground">
                     {sdg.name}
                   </h3>
-                  <p className="mt-1 text-sm text-foreground/70">{sdg.desc}</p>
+                  <p className="mt-1 text-sm text-foreground/80">{sdg.desc}</p>
                 </div>
               </article>
             </FadeIn>

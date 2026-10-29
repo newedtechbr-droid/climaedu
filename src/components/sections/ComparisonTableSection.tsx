@@ -21,7 +21,7 @@ const rows: Row[] = [
 export function ComparisonTableSection() {
   return (
     <section className="bg-background">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <div className="container-brand py-16 md:py-20">
         <FadeIn>
           <div className="overflow-hidden rounded-xl border border-border bg-card shadow-[0_20px_50px_-30px_rgba(20,30,40,0.3)]">
             <div className="overflow-x-auto">
@@ -29,7 +29,7 @@ export function ComparisonTableSection() {
                 <thead>
                   <tr>
                     <th
-                      className="px-5 py-4 text-[13px] font-bold uppercase tracking-[0.12em] text-foreground/60"
+                      className="px-5 py-4 text-[14px] font-bold uppercase tracking-[0.12em] text-foreground/80"
                       style={{ borderBottom: "1px solid var(--color-border)" }}
                     >
                       Recurso
@@ -58,7 +58,7 @@ export function ComparisonTableSection() {
                   {rows.map((r, ri) => (
                     <tr key={r.feature} className={ri % 2 === 0 ? "bg-background/40" : ""}>
                       <td
-                        className="px-5 py-3.5 text-[15px] font-medium text-foreground/85"
+                        className="px-5 py-3.5 text-[16px] font-medium text-foreground/85"
                         style={{ borderBottom: "1px solid var(--color-border)" }}
                       >
                         {r.feature}

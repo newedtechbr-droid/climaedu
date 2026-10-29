@@ -64,7 +64,7 @@ function Escolas() {
       <ClassroomSection />
 
       <section className="bg-background">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="container-brand py-16 md:py-20">
           <SectionTitle
             eyebrow="O que entregamos"
             title="Pedagogia climática: do território à comunidade"
@@ -87,7 +87,7 @@ function Escolas() {
 
                   <h3 className="mt-4 text-[18px] font-semibold text-primary-dark">{b.title}</h3>
 
-                  <p className="mt-1.5 text-[15px] leading-[1.55] text-foreground/75">{b.text}</p>
+                  <p className="mt-1.5 text-[16px] leading-[1.55] text-foreground/85">{b.text}</p>
                 </div>
               </FadeIn>
             ))}

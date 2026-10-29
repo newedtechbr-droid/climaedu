@@ -47,7 +47,7 @@ function Cursos() {
       />
 
       <section className="bg-surface">
-        <div className="mx-auto max-w-6xl px-6 pt-14 pb-8 md:pt-16 md:pb-10">
+        <div className="container-brand pt-14 pb-8 md:pt-16 md:pb-10">
           <SectionTitle
             eyebrow="Categorias"
             title="10 áreas estruturantes de capacitação climática"
@@ -61,7 +61,7 @@ function Cursos() {
                   style={{ borderColor: "var(--color-border)" }}
                 >
                   <span
-                    className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[12px] font-bold"
+                    className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[14px] font-bold"
                     style={{
                       backgroundColor: "color-mix(in oklab, var(--color-olive) 16%, white)",
                       color: "var(--color-primary-deep)",
@@ -70,7 +70,7 @@ function Cursos() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
-                  <span className="text-[15.5px] font-medium text-foreground/90">{c}</span>
+                  <span className="text-[16px] font-medium text-foreground/90">{c}</span>
                 </div>
               </FadeIn>
             ))}
@@ -95,7 +95,7 @@ function Cursos() {
             ].map((item) => (
               <li
                 key={item}
-                className="rounded-lg border border-border bg-card px-4 py-3 text-[15.5px] font-medium text-foreground/85"
+                className="rounded-lg border border-border bg-card px-4 py-3 text-[16px] font-medium text-foreground/85"
               >
                 {item}
               </li>
