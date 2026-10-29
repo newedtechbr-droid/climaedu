@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/plataforma", label: "Plataforma" },
@@ -9,8 +9,6 @@ const nav = [
   { to: "/cursos", label: "Cursos" },
   { to: "/sobre", label: "Sobre" },
 ] as const;
-
-const newedtechUrl = "https://www.newedtech.com.br/";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -47,16 +45,6 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <a
-            href={newedtechUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-11 items-center gap-1 rounded-md px-1 text-[16px] font-semibold text-foreground/88 transition-colors hover:text-primary"
-          >
-            NewEdTech
-            <ArrowUpRight size={16} aria-hidden="true" />
-            <span className="sr-only">(abre em nova aba)</span>
-          </a>
         </nav>
 
         <Link
@@ -93,17 +81,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href={newedtechUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="inline-flex items-center gap-1 rounded-md px-2 py-2.5 text-[16px] font-semibold text-foreground/85 hover:bg-surface"
-            >
-              NewEdTech
-              <ArrowUpRight size={16} aria-hidden="true" />
-              <span className="sr-only">(abre em nova aba)</span>
-            </a>
             <Link
               to="/demonstracao"
               onClick={() => setOpen(false)}
