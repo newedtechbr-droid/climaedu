@@ -2,32 +2,45 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import viposaLogo from "@/assets/partners/viposa.png";
 import viposaMockup from "@/assets/mockup-plataforma-viposa.png";
-import { Colunas, Fechamento, Limites, Metodo, PageHeader, PONTE, ui } from "@/components/brand";
+import {
+  BaseTecnica,
+  Colunas,
+  Entregas,
+  Fechamento,
+  FaqList,
+  Formatos,
+  INTEGRADORES,
+  Limites,
+  Metodo,
+  PageHeader,
+  ui,
+} from "@/components/brand";
+import { faqIndustria, odsIndustria, referenciasIndustria } from "@/data/conteudo";
 
 const title = "Indústria | CLIMAEDU";
 const description =
-  "A CLIMAEDU ajuda indústrias a levar planos de emergência, protocolos ambientais e o tema do clima até quem está na operação.";
+  "A CLIMAEDU leva o conhecimento técnico da empresa a cada função, para que a operação esteja pronta para agir em atividades que exigem mais cuidado.";
 
 const desafios = [
   {
     title: "Do escritório ao turno",
-    text: "Planos de emergência e procedimentos ambientais precisam chegar à liderança, à operação e aos terceiros, em todos os turnos.",
+    text: "Procedimentos, normas e protocolos ambientais precisam chegar à liderança, à operação e aos terceiros, em todos os turnos.",
   },
   {
     title: "Gente que entra e sai",
-    text: "Rotatividade, novos contratados e prestadores. O preparo precisa recomeçar a cada entrada, sem depender de quem já saiu.",
+    text: "Rotatividade, novos contratados e prestadores. O conhecimento não pode ir embora com quem saiu.",
   },
   {
-    title: "Clima no dia a dia",
-    text: "Eventos extremos afetam a operação, a logística e as pessoas. O tema precisa sair do relatório e chegar à rotina.",
+    title: "O custo de não saber",
+    text: "Um procedimento mal compreendido pode virar acidente, autuação ou parada da operação.",
   },
 ];
 
 const limitesIndustria = [
-  "Não elaboramos nem revisamos o plano de emergência da empresa.",
+  "Não elaboramos nem revisamos os procedimentos da empresa.",
   "Não fazemos auditoria nem emitimos certificação de conformidade.",
   "Não substituímos o SESMT, a brigada nem os responsáveis técnicos.",
-  "Não substituímos consultorias nem sistemas de gestão ambiental.",
+  "Não substituímos consultorias nem sistemas de gestão.",
 ];
 
 export const Route = createFileRoute("/empresas")({
@@ -49,8 +62,8 @@ function Empresas() {
     <>
       <PageHeader
         eyebrow="Indústria"
-        title="Planos de emergência que chegam à operação"
-        lead={`${PONTE} A CLIMAEDU leva os planos e protocolos da empresa a cada função, da liderança ao chão de fábrica.`}
+        title="Conhecimento que deixa a operação pronta para agir"
+        lead="Em atividades que exigem mais cuidado, cada pessoa precisa saber como agir. A CLIMAEDU leva o conhecimento técnico da empresa a cada função, da liderança ao chão de fábrica."
       >
         <Link to="/demonstracao" className={ui.btn}>
           Conversar com a CLIMAEDU <ArrowRight size={18} />
@@ -60,7 +73,7 @@ function Empresas() {
       <section className={ui.section}>
         <div className="container-brand">
           <p className={ui.eyebrow}>O desafio</p>
-          <h2 className={ui.h2}>O procedimento existe. A pergunta é se ele chega a quem age</h2>
+          <h2 className={ui.h2}>O conhecimento existe. Ele precisa chegar a quem age</h2>
           <Colunas items={desafios} />
         </div>
       </section>
@@ -68,8 +81,15 @@ function Empresas() {
       <section className={`${ui.section} bg-surface`}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Como trabalhamos</p>
-          <h2 className={ui.h2}>Partimos dos planos que a empresa já tem</h2>
+          <h2 className={ui.h2}>Partimos do que a empresa já tem</h2>
           <Metodo />
+          <Formatos />
+          <p className="mt-10 max-w-[60ch] font-display text-[22px] font-bold text-primary">
+            {INTEGRADORES}
+          </p>
+          <div className="mt-10">
+            <Limites items={limitesIndustria} />
+          </div>
         </div>
       </section>
 
@@ -77,11 +97,12 @@ function Empresas() {
         <div className="container-brand grid gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center">
           <div>
             <img src={viposaLogo} alt="VIPOSA" className="h-14 w-auto" loading="lazy" />
-            <p className={`${ui.eyebrow} mt-6`}>Projeto piloto</p>
-            <h2 className={ui.h2}>Universidade corporativa com a VIPOSA</h2>
+            <p className={`${ui.eyebrow} mt-6`}>Universidade corporativa · projeto piloto</p>
+            <h2 className={ui.h2}>Um ambiente com a identidade da empresa</h2>
             <p className={ui.intro}>
-              Um ambiente de aprendizagem com a identidade da empresa, para levar temas climáticos
-              e socioambientais às equipes e lideranças.
+              A tecnologia é o meio. Com a VIPOSA, montamos uma universidade corporativa própria,
+              com trilhas por função e materiais de apoio, para levar temas climáticos e
+              socioambientais às equipes e lideranças, no computador, no tablet e no celular.
             </p>
           </div>
           <img
@@ -93,21 +114,21 @@ function Empresas() {
         </div>
       </section>
 
-      <section className={`${ui.section} bg-surface`}>
-        <div className="container-brand">
-          <Limites items={limitesIndustria} />
-          <Link
-            to="/cursos"
-            className="mt-8 inline-flex items-center gap-2 text-[18px] font-bold text-terracotta"
-          >
-            Ver os cursos de apoio <ArrowRight size={17} />
-          </Link>
-        </div>
-      </section>
+
+      <Entregas surface />
+
+
+      <FaqList items={faqIndustria} />
+
+      <BaseTecnica
+        ods={odsIndustria}
+        refs={referenciasIndustria}
+        note="Fontes: ISO, Planalto, GRI, IFRS e ONU Brasil. As referências não substituem análise jurídica, técnica ou de conformidade."
+      />
 
       <Fechamento
-        title="Quais planos precisam chegar à sua operação?"
-        text="Conte o seu contexto e mostramos como seria o caminho do plano até as equipes."
+        title="Que conhecimento precisa chegar à sua operação?"
+        text="Conte o seu contexto e mostramos como seria o caminho até as equipes."
       />
     </>
   );

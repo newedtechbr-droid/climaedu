@@ -1,3 +1,4 @@
+import newedtechLogo from "@/assets/newedtech-logo.png";
 const navigationLinks = [
   {
     title: "Para quem",
@@ -44,6 +45,18 @@ export function Footer() {
             <a href="/" aria-label="Página inicial da CLIMAEDU">
               <img src="/logo.png" alt="CLIMAEDU" className="h-12 w-auto brightness-0 invert" />
             </a>
+
+            <div className="mt-4 flex items-center gap-3">
+              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white/70">
+                Uma solução
+              </span>
+              <img
+                src={newedtechLogo}
+                alt="NewEdTech"
+                className="h-7 w-auto brightness-0 invert"
+                loading="lazy"
+              />
+            </div>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/78">
               A CLIMAEDU, da NewEdTech, ajuda prefeituras e organizações a transformar planos de

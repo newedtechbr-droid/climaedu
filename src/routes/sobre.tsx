@@ -1,5 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ACREDITAMOS, Colunas, Fechamento, PageHeader, PONTE, ui } from "@/components/brand";
+import {
+  ACREDITAMOS,
+  Colunas,
+  Fechamento,
+  INTEGRADORES,
+  NewEdTechMarca,
+  OdsGrid,
+  PageHeader,
+  PONTE,
+  ui,
+} from "@/components/brand";
+import { odsPublico } from "@/data/conteudo";
 
 const title = "Sobre | CLIMAEDU";
 const description =
@@ -41,7 +52,9 @@ function Sobre() {
         eyebrow="Sobre"
         title="Uma marca da NewEdTech para resiliência climática"
         lead="A CLIMAEDU ajuda prefeituras e organizações a levar seus planos até as equipes que vão executar cada etapa. Somos de Florianópolis, Santa Catarina."
-      />
+      >
+        <NewEdTechMarca />
+      </PageHeader>
 
       <section className={`${ui.section} bg-surface`}>
         <div className="container-brand">
@@ -53,6 +66,9 @@ function Sobre() {
             {PONTE} Em conversas com a gestão pública, vimos o mesmo padrão se repetir: áreas que
             não se conectam, insegurança na hora de agir e distância entre o que está no plano e o
             que acontece na prática. A CLIMAEDU trabalha nessa distância.
+          </p>
+          <p className="mt-6 max-w-[60ch] font-display text-[22px] font-bold text-primary">
+            {INTEGRADORES}
           </p>
         </div>
       </section>
@@ -66,6 +82,14 @@ function Sobre() {
       </section>
 
       <section className={`${ui.section} bg-surface`}>
+        <div className="container-brand">
+          <p className={ui.eyebrow}>Agenda 2030</p>
+          <h2 className={ui.h2}>Objetivos de Desenvolvimento Sustentável</h2>
+          <OdsGrid items={odsPublico} />
+        </div>
+      </section>
+
+      <section className={ui.section}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Ecossistema</p>
           <h2 className={ui.h2}>Programas e redes de inovação de que participamos</h2>

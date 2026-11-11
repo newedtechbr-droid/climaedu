@@ -1,39 +1,37 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import { Colunas, Fechamento, Limites, Metodo, PageHeader, PONTE, ui } from "@/components/brand";
+import {
+  Ambiente,
+  BaseTecnica,
+  Entregas,
+  Fechamento,
+  FaqList,
+  Formatos,
+  INTEGRADORES,
+  Limites,
+  Metodo,
+  PageHeader,
+  ui,
+} from "@/components/brand";
+import { faqPublico, odsPublico, referenciasPublico } from "@/data/conteudo";
 
 const title = "Poder público | CLIMAEDU";
 const description =
-  "A CLIMAEDU ajuda prefeituras a levar o PLANCON a todas as áreas que precisam executá-lo, com preparo por área e continuidade quando a equipe ou o plano mudam.";
-
-const desafios = [
-  {
-    title: "O plano é de muitas áreas",
-    text: "Saúde, Assistência Social, Educação, Obras, Comunicação: cada uma tem um papel no PLANCON e precisa reconhecê-lo antes do alerta.",
-  },
-  {
-    title: "As pessoas mudam",
-    text: "Troca de gestão, de servidores e de comissionados. O preparo não pode ir embora com quem saiu.",
-  },
-  {
-    title: "O plano é revisado",
-    text: "Cada atualização e cada simulado trazem mudanças que precisam chegar a quem executa.",
-  },
-];
+  "Ter o Plano de Contingência não basta. A CLIMAEDU ajuda cada área da prefeitura a saber o que fazer, estar preparada e conseguir demonstrar essa preparação.";
 
 const publico = [
-  { title: "Quem decide", text: "Prefeitos, secretários e chefes de gabinete." },
+  { title: "Quem decide", text: "Prefeitos, vice-prefeitos, secretários e chefes de gabinete." },
   {
     title: "Quem executa o plano",
-    text: "A Defesa Civil e as secretarias com papel no PLANCON.",
+    text: "Defesa Civil e as áreas com papel no Plano de Contingência: Administração, Assistência Social, Saúde, Educação, Obras, Agricultura e Meio Ambiente.",
   },
   {
     title: "Quem contrata e controla",
     text: "Agentes de contratação, compras, procuradoria e controle interno.",
   },
   {
-    title: "Quem forma as equipes",
-    text: "Escolas de governo, gestão de pessoas e associações de municípios.",
+    title: "Quem articula e forma",
+    text: "Associações de municípios, consórcios e escolas de governo.",
   },
 ];
 
@@ -56,8 +54,8 @@ function OrgaosPublicos() {
     <>
       <PageHeader
         eyebrow="Poder público"
-        title="O PLANCON nas mãos de toda a prefeitura"
-        lead={`${PONTE} A CLIMAEDU ajuda cada área a conhecer o seu papel no plano de contingência e a se preparar para ele.`}
+        title="Do plano no papel à prefeitura preparada"
+        lead="Ter o Plano de Contingência não basta. Cada área da prefeitura precisa saber o que fazer, estar preparada e conseguir demonstrar essa preparação."
       >
         <Link to="/demonstracao" className={ui.btn}>
           Conversar com a CLIMAEDU <ArrowRight size={18} />
@@ -77,24 +75,15 @@ function OrgaosPublicos() {
         </div>
       </div>
 
-      <section className={ui.section}>
-        <div className="container-brand">
-          <p className={ui.eyebrow}>O desafio</p>
-          <h2 className={ui.h2}>Ter o plano é o começo</h2>
-          <p className={ui.intro}>
-            Os planos foram feitos por quem entende do assunto. O desafio é levar esse
-            conhecimento a todas as pessoas que vão colocá-lo em prática, e manter isso ao longo do
-            tempo.
-          </p>
-          <Colunas items={desafios} />
-        </div>
-      </section>
-
       <section className={`${ui.section} bg-surface`}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Como trabalhamos</p>
-          <h2 className={ui.h2}>Partimos do PLANCON que vocês já têm</h2>
+          <h2 className={ui.h2}>Partimos do plano que o município já tem</h2>
           <Metodo />
+          <Formatos />
+          <p className="mt-10 max-w-[60ch] font-display text-[22px] font-bold text-primary">
+            {INTEGRADORES}
+          </p>
         </div>
       </section>
 
@@ -113,17 +102,26 @@ function OrgaosPublicos() {
           <div className="mt-12">
             <Limites />
           </div>
-          <Link
-            to="/cursos"
-            className="mt-8 inline-flex items-center gap-2 text-[18px] font-bold text-terracotta"
-          >
-            Ver os cursos de apoio <ArrowRight size={17} />
-          </Link>
         </div>
       </section>
 
+      <Ambiente
+        title="Uma escola de governo digital, com a identidade do município"
+        text="A tecnologia é o meio. O município ganha um ambiente de aprendizagem próprio, com cursos por área, materiais de apoio e acompanhamento, acessível no computador, no tablet e no celular."
+      />
+
+      <Entregas />
+
+      <BaseTecnica
+        ods={odsPublico}
+        refs={referenciasPublico}
+        note="Fontes: Planalto, AGU e IPCC. As referências não substituem a análise jurídica ou técnica do órgão."
+      />
+
+      <FaqList items={faqPublico} />
+
       <Fechamento
-        title="Vamos levar o seu PLANCON a todas as áreas que vão executá-lo?"
+        title="Vamos preparar toda a prefeitura para o que está no plano?"
         text="Conte o seu contexto. Começamos pelo que já é público, sem pedir documentos internos."
       />
     </>

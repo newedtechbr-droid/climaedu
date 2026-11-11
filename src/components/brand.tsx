@@ -2,6 +2,11 @@ import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Clock } from "lucide-react";
 import { cursos, limites, metodo } from "@/data/cursos";
+import { entregas, formatos, type Faq, type Ods, type Referencia } from "@/data/conteudo";
+import newedtechLogo from "@/assets/newedtech-logo.png";
+import devicesImg from "@/assets/climaedu-platform-devices.png";
+import courseImg from "@/assets/platform-course-real.png";
+import reportsImg from "@/assets/mockup-relatorios.png";
 
 /* Linguagem visual herdada da landing page "Municípios Preparados". */
 export const ui = {
@@ -129,5 +134,199 @@ export function Fechamento({ title, text }: { title: string; text: string }) {
         </Link>
       </div>
     </section>
+  );
+}
+
+export const INTEGRADORES =
+  "Somos integradores: conectamos o plano, as áreas, as pessoas e os dados.";
+
+export function Formatos() {
+  return (
+    <div className="mt-10 grid gap-6 md:grid-cols-3">
+      {formatos.map((f) => (
+        <div key={f.title} className="border-t-[3px] border-primary pt-4">
+          <h3 className="text-[21px] font-bold text-primary">{f.title}</h3>
+          <p className="mt-2 text-[17px] text-foreground/75">{f.text}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/** Ambiente de aprendizagem próprio: a tecnologia como meio. */
+export function Ambiente({
+  title,
+  text,
+  surface = true,
+}: {
+  title: string;
+  text: string;
+  surface?: boolean;
+}) {
+  return (
+    <section className={`${ui.section} ${surface ? "bg-surface" : ""}`}>
+      <div className="container-brand grid gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center">
+        <div>
+          <p className={ui.eyebrow}>Ambiente de aprendizagem</p>
+          <h2 className={ui.h2}>{title}</h2>
+          <p className={ui.intro}>{text}</p>
+          <img
+            src={courseImg}
+            alt="Tela de aula no ambiente de aprendizagem da CLIMAEDU"
+            className="mt-8 w-full rounded-xl border border-border shadow-sm"
+            loading="lazy"
+          />
+        </div>
+        <img
+          src={devicesImg}
+          alt="Ambiente de aprendizagem da CLIMAEDU em notebook, tablet e celular"
+          className="w-full"
+          loading="lazy"
+        />
+      </div>
+    </section>
+  );
+}
+
+export function Entregas({ surface = false }: { surface?: boolean }) {
+  return (
+    <section className={`${ui.section} ${surface ? "bg-surface" : ""}`}>
+      <div className="container-brand grid gap-10 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:items-center">
+        <div>
+          <p className={ui.eyebrow}>O que fica registrado</p>
+          <h2 className={ui.h2}>Preparo que a gestão consegue acompanhar</h2>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            {entregas.map((e) => (
+              <div key={e.title} className="border-l-[3px] border-primary pl-4">
+                <h3 className="text-[20px] font-bold text-primary-dark">{e.title}</h3>
+                <p className="mt-1 text-[16px] text-foreground/75">{e.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <img
+          src={reportsImg}
+          alt="Relatórios de participação, conclusão e avaliações no tablet e no celular"
+          className="mx-auto w-full max-w-[420px]"
+          loading="lazy"
+        />
+      </div>
+    </section>
+  );
+}
+
+export function OdsGrid({ items }: { items: Ods[] }) {
+  return (
+    <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((o) => (
+        <div key={o.n} className="flex gap-4 rounded-xl bg-background p-4">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary font-display text-[20px] font-bold text-white">
+            {o.n}
+          </span>
+          <div>
+            <h3 className="text-[17px] font-bold leading-tight text-primary-dark">{o.title}</h3>
+            <p className="mt-1 text-[15px] leading-snug text-foreground/75">{o.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function Referencias({ items, note }: { items: Referencia[]; note: string }) {
+  return (
+    <>
+      <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((r) => (
+          <li key={r.href}>
+            <a
+              href={r.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block h-full rounded-xl border border-border bg-background p-4 no-underline transition hover:border-primary"
+            >
+              <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-terracotta">
+                {r.source}
+              </p>
+              <p className="mt-1 text-[17px] font-bold text-primary-dark">{r.title}</p>
+              <p className="text-[15px] text-foreground/75">{r.label}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-4 text-[14px] text-foreground/65">{note}</p>
+    </>
+  );
+}
+
+/** ODS + referências numa só seção, para não alongar a página. */
+export function BaseTecnica({
+  ods,
+  refs,
+  note,
+}: {
+  ods: Ods[];
+  refs: Referencia[];
+  note: string;
+}) {
+  return (
+    <section className={`${ui.section} bg-surface`}>
+      <div className="container-brand">
+        <p className={ui.eyebrow}>Agenda 2030</p>
+        <h2 className={ui.h2}>Objetivos de Desenvolvimento Sustentável</h2>
+        <OdsGrid items={ods} />
+        <p className={`${ui.eyebrow} mt-14`}>Base técnica</p>
+        <h2 className={ui.h2}>Referências com que trabalhamos</h2>
+        <Referencias items={refs} note={note} />
+      </div>
+    </section>
+  );
+}
+
+export function FaqList({ items, jsonLd = true }: { items: Faq[]; jsonLd?: boolean }) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return (
+    <section className={ui.section}>
+      <div className="container-brand">
+        {jsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+          />
+        )}
+        <p className={ui.eyebrow}>Perguntas frequentes</p>
+        <h2 className={ui.h2}>Respostas diretas</h2>
+        <div className="mt-8 max-w-4xl divide-y divide-border border-y border-border">
+          {items.map((f) => (
+            <details key={f.q} className="group py-4">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[19px] font-bold text-primary-dark">
+                {f.q}
+                <span className="text-[24px] text-terracotta transition group-open:rotate-45">+</span>
+              </summary>
+              <p className="mt-3 text-[17px] text-foreground/80">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function NewEdTechMarca({ className = "" }: { className?: string }) {
+  return (
+    <div className={`flex items-center gap-4 ${className}`}>
+      <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-foreground/70">
+        Uma solução
+      </p>
+      <img src={newedtechLogo} alt="NewEdTech" className="h-8 w-auto" loading="lazy" />
+    </div>
   );
 }

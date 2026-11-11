@@ -3,27 +3,40 @@ import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
 import { metodo } from "@/data/cursos";
-import { ACREDITAMOS, Colunas, CursosStrip, Fechamento, Metodo, PONTE, ui } from "@/components/brand";
+import {
+  ACREDITAMOS,
+  Ambiente,
+  CursosStrip,
+  Entregas,
+  Fechamento,
+  INTEGRADORES,
+  Metodo,
+  NewEdTechMarca,
+  PONTE,
+  ui,
+} from "@/components/brand";
 
 const pageModified = "2026-11-11";
 const title = "CLIMAEDU | Do plano à preparação";
 const description =
-  "A CLIMAEDU ajuda prefeituras e organizações a transformar o PLANCON e outros planos de contingência em equipes preparadas para agir.";
+  "A CLIMAEDU ajuda prefeituras e organizações a transformar planos de contingência e protocolos climáticos em equipes preparadas para agir.";
 
-const desafios = [
+const publico = [
+  { title: "Quem decide", text: "Prefeitos, vice-prefeitos, secretários e chefes de gabinete." },
   {
-    title: "Conexão",
-    text: "O plano envolve várias áreas, e cada uma enxerga só a sua parte. O preparo começa quando elas se reconhecem no mesmo plano.",
+    title: "Quem executa o plano",
+    text: "Defesa Civil e as áreas com papel no Plano de Contingência: Administração, Assistência Social, Saúde, Educação, Obras, Agricultura e Meio Ambiente.",
   },
   {
-    title: "Preparo",
-    text: "Quem executa precisa saber o próprio papel antes do alerta, na linguagem de quem trabalha.",
+    title: "Quem contrata e controla",
+    text: "Agentes de contratação, compras, procuradoria e controle interno.",
   },
   {
-    title: "Continuidade",
-    text: "Equipes e gestões mudam, e o plano é revisado. O preparo precisa acompanhar, sem depender de quem já saiu.",
+    title: "Quem articula e forma",
+    text: "Associações de municípios, consórcios e escolas de governo.",
   },
 ];
+
 
 const webPageJsonLd = {
   "@context": "https://schema.org",
@@ -82,8 +95,8 @@ function Index() {
               Do plano à preparação
             </h1>
             <p className={ui.lead}>
-              A CLIMAEDU ajuda prefeituras e organizações a transformar o PLANCON e outros planos
-              de contingência em equipes preparadas para agir.
+              A CLIMAEDU ajuda prefeituras e organizações a transformar planos de contingência e
+              protocolos climáticos em equipes preparadas para agir.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/demonstracao" className={ui.btn}>
@@ -93,6 +106,7 @@ function Index() {
                 Como trabalhamos
               </a>
             </div>
+            <NewEdTechMarca className="mt-10" />
           </div>
         </div>
         <div
@@ -127,7 +141,6 @@ function Index() {
           <p className="mt-6 max-w-[56ch] text-[20px] text-foreground/80">
             {PONTE} É nessa passagem, do documento para quem executa, que a CLIMAEDU trabalha.
           </p>
-          <Colunas items={desafios} />
         </div>
       </section>
 
@@ -137,53 +150,67 @@ function Index() {
           <p className={ui.eyebrow}>Como trabalhamos</p>
           <h2 className={ui.h2}>Partimos do plano que vocês já têm</h2>
           <Metodo />
-          <p className="mt-6 text-[17px] text-foreground/75">
-            O plano continua sendo de vocês: não elaboramos, não auditamos e não substituímos a
-            Defesa Civil nem os responsáveis técnicos.
+          <p className="mt-8 max-w-[60ch] font-display text-[22px] font-bold text-primary">
+            {INTEGRADORES}
+          </p>
+          <p className="mt-3 text-[17px] text-foreground/75">
+            O plano continua sendo de vocês: não elaboramos, não fazemos auditoria e não
+            substituímos a Defesa Civil nem os responsáveis técnicos.
           </p>
         </div>
       </section>
+
+      <Ambiente
+        surface={false}
+        title="A tecnologia é o meio"
+        text="Cada organização ganha um ambiente de aprendizagem próprio, com a sua identidade: uma universidade corporativa ou uma escola de governo digital, com cursos, materiais de apoio e acompanhamento."
+      />
+
+      <Entregas surface />
 
       {/* Para quem */}
       <section className={ui.section}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Para quem</p>
-          <h2 className={ui.h2}>Onde há um plano para executar</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-            <Link
-              to="/orgaos-publicos"
-              className="group rounded-2xl bg-primary p-7 text-white no-underline md:p-9"
-            >
-              <p className="text-[15px] font-bold uppercase tracking-[0.12em] text-white/75">
-                Poder público
-              </p>
-              <h3 className="mt-3 text-[30px] font-bold leading-tight text-white">
-                O PLANCON nas mãos de toda a prefeitura
-              </h3>
-              <p className="mt-3 text-[18px] text-white/85">
-                Não só a Defesa Civil: as secretarias que executam o plano, quem decide, quem
-                contrata e quem forma as equipes.
-              </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold">
-                CLIMAEDU para o poder público{" "}
-                <ArrowRight size={17} className="transition group-hover:translate-x-1" />
-              </span>
-            </Link>
-            <Link to="/empresas" className="group rounded-2xl bg-surface p-7 no-underline md:p-9">
-              <p className={ui.eyebrow}>Indústria</p>
-              <h3 className="mt-3 text-[26px] font-bold leading-tight text-primary-dark">
-                Planos de emergência que chegam à operação
-              </h3>
-              <div className="mt-5 flex items-center gap-4">
-                <img src={viposaLogo} alt="VIPOSA" className="h-10 w-auto" loading="lazy" />
-                <p className="text-[16px] text-foreground/75">Projeto piloto com a VIPOSA</p>
+          <h2 className={ui.h2}>Para toda a prefeitura, não só a Defesa Civil</h2>
+          <p className={ui.intro}>
+            Ter o Plano de Contingência não basta. Cada área da prefeitura precisa saber o que
+            fazer, estar preparada e conseguir demonstrar essa preparação.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {publico.map((p) => (
+              <div key={p.title}>
+                <h3 className="text-[21px] font-bold text-primary">{p.title}</h3>
+                <p className="mt-1.5 text-[17px] text-foreground/75">{p.text}</p>
               </div>
-              <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold text-terracotta">
-                CLIMAEDU para a indústria{" "}
-                <ArrowRight size={17} className="transition group-hover:translate-x-1" />
-              </span>
-            </Link>
+            ))}
           </div>
+          <Link
+            to="/orgaos-publicos"
+            className="mt-8 inline-flex items-center gap-2 text-[18px] font-bold text-terracotta"
+          >
+            CLIMAEDU para o poder público <ArrowRight size={17} />
+          </Link>
+
+          <Link
+            to="/empresas"
+            className="group mt-12 grid gap-6 rounded-2xl bg-surface p-7 no-underline md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:p-9"
+          >
+            <div>
+              <p className={ui.eyebrow}>Também para a indústria</p>
+              <h3 className="mt-2 text-[26px] font-bold leading-tight text-primary-dark">
+                Conhecimento que deixa a operação pronta para agir
+              </h3>
+              <p className="mt-2 max-w-[60ch] text-[17px] text-foreground/75">
+                Em atividades que exigem mais cuidado, cada pessoa precisa saber como agir.
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <img src={viposaLogo} alt="VIPOSA" className="h-10 w-auto" loading="lazy" />
+              <span className="text-[15px] text-foreground/70">Projeto piloto</span>
+              <ArrowRight size={20} className="text-terracotta transition group-hover:translate-x-1" />
+            </div>
+          </Link>
         </div>
       </section>
 
