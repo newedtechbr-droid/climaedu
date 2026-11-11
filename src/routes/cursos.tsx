@@ -1,38 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHero } from "@/components/PageHero";
-import { TracksSection } from "@/components/sections/TracksSection";
-import { CTASection } from "@/components/sections/CTASection";
-import { FadeIn } from "@/components/FadeIn";
-import { SectionTitle } from "@/components/SectionTitle";
+import { Clock } from "lucide-react";
+import { cursos } from "@/data/cursos";
+import { ACREDITAMOS, Fechamento, PageHeader } from "@/components/brand";
 
-const categorias = [
-  "Emergência climática e resiliência",
-  "Compras públicas sustentáveis",
-  "Mudanças climáticas e ESG",
-  "Gestão de resíduos sólidos",
-  "Licenciamento ambiental",
-  "Recursos hídricos",
-  "Saúde e clima",
-  "Educação climática",
-  "Comunicação de risco",
-  "Prevenção e resposta comunitária",
-];
+const title = "Cursos | CLIMAEDU";
+const description =
+  "Cursos sobre clima, eventos extremos, riscos e contratações públicas: materiais de apoio para preparar cada área que executa o plano.";
 
 export const Route = createFileRoute("/cursos")({
   head: () => ({
     meta: [
-      { title: "Cursos e trilhas | CLIMAEDU — Capacitação climática aplicada" },
-      {
-        name: "description",
-        content:
-          "Cursos, atividades práticas, checklists e certificados organizados por risco, função e necessidade institucional.",
-      },
-      { property: "og:title", content: "Trilhas climáticas CLIMAEDU" },
-      {
-        property: "og:description",
-        content: "10 categorias de trilhas aplicadas para preparar equipes, comunidades e gestão.",
-      },
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:url", content: "https://climaedu.com/cursos" },
     ],
+    links: [{ rel: "canonical", href: "https://climaedu.com/cursos" }],
   }),
   component: Cursos,
 });
@@ -40,74 +24,53 @@ export const Route = createFileRoute("/cursos")({
 function Cursos() {
   return (
     <>
-      <PageHero
-        eyebrow="Cursos e trilhas"
-        title="Trilhas climáticas aplicadas para preparar equipes e comunidades"
-        subtitle="Cursos, atividades práticas, checklists e certificados organizados por risco, função e necessidade institucional."
+      <PageHeader
+        eyebrow="Materiais de apoio"
+        title="Cursos para quem executa o plano"
+        lead={ACREDITAMOS}
       />
 
-      <section className="bg-surface">
-        <div className="container-brand pt-14 pb-8 md:pt-16 md:pb-10">
-          <SectionTitle
-            eyebrow="Categorias"
-            title="10 áreas estruturantes de capacitação climática"
-          />
-
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {categorias.map((c, i) => (
-              <FadeIn key={c} delay={i * 0.03}>
-                <div
-                  className="flex h-full items-center gap-3 rounded-lg border bg-background px-4 py-4"
-                  style={{ borderColor: "var(--color-border)" }}
-                >
-                  <span
-                    className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[14px] font-bold"
-                    style={{
-                      backgroundColor: "color-mix(in oklab, var(--color-olive) 16%, white)",
-                      color: "var(--color-primary-deep)",
-                    }}
-                  >
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-
-                  <span className="text-[16px] font-medium text-foreground/90">{c}</span>
+      <section className="bg-surface py-14 md:py-16">
+        <div className="container-brand">
+          <p className="max-w-[62ch] text-[19px] text-foreground/80">
+            O clima atravessa todas as áreas. Por isso os cursos apoiam a preparação de cada
+            secretaria e equipe, online e com certificado de conclusão.
+          </p>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            {cursos.map((c) => (
+              <article
+                key={c.title}
+                className="grid grid-cols-[110px_minmax(0,1fr)] overflow-hidden rounded-xl bg-background shadow-sm sm:grid-cols-[140px_minmax(0,1fr)]"
+              >
+                <img
+                  src={c.cover}
+                  alt={`Capa do curso ${c.title}`}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="p-5">
+                  <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-terracotta">
+                    {c.category}
+                  </p>
+                  <h2 className="mt-1 text-[20px] font-bold leading-snug text-primary-dark">
+                    {c.title}
+                  </h2>
+                  <p className="mt-2 text-[16px] leading-relaxed text-foreground/75">
+                    {c.description}
+                  </p>
+                  <p className="mt-2 inline-flex items-center gap-1.5 text-[15px] font-bold text-primary-deep">
+                    <Clock size={14} aria-hidden /> {c.hours}
+                  </p>
                 </div>
-              </FadeIn>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <TracksSection />
-
-      <section className="bg-background">
-        <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
-          <SectionTitle eyebrow="Cada curso entrega" title="Estrutura padrão de cada trilha" />
-
-          <ul className="mt-10 grid gap-3 sm:grid-cols-2">
-            {[
-              "Nome do curso",
-              "Carga horária",
-              "Público indicado",
-              "Aplicação prática",
-              "Evidência gerada",
-              "Certificado",
-            ].map((item) => (
-              <li
-                key={item}
-                className="rounded-lg border border-border bg-card px-4 py-3 text-[16px] font-medium text-foreground/85"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <CTASection
-        title="Solicitar catálogo de trilhas"
-        subtitle="Enviamos o catálogo completo com cursos, cargas horárias e públicos indicados."
-        ctaLabel="Solicitar catálogo"
+      <Fechamento
+        title="Quer os cursos para a sua equipe?"
+        text="Conte quem precisa ser preparado e indicamos os cursos e o formato de turma."
       />
     </>
   );

@@ -9,73 +9,29 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
-import { Route as PlataformaRouteImport } from './routes/plataforma'
-import { Route as ParaQuemRouteImport } from './routes/para-quem'
-import { Route as OrgaosPublicosRouteImport } from './routes/orgaos-publicos'
-import { Route as EscolasRouteImport } from './routes/escolas'
-import { Route as EmpresasRouteImport } from './routes/empresas'
-import { Route as DiferenciaisRouteImport } from './routes/diferenciais'
-import { Route as DemonstracaoRouteImport } from './routes/demonstracao'
-import { Route as CursosRouteImport } from './routes/cursos'
-import { Route as ContatoRouteImport } from './routes/contato'
-import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CapacitacoesRouteImport } from './routes/capacitacoes'
+import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as CursosRouteImport } from './routes/cursos'
+import { Route as DemonstracaoRouteImport } from './routes/demonstracao'
+import { Route as DiferenciaisRouteImport } from './routes/diferenciais'
+import { Route as EmpresasRouteImport } from './routes/empresas'
+import { Route as EscolasRouteImport } from './routes/escolas'
+import { Route as OrgaosPublicosRouteImport } from './routes/orgaos-publicos'
+import { Route as ParaQuemRouteImport } from './routes/para-quem'
+import { Route as PlataformaRouteImport } from './routes/plataforma'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as SobreRouteImport } from './routes/sobre'
 
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
-  id: '/politica-de-privacidade',
-  path: '/politica-de-privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PlataformaRoute = PlataformaRouteImport.update({
-  id: '/plataforma',
-  path: '/plataforma',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ParaQuemRoute = ParaQuemRouteImport.update({
-  id: '/para-quem',
-  path: '/para-quem',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OrgaosPublicosRoute = OrgaosPublicosRouteImport.update({
-  id: '/orgaos-publicos',
-  path: '/orgaos-publicos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EscolasRoute = EscolasRouteImport.update({
-  id: '/escolas',
-  path: '/escolas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EmpresasRoute = EmpresasRouteImport.update({
-  id: '/empresas',
-  path: '/empresas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DiferenciaisRoute = DiferenciaisRouteImport.update({
-  id: '/diferenciais',
-  path: '/diferenciais',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DemonstracaoRoute = DemonstracaoRouteImport.update({
-  id: '/demonstracao',
-  path: '/demonstracao',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CursosRoute = CursosRouteImport.update({
-  id: '/cursos',
-  path: '/cursos',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContatoRoute = ContatoRouteImport.update({
-  id: '/contato',
-  path: '/contato',
+const CapacitacoesRoute = CapacitacoesRouteImport.update({
+  id: '/capacitacoes',
+  path: '/capacitacoes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
@@ -83,14 +39,65 @@ const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
   path: '/como-funciona',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursosRoute = CursosRouteImport.update({
+  id: '/cursos',
+  path: '/cursos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemonstracaoRoute = DemonstracaoRouteImport.update({
+  id: '/demonstracao',
+  path: '/demonstracao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiferenciaisRoute = DiferenciaisRouteImport.update({
+  id: '/diferenciais',
+  path: '/diferenciais',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmpresasRoute = EmpresasRouteImport.update({
+  id: '/empresas',
+  path: '/empresas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EscolasRoute = EscolasRouteImport.update({
+  id: '/escolas',
+  path: '/escolas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrgaosPublicosRoute = OrgaosPublicosRouteImport.update({
+  id: '/orgaos-publicos',
+  path: '/orgaos-publicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParaQuemRoute = ParaQuemRouteImport.update({
+  id: '/para-quem',
+  path: '/para-quem',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlataformaRoute = PlataformaRouteImport.update({
+  id: '/plataforma',
+  path: '/plataforma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/capacitacoes': typeof CapacitacoesRoute
   '/como-funciona': typeof ComoFuncionaRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
@@ -106,6 +113,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/capacitacoes': typeof CapacitacoesRoute
   '/como-funciona': typeof ComoFuncionaRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
@@ -122,6 +130,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/capacitacoes': typeof CapacitacoesRoute
   '/como-funciona': typeof ComoFuncionaRoute
   '/contato': typeof ContatoRoute
   '/cursos': typeof CursosRoute
@@ -139,6 +148,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/capacitacoes'
     | '/como-funciona'
     | '/contato'
     | '/cursos'
@@ -154,6 +164,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/capacitacoes'
     | '/como-funciona'
     | '/contato'
     | '/cursos'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/capacitacoes'
     | '/como-funciona'
     | '/contato'
     | '/cursos'
@@ -185,6 +197,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CapacitacoesRoute: typeof CapacitacoesRoute
   ComoFuncionaRoute: typeof ComoFuncionaRoute
   ContatoRoute: typeof ContatoRoute
   CursosRoute: typeof CursosRoute
@@ -201,81 +214,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/politica-de-privacidade': {
-      id: '/politica-de-privacidade'
-      path: '/politica-de-privacidade'
-      fullPath: '/politica-de-privacidade'
-      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/plataforma': {
-      id: '/plataforma'
-      path: '/plataforma'
-      fullPath: '/plataforma'
-      preLoaderRoute: typeof PlataformaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/para-quem': {
-      id: '/para-quem'
-      path: '/para-quem'
-      fullPath: '/para-quem'
-      preLoaderRoute: typeof ParaQuemRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/orgaos-publicos': {
-      id: '/orgaos-publicos'
-      path: '/orgaos-publicos'
-      fullPath: '/orgaos-publicos'
-      preLoaderRoute: typeof OrgaosPublicosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/escolas': {
-      id: '/escolas'
-      path: '/escolas'
-      fullPath: '/escolas'
-      preLoaderRoute: typeof EscolasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/empresas': {
-      id: '/empresas'
-      path: '/empresas'
-      fullPath: '/empresas'
-      preLoaderRoute: typeof EmpresasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/diferenciais': {
-      id: '/diferenciais'
-      path: '/diferenciais'
-      fullPath: '/diferenciais'
-      preLoaderRoute: typeof DiferenciaisRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/demonstracao': {
-      id: '/demonstracao'
-      path: '/demonstracao'
-      fullPath: '/demonstracao'
-      preLoaderRoute: typeof DemonstracaoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cursos': {
-      id: '/cursos'
-      path: '/cursos'
-      fullPath: '/cursos'
-      preLoaderRoute: typeof CursosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contato': {
-      id: '/contato'
-      path: '/contato'
-      fullPath: '/contato'
-      preLoaderRoute: typeof ContatoRouteImport
+    '/capacitacoes': {
+      id: '/capacitacoes'
+      path: '/capacitacoes'
+      fullPath: '/capacitacoes'
+      preLoaderRoute: typeof CapacitacoesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/como-funciona': {
@@ -285,11 +235,81 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ComoFuncionaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cursos': {
+      id: '/cursos'
+      path: '/cursos'
+      fullPath: '/cursos'
+      preLoaderRoute: typeof CursosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demonstracao': {
+      id: '/demonstracao'
+      path: '/demonstracao'
+      fullPath: '/demonstracao'
+      preLoaderRoute: typeof DemonstracaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diferenciais': {
+      id: '/diferenciais'
+      path: '/diferenciais'
+      fullPath: '/diferenciais'
+      preLoaderRoute: typeof DiferenciaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/empresas': {
+      id: '/empresas'
+      path: '/empresas'
+      fullPath: '/empresas'
+      preLoaderRoute: typeof EmpresasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/escolas': {
+      id: '/escolas'
+      path: '/escolas'
+      fullPath: '/escolas'
+      preLoaderRoute: typeof EscolasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orgaos-publicos': {
+      id: '/orgaos-publicos'
+      path: '/orgaos-publicos'
+      fullPath: '/orgaos-publicos'
+      preLoaderRoute: typeof OrgaosPublicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/para-quem': {
+      id: '/para-quem'
+      path: '/para-quem'
+      fullPath: '/para-quem'
+      preLoaderRoute: typeof ParaQuemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plataforma': {
+      id: '/plataforma'
+      path: '/plataforma'
+      fullPath: '/plataforma'
+      preLoaderRoute: typeof PlataformaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -297,6 +317,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CapacitacoesRoute: CapacitacoesRoute,
   ComoFuncionaRoute: ComoFuncionaRoute,
   ContatoRoute: ContatoRoute,
   CursosRoute: CursosRoute,

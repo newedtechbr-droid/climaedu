@@ -50,7 +50,7 @@ const organizationJsonLd = {
     addressCountry: "BR",
   },
   description:
-    "A CLIMAEDU e uma plataforma GovTech/EdTech de aprendizagem aplicada para clima, sustentabilidade, gestao de riscos e desenvolvimento de competencias institucionais.",
+    "A CLIMAEDU ajuda prefeituras e organizações a transformar planos de contingência e protocolos climáticos em equipes preparadas para agir.",
   parentOrganization: {
     "@type": "Organization",
     name: "NEWEDTECH",
@@ -75,7 +75,7 @@ const websiteJsonLd = {
   alternateName: "ClimaEdu",
   url: "https://climaedu.com/",
   description:
-    "Aprendizagem aplicada para clima, sustentabilidade, gestao de riscos e capacidade institucional.",
+    "Do plano à preparação: capacitação para resiliência climática.",
   publisher: {
     "@type": "Organization",
     name: "CLIMAEDU",
@@ -236,7 +236,7 @@ function RootComponent() {
       {/* Sticky CTA mobile */}
       <Link
         to="/demonstracao"
-        className="fixed bottom-3 left-3 right-3 z-40 inline-flex h-12 items-center justify-center rounded-lg bg-primary text-base font-semibold text-primary-foreground shadow-[0_10px_28px_-8px_rgba(81,109,60,0.7)] ring-1 ring-primary/40 md:hidden"
+        className="fixed bottom-3 left-3 right-3 z-40 inline-flex h-12 items-center justify-center rounded-full bg-terracotta text-base font-bold text-white shadow-[0_10px_28px_-8px_rgba(153,59,48,0.6)] md:hidden"
       >
         Agendar conversa
       </Link>

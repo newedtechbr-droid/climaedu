@@ -4,9 +4,8 @@ import { Menu, X } from "lucide-react";
 
 const nav = [
   { to: "/", label: "Início" },
-  { to: "/plataforma", label: "Plataforma" },
-  { to: "/orgaos-publicos", label: "Órgãos públicos" },
-  { to: "/empresas", label: "Indústrias" },
+  { to: "/orgaos-publicos", label: "Poder público" },
+  { to: "/empresas", label: "Indústria" },
   { to: "/cursos", label: "Cursos" },
   { to: "/sobre", label: "Sobre" },
 ] as const;
@@ -51,7 +50,7 @@ export function Header() {
 
         <Link
           to="/demonstracao"
-          className="hidden rounded-lg bg-primary px-6 py-3 text-[16px] font-semibold text-primary-foreground shadow-[0_8px_22px_-8px_rgba(81,109,60,0.6)] ring-1 ring-primary/30 transition-all hover:bg-primary-deep hover:shadow-[0_12px_28px_-8px_rgba(63,85,48,0.7)] md:inline-flex"
+          className="hidden rounded-full bg-terracotta px-6 py-3 text-[16px] font-bold text-white transition-colors hover:bg-[#7c2e26] md:inline-flex"
         >
           Agendar conversa
         </Link>
@@ -86,7 +85,7 @@ export function Header() {
             <Link
               to="/demonstracao"
               onClick={() => setOpen(false)}
-              className="mt-3 rounded-lg bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground shadow-[0_6px_18px_-6px_rgba(81,109,60,0.55)]"
+              className="mt-3 rounded-full bg-terracotta px-4 py-3 text-center text-sm font-bold text-white"
             >
               Agendar conversa
             </Link>

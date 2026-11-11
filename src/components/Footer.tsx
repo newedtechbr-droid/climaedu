@@ -2,17 +2,13 @@ const navigationLinks = [
   {
     title: "Para quem",
     links: [
-      { label: "Órgãos públicos", href: "/orgaos-publicos" },
-      { label: "Indústrias", href: "/empresas" },
-      { label: "Escolas e redes", href: "/escolas" },
+      { label: "Poder público", href: "/orgaos-publicos" },
+      { label: "Indústria", href: "/empresas" },
     ],
   },
   {
-    title: "Plataforma",
-    links: [
-      { label: "A solução", href: "/plataforma" },
-      { label: "Cursos e trilhas", href: "/cursos" },
-    ],
+    title: "Materiais de apoio",
+    links: [{ label: "Cursos", href: "/cursos" }],
   },
   {
     title: "Institucional",
@@ -50,8 +46,8 @@ export function Footer() {
             </a>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/78">
-              A CLIMAEDU é uma plataforma de aprendizagem online da NewEdTech para transformar
-              conhecimentos climáticos, ambientais e socioambientais em aprendizagem aplicada.
+              A CLIMAEDU, da NewEdTech, ajuda prefeituras e organizações a transformar planos de
+              contingência e protocolos climáticos em equipes preparadas para agir.
             </p>
 
             <div className="mt-6 rounded-2xl border border-white/12 bg-white/[0.04] p-5">

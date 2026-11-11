@@ -1,387 +1,52 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { TrilhasPorAreaSection } from "@/components/sections/TrilhasPorAreaSection";
-import { CTASection } from "@/components/sections/CTASection";
-import { FadeIn } from "@/components/FadeIn";
-import { SectionTitle } from "@/components/SectionTitle";
-import mockupRelatorios from "@/assets/mockup-climaedu.png";
-import {
-  Users,
-  ShoppingCart,
-  BarChart3,
-  FileText,
-  Landmark,
-  ShieldCheck,
-  ExternalLink,
-  CheckCircle2,
-  Brain,
-} from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
+import { Colunas, Fechamento, Limites, Metodo, PageHeader, PONTE, ui } from "@/components/brand";
 
-const pagePublished = "2026-07-09";
-const pageModified = "2026-10-29";
+const title = "Poder público | CLIMAEDU";
+const description =
+  "A CLIMAEDU ajuda prefeituras a levar o PLANCON a todas as áreas que precisam executá-lo, com preparo por área e continuidade quando a equipe ou o plano mudam.";
 
-const solucao = [
+const desafios = [
   {
-    icon: Users,
-    text: "Jornadas por perfil, função, secretaria, unidade ou grupo de atuação.",
+    title: "O plano é de muitas áreas",
+    text: "Saúde, Assistência Social, Educação, Obras, Comunicação: cada uma tem um papel no PLANCON e precisa reconhecê-lo antes do alerta.",
   },
   {
-    icon: Brain,
-    text: "Motor de inteligência artificial para extrair, organizar e transformar conteúdos institucionais em aprendizagem.",
+    title: "As pessoas mudam",
+    text: "Troca de gestão, de servidores e de comissionados. O preparo não pode ir embora com quem saiu.",
   },
   {
-    icon: BarChart3,
-    text: "Dados para acompanhar participação, conclusão, certificados e lacunas de desenvolvimento.",
+    title: "O plano é revisado",
+    text: "Cada atualização e cada simulado trazem mudanças que precisam chegar a quem executa.",
   },
 ];
 
-const aplicacoes = [
+const publico = [
+  { title: "Quem decide", text: "Prefeitos, secretários e chefes de gabinete." },
   {
-    icon: ShoppingCart,
-    title: "Compras públicas sustentáveis",
-    text: "Capacitar equipes para compreender critérios, planejamento, riscos e sustentabilidade nas contratações públicas.",
+    title: "Quem executa o plano",
+    text: "A Defesa Civil e as secretarias com papel no PLANCON.",
   },
   {
-    icon: Landmark,
-    title: "Planejamento urbano resiliente",
-    text: "Traduzir instrumentos como Plano Diretor, Código de Obras, drenagem, arborização e Soluções Baseadas na Natureza em aprendizagem aplicada.",
+    title: "Quem contrata e controla",
+    text: "Agentes de contratação, compras, procuradoria e controle interno.",
   },
   {
-    icon: ShieldCheck,
-    title: "Gestão de riscos e defesa civil",
-    text: "Preparar equipes para compreender papéis, fluxos, prevenção, resposta e recuperação diante de eventos extremos.",
-  },
-  {
-    icon: FileText,
-    title: "Certificados e evidências",
-    text: "Registrar participação, conclusão, proficiência e certificados como apoio à gestão da aprendizagem e a processos de prestação de contas.",
+    title: "Quem forma as equipes",
+    text: "Escolas de governo, gestão de pessoas e associações de municípios.",
   },
 ];
-
-const odsRelacionados = [
-  {
-    number: "ODS 4",
-    title: "Educação de qualidade",
-    text: "Capacitação continuada, trilhas de aprendizagem e desenvolvimento de competências.",
-  },
-  {
-    number: "ODS 11",
-    title: "Cidades e comunidades sustentáveis",
-    text: "Resiliência urbana, adaptação, planejamento territorial e preparação institucional.",
-  },
-  {
-    number: "ODS 12",
-    title: "Consumo e produção responsáveis",
-    text: "Compras públicas sustentáveis, critérios de sustentabilidade e consumo institucional.",
-  },
-  {
-    number: "ODS 13",
-    title: "Ação climática",
-    text: "Formação de equipes para compreender riscos climáticos, adaptação e resposta.",
-  },
-  {
-    number: "ODS 16",
-    title: "Instituições eficazes",
-    text: "Governança, transparência, controle preventivo, documentação e prestação de contas.",
-  },
-  {
-    number: "ODS 17",
-    title: "Parcerias e implementação",
-    text: "Consórcios, escolas de governo, órgãos técnicos, universidades e redes institucionais.",
-  },
-];
-
-const referenciasInstitucionais = [
-  {
-    title: "Lei nº 14.133/2021",
-    source: "Planalto",
-    label: "Licitações e contratos administrativos",
-    description:
-      "Referência normativa para planejamento, governança, sustentabilidade, gestão de riscos e contratações públicas.",
-    href: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
-  },
-  {
-    title: "Guia Nacional de Contratações Sustentáveis",
-    source: "AGU",
-    label: "Contratações públicas sustentáveis",
-    description:
-      "Referência técnica para apoiar gestores públicos na incorporação de critérios de sustentabilidade nas contratações.",
-    href: "https://www.gov.br/agu/pt-br/assuntos-1/Publicacoes/cartilhas/guia-nacional-de-contratacoes-sustentaveis-2024.pdf",
-  },
-  {
-    title: "Lei nº 12.187/2009",
-    source: "Planalto",
-    label: "Política Nacional sobre Mudança do Clima",
-    description:
-      "Marco nacional relacionado à política climática, adaptação, mitigação e redução de vulnerabilidades.",
-    href: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12187.htm",
-  },
-  {
-    title: "Lei nº 14.904/2024",
-    source: "Planalto",
-    label: "Planos de adaptação à mudança do clima",
-    description:
-      "Referência sobre diretrizes para elaboração de planos de adaptação, agenda diretamente ligada à capacidade institucional.",
-    href: "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/Lei/L14904.htm",
-  },
-  {
-    title: "Lei nº 12.608/2012",
-    source: "Planalto",
-    label: "Proteção e Defesa Civil",
-    description:
-      "Referência para prevenção, preparação, resposta, recuperação e gestão de riscos de desastres.",
-    href: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm",
-  },
-  {
-    title: "Objetivos de Desenvolvimento Sustentável",
-    source: "ONU Brasil",
-    label: "Agenda 2030 e ODS",
-    description:
-      "Agenda global relacionada a educação, instituições eficazes, cidades sustentáveis, clima e meios de implementação.",
-    href: "https://brasil.un.org/pt-br/sdgs",
-  },
-  {
-    title: "AR6 Synthesis Report",
-    source: "IPCC",
-    label: "Ciência climática internacional",
-    description:
-      "Relatório de síntese sobre mudança climática, impactos, riscos, adaptação e mitigação.",
-    href: "https://www.ipcc.ch/report/ar6/syr/",
-  },
-];
-
-const webPageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "CLIMAEDU para órgãos públicos",
-  url: "https://climaedu.com/orgaos-publicos",
-  datePublished: pagePublished,
-  dateModified: pageModified,
-  inLanguage: "pt-BR",
-  citation: referenciasInstitucionais.map((reference) => reference.href),
-  description:
-    "A CLIMAEDU apoia escolas de governo e áreas técnicas na transformação de planos, normas, protocolos e conhecimentos já existentes em jornadas de aprendizagem aplicada.",
-  about: [
-    {
-      "@type": "Thing",
-      name: "Preparação para ação climática",
-    },
-    {
-      "@type": "Thing",
-      name: "Capacidade institucional",
-    },
-    {
-      "@type": "Thing",
-      name: "Compras públicas sustentáveis",
-    },
-    {
-      "@type": "Thing",
-      name: "Planejamento urbano resiliente",
-    },
-    {
-      "@type": "Thing",
-      name: "Gestão de riscos",
-    },
-    {
-      "@type": "Thing",
-      name: "Capacitação de agentes públicos",
-    },
-    {
-      "@type": "Thing",
-      name: "Objetivos de Desenvolvimento Sustentável",
-    },
-  ],
-  audience: {
-    "@type": "Audience",
-    audienceType:
-      "Órgãos públicos, prefeituras, escolas de governo, consórcios públicos, secretarias e equipes técnicas",
-  },
-  isPartOf: {
-    "@type": "WebSite",
-    name: "CLIMAEDU",
-    url: "https://climaedu.com/",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "CLIMAEDU",
-    url: "https://climaedu.com/",
-    email: "contato@newedtech.com.br",
-    telephone: "+55 48 99160-6518",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Florianópolis",
-      addressRegion: "SC",
-      addressCountry: "BR",
-    },
-  },
-};
-
-const serviceJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "CLIMAEDU para órgãos públicos",
-  serviceType: "Ambiente de aprendizagem online para preparação institucional e ação climática",
-  provider: {
-    "@type": "Organization",
-    name: "CLIMAEDU",
-    url: "https://climaedu.com/",
-  },
-  areaServed: "BR",
-  audience: {
-    "@type": "GovernmentOrganization",
-    name: "Órgãos públicos",
-  },
-  description:
-    "Ambiente de aprendizagem online para preparar equipes públicas para a ação climática, organizar trilhas por função, emitir certificados, acompanhar participação e gerar evidências de capacitação.",
-};
-
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Início",
-      item: "https://climaedu.com/",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Órgãos públicos",
-      item: "https://climaedu.com/orgaos-publicos",
-    },
-  ],
-};
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-    name: "Como a CLIMAEDU prepara equipes públicas para a ação climática?",
-    acceptedAnswer: {
-      "@type": "Answer",
-        text: "A CLIMAEDU apoia equipes públicas ao transformar normas, planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem aplicada, com apoio de inteligência artificial, curadoria humana e jornadas adequadas a diferentes funções.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "A CLIMAEDU apoia compras públicas sustentáveis?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sim. A CLIMAEDU apoia a capacitação de equipes públicas para compreender temas relacionados a compras públicas sustentáveis, critérios de sustentabilidade, planejamento, gestão de riscos e documentação da aprendizagem.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "A CLIMAEDU substitui consultorias, pareceres técnicos ou análise jurídica?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Não. A CLIMAEDU não substitui consultorias, pareceres técnicos, análise jurídica ou decisão administrativa. A plataforma apoia a capacitação de equipes e a geração de evidências de aprendizagem.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Que evidências a CLIMAEDU gera para órgãos públicos?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A CLIMAEDU gera evidências de aprendizagem, como participação, engajamento, conclusão, proficiência, certificados, relatórios e dashboards. Ela não mede diretamente indicadores ambientais ou urbanos.",
-      },
-    },
-  ],
-};
 
 export const Route = createFileRoute("/orgaos-publicos")({
   head: () => ({
     meta: [
-      {
-        title: "Órgãos públicos | CLIMAEDU — Preparação para ação climática",
-      },
-      {
-        name: "description",
-        content:
-          "Jornadas de aprendizagem aplicada para órgãos públicos que precisam transformar planos, normas, protocolos e conhecimentos técnicos em prática.",
-      },
-      {
-        name: "robots",
-        content: "index, follow",
-      },
-      {
-        name: "author",
-        content: "CLIMAEDU",
-      },
-      {
-        name: "date",
-        content: pageModified,
-      },
-      {
-        name: "datePublished",
-        content: pagePublished,
-      },
-      {
-        name: "dateModified",
-        content: pageModified,
-      },
-      {
-        property: "article:published_time",
-        content: "2026-07-09T00:00:00-03:00",
-      },
-      {
-        property: "article:modified_time",
-        content: "2026-07-10T00:00:00-03:00",
-      },
-
-      {
-        property: "og:type",
-        content: "website",
-      },
-      {
-        property: "og:site_name",
-        content: "CLIMAEDU",
-      },
-      {
-        property: "og:title",
-        content: "CLIMAEDU para órgãos públicos | Preparação para ação climática",
-      },
-      {
-        property: "og:description",
-        content:
-          "Solução da NewEdTech para transformar normas, guias e conhecimento técnico em aprendizagem aplicada para equipes públicas.",
-      },
-      {
-        property: "og:url",
-        content: "https://climaedu.com/orgaos-publicos",
-      },
-      {
-        property: "og:image",
-        content: "https://climaedu.com/og-image.png",
-      },
-
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-      {
-        name: "twitter:title",
-        content: "CLIMAEDU para órgãos públicos | Preparação para ação climática",
-      },
-      {
-        name: "twitter:description",
-        content:
-          "Aprendizagem aplicada para escolas de governo, áreas técnicas e equipes públicas.",
-      },
-      {
-        name: "twitter:image",
-        content: "https://climaedu.com/og-image.png",
-      },
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:url", content: "https://climaedu.com/orgaos-publicos" },
     ],
-    links: [
-      {
-        rel: "canonical",
-        href: "https://climaedu.com/orgaos-publicos",
-      },
-    ],
+    links: [{ rel: "canonical", href: "https://climaedu.com/orgaos-publicos" }],
   }),
   component: OrgaosPublicos,
 });
@@ -389,361 +54,77 @@ export const Route = createFileRoute("/orgaos-publicos")({
 function OrgaosPublicos() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(webPageJsonLd),
-        }}
-      />
+      <PageHeader
+        eyebrow="Poder público"
+        title="O PLANCON nas mãos de toda a prefeitura"
+        lead={`${PONTE} A CLIMAEDU ajuda cada área a conhecer o seu papel no plano de contingência e a se preparar para ele.`}
+      >
+        <Link to="/demonstracao" className={ui.btn}>
+          Conversar com a CLIMAEDU <ArrowRight size={18} />
+        </Link>
+      </PageHeader>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceJsonLd),
-        }}
-      />
+      <div className="bg-primary-dark text-white">
+        <div className="container-brand flex flex-wrap items-baseline gap-x-10 gap-y-3 py-6">
+          <p className="text-[19px] text-white">
+            <b className="font-display text-[28px] text-[#e3aca4]">211</b> dos 295 municípios de SC
+            têm PLANCON
+          </p>
+          <p className="text-[19px] text-white">
+            <b className="font-display text-[28px] text-[#e3aca4]">150</b> informaram capacitações
+          </p>
+          <p className="text-[14px] text-white/60">Fonte: TCE/SC, levantamento de junho de 2026</p>
+        </div>
+      </div>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd),
-        }}
-      />
-
-      <section className="bg-background">
-        <div className="container-brand py-16 md:py-24">
-          <FadeIn>
-            <div className="max-w-4xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-                Órgãos públicos
-              </p>
-
-              <h1 className="mt-4 text-4xl font-medium leading-[1.05] text-primary-dark md:text-6xl">
-                Plataforma de aprendizagem para preparar equipes públicas.
-              </h1>
-
-              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-foreground/85 md:text-xl">
-                A CLIMAEDU transforma planos, normas e protocolos que o órgão já tem em trilhas
-                online para cada equipe, com inteligência artificial e curadoria NewEdTech.
-                Complementa as áreas técnicas e escolas de governo, sem substituí-las.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <FadeIn delay={0.04}>
-              <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                IA aplicada
-                </p>
-                <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Materiais institucionais transformados em jornadas digitais com curadoria.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.08}>
-              <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                Aplicação prática
-                </p>
-                <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Atividades e checkpoints que conectam normas e políticas públicas à rotina.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.12}>
-              <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                Evidências
-                </p>
-                <p className="mt-3 text-lg font-medium text-primary-dark">
-                  Certificados, dashboards e relatórios para apoiar a gestão da aprendizagem.
-                </p>
-              </div>
-            </FadeIn>
-          </div>
+      <section className={ui.section}>
+        <div className="container-brand">
+          <p className={ui.eyebrow}>O desafio</p>
+          <h2 className={ui.h2}>Ter o plano é o começo</h2>
+          <p className={ui.intro}>
+            Os planos foram feitos por quem entende do assunto. O desafio é levar esse
+            conhecimento a todas as pessoas que vão colocá-lo em prática, e manter isso ao longo do
+            tempo.
+          </p>
+          <Colunas items={desafios} />
         </div>
       </section>
 
-      <section className="bg-surface py-20">
+      <section className={`${ui.section} bg-surface`}>
         <div className="container-brand">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              O desafio
-            </p>
+          <p className={ui.eyebrow}>Como trabalhamos</p>
+          <h2 className={ui.h2}>Partimos do PLANCON que vocês já têm</h2>
+          <Metodo />
+        </div>
+      </section>
 
-            <h2 className="mt-3 text-primary-dark">
-              Da norma à ação climática: onde a capacitação precisa chegar
-            </h2>
-
-            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
-              Leis, guias técnicos e agendas de sustentabilidade exigem equipes preparadas e registro
-              dessa preparação. A CLIMAEDU capacita as equipes e organiza as evidências, sem
-              substituir certificadoras.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-4">
-            {aplicacoes.map((item, index) => (
-              <FadeIn key={item.title} delay={index * 0.04}>
-                <article className="h-full rounded-2xl border border-border bg-card p-6 shadow-sm">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary-deep">
-                    <item.icon size={20} />
-                  </div>
-
-                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
-
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/80">{item.text}</p>
-                </article>
-              </FadeIn>
+      <section className={ui.section}>
+        <div className="container-brand">
+          <p className={ui.eyebrow}>Para quem</p>
+          <h2 className={ui.h2}>Para toda a prefeitura, não só a Defesa Civil</h2>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {publico.map((p) => (
+              <div key={p.title}>
+                <h3 className="text-[21px] font-bold text-primary">{p.title}</h3>
+                <p className="mt-1.5 text-[17px] text-foreground/75">{p.text}</p>
+              </div>
             ))}
           </div>
+          <div className="mt-12">
+            <Limites />
+          </div>
+          <Link
+            to="/cursos"
+            className="mt-8 inline-flex items-center gap-2 text-[18px] font-bold text-terracotta"
+          >
+            Ver os cursos de apoio <ArrowRight size={17} />
+          </Link>
         </div>
       </section>
 
-      <section className="bg-background">
-        <div className="container-brand grid items-center gap-10 py-16 md:grid-cols-[0.85fr_1.15fr] md:py-20">
-          <FadeIn>
-            <SectionTitle
-              eyebrow="Na prática"
-              title="Da aprendizagem ao acompanhamento"
-            subtitle="Primeiro, a organização transforma seus próprios conteúdos em aprendizagem online. Depois, acompanha avanços, conclusão e lacunas."
-            />
-
-            <div className="mt-8 grid gap-3">
-              {solucao.map((s) => (
-                <div
-                  key={s.text}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4 shadow-sm"
-                >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary-deep">
-                    <s.icon size={17} />
-                  </span>
-
-                  <p className="text-[16.5px] leading-snug text-foreground/85">{s.text}</p>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.08}>
-            <div className="relative">
-              <img
-                src={mockupRelatorios}
-                alt="Mockup de relatórios, dashboards e evidências da plataforma CLIMAEDU"
-                className="w-full object-contain drop-shadow-[0_26px_46px_rgba(20,30,40,0.24)]"
-              />
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      <section className="bg-surface py-20">
-        <div className="container-brand">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Agenda 2030
-            </p>
-
-            <h2 className="mt-3 text-primary-dark">
-              Aderência a ODS por aprendizagem, rotina e evidência
-            </h2>
-
-            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
-              A CLIMAEDU dialoga com diferentes Objetivos de Desenvolvimento Sustentável,
-              especialmente quando a instituição precisa formar equipes, organizar rotinas,
-              documentar capacitação e fortalecer sua capacidade de implementação.
-            </p>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {odsRelacionados.map((ods) => (
-              <article
-                key={ods.number}
-                className="rounded-2xl border border-border bg-card p-5 shadow-sm"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                  {ods.number}
-                </p>
-
-                <h3 className="mt-3 text-lg font-semibold text-primary-dark">{ods.title}</h3>
-
-                <p className="mt-3 text-sm leading-relaxed text-foreground/80">{ods.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <TrilhasPorAreaSection />
-
-      <section className="bg-surface py-20">
-        <div className="container-brand">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Referências institucionais
-            </p>
-
-            <h2 className="mt-3 text-primary-dark">
-              Base técnica relacionada à atuação pública
-            </h2>
-
-            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
-              Agendas e referências técnicas com as quais a CLIMAEDU trabalha.
-            </p>
-
-            <p className="mt-4 text-sm italic leading-relaxed text-foreground/80">
-              Fontes: Planalto, AGU, ONU Brasil e IPCC. Não substituem a análise jurídica ou técnica
-              do órgão.
-            </p>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {referenciasInstitucionais.map((reference) => (
-              <a
-                key={reference.href}
-                href={reference.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group rounded-2xl border border-border bg-card p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md"
-              >
-                <div className="flex items-center justify-between gap-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                    Fonte: {reference.source}
-                  </p>
-
-                  <ExternalLink
-                    size={15}
-                    className="text-foreground/40 transition group-hover:text-primary"
-                  />
-                </div>
-
-                <h3 className="mt-3 text-lg font-semibold text-primary-dark group-hover:text-primary">
-                  {reference.title}
-                </h3>
-
-                <p className="mt-1 text-sm font-medium text-foreground/80">{reference.label}</p>
-
-                <p className="mt-3 text-sm leading-relaxed text-foreground/80">
-                  {reference.description}
-                </p>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background py-20">
-        <div className="container-brand">
-          <div className="mb-10 max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-              Perguntas frequentes
-            </p>
-
-            <h2 className="mt-3 text-primary-dark">
-              Respostas diretas para órgãos públicos
-            </h2>
-
-            <p className="mt-6 text-[19px] leading-[1.65] text-foreground/85 md:text-[21px]">
-              Informações institucionais para gestores públicos, equipes técnicas, escolas de
-              governo e consórcios públicos.
-            </p>
-
-            <p className="mt-3 text-sm text-foreground/80">
-              Publicado em 09/07/2026 · Atualizado em 10/07/2026.
-            </p>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2">
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
-
-                <div>
-                  <h3 className="text-xl font-semibold text-primary-dark">
-                    Como a CLIMAEDU prepara equipes públicas para a ação climática?
-                  </h3>
-
-                  <p className="mt-3 text-foreground/85">
-                    A CLIMAEDU prepara equipes públicas para a ação climática ao transformar normas,
-                    planos, guias técnicos e diretrizes de sustentabilidade em aprendizagem
-                    aplicada, trilhas por função, certificados, relatórios e evidências de
-                    capacitação.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
-
-                <div>
-                  <h3 className="text-xl font-semibold text-primary-dark">
-                    A CLIMAEDU apoia compras públicas sustentáveis?
-                  </h3>
-
-                  <p className="mt-3 text-foreground/85">
-                    Sim. A CLIMAEDU apoia a capacitação de equipes públicas para compreender temas
-                    relacionados a compras públicas sustentáveis, critérios de sustentabilidade,
-                    planejamento, gestão de riscos e documentação da aprendizagem.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
-
-                <div>
-                  <h3 className="text-xl font-semibold text-primary-dark">
-                    A CLIMAEDU substitui consultorias ou pareceres técnicos?
-                  </h3>
-
-                  <p className="mt-3 text-foreground/85">
-                    Não. A CLIMAEDU não substitui consultorias, pareceres técnicos, análise jurídica
-                    ou decisão administrativa. A plataforma apoia a capacitação e a geração de
-                    evidências de aprendizagem.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 size={21} className="mt-1 shrink-0 text-primary" />
-
-                <div>
-                  <h3 className="text-xl font-semibold text-primary-dark">
-                    Que evidências a CLIMAEDU gera?
-                  </h3>
-
-                  <p className="mt-3 text-foreground/85">
-                    A CLIMAEDU gera evidências de aprendizagem, como participação, engajamento,
-                    conclusão, proficiência, certificados, relatórios e dashboards. Ela não mede
-                    diretamente indicadores ambientais ou urbanos.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <CTASection
-        title="Levar conhecimento técnico à prática no setor público"
-        subtitle="Converse com a NewEdTech sobre como transformar conteúdos técnicos em jornadas de aprendizagem aplicada para equipes públicas."
-        ctaLabel="Agendar uma conversa"
+      <Fechamento
+        title="Vamos levar o seu PLANCON a todas as áreas que vão executá-lo?"
+        text="Conte o seu contexto. Começamos pelo que já é público, sem pedir documentos internos."
       />
     </>
   );
