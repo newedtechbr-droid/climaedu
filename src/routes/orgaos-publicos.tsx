@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import reuniaoImage from "@/assets/team-meeting.jpg";
 import {
   Ambiente,
+  ComoTrabalhamos,
+  Lente,
   BaseTecnica,
   Entregas,
   Fechamento,
   FaqList,
-  Formatos,
-  INTEGRADORES,
   Limites,
-  Metodo,
   PageHeader,
   ui,
 } from "@/components/brand";
@@ -56,6 +56,12 @@ function OrgaosPublicos() {
         eyebrow="Poder público"
         title="Do plano no papel à prefeitura preparada"
         lead="Ter o Plano de Contingência não basta. Cada área da prefeitura precisa saber o que fazer, estar preparada e conseguir demonstrar essa preparação."
+        media={
+          <Lente
+            src={reuniaoImage}
+            alt="Gestores públicos reunidos em torno de mapas e documentos de planejamento"
+          />
+        }
       >
         <Link to="/demonstracao" className={ui.btn}>
           Conversar com a CLIMAEDU <ArrowRight size={18} />
@@ -75,17 +81,7 @@ function OrgaosPublicos() {
         </div>
       </div>
 
-      <section className={`${ui.section} bg-surface`}>
-        <div className="container-brand">
-          <p className={ui.eyebrow}>Como trabalhamos</p>
-          <h2 className={ui.h2}>Partimos do plano que o município já tem</h2>
-          <Metodo />
-          <Formatos />
-          <p className="mt-10 max-w-[60ch] font-display text-[22px] font-bold text-primary">
-            {INTEGRADORES}
-          </p>
-        </div>
-      </section>
+      <ComoTrabalhamos />
 
       <section className={ui.section}>
         <div className="container-brand">

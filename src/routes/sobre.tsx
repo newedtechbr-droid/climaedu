@@ -1,13 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import campoImage from "@/assets/hero-climate.jpg";
+import reuniaoImage from "@/assets/team-meeting.jpg";
 import {
-  ACREDITAMOS,
+  Acreditamos,
   Colunas,
   Fechamento,
   INTEGRADORES,
+  Lente,
   NewEdTechMarca,
   OdsGrid,
   PageHeader,
-  PONTE,
   ui,
 } from "@/components/brand";
 import { odsPublico } from "@/data/conteudo";
@@ -27,7 +29,37 @@ const principios = [
   },
   {
     title: "Prometer só o que entregamos",
-    text: "Não fazemos auditoria, não certificamos e não substituímos a Defesa Civil nem os responsáveis técnicos.",
+    text: "Não fazemos auditoria, não certificamos conformidade e não substituímos a Defesa Civil nem os responsáveis técnicos.",
+  },
+];
+
+/* Logos recortados de /ecossistema-logos.png (um arquivo por marca). */
+const ecossistema = [
+  {
+    grupo: "Programas de inovação e aceleração",
+    logos: [
+      { src: "/ecossistema/05.png", alt: "SebraeHub" },
+      { src: "/ecossistema/07.png", alt: "Sebrae Startups" },
+      { src: "/ecossistema/06.png", alt: "Rede Midihub" },
+      { src: "/ecossistema/04.png", alt: "TXM Methods" },
+      { src: "/ecossistema/00.png", alt: "Global Impact Bootcamp" },
+      { src: "/ecossistema/03.png", alt: "Impact Hub" },
+      { src: "/ecossistema/09.png", alt: "uGlobally" },
+      { src: "/ecossistema/10.png", alt: "UK Government" },
+    ],
+  },
+  {
+    grupo: "Instituições, fomento e redes de Santa Catarina",
+    logos: [
+      { src: "/ecossistema/01.png", alt: "Governo de Santa Catarina" },
+      { src: "/ecossistema/02.png", alt: "FAPESC" },
+      { src: "/ecossistema/08.png", alt: "ACATE" },
+      { src: "/ecossistema/14.png", alt: "Rede Catarinense de Centros de Inovação" },
+      { src: "/ecossistema/12.png", alt: "Inova Contestado" },
+      { src: "/ecossistema/13.png", alt: "I2EC, Instituto de Inovação e Empreendedorismo de Caçador" },
+      { src: "/ecossistema/15.png", alt: "Prefeitura de Caçador" },
+      { src: "/ecossistema/11.png", alt: "VIPOSA" },
+    ],
   },
 ];
 
@@ -50,33 +82,34 @@ function Sobre() {
     <>
       <PageHeader
         eyebrow="Sobre"
-        title="Uma marca da NewEdTech para resiliência climática"
+        title="Resiliência climática começa pelas pessoas"
         lead="A CLIMAEDU ajuda prefeituras e organizações a levar seus planos até as equipes que vão executar cada etapa. Somos de Florianópolis, Santa Catarina."
+        media={<Lente src={campoImage} alt="Equipe de campo com tablets em área alagada" />}
       >
         <NewEdTechMarca />
       </PageHeader>
 
-      <section className={`${ui.section} bg-surface`}>
-        <div className="container-brand">
-          <p className={ui.eyebrow}>Acreditamos</p>
-          <p className="mt-4 max-w-[26ch] font-display text-[clamp(30px,4vw,46px)] font-bold leading-[1.06] tracking-[-0.5px] text-primary-dark">
-            {ACREDITAMOS}
-          </p>
-          <p className="mt-6 max-w-[60ch] text-[19px] text-foreground/80">
-            {PONTE} Em conversas com a gestão pública, vimos o mesmo padrão se repetir: áreas que
-            não se conectam, insegurança na hora de agir e distância entre o que está no plano e o
-            que acontece na prática. A CLIMAEDU trabalha nessa distância.
-          </p>
-          <p className="mt-6 max-w-[60ch] font-display text-[22px] font-bold text-primary">
-            {INTEGRADORES}
-          </p>
-        </div>
-      </section>
+      <Acreditamos
+        foto={reuniaoImage}
+        alt="Gestores reunidos em torno de mapas e documentos de planejamento"
+      />
 
       <section className={ui.section}>
+        <div className="container-brand grid gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+          <div>
+            <p className={ui.eyebrow}>De onde viemos</p>
+            <h2 className={ui.h2}>O que vimos na gestão pública</h2>
+          </div>
+          <div>
+            <p className="text-[19px] text-foreground/80">
+              Em conversas com gestores públicos, o mesmo padrão se repetia: áreas que não se
+              conectam, insegurança na hora de agir e distância entre o que está no plano e o que
+              acontece na prática. A CLIMAEDU trabalha nessa distância.
+            </p>
+            <p className="mt-6 font-display text-[22px] font-bold text-primary">{INTEGRADORES}</p>
+          </div>
+        </div>
         <div className="container-brand">
-          <p className={ui.eyebrow}>O que nos orienta</p>
-          <h2 className={ui.h2}>Três princípios</h2>
           <Colunas items={principios} />
         </div>
       </section>
@@ -92,14 +125,28 @@ function Sobre() {
       <section className={ui.section}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Ecossistema</p>
-          <h2 className={ui.h2}>Programas e redes de inovação de que participamos</h2>
-          <img
-            src="/ecossistema-logos.png?v=20260710"
-            alt="Logos de programas e redes de inovação do ecossistema da CLIMAEDU"
-            className="mt-10 h-auto w-full max-w-5xl object-contain"
-            loading="lazy"
-          />
-          <p className="mt-8 max-w-[60ch] text-[17px] text-foreground/75">
+          <h2 className={ui.h2}>Onde a CLIMAEDU está conectada</h2>
+          {ecossistema.map((g) => (
+            <div key={g.grupo} className="mt-10">
+              <h3 className="text-[18px] font-bold text-primary-dark">{g.grupo}</h3>
+              <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {g.logos.map((l) => (
+                  <li
+                    key={l.src}
+                    className="flex h-28 items-center justify-center rounded-xl border border-border bg-white p-5"
+                  >
+                    <img
+                      src={l.src}
+                      alt={l.alt}
+                      className="max-h-16 w-auto max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <p className="mt-10 max-w-[60ch] text-[16px] text-foreground/70">
             A CLIMAEDU é uma marca da New Tecnologia e Inovação Educacional Ltda (NewEdTech), CNPJ
             50.443.417/0001-05.
           </p>

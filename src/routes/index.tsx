@@ -3,16 +3,15 @@ import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
 import { metodo } from "@/data/cursos";
+import pessoasImage from "@/assets/hero-climate.jpg";
 import {
-  ACREDITAMOS,
+  Acreditamos,
   Ambiente,
+  ComoTrabalhamos,
   CursosStrip,
   Entregas,
   Fechamento,
-  INTEGRADORES,
-  Metodo,
   NewEdTechMarca,
-  PONTE,
   ui,
 } from "@/components/brand";
 
@@ -131,34 +130,12 @@ function Index() {
         </div>
       </div>
 
-      {/* Acreditamos + desafio */}
-      <section className={ui.section}>
-        <div className="container-brand">
-          <p className={ui.eyebrow}>Acreditamos</p>
-          <p className="mt-4 max-w-[26ch] font-display text-[clamp(30px,4vw,48px)] font-bold leading-[1.06] tracking-[-0.5px] text-primary-dark">
-            {ACREDITAMOS}
-          </p>
-          <p className="mt-6 max-w-[56ch] text-[20px] text-foreground/80">
-            {PONTE} É nessa passagem, do documento para quem executa, que a CLIMAEDU trabalha.
-          </p>
-        </div>
-      </section>
+      <Acreditamos
+        foto={pessoasImage}
+        alt="Equipe de campo com tablets em área alagada, consultando o plano"
+      />
 
-      {/* Como trabalhamos */}
-      <section id="como-trabalhamos" className={`${ui.section} scroll-mt-24 bg-surface`}>
-        <div className="container-brand">
-          <p className={ui.eyebrow}>Como trabalhamos</p>
-          <h2 className={ui.h2}>Partimos do plano que vocês já têm</h2>
-          <Metodo />
-          <p className="mt-8 max-w-[60ch] font-display text-[22px] font-bold text-primary">
-            {INTEGRADORES}
-          </p>
-          <p className="mt-3 text-[17px] text-foreground/75">
-            O plano continua sendo de vocês: não elaboramos, não fazemos auditoria e não
-            substituímos a Defesa Civil nem os responsáveis técnicos.
-          </p>
-        </div>
-      </section>
+      <ComoTrabalhamos />
 
       <Ambiente
         surface={false}

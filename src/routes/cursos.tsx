@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Clock } from "lucide-react";
 import { cursos } from "@/data/cursos";
-import { ACREDITAMOS, Fechamento, PageHeader } from "@/components/brand";
+import { CapasEmLeque, Fechamento, PageHeader } from "@/components/brand";
 
 const title = "Cursos | CLIMAEDU";
 const description =
@@ -27,7 +27,8 @@ function Cursos() {
       <PageHeader
         eyebrow="Materiais de apoio"
         title="Cursos para quem executa o plano"
-        lead={ACREDITAMOS}
+        lead="O conhecimento para enfrentar os desafios do clima já existe. Os cursos levam esse conhecimento a cada secretaria e equipe, na linguagem de quem executa."
+        media={<CapasEmLeque />}
       />
 
       <section className="bg-surface py-14 md:py-16">

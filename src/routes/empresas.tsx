@@ -2,16 +2,15 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import viposaLogo from "@/assets/partners/viposa.png";
 import viposaMockup from "@/assets/mockup-plataforma-viposa.png";
+import telaIndustria from "@/assets/industrial-course-rating.png";
 import {
   BaseTecnica,
   Colunas,
+  ComoTrabalhamos,
+  Notebook,
   Entregas,
   Fechamento,
   FaqList,
-  Formatos,
-  INTEGRADORES,
-  Limites,
-  Metodo,
   PageHeader,
   ui,
 } from "@/components/brand";
@@ -64,6 +63,12 @@ function Empresas() {
         eyebrow="Indústria"
         title="Conhecimento que deixa a operação pronta para agir"
         lead="Em atividades que exigem mais cuidado, cada pessoa precisa saber como agir. A CLIMAEDU leva o conhecimento técnico da empresa a cada função, da liderança ao chão de fábrica."
+        media={
+          <Notebook
+            src={telaIndustria}
+            alt="Curso para equipes industriais no ambiente de aprendizagem, com avaliação da aula"
+          />
+        }
       >
         <Link to="/demonstracao" className={ui.btn}>
           Conversar com a CLIMAEDU <ArrowRight size={18} />
@@ -78,20 +83,7 @@ function Empresas() {
         </div>
       </section>
 
-      <section className={`${ui.section} bg-surface`}>
-        <div className="container-brand">
-          <p className={ui.eyebrow}>Como trabalhamos</p>
-          <h2 className={ui.h2}>Partimos do que a empresa já tem</h2>
-          <Metodo />
-          <Formatos />
-          <p className="mt-10 max-w-[60ch] font-display text-[22px] font-bold text-primary">
-            {INTEGRADORES}
-          </p>
-          <div className="mt-10">
-            <Limites items={limitesIndustria} />
-          </div>
-        </div>
-      </section>
+      <ComoTrabalhamos limitesItems={limitesIndustria} />
 
       <section className={ui.section}>
         <div className="container-brand grid gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center">
