@@ -1,18 +1,21 @@
 /** Formatos de preparação (genéricos; não reproduzem o desenho da Jornada, que é obra conjunta). */
 export const formatos = [
   {
-    title: "Online",
-    text: "Cursos e trilhas por área no ambiente de aprendizagem, para cada pessoa avançar no seu ritmo.",
+    title: "Online, no seu ritmo",
+    tag: "Assíncrono",
+    text: "Cursos e trilhas por área no ambiente de aprendizagem, para cada pessoa avançar quando a rotina permitir.",
   },
   {
-    title: "Encontros síncronos e assíncronos",
-    text: "Momentos ao vivo para tirar dúvidas e praticar, e atividades para fazer quando a rotina permitir.",
+    title: "Ao vivo",
+    tag: "Síncrono",
+    text: "Encontros online com a equipe da CLIMAEDU para tirar dúvidas, discutir casos e praticar.",
   },
   {
     title: "Presencial",
-    text: "Vamos até o local para trabalhar com as equipes a partir do plano e da realidade de cada área.",
+    tag: "No local",
+    text: "Vamos até a organização para trabalhar com as equipes a partir do plano e da realidade de cada área.",
   },
-];
+]
 
 export const entregas = [
   {
@@ -78,7 +81,7 @@ export type Faq = { q: string; a: string };
 const faqComum: Faq[] = [
   {
     q: "Como a CLIMAEDU prepara as equipes?",
-    a: "Partimos do plano que a organização já tem e identificamos o papel de cada área. A preparação combina cursos e trilhas online, encontros síncronos para tirar dúvidas e praticar, atividades assíncronas e momentos presenciais no local, com as equipes.",
+    a: "Partimos do plano que a organização já tem e identificamos o papel de cada área. A preparação combina três formatos: cursos e trilhas online, no ritmo de cada pessoa; encontros ao vivo para tirar dúvidas e praticar; e momentos presenciais no local, com as equipes.",
   },
   {
     q: "Que recursos vocês usam?",
@@ -95,7 +98,6 @@ const faqComum: Faq[] = [
 ];
 
 export const faqPublico: Faq[] = [
-  ...faqComum.slice(0, 1),
   {
     q: "Precisamos compartilhar documentos internos para começar?",
     a: "Não. Começamos pelo que já é público, como o Plano de Contingência e a estrutura do município. A equipe valida e complementa só o necessário.",
@@ -104,11 +106,14 @@ export const faqPublico: Faq[] = [
     q: "A CLIMAEDU elabora ou revisa o Plano de Contingência?",
     a: "Não. O plano continua sendo do município e de quem responde por ele. A CLIMAEDU trabalha na preparação das pessoas que vão executá-lo e não substitui a Defesa Civil nem os responsáveis técnicos.",
   },
-  ...faqComum.slice(1),
+  ...faqComum.slice(2),
 ];
 
 export const faqIndustria: Faq[] = [
-  ...faqComum.slice(0, 2),
+  {
+    q: "A CLIMAEDU ajuda na preparação para auditorias e certificações?",
+    a: "Sim, na parte das pessoas. Preparamos as equipes nos procedimentos e normas cobrados e organizamos os registros de capacitação (participação, conclusão, avaliações e certificados) para a empresa apresentar. A auditoria e a certificação continuam com os organismos responsáveis.",
+  },
   {
     q: "A CLIMAEDU substitui o SESMT, consultorias ou auditorias?",
     a: "Não. A CLIMAEDU apoia a preparação das equipes e a organização das evidências de capacitação. Não substitui o SESMT, a brigada, consultorias, auditorias nem sistemas de gestão.",

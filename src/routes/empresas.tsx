@@ -6,9 +6,8 @@ import telaIndustria from "@/assets/industrial-course-rating.png";
 import {
   BaseTecnica,
   Colunas,
-  ComoTrabalhamos,
+  MetodologiaResumo,
   Notebook,
-  Entregas,
   Fechamento,
   FaqList,
   PageHeader,
@@ -26,8 +25,8 @@ const desafios = [
     text: "Procedimentos, normas e protocolos ambientais precisam chegar à liderança, à operação e aos terceiros, em todos os turnos.",
   },
   {
-    title: "Gente que entra e sai",
-    text: "Rotatividade, novos contratados e prestadores. O conhecimento não pode ir embora com quem saiu.",
+    title: "Na hora da auditoria",
+    text: "Auditorias e certificações, como ISO 14001 e ISO 45001, pedem evidência de que as pessoas foram preparadas, e não só lista de presença.",
   },
   {
     title: "O custo de não saber",
@@ -83,7 +82,11 @@ function Empresas() {
         </div>
       </section>
 
-      <ComoTrabalhamos limitesItems={limitesIndustria} />
+      <MetodologiaResumo
+        title="Equipes preparadas para auditorias e certificações"
+        intro="A mesma metodologia que usamos no poder público, aplicada aos procedimentos da empresa: cada função sabe o que fazer, e a capacitação fica registrada para apresentar quando for preciso."
+        limitesItems={limitesIndustria}
+      />
 
       <section className={ui.section}>
         <div className="container-brand grid gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center">
@@ -107,15 +110,14 @@ function Empresas() {
       </section>
 
 
-      <Entregas surface />
 
-
-      <FaqList items={faqIndustria} />
+      <FaqList items={faqIndustria} surface />
 
       <BaseTecnica
         ods={odsIndustria}
         refs={referenciasIndustria}
         note="Fontes: ISO, Planalto, GRI, IFRS e ONU Brasil. As referências não substituem análise jurídica, técnica ou de conformidade."
+        surface={false}
       />
 
       <Fechamento

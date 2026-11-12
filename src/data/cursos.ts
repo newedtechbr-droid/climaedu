@@ -46,17 +46,17 @@ export const metodo = [
   {
     n: "01",
     title: "Partir do plano",
-    text: "Começamos pelo que já existe e é público: o plano, as responsabilidades e quem faz o quê. Vocês validam o retrato.",
+    text: "Começamos pelo que já existe e é público: responsabilidades e quem faz o quê. Vocês validam o retrato.",
   },
   {
     n: "02",
-    title: "Preparar por área",
-    text: "Cada área recebe o que precisa saber e fazer no seu papel, em linguagem de quem executa, com prática e materiais de apoio.",
+    title: "Preparar cada setor",
+    text: "Cada setor recebe o que precisa saber e fazer, em linguagem prática, com exercícios e materiais de apoio.",
   },
   {
     n: "03",
     title: "Manter vivo",
-    text: "Quando a equipe muda ou o plano é revisado, o preparo acompanha. A gestão enxerga onde avançou e o que ainda falta.",
+    text: "Quando a equipe muda ou o documento é revisado, o preparo acompanha. A gestão enxerga o que avançou e o que falta.",
   },
 ];
 

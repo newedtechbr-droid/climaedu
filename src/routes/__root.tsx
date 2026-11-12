@@ -228,7 +228,7 @@ function RootComponent() {
   return (
     <div style={climaeduTheme} className="flex min-h-screen flex-col bg-background text-foreground">
       <Header />
-      <main className="flex-1 pb-16 md:pb-0">
+      <main className="flex-1">
         <Outlet />
       </main>
       <Footer />
