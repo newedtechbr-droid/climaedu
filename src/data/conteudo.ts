@@ -42,7 +42,7 @@ export const odsPublico: Ods[] = [
   { n: 4, title: "Educação de qualidade", text: "Capacitação continuada e desenvolvimento de competências." },
   { n: 11, title: "Cidades e comunidades sustentáveis", text: "Resiliência urbana, adaptação e preparação institucional." },
   { n: 12, title: "Consumo e produção responsáveis", text: "Compras públicas sustentáveis e consumo institucional." },
-  { n: 13, title: "Ação climática", text: "Equipes preparadas para riscos climáticos, adaptação e resposta." },
+  { n: 13, title: "Ação climática", text: "Capacitação para riscos climáticos, adaptação e resposta." },
   { n: 16, title: "Instituições eficazes", text: "Governança, transparência e prestação de contas." },
   { n: 17, title: "Parcerias e meios de implementação", text: "Consórcios, escolas de governo e redes institucionais." },
 ];
@@ -52,7 +52,7 @@ export const odsIndustria: Ods[] = [
   { n: 8, title: "Trabalho decente e crescimento econômico", text: "Segurança, qualificação profissional e melhoria de rotinas." },
   { n: 9, title: "Indústria, inovação e infraestrutura", text: "Processos, inovação e transição sustentável." },
   { n: 12, title: "Consumo e produção responsáveis", text: "Resíduos, circularidade e cadeia de valor." },
-  { n: 13, title: "Ação climática", text: "Equipes preparadas para riscos climáticos e resposta." },
+  { n: 13, title: "Ação climática", text: "Capacitação para riscos climáticos e resposta." },
   { n: 16, title: "Instituições eficazes", text: "Governança, compliance, rastreabilidade e evidências." },
 ];
 

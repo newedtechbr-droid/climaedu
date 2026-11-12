@@ -18,7 +18,7 @@ import { faqPublico, odsPublico, referenciasPublico } from "@/data/conteudo";
 
 const title = "Poder público | CLIMAEDU";
 const description =
-  "Ter o Plano de Contingência não basta. A CLIMAEDU ajuda cada área da prefeitura a saber o que fazer, estar preparada e conseguir demonstrar essa preparação.";
+  "O Plano de Contingência envolve toda a prefeitura. A CLIMAEDU capacita cada secretaria a partir do plano do próprio município.";
 
 const publico = [
   { title: "Quem decide", text: "Prefeitos, vice-prefeitos, secretários e chefes de gabinete." },
@@ -55,8 +55,8 @@ function OrgaosPublicos() {
     <>
       <PageHeader
         eyebrow="Poder público"
-        title="Do plano no papel à prefeitura preparada"
-        lead="Ter o Plano de Contingência não basta. Cada área da prefeitura precisa saber o que fazer, estar preparada e conseguir demonstrar essa preparação."
+        title="Da Defesa Civil a todas as secretarias"
+        lead="O Plano de Contingência envolve toda a prefeitura. A CLIMAEDU capacita cada secretaria a partir do plano do próprio município, e o conhecimento fica registrado na instituição."
         media={
           <Lente
             src={reuniaoImage}
@@ -108,7 +108,7 @@ function OrgaosPublicos() {
       />
 
       <Fechamento
-        title="Vamos preparar toda a prefeitura para o que está no plano?"
+        title="Vamos conversar sobre a capacitação da sua prefeitura?"
         text="Conte o seu contexto. Começamos pelo que já é público, sem pedir documentos internos."
       />
     </>

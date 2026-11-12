@@ -137,8 +137,8 @@ function Index() {
                 Toda a prefeitura, não só a Defesa Civil
               </h3>
               <p className="mt-3 text-[18px] text-white/85">
-                Ter o Plano de Contingência não basta: cada secretaria precisa saber o que fazer e
-                estar pronta antes do alerta.
+                Cada secretaria tem um papel no Plano de Contingência. Capacitamos cada uma a partir
+                do plano do próprio município.
               </p>
               <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold">
                 Conheça a metodologia completa{" "}
@@ -148,7 +148,7 @@ function Index() {
             <Link to="/empresas" className="group rounded-2xl bg-surface p-7 no-underline md:p-9">
               <p className={ui.eyebrow}>Indústria</p>
               <h3 className="mt-3 text-[26px] font-bold leading-tight text-primary-dark">
-                Operação pronta para auditorias e certificações
+                Preparação para auditorias e certificações
               </h3>
               <div className="mt-5 flex items-center gap-4">
                 <img src={viposaLogo} alt="VIPOSA" className="h-10 w-auto" loading="lazy" />

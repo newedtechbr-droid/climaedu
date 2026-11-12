@@ -23,8 +23,8 @@ export const ui = {
 export const ACREDITAMOS =
   "O conhecimento para enfrentar os desafios do clima já existe. A CLIMAEDU é a ponte que leva esse conhecimento a cada pessoa que precisa agir.";
 export const PONTE = "Um plano ganha força quando cada pessoa sabe o seu papel antes de precisar dele.";
-export const PROMESSA =
-  "Cada setor sabe o que fazer, está preparado e consegue demonstrar essa preparação.";
+export const COMPROMISSO =
+  "Partir do plano de vocês, capacitar cada setor para o seu papel e deixar o conhecimento registrado na instituição.";
 export const INTEGRADORES = "Somos integradores: conectamos documentos, setores, pessoas e dados.";
 
 /* ---------- Mídia ---------- */
@@ -106,10 +106,10 @@ export function Acreditamos({ foto, alt }: { foto: string; alt: string }) {
           <p className="mt-6 max-w-[54ch] text-[19px] text-white/85">{PONTE}</p>
           <div className="mt-8 border-l-4 border-[#e3aca4] pl-5">
             <p className="text-[14px] font-bold uppercase tracking-[0.12em] text-[#f0cbc5]">
-              Nossa promessa
+              Nosso compromisso
             </p>
             <p className="mt-1 font-display text-[clamp(21px,2.2vw,27px)] font-bold leading-snug text-white">
-              {PROMESSA}
+              {COMPROMISSO}
             </p>
           </div>
         </div>
