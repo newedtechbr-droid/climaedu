@@ -98,7 +98,6 @@ const faqComum: Faq[] = [
 ];
 
 export const faqPublico: Faq[] = [
-  ...faqComum.slice(0, 1),
   {
     q: "Precisamos compartilhar documentos internos para começar?",
     a: "Não. Começamos pelo que já é público, como o Plano de Contingência e a estrutura do município. A equipe valida e complementa só o necessário.",
@@ -107,11 +106,14 @@ export const faqPublico: Faq[] = [
     q: "A CLIMAEDU elabora ou revisa o Plano de Contingência?",
     a: "Não. O plano continua sendo do município e de quem responde por ele. A CLIMAEDU trabalha na preparação das pessoas que vão executá-lo e não substitui a Defesa Civil nem os responsáveis técnicos.",
   },
-  ...faqComum.slice(1),
+  ...faqComum.slice(2),
 ];
 
 export const faqIndustria: Faq[] = [
-  ...faqComum.slice(0, 2),
+  {
+    q: "A CLIMAEDU ajuda na preparação para auditorias e certificações?",
+    a: "Sim, na parte das pessoas. Preparamos as equipes nos procedimentos e normas cobrados e organizamos os registros de capacitação (participação, conclusão, avaliações e certificados) para a empresa apresentar. A auditoria e a certificação continuam com os organismos responsáveis.",
+  },
   {
     q: "A CLIMAEDU substitui o SESMT, consultorias ou auditorias?",
     a: "Não. A CLIMAEDU apoia a preparação das equipes e a organização das evidências de capacitação. Não substitui o SESMT, a brigada, consultorias, auditorias nem sistemas de gestão.",

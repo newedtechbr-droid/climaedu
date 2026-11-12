@@ -4,6 +4,7 @@ import { ArrowRight, Award, BarChart3, Clock, FileCheck2, Laptop, MapPin, Monito
 import { cursos, limites, metodo } from "@/data/cursos";
 import { entregas, formatos, type Faq, type Ods, type Referencia } from "@/data/conteudo";
 import newedtechLogo from "@/assets/newedtech-logo.png";
+import tabletImg from "@/assets/mockup-climaedu.png";
 import devicesImg from "@/assets/climaedu-platform-devices.png";
 
 /* Linguagem visual herdada da landing page "Municípios Preparados". */
@@ -23,9 +24,8 @@ export const ACREDITAMOS =
   "O conhecimento para enfrentar os desafios do clima já existe. A CLIMAEDU é a ponte que leva esse conhecimento a cada pessoa que precisa agir.";
 export const PONTE = "Um plano ganha força quando cada pessoa sabe o seu papel antes de precisar dele.";
 export const PROMESSA =
-  "Cada área sabe o seu papel, está preparada e consegue demonstrar essa preparação.";
-export const INTEGRADORES =
-  "Somos integradores: conectamos o plano, as áreas, as pessoas e os dados.";
+  "Cada setor sabe o que fazer, está preparado e consegue demonstrar essa preparação.";
+export const INTEGRADORES = "Somos integradores: conectamos documentos, setores, pessoas e dados.";
 
 /* ---------- Mídia ---------- */
 
@@ -193,7 +193,72 @@ export function NossaEntrega({ surface = false }: { surface?: boolean }) {
   );
 }
 
-/** Seção completa "Como trabalhamos", igual em todas as páginas. */
+/** Resumo da metodologia para as páginas internas (a versão completa fica na home). */
+export function MetodologiaResumo({
+  limitesItems,
+  title = "Partimos de um plano existente",
+  intro,
+  linkTo = "/orgaos-publicos",
+}: {
+  limitesItems?: string[];
+  title?: string;
+  intro?: string;
+  linkTo?: "/orgaos-publicos" | "/";
+}) {
+  const colunas = [
+    { titulo: "Etapas", itens: metodo.map((m) => `${m.n} · ${m.title}`) },
+    { titulo: "Formatos", itens: formatos.map((f) => `${f.title} (${f.tag.toLowerCase()})`) },
+    { titulo: "O que fica registrado", itens: entregas.map((e) => e.title) },
+  ];
+  return (
+    <section id="metodologia" className={`${ui.section} scroll-mt-24 overflow-hidden bg-surface`}>
+      <div className="container-brand grid items-center gap-10 md:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]">
+        <div>
+          <p className={ui.eyebrow}>Metodologia CLIMAEDU</p>
+          <h2 className={ui.h2}>{title}</h2>
+          {intro && <p className={ui.intro}>{intro}</p>}
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            {colunas.map((c) => (
+              <div key={c.titulo} className="rounded-xl border-t-[3px] border-primary bg-background p-5">
+                <h3 className="text-[15px] font-bold uppercase tracking-[0.1em] text-terracotta">
+                  {c.titulo}
+                </h3>
+                <ul className="mt-3 grid gap-2">
+                  {c.itens.map((i) => (
+                    <li key={i} className="text-[17px] font-bold leading-snug text-primary-dark">
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 font-display text-[20px] font-bold text-primary">{INTEGRADORES}</p>
+          <Link
+            to={linkTo}
+            hash="como-trabalhamos"
+            className="mt-4 inline-flex items-center gap-2 text-[17px] font-bold text-terracotta"
+          >
+            Ver a metodologia completa <ArrowRight size={17} />
+          </Link>
+        </div>
+        <img
+          src={tabletImg}
+          alt="Ambiente de aprendizagem da CLIMAEDU no tablet e no celular"
+          className="mx-auto w-full max-w-[380px]"
+          loading="lazy"
+        />
+      </div>
+      {limitesItems && (
+        <div className="container-brand mt-12">
+          <Limites items={limitesItems} />
+        </div>
+      )}
+    </section>
+  );
+}
+
+/** Seção completa "Como trabalhamos" (home). */
 export function ComoTrabalhamos({ limitesItems }: { limitesItems?: string[] }) {
   return (
     <section id="como-trabalhamos" className={`${ui.section} scroll-mt-24 bg-surface`}>

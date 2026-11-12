@@ -2,12 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import reuniaoImage from "@/assets/team-meeting.jpg";
 import {
+  Lente,
   Ambiente,
   ComoTrabalhamos,
-  Lente,
+  Entregas,
   NossaEntrega,
   BaseTecnica,
-  Entregas,
   Fechamento,
   FaqList,
   Limites,
@@ -73,6 +73,13 @@ function OrgaosPublicos() {
 
       <NossaEntrega />
 
+      <Ambiente
+        title="Uma escola de governo digital, com a identidade do município"
+        text="A tecnologia é o meio. O município ganha um ambiente de aprendizagem próprio, com cursos por secretaria, materiais de apoio e acompanhamento."
+      />
+
+      <Entregas />
+
       <section className={`${ui.section} bg-surface`}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Para quem</p>
@@ -91,13 +98,6 @@ function OrgaosPublicos() {
         </div>
       </section>
 
-      <Ambiente
-        surface={false}
-        title="Uma escola de governo digital, com a identidade do município"
-        text="A tecnologia é o meio. O município ganha um ambiente de aprendizagem próprio, com cursos por área, materiais de apoio e acompanhamento, acessível no computador, no tablet e no celular."
-      />
-
-      <Entregas surface />
 
       <FaqList items={faqPublico} />
 

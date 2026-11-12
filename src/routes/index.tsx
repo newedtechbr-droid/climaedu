@@ -6,36 +6,18 @@ import { metodo } from "@/data/cursos";
 import pessoasImage from "@/assets/hero-climate.jpg";
 import {
   Acreditamos,
-  Ambiente,
-  ComoTrabalhamos,
   CursosStrip,
-  Entregas,
   Fechamento,
+  MetodologiaResumo,
   NewEdTechMarca,
-  NossaEntrega,
   ui,
 } from "@/components/brand";
 
 const pageModified = "2026-11-11";
 const title = "CLIMAEDU | Levamos o plano a quem precisa agir";
 const description =
-  "A CLIMAEDU prepara as equipes de prefeituras e organizações para executar planos de contingência e protocolos climáticos, área por área.";
+  "A CLIMAEDU prepara prefeituras e organizações para executar planos de contingência e protocolos climáticos, setor por setor.";
 
-const publico = [
-  { title: "Quem decide", text: "Prefeitos, vice-prefeitos, secretários e chefes de gabinete." },
-  {
-    title: "Quem executa o plano",
-    text: "Defesa Civil e as áreas com papel no Plano de Contingência: Administração, Assistência Social, Saúde, Educação, Obras, Agricultura e Meio Ambiente.",
-  },
-  {
-    title: "Quem contrata e controla",
-    text: "Agentes de contratação, compras, procuradoria e controle interno.",
-  },
-  {
-    title: "Quem articula e forma",
-    text: "Associações de municípios, consórcios e escolas de governo.",
-  },
-];
 
 
 const webPageJsonLd = {
@@ -95,14 +77,14 @@ function Index() {
               Levamos o plano a <span className="text-primary">quem precisa agir</span>
             </h1>
             <p className={ui.lead}>
-              A CLIMAEDU prepara as equipes de prefeituras e organizações para executar planos de
-              contingência e protocolos climáticos, área por área.
+              A CLIMAEDU prepara prefeituras e organizações para executar planos de contingência e
+              protocolos climáticos, setor por setor.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/demonstracao" className={ui.btn}>
                 Conversar com a CLIMAEDU <ArrowRight size={18} />
               </Link>
-              <a href="#como-trabalhamos" className={ui.btnGhost}>
+              <a href="#metodologia" className={ui.btnGhost}>
                 Como trabalhamos
               </a>
             </div>
@@ -136,73 +118,61 @@ function Index() {
         alt="Equipe de campo com tablets em área alagada, consultando o plano"
       />
 
-      <ComoTrabalhamos />
-
-      <NossaEntrega />
-
-      <Ambiente
-        title="A tecnologia é o meio"
-        text="Cada organização ganha um ambiente de aprendizagem próprio, com a sua identidade: uma universidade corporativa ou uma escola de governo digital, com cursos, materiais de apoio e acompanhamento."
-      />
-
-      <Entregas />
+      <MetodologiaResumo />
 
       {/* Para quem */}
-      <section className={`${ui.section} bg-surface`}>
+      <section className={ui.section}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Para quem</p>
-          <h2 className={ui.h2}>Para toda a prefeitura, não só a Defesa Civil</h2>
-          <p className={ui.intro}>
-            Ter o Plano de Contingência não basta. Cada área da prefeitura precisa saber o que
-            fazer, estar preparada e conseguir demonstrar essa preparação.
-          </p>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {publico.map((p) => (
-              <div key={p.title}>
-                <h3 className="text-[21px] font-bold text-primary-dark">{p.title}</h3>
-                <p className="mt-1.5 text-[17px] text-foreground/75">{p.text}</p>
-              </div>
-            ))}
-          </div>
-          <Link
-            to="/orgaos-publicos"
-            className="mt-8 inline-flex items-center gap-2 text-[18px] font-bold text-terracotta"
-          >
-            CLIMAEDU para o poder público <ArrowRight size={17} />
-          </Link>
-
-          <Link
-            to="/empresas"
-            className="group mt-12 grid gap-6 rounded-2xl bg-background p-7 no-underline md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:p-9"
-          >
-            <div>
-              <p className={ui.eyebrow}>Também para a indústria</p>
-              <h3 className="mt-2 text-[26px] font-bold leading-tight text-primary-dark">
-                Conhecimento que deixa a operação pronta para agir
-              </h3>
-              <p className="mt-2 max-w-[60ch] text-[17px] text-foreground/75">
-                Em atividades que exigem mais cuidado, cada pessoa precisa saber como agir.
+          <h2 className={ui.h2}>Onde há um plano para colocar em prática</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+            <Link
+              to="/orgaos-publicos"
+              className="group rounded-2xl bg-primary p-7 text-white no-underline md:p-9"
+            >
+              <p className="text-[15px] font-bold uppercase tracking-[0.12em] text-white/75">
+                Poder público
               </p>
-            </div>
-            <div className="flex items-center gap-4">
-              <img src={viposaLogo} alt="VIPOSA" className="h-10 w-auto" loading="lazy" />
-              <span className="text-[15px] text-foreground/70">Projeto piloto</span>
-              <ArrowRight size={20} className="text-terracotta transition group-hover:translate-x-1" />
-            </div>
-          </Link>
+              <h3 className="mt-3 text-[30px] font-bold leading-tight text-white">
+                Toda a prefeitura, não só a Defesa Civil
+              </h3>
+              <p className="mt-3 text-[18px] text-white/85">
+                Ter o Plano de Contingência não basta: cada secretaria precisa saber o que fazer e
+                estar pronta antes do alerta.
+              </p>
+              <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold">
+                Conheça a metodologia completa{" "}
+                <ArrowRight size={17} className="transition group-hover:translate-x-1" />
+              </span>
+            </Link>
+            <Link to="/empresas" className="group rounded-2xl bg-surface p-7 no-underline md:p-9">
+              <p className={ui.eyebrow}>Indústria</p>
+              <h3 className="mt-3 text-[26px] font-bold leading-tight text-primary-dark">
+                Operação pronta para auditorias e certificações
+              </h3>
+              <div className="mt-5 flex items-center gap-4">
+                <img src={viposaLogo} alt="VIPOSA" className="h-10 w-auto" loading="lazy" />
+                <p className="text-[16px] text-foreground/75">Projeto piloto com a VIPOSA</p>
+              </div>
+              <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold text-terracotta">
+                CLIMAEDU para a indústria{" "}
+                <ArrowRight size={17} className="transition group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Materiais de apoio */}
-      <section className={ui.section}>
+      <section className={`${ui.section} bg-surface`}>
         <div className="container-brand">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-2xl">
               <p className={ui.eyebrow}>Materiais de apoio</p>
               <h2 className={ui.h2}>Cursos para cada área que o clima atravessa</h2>
               <p className={ui.intro}>
-                O preparo não fica só com quem escreveu o plano. Os cursos levam os temas do clima
-                a cada secretaria e equipe, na linguagem de quem executa.
+                Os cursos levam os temas do clima a cada secretaria, com linguagem prática e
+                certificado de conclusão.
               </p>
             </div>
             <Link to="/cursos" className={ui.btnGhost}>
@@ -215,7 +185,7 @@ function Index() {
 
       <Fechamento
         title="Vamos conversar sobre os planos da sua organização?"
-        text="Conte o seu contexto. Mostramos como seria o caminho do plano até as equipes, sem pedir documentos internos para começar."
+        text="Conte o seu contexto. Mostramos como seria esse caminho na sua organização, sem pedir documentos internos para começar."
       />
     </>
   );
