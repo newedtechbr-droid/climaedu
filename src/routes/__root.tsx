@@ -75,7 +75,7 @@ const websiteJsonLd = {
   alternateName: "ClimaEdu",
   url: "https://climaedu.com/",
   description:
-    "Do plano à preparação: capacitação para resiliência climática.",
+    "Resiliência climática, setor por setor.",
   publisher: {
     "@type": "Organization",
     name: "CLIMAEDU",

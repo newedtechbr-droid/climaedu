@@ -14,9 +14,9 @@ import {
 } from "@/components/brand";
 
 const pageModified = "2026-11-11";
-const title = "CLIMAEDU | Levamos o plano a quem precisa agir";
+const title = "CLIMAEDU | Resiliência climática, setor por setor";
 const description =
-  "A CLIMAEDU prepara prefeituras e organizações para executar planos de contingência e protocolos climáticos, setor por setor.";
+  "Capacitação em resiliência climática para prefeituras e indústrias: partimos do plano de cada organização, conectamos as áreas e deixamos o conhecimento registrado na instituição.";
 
 
 
@@ -72,13 +72,13 @@ function Index() {
         />
         <div className="container-brand relative py-14 md:py-20">
           <div className="md:max-w-[56%]">
-            <p className={ui.eyebrow}>Resiliência climática</p>
+            <p className={ui.eyebrow}>Capacitação para prefeituras e indústrias</p>
             <h1 className="mt-4 text-[clamp(44px,5.8vw,74px)] font-bold leading-[0.97] tracking-[-1.5px] text-primary-dark">
-              Levamos o plano a <span className="text-primary">quem precisa agir</span>
+              Resiliência climática, <span className="whitespace-nowrap text-primary">setor por setor</span>
             </h1>
             <p className={ui.lead}>
-              A CLIMAEDU prepara prefeituras e organizações para executar planos de contingência e
-              protocolos climáticos, setor por setor.
+              Partimos do plano de cada organização, conectamos as áreas que precisam agir juntas e
+              deixamos o conhecimento registrado na instituição.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/demonstracao" className={ui.btn}>
