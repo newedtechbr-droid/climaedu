@@ -1,74 +1,47 @@
 # CLIMAEDU
 
-A CLIMAEDU e uma plataforma GovTech/EdTech de aprendizagem aplicada para clima, sustentabilidade, gestao de riscos e desenvolvimento de competencias institucionais.
+A CLIMAEDU ajuda prefeituras e organizações a transformar o PLANCON e outros planos de contingência em equipes preparadas para agir.
 
-A CLIMAEDU transforma conhecimento tecnico, normas, planos, guias, alertas e diretrizes em aprendizagem aplicada, trilhas, rotinas institucionais, certificados, dashboards, relatorios e evidencias de capacitacao.
+## Acreditamos
 
-## Tese central
+O conhecimento para enfrentar os desafios do clima já existe. O que falta é ele chegar a cada pessoa que precisa agir.
 
-Nao falta informacao tecnica sobre clima, sustentabilidade e gestao publica. Falta transformar essa informacao em capacidade institucional de acao.
+Um plano ganha força quando cada pessoa sabe o seu papel antes de precisar dele.
 
-Entre saber e fazer, existe aprendizagem.
+## Como trabalhamos
 
-## O que a CLIMAEDU faz
+1. Partir do plano: o que já existe e é público, as responsabilidades e quem faz o quê.
+2. Preparar por área: o que cada área precisa saber e fazer no seu papel.
+3. Manter vivo: o preparo acompanha mudanças de equipe e revisões do plano.
 
-- Estrutura trilhas de aprendizagem por perfil, funcao, unidade ou instituicao.
-- Apoia governos, orgaos publicos, empresas e instituicoes na capacitacao de equipes.
-- Gera certificados, relatorios, dashboards e evidencias de aprendizagem.
-- Transforma conteudos tecnicos em experiencias de aprendizagem aplicadas.
-- Apoia a implementacao de politicas publicas, rotinas institucionais e praticas corporativas ligadas a clima, sustentabilidade e gestao de riscos.
+## Materiais de apoio
 
-## Publico atendido
+Cursos sobre eventos extremos e resiliência, mudanças climáticas e ESG, planejamento e riscos, e compras públicas sustentáveis.
 
-- Governos
-- Orgaos publicos
-- Prefeituras
-- Escolas de governo
-- Conselhos profissionais
-- Consorcios publicos
-- Empresas
-- Areas de ESG
-- RH e Treinamento & Desenvolvimento
-- Compliance
-- Meio ambiente
-- Operacoes
-- Gestao de riscos
+## Para quem
 
-## Diferenciais
+- Poder público: prefeituras e todas as áreas com papel nos planos (Defesa Civil, Saúde, Assistência Social, Educação, Obras, Meio Ambiente, Administração), compras e controle, escolas de governo.
+- Indústria: operações com planos de emergência e protocolos ambientais.
 
-- Microlearning
-- Trilhas por perfil e funcao
-- Certificados
-- Dashboards
-- Relatorios de participacao, engajamento, conclusao e proficiencia
-- Evidencias para prestacao de contas
-- White label
-- IA com curadoria humana
-- Catalogo vivo
-- Templates e checklists
-- Recomendacoes por perfil
-- Gamificacao
-- API e exportacao para BI
-- LGPD e acessibilidade
+## O que a CLIMAEDU não faz
 
-## O que a CLIMAEDU nao e
+- Não elabora nem revisa planos; o plano continua sendo da organização.
+- Não faz auditoria nem emite certificação de conformidade.
+- Não substitui a Defesa Civil nem os responsáveis técnicos.
+- Não promete acesso a recursos ou financiamentos.
 
-A CLIMAEDU nao e apenas uma plataforma de cursos, nem um LMS tradicional, nem um repositorio de conteudo, nem uma consultoria climatica generica.
-
-A CLIMAEDU nao mede diretamente indicadores ambientais, urbanos ou de sustentabilidade municipal.
-
-A CLIMAEDU mede e evidencia o ambiente de aprendizagem: participacao, engajamento, proficiencia, conclusao, trilhas realizadas, certificados, relatorios e evidencias de capacitacao.
-
-## Paginas principais
+## Páginas principais
 
 - https://climaedu.com/
+- https://climaedu.com/cursos
+- https://climaedu.com/orgaos-publicos
+- https://climaedu.com/empresas
 - https://climaedu.com/sobre
-- https://climaedu.com/contato
-- https://climaedu.com/politica-de-privacidade
+- https://climaedu.com/demonstracao
 
-## Entidade responsavel
+## Entidade responsável
 
-CLIMAEDU e um produto da NEWEDTECH.
+CLIMAEDU é uma marca da NewEdTech (New Tecnologia e Inovação Educacional Ltda), Florianópolis, SC.
 
 ## Contato
 

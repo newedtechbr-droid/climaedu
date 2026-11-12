@@ -1,149 +1,70 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import {
-  ArrowRight,
-  Award,
-  BarChart3,
-  BookOpen,
-  Brain,
-  CheckCircle2,
-  ClipboardCheck,
-  Factory,
-  Gamepad2,
-  Landmark,
-  LineChart,
-  PlayCircle,
-  ShieldCheck,
-  Sparkles,
-  Users,
-} from "lucide-react";
-import { FadeIn } from "@/components/FadeIn";
-import platformDevices from "@/assets/climaedu-platform-devices.png";
-import newedtechLogo from "@/assets/newedtech-logo.png";
+import { ArrowRight } from "lucide-react";
+import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
+import { metodo } from "@/data/cursos";
+import pessoasImage from "@/assets/hero-climate.jpg";
+import {
+  Acreditamos,
+  Ambiente,
+  ComoTrabalhamos,
+  CursosStrip,
+  Entregas,
+  Fechamento,
+  NewEdTechMarca,
+  ui,
+} from "@/components/brand";
 
-const pagePublished = "2026-07-09";
-const pageModified = "2026-09-09";
+const pageModified = "2026-11-11";
+const title = "CLIMAEDU | Do plano à preparação";
+const description =
+  "A CLIMAEDU ajuda prefeituras e organizações a transformar planos de contingência e protocolos climáticos em equipes preparadas para agir.";
 
-const steps = [
+const publico = [
+  { title: "Quem decide", text: "Prefeitos, vice-prefeitos, secretários e chefes de gabinete." },
   {
-    icon: Brain,
-    title: "Transformar",
-    text: "Materiais e documentos viram jornadas online com apoio de inteligência artificial e curadoria.",
+    title: "Quem executa o plano",
+    text: "Defesa Civil e as áreas com papel no Plano de Contingência: Administração, Assistência Social, Saúde, Educação, Obras, Agricultura e Meio Ambiente.",
   },
   {
-    icon: BookOpen,
-    title: "Aprender",
-    text: "Conteúdos em linguagem clara, com vídeos, quizzes, desafios e atividades gamificadas.",
+    title: "Quem contrata e controla",
+    text: "Agentes de contratação, compras, procuradoria e controle interno.",
   },
   {
-    icon: PlayCircle,
-    title: "Aplicar",
-    text: "Situações práticas conectam o conteúdo institucional à rotina de cada público.",
-  },
-  {
-    icon: LineChart,
-    title: "Acompanhar",
-    text: "Dados e registros mostram avanços, conclusão e lacunas de aprendizagem.",
+    title: "Quem articula e forma",
+    text: "Associações de municípios, consórcios e escolas de governo.",
   },
 ];
 
-const deliverables = [
-  "Plataforma de aprendizagem online com trilhas por perfil e função",
-  "Motor de inteligência artificial para transformar materiais em experiências de aprendizagem",
-  "Conteúdos simplificados em vídeos, aulas, quizzes e atividades gamificadas",
-  "Processo de aprendizagem mais leve, guiado e aplicável à rotina",
-  "Acompanhamento da aprendizagem por dados",
-];
-
-const platformHighlights = [
-  {
-    icon: Brain,
-    title: "IA que transforma conteúdo",
-    text: "Documentos, normas, protocolos e materiais institucionais ganham estrutura de aprendizagem com curadoria NewEdTech.",
-  },
-  {
-    icon: BookOpen,
-    title: "Aprendizagem online",
-    text: "Uma plataforma para organizar conteúdos, turmas, trilhas e certificados em um só ambiente.",
-  },
-  {
-    icon: Gamepad2,
-    title: "Conteúdo gamificado",
-    text: "Quizzes, desafios e atividades aplicadas ajudam a transformar temas técnicos em prática.",
-  },
-];
 
 const webPageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "CLIMAEDU | Conhecimento técnico em aprendizagem aplicada",
+  name: title,
   url: "https://climaedu.com/",
-  datePublished: pagePublished,
   dateModified: pageModified,
   inLanguage: "pt-BR",
-  isPartOf: {
-    "@type": "WebSite",
-    name: "CLIMAEDU",
-    url: "https://climaedu.com/",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "NewEdTech",
-    url: "https://climaedu.com/",
-    email: "contato@newedtech.com.br",
-    telephone: "+55 48 99160-6518",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Florianópolis",
-      addressRegion: "SC",
-      addressCountry: "BR",
-    },
-  },
-  description:
-    "A CLIMAEDU, solução da NewEdTech, transforma conhecimentos climáticos e socioambientais em aprendizagem aplicada para órgãos públicos e indústrias.",
+  isPartOf: { "@type": "WebSite", name: "CLIMAEDU", url: "https://climaedu.com/" },
+  publisher: { "@type": "Organization", name: "NewEdTech", url: "https://climaedu.com/" },
+  description,
 };
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      {
-        title: "CLIMAEDU | Conhecimento técnico em aprendizagem aplicada",
-      },
-      {
-        name: "description",
-        content:
-          "A CLIMAEDU, solução da NewEdTech, transforma conhecimentos climáticos e socioambientais em aprendizagem aplicada para órgãos públicos e indústrias.",
-      },
+      { title },
+      { name: "description", content: description },
       { name: "robots", content: "index, follow" },
-      { name: "author", content: "NewEdTech" },
-      { name: "date", content: pageModified },
-      { name: "datePublished", content: pagePublished },
       { name: "dateModified", content: pageModified },
-      { property: "article:published_time", content: "2026-07-09T00:00:00-03:00" },
-      { property: "article:modified_time", content: "2026-09-09T00:00:00-03:00" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "CLIMAEDU" },
-      {
-        property: "og:title",
-        content: "CLIMAEDU | Conhecimento técnico em aprendizagem aplicada",
-      },
-      {
-        property: "og:description",
-        content:
-          "Do conhecimento à ação: aprendizagem aplicada para temas climáticos e socioambientais.",
-      },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
       { property: "og:url", content: "https://climaedu.com/" },
       { property: "og:image", content: "https://climaedu.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      {
-        name: "twitter:title",
-        content: "CLIMAEDU | Conhecimento técnico em aprendizagem aplicada",
-      },
-      {
-        name: "twitter:description",
-        content:
-          "A CLIMAEDU transforma conhecimentos climáticos e socioambientais em aprendizagem aplicada.",
-      },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
       { name: "twitter:image", content: "https://climaedu.com/og-image.png" },
     ],
     links: [{ rel: "canonical", href: "https://climaedu.com/" }],
@@ -159,301 +80,141 @@ function Index() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
 
-      <section className="bg-background">
-        <div className="container-brand grid items-center gap-12 py-16 md:grid-cols-[1.05fr_0.95fr] md:py-20">
-          <FadeIn>
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
-                UMA SOLUÇÃO NEWEDTECH
-              </p>
-
-              <h1 className="mt-5 max-w-3xl text-primary-dark">
-                Plataforma de aprendizagem online para transformar conhecimento técnico em ação.
-              </h1>
-
-              <p className="mt-7 max-w-2xl text-xl leading-relaxed text-foreground/80">
-                A CLIMAEDU usa inteligência artificial com curadoria para transformar materiais,
-                documentos e conteúdos institucionais em trilhas, aulas, experiências gamificadas,
-                certificados e dashboards.
-              </p>
-
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-foreground/80">
-                Para órgãos públicos e indústrias que precisam levar conhecimentos climáticos e
-                socioambientais até as pessoas responsáveis por aplicá-los.
-              </p>
-
-              <p className="mt-6 text-base font-semibold text-primary-deep">
-                Do conhecimento à ação.
-              </p>
-
-              <div className="mt-9 flex flex-wrap gap-4">
-                <a
-                  href="#como-funciona"
-                  className="inline-flex min-h-14 items-center gap-2 rounded-lg bg-primary px-7 py-3 text-base font-semibold text-primary-foreground shadow-[0_12px_30px_-12px_rgba(81,109,60,0.7)] ring-1 ring-primary/30 transition hover:bg-primary-deep"
-                >
-                  Conhecer a CLIMAEDU <ArrowRight size={18} />
-                </a>
-
-                <Link
-                  to="/demonstracao"
-                  className="inline-flex min-h-14 items-center rounded-lg border-2 border-primary bg-background px-7 py-3 text-base font-semibold text-primary-dark transition hover:bg-accent"
-                >
-                  Agendar uma conversa
-                </Link>
-              </div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.08}>
-            <div className="climaedu-floating-mockup relative mx-auto -my-6 w-full max-w-[620px] md:scale-105">
-              <img
-                src={platformDevices}
-                alt="Plataforma CLIMAEDU apresentada em notebook, tablet e celular"
-                width={1890}
-                height={1890}
-                className="block aspect-square w-full object-contain"
-              />
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      <section
-        className="bg-surface py-14 md:py-16"
-        aria-label="Relação entre NewEdTech e CLIMAEDU"
-      >
-        <div className="container-brand">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center md:gap-8">
-            <div className="shrink-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-foreground/80">
-                Uma solução
-              </p>
-              <img
-                src={newedtechLogo}
-                alt="New EdTech"
-                width={723}
-                height={233}
-                className="mt-3 h-auto w-[132px] max-w-full"
-                loading="lazy"
-              />
-            </div>
-
-            <p className="max-w-3xl text-lg leading-relaxed text-primary-dark md:text-xl">
-              A CLIMAEDU é uma solução especializada da NewEdTech para transformar conhecimento
-              técnico em aprendizagem online aplicada.
+      {/* Hero */}
+      <header className="relative overflow-hidden bg-background">
+        <div
+          aria-hidden
+          className="absolute inset-y-0 right-0 hidden w-[40%] rounded-l-[999px] border-l-[14px] border-primary-dark bg-cover bg-center md:block"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="container-brand relative py-14 md:py-20">
+          <div className="md:max-w-[56%]">
+            <p className={ui.eyebrow}>Resiliência climática na prática</p>
+            <h1 className="mt-4 text-[clamp(50px,7.5vw,92px)] font-bold leading-[0.92] tracking-[-1.5px] text-primary">
+              Do plano à preparação
+            </h1>
+            <p className={ui.lead}>
+              A CLIMAEDU ajuda prefeituras e organizações a transformar planos de contingência e
+              protocolos climáticos em equipes preparadas para agir.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background py-16 md:py-20">
-        <div className="container-brand">
-          <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
-              A solução
-            </p>
-            <h2 className="mt-4 text-primary-dark">
-              Uma jornada digital para aprender, praticar e acompanhar.
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {platformHighlights.map((item, index) => (
-              <FadeIn key={item.title} delay={index * 0.04}>
-                <article className="h-full rounded-lg border border-border bg-card p-6 shadow-sm">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary-deep">
-                    <item.icon size={20} aria-hidden />
-                  </div>
-                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{item.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-foreground/80">{item.text}</p>
-                </article>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-surface py-16 md:py-20">
-        <div className="container-brand">
-          <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">O problema</p>
-            <h2 className="mt-4 text-primary-dark">
-              O conhecimento existe. O desafio é fazê-lo chegar a quem precisa agir.
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/85">
-              Planos, normas, pesquisas e conhecimentos técnicos costumam estar em documentos,
-              apresentações, guias ou concentrados em especialistas. A CLIMAEDU extrai e organiza
-              esse conteúdo por meio de um motor de inteligência artificial, com curadoria humana,
-              para criar experiências de aprendizagem adequadas a diferentes funções e realidades.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="como-funciona" className="scroll-mt-24 bg-background py-16 md:py-20">
-        <div className="container-brand">
-          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-3xl">
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
-                Como funciona
-              </p>
-              <h2 className="mt-4 text-primary-dark">Do conhecimento à ação</h2>
-            </div>
-            <p className="text-base font-semibold text-primary-deep">
-              Transformar → Aprender → Aplicar → Acompanhar
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-4">
-            {steps.map((step, index) => (
-              <FadeIn key={step.title} delay={index * 0.04}>
-                <article className="h-full rounded-lg border border-border bg-card p-6 shadow-sm">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary-deep">
-                    <step.icon size={20} aria-hidden />
-                  </div>
-                  <h3 className="mt-5 text-xl font-semibold text-primary-dark">{step.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-foreground/80">{step.text}</p>
-                </article>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-surface py-16 md:py-20">
-        <div className="container-brand">
-          <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">Para quem</p>
-            <h2 className="mt-4 text-primary-dark">Conhecimento aplicado a diferentes contextos</h2>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <article className="rounded-lg border border-border bg-card p-7 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary-deep">
-                <Landmark size={22} aria-hidden />
-              </div>
-              <h3 className="mt-5 text-2xl font-semibold text-primary-dark">Órgãos públicos</h3>
-              <p className="mt-4 text-base leading-relaxed text-foreground/85">
-                Transforme planos, normas, protocolos e materiais institucionais já existentes em
-                jornadas de aprendizagem para diferentes áreas e equipes.
-              </p>
-              <Link
-                to="/orgaos-publicos"
-                className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-primary-deep hover:text-primary"
-              >
-                CLIMAEDU para órgãos públicos <ArrowRight size={17} />
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/demonstracao" className={ui.btn}>
+                Conversar com a CLIMAEDU <ArrowRight size={18} />
               </Link>
-            </article>
-
-            <article className="rounded-lg border border-border bg-card p-7 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary-deep">
-                <Factory size={22} aria-hidden />
-              </div>
-              <h3 className="mt-5 text-2xl font-semibold text-primary-dark">Indústrias</h3>
-              <p className="mt-4 text-base leading-relaxed text-foreground/85">
-                Transforme documentos, políticas e conhecimentos ambientais em aprendizagem
-                aplicada às funções e à realidade da operação.
-              </p>
-              <Link
-                to="/empresas"
-                className="mt-6 inline-flex items-center gap-2 text-base font-semibold text-primary-deep hover:text-primary"
-              >
-                CLIMAEDU para indústrias <ArrowRight size={17} />
-              </Link>
-            </article>
+              <a href="#como-trabalhamos" className={ui.btnGhost}>
+                Como trabalhamos
+              </a>
+            </div>
+            <NewEdTechMarca className="mt-10" />
           </div>
-
-          <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/80">
-            Também desenvolvemos projetos com universidades, consultorias, organizações e redes de
-            conhecimento.
-          </p>
         </div>
-      </section>
+        <div
+          aria-hidden
+          className="mx-4 mb-8 h-52 rounded-tl-[160px] border-l-[12px] border-primary-dark bg-cover bg-center md:hidden"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+      </header>
 
-      <section className="bg-surface py-16 md:py-20">
+      {/* Faixa da abordagem */}
+      <div className="bg-primary-dark text-white">
+        <div className="container-brand flex flex-wrap items-center gap-x-8 gap-y-3 py-5">
+          {metodo.map((m, i) => (
+            <span key={m.n} className="flex items-center gap-3 text-[18px]">
+              <b className="font-display text-[#e3aca4]">{m.n}</b>
+              <span>{m.title}</span>
+              {i < metodo.length - 1 && (
+                <ArrowRight size={18} className="hidden text-white/50 md:inline" aria-hidden />
+              )}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <Acreditamos
+        foto={pessoasImage}
+        alt="Equipe de campo com tablets em área alagada, consultando o plano"
+      />
+
+      <ComoTrabalhamos />
+
+      <Ambiente
+        surface={false}
+        title="A tecnologia é o meio"
+        text="Cada organização ganha um ambiente de aprendizagem próprio, com a sua identidade: uma universidade corporativa ou uma escola de governo digital, com cursos, materiais de apoio e acompanhamento."
+      />
+
+      <Entregas surface />
+
+      {/* Para quem */}
+      <section className={ui.section}>
         <div className="container-brand">
-          <div className="max-w-3xl">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
-              O que a CLIMAEDU entrega
-            </p>
-            <h2 className="mt-4 text-primary-dark">
-              Aprendizagem estruturada para diferentes perfis e responsabilidades.
-            </h2>
-          </div>
-
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
-            {deliverables.map((item) => (
-              <div key={item} className="flex gap-3 rounded-lg border border-border bg-card p-5">
-                <CheckCircle2 size={20} className="mt-1 shrink-0 text-primary" aria-hidden />
-                <p className="text-base leading-relaxed text-foreground/85">{item}</p>
+          <p className={ui.eyebrow}>Para quem</p>
+          <h2 className={ui.h2}>Para toda a prefeitura, não só a Defesa Civil</h2>
+          <p className={ui.intro}>
+            Ter o Plano de Contingência não basta. Cada área da prefeitura precisa saber o que
+            fazer, estar preparada e conseguir demonstrar essa preparação.
+          </p>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {publico.map((p) => (
+              <div key={p.title}>
+                <h3 className="text-[21px] font-bold text-primary">{p.title}</h3>
+                <p className="mt-1.5 text-[17px] text-foreground/75">{p.text}</p>
               </div>
             ))}
           </div>
-
-          <p className="mt-8 max-w-3xl text-base leading-relaxed text-foreground/80">
-            Certificados, dashboards e relatórios ajudam a organização a acompanhar e comprovar a
-            aprendizagem, sem substituir certificadoras ou auditorias técnicas.
-          </p>
-        </div>
-      </section>
-
-      <section className="bg-background py-16 md:py-20">
-        <div className="container-brand grid gap-10 md:grid-cols-[0.85fr_1.15fr] md:items-center">
-          <FadeIn>
-            <div className="max-w-xl">
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
-                Case industrial
-              </p>
-              <h2 className="mt-4 text-primary-dark">Case UC Viposa</h2>
-              <p className="mt-6 text-lg leading-relaxed text-foreground/85">
-                Universidade corporativa levando conhecimento climático e socioambiental para mais
-                perto das equipes e do chão de fábrica.
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.08}>
-            <div className="rounded-lg border border-border bg-card p-8 shadow-sm">
-              <div className="flex flex-col gap-6 md:flex-row md:items-center">
-                <img
-                  src={viposaLogo}
-                  alt="Logo VIPOSA"
-                  className="h-16 w-auto object-contain md:h-20"
-                  loading="lazy"
-                />
-                <div>
-                  <p className="text-base font-semibold text-primary-dark">
-                    Do conteúdo técnico à rotina da operação.
-                  </p>
-                  <p className="mt-2 text-base leading-relaxed text-foreground/80">
-                    Trilhas digitais organizam a aprendizagem para lideranças e equipes, sem
-                    depender de linguagem excessivamente técnica.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      <section className="bg-primary-dark px-6 py-16 text-white md:py-20">
-        <div className="mx-auto max-w-5xl text-center">
-          <Sparkles size={28} className="mx-auto text-white/75" aria-hidden />
-          <h2 className="mt-5 text-white">
-            Que conhecimento precisa chegar à prática na sua organização?
-          </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/76">
-            Converse com a NewEdTech e conheça como a CLIMAEDU pode transformar conteúdos técnicos
-            em uma jornada de aprendizagem aplicada.
-          </p>
           <Link
-            to="/demonstracao"
-            className="mt-9 inline-flex min-h-14 items-center gap-2 rounded-lg bg-primary px-8 py-3 text-base font-semibold text-primary-foreground transition hover:bg-card hover:text-primary-dark"
+            to="/orgaos-publicos"
+            className="mt-8 inline-flex items-center gap-2 text-[18px] font-bold text-terracotta"
           >
-            Agendar uma conversa <ArrowRight size={18} />
+            CLIMAEDU para o poder público <ArrowRight size={17} />
+          </Link>
+
+          <Link
+            to="/empresas"
+            className="group mt-12 grid gap-6 rounded-2xl bg-surface p-7 no-underline md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:p-9"
+          >
+            <div>
+              <p className={ui.eyebrow}>Também para a indústria</p>
+              <h3 className="mt-2 text-[26px] font-bold leading-tight text-primary-dark">
+                Conhecimento que deixa a operação pronta para agir
+              </h3>
+              <p className="mt-2 max-w-[60ch] text-[17px] text-foreground/75">
+                Em atividades que exigem mais cuidado, cada pessoa precisa saber como agir.
+              </p>
+            </div>
+            <div className="flex items-center gap-4">
+              <img src={viposaLogo} alt="VIPOSA" className="h-10 w-auto" loading="lazy" />
+              <span className="text-[15px] text-foreground/70">Projeto piloto</span>
+              <ArrowRight size={20} className="text-terracotta transition group-hover:translate-x-1" />
+            </div>
           </Link>
         </div>
       </section>
+
+      {/* Materiais de apoio */}
+      <section className={`${ui.section} bg-surface`}>
+        <div className="container-brand">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <p className={ui.eyebrow}>Materiais de apoio</p>
+              <h2 className={ui.h2}>Cursos para cada área que o clima atravessa</h2>
+              <p className={ui.intro}>
+                O preparo não fica só com quem escreveu o plano. Os cursos levam os temas do clima
+                a cada secretaria e equipe, na linguagem de quem executa.
+              </p>
+            </div>
+            <Link to="/cursos" className={ui.btnGhost}>
+              Ver cursos
+            </Link>
+          </div>
+          <CursosStrip />
+        </div>
+      </section>
+
+      <Fechamento
+        title="Vamos conversar sobre os planos da sua organização?"
+        text="Conte o seu contexto. Mostramos como seria o caminho do plano até as equipes, sem pedir documentos internos para começar."
+      />
     </>
   );
 }
