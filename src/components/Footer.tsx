@@ -59,8 +59,8 @@ export function Footer() {
             </div>
 
             <p className="mt-5 max-w-md text-sm leading-relaxed text-white/78">
-              A CLIMAEDU, da NewEdTech, ajuda prefeituras e organizações a transformar planos de
-              contingência e protocolos climáticos em equipes preparadas para agir.
+              A CLIMAEDU, da NewEdTech, capacita prefeituras e indústrias em resiliência climática,
+              setor por setor, a partir dos seus próprios planos.
             </p>
 
             <div className="mt-6 rounded-2xl border border-white/12 bg-white/[0.04] p-5">

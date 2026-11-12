@@ -50,7 +50,7 @@ const organizationJsonLd = {
     addressCountry: "BR",
   },
   description:
-    "A CLIMAEDU ajuda prefeituras e organizações a transformar planos de contingência e protocolos climáticos em equipes preparadas para agir.",
+    "A CLIMAEDU capacita prefeituras e indústrias em resiliência climática, setor por setor, a partir dos seus próprios planos.",
   parentOrganization: {
     "@type": "Organization",
     name: "NEWEDTECH",

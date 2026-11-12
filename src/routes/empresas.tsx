@@ -17,7 +17,7 @@ import { faqIndustria, odsIndustria, referenciasIndustria } from "@/data/conteud
 
 const title = "Indústria | CLIMAEDU";
 const description =
-  "A CLIMAEDU leva o conhecimento técnico da empresa a cada função, para que a operação esteja pronta para agir em atividades que exigem mais cuidado.";
+  "A CLIMAEDU leva o conhecimento técnico da empresa a cada função, em atividades que exigem mais cuidado.";
 
 const desafios = [
   {
@@ -26,7 +26,7 @@ const desafios = [
   },
   {
     title: "Na hora da auditoria",
-    text: "Auditorias e certificações, como ISO 14001 e ISO 45001, pedem evidência de que as pessoas foram preparadas, e não só lista de presença.",
+    text: "Auditorias e certificações, como ISO 14001 e ISO 45001, pedem evidência de capacitação das pessoas, e não só lista de presença.",
   },
   {
     title: "O custo de não saber",
@@ -60,7 +60,7 @@ function Empresas() {
     <>
       <PageHeader
         eyebrow="Indústria"
-        title="Conhecimento que deixa a operação pronta para agir"
+        title="Conhecimento técnico que chega a cada função"
         lead="Em atividades que exigem mais cuidado, cada pessoa precisa saber como agir. A CLIMAEDU leva o conhecimento técnico da empresa a cada função, da liderança ao chão de fábrica."
         media={
           <Notebook
@@ -83,7 +83,7 @@ function Empresas() {
       </section>
 
       <MetodologiaResumo
-        title="Equipes preparadas para auditorias e certificações"
+        title="Preparação para auditorias e certificações"
         intro="A mesma metodologia que usamos no poder público, aplicada aos procedimentos da empresa: cada função sabe o que fazer, e a capacitação fica registrada para apresentar quando for preciso."
         limitesItems={limitesIndustria}
       />
