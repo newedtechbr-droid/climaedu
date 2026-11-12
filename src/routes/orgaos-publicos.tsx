@@ -5,6 +5,7 @@ import {
   Ambiente,
   ComoTrabalhamos,
   Lente,
+  NossaEntrega,
   BaseTecnica,
   Entregas,
   Fechamento,
@@ -68,29 +69,18 @@ function OrgaosPublicos() {
         </Link>
       </PageHeader>
 
-      <div className="bg-primary-dark text-white">
-        <div className="container-brand flex flex-wrap items-baseline gap-x-10 gap-y-3 py-6">
-          <p className="text-[19px] text-white">
-            <b className="font-display text-[28px] text-[#e3aca4]">211</b> dos 295 municípios de SC
-            têm PLANCON
-          </p>
-          <p className="text-[19px] text-white">
-            <b className="font-display text-[28px] text-[#e3aca4]">150</b> informaram capacitações
-          </p>
-          <p className="text-[14px] text-white/60">Fonte: TCE/SC, levantamento de junho de 2026</p>
-        </div>
-      </div>
-
       <ComoTrabalhamos />
 
-      <section className={ui.section}>
+      <NossaEntrega />
+
+      <section className={`${ui.section} bg-surface`}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Para quem</p>
           <h2 className={ui.h2}>Para toda a prefeitura, não só a Defesa Civil</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {publico.map((p) => (
               <div key={p.title}>
-                <h3 className="text-[21px] font-bold text-primary">{p.title}</h3>
+                <h3 className="text-[21px] font-bold text-primary-dark">{p.title}</h3>
                 <p className="mt-1.5 text-[17px] text-foreground/75">{p.text}</p>
               </div>
             ))}
@@ -102,19 +92,20 @@ function OrgaosPublicos() {
       </section>
 
       <Ambiente
+        surface={false}
         title="Uma escola de governo digital, com a identidade do município"
         text="A tecnologia é o meio. O município ganha um ambiente de aprendizagem próprio, com cursos por área, materiais de apoio e acompanhamento, acessível no computador, no tablet e no celular."
       />
 
-      <Entregas />
+      <Entregas surface />
+
+      <FaqList items={faqPublico} />
 
       <BaseTecnica
         ods={odsPublico}
         refs={referenciasPublico}
         note="Fontes: Planalto, AGU e IPCC. As referências não substituem a análise jurídica ou técnica do órgão."
       />
-
-      <FaqList items={faqPublico} />
 
       <Fechamento
         title="Vamos preparar toda a prefeitura para o que está no plano?"

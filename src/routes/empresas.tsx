@@ -8,6 +8,7 @@ import {
   Colunas,
   ComoTrabalhamos,
   Notebook,
+  NossaEntrega,
   Entregas,
   Fechamento,
   FaqList,
@@ -85,7 +86,9 @@ function Empresas() {
 
       <ComoTrabalhamos limitesItems={limitesIndustria} />
 
-      <section className={ui.section}>
+      <NossaEntrega />
+
+      <section className={`${ui.section} bg-surface`}>
         <div className="container-brand grid gap-10 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center">
           <div>
             <img src={viposaLogo} alt="VIPOSA" className="h-14 w-auto" loading="lazy" />
@@ -107,15 +110,16 @@ function Empresas() {
       </section>
 
 
-      <Entregas surface />
+      <Entregas />
 
 
-      <FaqList items={faqIndustria} />
+      <FaqList items={faqIndustria} surface />
 
       <BaseTecnica
         ods={odsIndustria}
         refs={referenciasIndustria}
         note="Fontes: ISO, Planalto, GRI, IFRS e ONU Brasil. As referências não substituem análise jurídica, técnica ou de conformidade."
+        surface={false}
       />
 
       <Fechamento

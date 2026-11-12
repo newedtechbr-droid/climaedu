@@ -1,18 +1,21 @@
 /** Formatos de preparação (genéricos; não reproduzem o desenho da Jornada, que é obra conjunta). */
 export const formatos = [
   {
-    title: "Online",
-    text: "Cursos e trilhas por área no ambiente de aprendizagem, para cada pessoa avançar no seu ritmo.",
+    title: "Online, no seu ritmo",
+    tag: "Assíncrono",
+    text: "Cursos e trilhas por área no ambiente de aprendizagem, para cada pessoa avançar quando a rotina permitir.",
   },
   {
-    title: "Encontros síncronos e assíncronos",
-    text: "Momentos ao vivo para tirar dúvidas e praticar, e atividades para fazer quando a rotina permitir.",
+    title: "Ao vivo",
+    tag: "Síncrono",
+    text: "Encontros online com a equipe da CLIMAEDU para tirar dúvidas, discutir casos e praticar.",
   },
   {
     title: "Presencial",
-    text: "Vamos até o local para trabalhar com as equipes a partir do plano e da realidade de cada área.",
+    tag: "No local",
+    text: "Vamos até a organização para trabalhar com as equipes a partir do plano e da realidade de cada área.",
   },
-];
+]
 
 export const entregas = [
   {
@@ -78,7 +81,7 @@ export type Faq = { q: string; a: string };
 const faqComum: Faq[] = [
   {
     q: "Como a CLIMAEDU prepara as equipes?",
-    a: "Partimos do plano que a organização já tem e identificamos o papel de cada área. A preparação combina cursos e trilhas online, encontros síncronos para tirar dúvidas e praticar, atividades assíncronas e momentos presenciais no local, com as equipes.",
+    a: "Partimos do plano que a organização já tem e identificamos o papel de cada área. A preparação combina três formatos: cursos e trilhas online, no ritmo de cada pessoa; encontros ao vivo para tirar dúvidas e praticar; e momentos presenciais no local, com as equipes.",
   },
   {
     q: "Que recursos vocês usam?",

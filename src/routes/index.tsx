@@ -12,13 +12,14 @@ import {
   Entregas,
   Fechamento,
   NewEdTechMarca,
+  NossaEntrega,
   ui,
 } from "@/components/brand";
 
 const pageModified = "2026-11-11";
-const title = "CLIMAEDU | Do plano à preparação";
+const title = "CLIMAEDU | Levamos o plano a quem precisa agir";
 const description =
-  "A CLIMAEDU ajuda prefeituras e organizações a transformar planos de contingência e protocolos climáticos em equipes preparadas para agir.";
+  "A CLIMAEDU prepara as equipes de prefeituras e organizações para executar planos de contingência e protocolos climáticos, área por área.";
 
 const publico = [
   { title: "Quem decide", text: "Prefeitos, vice-prefeitos, secretários e chefes de gabinete." },
@@ -89,13 +90,13 @@ function Index() {
         />
         <div className="container-brand relative py-14 md:py-20">
           <div className="md:max-w-[56%]">
-            <p className={ui.eyebrow}>Resiliência climática na prática</p>
-            <h1 className="mt-4 text-[clamp(50px,7.5vw,92px)] font-bold leading-[0.92] tracking-[-1.5px] text-primary">
-              Do plano à preparação
+            <p className={ui.eyebrow}>Resiliência climática</p>
+            <h1 className="mt-4 text-[clamp(44px,5.8vw,74px)] font-bold leading-[0.97] tracking-[-1.5px] text-primary-dark">
+              Levamos o plano a <span className="text-primary">quem precisa agir</span>
             </h1>
             <p className={ui.lead}>
-              A CLIMAEDU ajuda prefeituras e organizações a transformar planos de contingência e
-              protocolos climáticos em equipes preparadas para agir.
+              A CLIMAEDU prepara as equipes de prefeituras e organizações para executar planos de
+              contingência e protocolos climáticos, área por área.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/demonstracao" className={ui.btn}>
@@ -137,16 +138,17 @@ function Index() {
 
       <ComoTrabalhamos />
 
+      <NossaEntrega />
+
       <Ambiente
-        surface={false}
         title="A tecnologia é o meio"
         text="Cada organização ganha um ambiente de aprendizagem próprio, com a sua identidade: uma universidade corporativa ou uma escola de governo digital, com cursos, materiais de apoio e acompanhamento."
       />
 
-      <Entregas surface />
+      <Entregas />
 
       {/* Para quem */}
-      <section className={ui.section}>
+      <section className={`${ui.section} bg-surface`}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Para quem</p>
           <h2 className={ui.h2}>Para toda a prefeitura, não só a Defesa Civil</h2>
@@ -157,7 +159,7 @@ function Index() {
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {publico.map((p) => (
               <div key={p.title}>
-                <h3 className="text-[21px] font-bold text-primary">{p.title}</h3>
+                <h3 className="text-[21px] font-bold text-primary-dark">{p.title}</h3>
                 <p className="mt-1.5 text-[17px] text-foreground/75">{p.text}</p>
               </div>
             ))}
@@ -171,7 +173,7 @@ function Index() {
 
           <Link
             to="/empresas"
-            className="group mt-12 grid gap-6 rounded-2xl bg-surface p-7 no-underline md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:p-9"
+            className="group mt-12 grid gap-6 rounded-2xl bg-background p-7 no-underline md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:p-9"
           >
             <div>
               <p className={ui.eyebrow}>Também para a indústria</p>
@@ -192,7 +194,7 @@ function Index() {
       </section>
 
       {/* Materiais de apoio */}
-      <section className={`${ui.section} bg-surface`}>
+      <section className={ui.section}>
         <div className="container-brand">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div className="max-w-2xl">

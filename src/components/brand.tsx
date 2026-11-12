@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Award, BarChart3, Clock, FileCheck2, MonitorSmartphone, Target } from "lucide-react";
+import { ArrowRight, Award, BarChart3, Clock, FileCheck2, Laptop, MapPin, MonitorSmartphone, Target, Video } from "lucide-react";
 import { cursos, limites, metodo } from "@/data/cursos";
 import { entregas, formatos, type Faq, type Ods, type Referencia } from "@/data/conteudo";
 import newedtechLogo from "@/assets/newedtech-logo.png";
@@ -9,7 +9,7 @@ import devicesImg from "@/assets/climaedu-platform-devices.png";
 /* Linguagem visual herdada da landing page "Municípios Preparados". */
 export const ui = {
   eyebrow: "text-[15px] font-bold uppercase tracking-[0.12em] text-primary",
-  h1: "mt-4 text-[clamp(42px,5.6vw,72px)] font-bold leading-[0.96] tracking-[-1px] text-primary",
+  h1: "mt-4 text-[clamp(42px,5.6vw,72px)] font-bold leading-[0.96] tracking-[-1px] text-primary-dark",
   h2: "mt-3 text-[clamp(30px,3.8vw,46px)] font-bold leading-[1.04] tracking-[-0.5px] text-primary-dark",
   lead: "mt-6 max-w-[38ch] text-[clamp(19px,1.9vw,24px)] leading-snug text-primary-dark",
   intro: "mt-5 max-w-[60ch] text-[19px] text-foreground/80",
@@ -20,7 +20,7 @@ export const ui = {
 };
 
 export const ACREDITAMOS =
-  "O conhecimento para enfrentar os desafios do clima já existe. O que falta é ele chegar a cada pessoa que precisa agir.";
+  "O conhecimento para enfrentar os desafios do clima já existe. A CLIMAEDU é a ponte que leva esse conhecimento a cada pessoa que precisa agir.";
 export const PONTE = "Um plano ganha força quando cada pessoa sabe o seu papel antes de precisar dele.";
 export const PROMESSA =
   "Cada área sabe o seu papel, está preparada e consegue demonstrar essa preparação.";
@@ -131,7 +131,7 @@ export function Colunas({ items }: { items: { title: string; text: string }[] })
     <div className="mt-10 grid gap-8 md:grid-cols-3">
       {items.map((d) => (
         <div key={d.title} className="border-t-[3px] border-primary pt-4">
-          <h3 className="text-[24px] font-bold text-primary">{d.title}</h3>
+          <h3 className="text-[24px] font-bold text-primary-dark">{d.title}</h3>
           <p className="mt-2 text-[17px] text-foreground/75">{d.text}</p>
         </div>
       ))}
@@ -153,16 +153,43 @@ export function Metodo({ steps = metodo }: { steps?: { n: string; title: string;
   );
 }
 
+const iconesFormatos = [Laptop, Video, MapPin];
+
 export function Formatos() {
   return (
-    <div className="mt-10 grid gap-6 md:grid-cols-3">
-      {formatos.map((f) => (
-        <div key={f.title} className="border-t-[3px] border-primary pt-4">
-          <h3 className="text-[21px] font-bold text-primary">{f.title}</h3>
-          <p className="mt-2 text-[17px] text-foreground/75">{f.text}</p>
-        </div>
-      ))}
+    <div className="mt-8 grid gap-6 md:grid-cols-3">
+      {formatos.map((f, i) => {
+        const Icon = iconesFormatos[i];
+        return (
+          <div key={f.title} className="rounded-xl border-t-[3px] border-primary bg-background p-6 shadow-sm">
+            <div className="flex items-center justify-between">
+              <Icon size={28} className="text-primary" aria-hidden />
+              <span className="rounded-full bg-[#e6ecdf] px-3 py-1 text-[13px] font-bold uppercase tracking-[0.08em] text-primary-deep">
+                {f.tag}
+              </span>
+            </div>
+            <h3 className="mt-4 text-[22px] font-bold text-primary-dark">{f.title}</h3>
+            <p className="mt-2 text-[16px] text-foreground/75">{f.text}</p>
+          </div>
+        );
+      })}
     </div>
+  );
+}
+
+/** "Nossa entrega": os três formatos de preparação. */
+export function NossaEntrega({ surface = false }: { surface?: boolean }) {
+  return (
+    <section className={`${ui.section} ${surface ? "bg-surface" : ""}`}>
+      <div className="container-brand">
+        <p className={ui.eyebrow}>Nossa entrega</p>
+        <h2 className={ui.h2}>Três formas de preparar as equipes</h2>
+        <p className={ui.intro}>
+          Combinamos os formatos conforme o plano, as áreas envolvidas e a rotina de cada equipe.
+        </p>
+        <Formatos />
+      </div>
+    </section>
   );
 }
 
@@ -171,10 +198,9 @@ export function ComoTrabalhamos({ limitesItems }: { limitesItems?: string[] }) {
   return (
     <section id="como-trabalhamos" className={`${ui.section} scroll-mt-24 bg-surface`}>
       <div className="container-brand">
-        <p className={ui.eyebrow}>Como trabalhamos</p>
+        <p className={ui.eyebrow}>Como trabalhamos · Metodologia CLIMAEDU</p>
         <h2 className={ui.h2}>Partimos de um plano existente</h2>
         <Metodo />
-        <Formatos />
         <p className="mt-10 max-w-[60ch] font-display text-[22px] font-bold text-primary">
           {INTEGRADORES}
         </p>
@@ -274,28 +300,27 @@ export function Entregas({ surface = false }: { surface?: boolean }) {
   );
 }
 
-/** Cursos em formato compacto. */
+export function CursoCard({ c }: { c: (typeof cursos)[number] }) {
+  return (
+    <article className="grid h-full grid-cols-[110px_minmax(0,1fr)] overflow-hidden rounded-xl bg-background shadow-sm sm:grid-cols-[140px_minmax(0,1fr)]">
+      <img src={c.cover} alt={`Capa do curso ${c.title}`} className="h-full w-full object-cover" loading="lazy" />
+      <div className="p-5">
+        <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-terracotta">{c.category}</p>
+        <h3 className="mt-1 text-[20px] font-bold leading-snug text-primary-dark">{c.title}</h3>
+        <p className="mt-2 text-[16px] leading-relaxed text-foreground/75">{c.description}</p>
+        <p className="mt-2 inline-flex items-center gap-1.5 text-[15px] font-bold text-primary-deep">
+          <Clock size={14} aria-hidden /> {c.hours}
+        </p>
+      </div>
+    </article>
+  );
+}
+
 export function CursosStrip() {
   return (
-    <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="mt-8 grid gap-5 sm:grid-cols-2">
       {cursos.map((c) => (
-        <article key={c.title} className="flex items-center gap-4 rounded-xl bg-background p-3 shadow-sm">
-          <img
-            src={c.cover}
-            alt={`Capa do curso ${c.title}`}
-            className="h-20 w-16 shrink-0 rounded-md object-cover"
-            loading="lazy"
-          />
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-terracotta">
-              {c.category}
-            </p>
-            <h3 className="mt-0.5 text-[16px] font-bold leading-snug text-primary-dark">{c.title}</h3>
-            <p className="mt-1 inline-flex items-center gap-1 text-[13px] font-bold text-primary-deep">
-              <Clock size={11} aria-hidden /> {c.hours}
-            </p>
-          </div>
-        </article>
+        <CursoCard key={c.title} c={c} />
       ))}
     </div>
   );
@@ -369,9 +394,19 @@ export function Referencias({ items, note }: { items: Referencia[]; note: string
 }
 
 /** ODS + referências numa só seção, para não alongar a página. */
-export function BaseTecnica({ ods, refs, note }: { ods: Ods[]; refs: Referencia[]; note: string }) {
+export function BaseTecnica({
+  ods,
+  refs,
+  note,
+  surface = true,
+}: {
+  ods: Ods[];
+  refs: Referencia[];
+  note: string;
+  surface?: boolean;
+}) {
   return (
-    <section className={`${ui.section} bg-surface`}>
+    <section className={`${ui.section} ${surface ? "bg-surface" : ""}`}>
       <div className="container-brand">
         <p className={ui.eyebrow}>Agenda 2030</p>
         <h2 className={ui.h2}>Objetivos de Desenvolvimento Sustentável</h2>
@@ -384,7 +419,7 @@ export function BaseTecnica({ ods, refs, note }: { ods: Ods[]; refs: Referencia[
   );
 }
 
-export function FaqList({ items }: { items: Faq[] }) {
+export function FaqList({ items, surface = false }: { items: Faq[]; surface?: boolean }) {
   const data = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -395,7 +430,7 @@ export function FaqList({ items }: { items: Faq[] }) {
     })),
   };
   return (
-    <section className={ui.section}>
+    <section className={`${ui.section} ${surface ? "bg-surface" : ""}`}>
       <div className="container-brand grid gap-10 md:grid-cols-[minmax(0,4fr)_minmax(0,8fr)]">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
         <div>
