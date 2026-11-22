@@ -19,21 +19,28 @@ export const formatos = [
 
 export const entregas = [
   {
-    title: "Certificados",
+    title: "Certificados de conclusão",
     text: "Emitidos a cada conclusão, por pessoa e por trilha.",
   },
   {
-    title: "Relatórios",
+    title: "Relatórios de participação",
     text: "Participação e conclusão por área, unidade, função ou turma.",
   },
   {
-    title: "Proficiência",
+    title: "Avaliações de aprendizagem",
     text: "Resultados das avaliações, para ver o que foi compreendido e onde reforçar.",
   },
   {
-    title: "Evidências rastreáveis",
+    title: "Registro das atividades realizadas",
     text: "Registros organizados para prestação de contas e para análise de dados.",
   },
+];
+
+export const registros = [
+  "Certificados de conclusão",
+  "Relatórios de participação",
+  "Avaliações de aprendizagem",
+  "Registro das atividades realizadas",
 ];
 
 export type Ods = { n: number; title: string; text: string };
@@ -89,7 +96,7 @@ const faqComum: Faq[] = [
   },
   {
     q: "Que evidências ficam registradas?",
-    a: "Participação, conclusão, resultados das avaliações (proficiência) e certificados, por pessoa, área, função ou turma. São registros rastreáveis, organizados para prestação de contas e para análise de dados. A CLIMAEDU não mede indicadores ambientais nem emite certificação de conformidade.",
+    a: "Participação, conclusão, resultados das avaliações de aprendizagem e certificados, por pessoa, área, função ou turma. São registros rastreáveis, organizados para prestação de contas e para análise de dados. A CLIMAEDU não mede indicadores ambientais nem emite certificação de conformidade.",
   },
   {
     q: "O que acontece quando a equipe muda?",
