@@ -116,10 +116,7 @@ function Index() {
           <p className={ui.eyebrow}>Para quem</p>
           <h2 className={ui.h2}>Onde há um plano para colocar em prática</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
-            <Link
-              to="/orgaos-publicos"
-              className="group rounded-2xl bg-primary p-7 text-white no-underline md:p-9"
-            >
+            <div className="group rounded-2xl bg-primary p-7 text-white md:p-9">
               <p className="text-[15px] font-bold uppercase tracking-[0.12em] text-white/75">
                 Poder público
               </p>
@@ -131,15 +128,19 @@ function Index() {
                 do plano do próprio município.
               </p>
               <p className="mt-3 text-[16px] text-white/75">
-                Segundo a Lei nº 12.608/2012, reduzir os riscos de desastre é dever da União, dos
+                Segundo a{" "}
+                <a href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm" target="_blank" rel="noopener noreferrer" className="underline decoration-white/50 underline-offset-4 hover:decoration-white">Lei nº 12.608/2012</a>, reduzir os riscos de desastre é dever da União, dos
                 estados e dos municípios.
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold">
+              <Link
+                to="/orgaos-publicos"
+                className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold text-white no-underline"
+              >
                 Conheça a metodologia completa{" "}
                 <ArrowRight size={17} className="transition group-hover:translate-x-1" />
-              </span>
-            </Link>
-            <Link to="/empresas" className="group rounded-2xl bg-surface p-7 no-underline md:p-9">
+              </Link>
+            </div>
+            <div className="group rounded-2xl bg-surface p-7 md:p-9">
               <p className={ui.eyebrow}>Indústria</p>
               <h3 className="mt-3 text-[26px] font-bold leading-tight text-primary-dark">
                 Preparação para auditorias e certificações
@@ -149,14 +150,19 @@ function Index() {
                 <p className="text-[16px] text-foreground/75">Projeto piloto com a VIPOSA</p>
               </div>
               <p className="mt-4 text-[16px] text-foreground/75">
-                Com base em referências como a ISO 14001 (gestão ambiental) e a ISO 45001 (saúde e
-                segurança ocupacional).
+                Com base em referências como a{" "}
+                <a href="https://www.iso.org/standard/14001" target="_blank" rel="noopener noreferrer" className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary">ISO 14001</a> (gestão ambiental) e a{" "}
+                <a href="https://www.iso.org/standard/63787.html" target="_blank" rel="noopener noreferrer" className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary">ISO 45001</a> (saúde e segurança
+                ocupacional).
               </p>
-              <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold text-terracotta">
+              <Link
+                to="/empresas"
+                className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold text-terracotta no-underline"
+              >
                 CLIMAEDU para a indústria{" "}
                 <ArrowRight size={17} className="transition group-hover:translate-x-1" />
-              </span>
-            </Link>
+              </Link>
+            </div>
           </div>
           <p className="mt-6 text-[15px] text-foreground/70">
             Fontes:{" "}
