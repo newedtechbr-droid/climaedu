@@ -130,6 +130,10 @@ function Index() {
                 Cada secretaria tem um papel no Plano de Contingência. Capacitamos cada uma a partir
                 do plano do próprio município.
               </p>
+              <p className="mt-3 text-[16px] text-white/75">
+                Segundo a Lei nº 12.608/2012, reduzir os riscos de desastre é dever da União, dos
+                estados e dos municípios.
+              </p>
               <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold">
                 Conheça a metodologia completa{" "}
                 <ArrowRight size={17} className="transition group-hover:translate-x-1" />
@@ -144,12 +148,36 @@ function Index() {
                 <img src={viposaLogo} alt="VIPOSA" className="h-10 w-auto" loading="lazy" />
                 <p className="text-[16px] text-foreground/75">Projeto piloto com a VIPOSA</p>
               </div>
+              <p className="mt-4 text-[16px] text-foreground/75">
+                Com base em referências como a ISO 14001 (gestão ambiental) e a ISO 45001 (saúde e
+                segurança ocupacional).
+              </p>
               <span className="mt-6 inline-flex items-center gap-2 text-[17px] font-bold text-terracotta">
                 CLIMAEDU para a indústria{" "}
                 <ArrowRight size={17} className="transition group-hover:translate-x-1" />
               </span>
             </Link>
           </div>
+          <p className="mt-6 text-[15px] text-foreground/70">
+            Fontes:{" "}
+            {[
+              { href: "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm", label: "Lei nº 12.608/2012 (Planalto)" },
+              { href: "https://www.iso.org/standard/14001", label: "ISO 14001" },
+              { href: "https://www.iso.org/standard/63787.html", label: "ISO 45001" },
+            ].map((f, i, all) => (
+              <span key={f.href}>
+                <a
+                  href={f.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                >
+                  {f.label}
+                </a>
+                {i < all.length - 1 ? " · " : ""}
+              </span>
+            ))}
+          </p>
         </div>
       </section>
 
