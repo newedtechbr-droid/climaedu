@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-field.jpg";
+import heroImage from "@/assets/cidade-verde-hero.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
 import { metodo } from "@/data/cursos";
 import { faqGeral } from "@/data/conteudo";
-import pessoasImage from "@/assets/cidade-verde.jpg";
+import pessoasImage from "@/assets/predio-verde.jpg";
 import {
   Acreditamos,
   CursosStrip,
@@ -129,7 +129,7 @@ function Index() {
 
       <Acreditamos
         foto={pessoasImage}
-        alt="Vista aérea de avenida cercada por jardins suspensos e áreas verdes"
+        alt="Fachada de prédio coberta de vegetação contra o céu azul"
       />
 
       <MetodologiaResumo />
