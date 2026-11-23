@@ -17,6 +17,14 @@ interface DemoInput {
   pessoas: string;
 }
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
 const sendDemoRequest = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => input as DemoInput)
   .handler(async ({ data }: { data: DemoInput }) => {
@@ -30,14 +38,14 @@ const sendDemoRequest = createServerFn({ method: "POST" })
     const html = `
       <h2>Nova solicitação de demonstração — CLIMAEDU</h2>
       <table style="border-collapse:collapse;width:100%">
-        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Nome</td><td style="padding:8px;border-bottom:1px solid #eee">${data.nome}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Instituição</td><td style="padding:8px;border-bottom:1px solid #eee">${data.instituicao}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Cargo</td><td style="padding:8px;border-bottom:1px solid #eee">${data.cargo}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">E-mail</td><td style="padding:8px;border-bottom:1px solid #eee">${data.email}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">WhatsApp</td><td style="padding:8px;border-bottom:1px solid #eee">${data.whatsapp || "—"}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Tipo de instituição</td><td style="padding:8px;border-bottom:1px solid #eee">${data.tipo}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Principal desafio</td><td style="padding:8px;border-bottom:1px solid #eee">${data.desafio}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold">Pessoas a capacitar</td><td style="padding:8px">${data.pessoas}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Nome</td><td style="padding:8px;border-bottom:1px solid #eee">${escapeHtml(data.nome)}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Instituição</td><td style="padding:8px;border-bottom:1px solid #eee">${escapeHtml(data.instituicao)}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Cargo</td><td style="padding:8px;border-bottom:1px solid #eee">${escapeHtml(data.cargo)}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">E-mail</td><td style="padding:8px;border-bottom:1px solid #eee">${escapeHtml(data.email)}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">WhatsApp</td><td style="padding:8px;border-bottom:1px solid #eee">${escapeHtml(data.whatsapp || "—")}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Tipo de instituição</td><td style="padding:8px;border-bottom:1px solid #eee">${escapeHtml(data.tipo)}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee">Principal desafio</td><td style="padding:8px;border-bottom:1px solid #eee">${escapeHtml(data.desafio)}</td></tr>
+        <tr><td style="padding:8px;font-weight:bold">Pessoas a capacitar</td><td style="padding:8px">${escapeHtml(data.pessoas)}</td></tr>
       </table>
     `;
 
@@ -50,7 +58,8 @@ const sendDemoRequest = createServerFn({ method: "POST" })
       },
       body: JSON.stringify({
         from: "CLIMAEDU <onboarding@resend.dev>",
-        to: ["conttao@newedtech.com"],
+        to: ["contato@newedtech.com.br"],
+        reply_to: data.email,
         subject: `[CLIMAEDU] Demonstração: ${data.nome} — ${data.instituicao}`,
         html,
       }),
