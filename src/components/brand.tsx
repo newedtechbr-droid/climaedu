@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Award, BarChart3, Clock, FileCheck2, Laptop, MapPin, MonitorSmartphone, Target, Video } from "lucide-react";
 import { cursos, limites, metodo } from "@/data/cursos";
-import { entregas, formatos, type Faq, type Ods, type Referencia } from "@/data/conteudo";
+import { entregas, formatos, registros, type Faq, type Ods, type Referencia } from "@/data/conteudo";
 import newedtechLogo from "@/assets/newedtech-logo.png";
 import tabletImg from "@/assets/mockup-climaedu.png";
 import devicesImg from "@/assets/climaedu-platform-devices.png";
@@ -208,7 +208,7 @@ export function MetodologiaResumo({
   const colunas = [
     { titulo: "Etapas", itens: metodo.map((m) => `${m.n} · ${m.title}`) },
     { titulo: "Formatos", itens: formatos.map((f) => `${f.title} (${f.tag.toLowerCase()})`) },
-    { titulo: "O que fica registrado", itens: entregas.map((e) => e.title) },
+    { titulo: "O que fica registrado", itens: registros },
   ];
   return (
     <section id="metodologia" className={`${ui.section} scroll-mt-24 overflow-hidden bg-surface`}>

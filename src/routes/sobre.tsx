@@ -83,7 +83,7 @@ function Sobre() {
       <PageHeader
         eyebrow="Sobre"
         title="Resiliência climática começa pelas pessoas"
-        lead="A CLIMAEDU ajuda prefeituras e organizações a levar seus planos até as equipes que vão executar cada etapa. Somos de Florianópolis, Santa Catarina."
+        lead="A CLIMAEDU ajuda prefeituras e organizações a levar seus planos até as equipes que vão executar cada etapa. Temos plataforma de ensino própria e usamos inteligência artificial para produzir cursos sob medida a partir do plano de cada organização. Somos de Florianópolis, Santa Catarina."
         media={<Lente src={campoImage} alt="Equipe de campo com tablets em área alagada" />}
       >
         <NewEdTechMarca />

@@ -19,21 +19,28 @@ export const formatos = [
 
 export const entregas = [
   {
-    title: "Certificados",
+    title: "Certificados de conclusão",
     text: "Emitidos a cada conclusão, por pessoa e por trilha.",
   },
   {
-    title: "Relatórios",
+    title: "Relatórios de participação",
     text: "Participação e conclusão por área, unidade, função ou turma.",
   },
   {
-    title: "Proficiência",
+    title: "Avaliações de aprendizagem",
     text: "Resultados das avaliações, para ver o que foi compreendido e onde reforçar.",
   },
   {
-    title: "Evidências rastreáveis",
+    title: "Registro das atividades realizadas",
     text: "Registros organizados para prestação de contas e para análise de dados.",
   },
+];
+
+export const registros = [
+  "Certificados de conclusão",
+  "Relatórios de participação",
+  "Avaliações de aprendizagem",
+  "Registro das atividades realizadas",
 ];
 
 export type Ods = { n: number; title: string; text: string };
@@ -78,7 +85,7 @@ export const referenciasIndustria: Referencia[] = [
 
 export type Faq = { q: string; a: string };
 
-const faqComum: Faq[] = [
+export const faqGeral: Faq[] = [
   {
     q: "Como a CLIMAEDU prepara as equipes?",
     a: "Partimos do plano que a organização já tem e identificamos o papel de cada área. A preparação combina três formatos: cursos e trilhas online, no ritmo de cada pessoa; encontros ao vivo para tirar dúvidas e praticar; e momentos presenciais no local, com as equipes.",
@@ -89,7 +96,7 @@ const faqComum: Faq[] = [
   },
   {
     q: "Que evidências ficam registradas?",
-    a: "Participação, conclusão, resultados das avaliações (proficiência) e certificados, por pessoa, área, função ou turma. São registros rastreáveis, organizados para prestação de contas e para análise de dados. A CLIMAEDU não mede indicadores ambientais nem emite certificação de conformidade.",
+    a: "Participação, conclusão, resultados das avaliações de aprendizagem e certificados, por pessoa, área, função ou turma. São registros rastreáveis, organizados para prestação de contas e para análise de dados. A CLIMAEDU não mede indicadores ambientais nem emite certificação de conformidade.",
   },
   {
     q: "O que acontece quando a equipe muda?",
@@ -106,7 +113,7 @@ export const faqPublico: Faq[] = [
     q: "A CLIMAEDU elabora ou revisa o Plano de Contingência?",
     a: "Não. O plano continua sendo do município e de quem responde por ele. A CLIMAEDU trabalha na preparação das pessoas que vão executá-lo e não substitui a Defesa Civil nem os responsáveis técnicos.",
   },
-  ...faqComum.slice(2),
+  ...faqGeral.slice(2),
 ];
 
 export const faqIndustria: Faq[] = [
@@ -122,5 +129,5 @@ export const faqIndustria: Faq[] = [
     q: "Quais áreas da empresa podem usar?",
     a: "Operação, manutenção, SSMA, meio ambiente, qualidade, RH e T&D, ESG, compliance e lideranças, além de terceiros e novos contratados.",
   },
-  ...faqComum.slice(2),
+  ...faqGeral.slice(2),
 ];

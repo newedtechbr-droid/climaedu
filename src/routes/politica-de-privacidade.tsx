@@ -88,6 +88,7 @@ const privacyJsonLd = {
     telephone: "+55 48 99160-6518",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Rua Munique, 51 - Córrego Grande",
       addressLocality: "Florianópolis",
       addressRegion: "SC",
       addressCountry: "BR",

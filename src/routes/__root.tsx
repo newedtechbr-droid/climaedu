@@ -45,6 +45,7 @@ const organizationJsonLd = {
   telephone: "+55 48 99160-6518",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Rua Munique, 51 - Córrego Grande",
     addressLocality: "Florianópolis",
     addressRegion: "SC",
     addressCountry: "BR",
@@ -122,7 +123,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "A CLIMAEDU transforma conhecimento tecnico sobre clima, sustentabilidade e gestao de riscos em aprendizagem aplicada, competencias institucionais, certificados, relatorios e evidencias de capacitacao.",
+          "A CLIMAEDU capacita prefeituras e indústrias em resiliência climática, setor por setor, a partir dos seus próprios planos.",
       },
 
       { name: "robots", content: "index, follow" },
@@ -143,7 +144,7 @@ export const Route = createRootRoute({
       {
         property: "og:description",
         content:
-          "Conhecimento tecnico transformado em aprendizagem aplicada, capacidade institucional e evidencias de capacitacao.",
+          "A CLIMAEDU capacita prefeituras e indústrias em resiliência climática, setor por setor, a partir dos seus próprios planos.",
       },
       {
         property: "og:url",
@@ -165,7 +166,7 @@ export const Route = createRootRoute({
       {
         name: "twitter:description",
         content:
-          "A CLIMAEDU transforma conhecimento técnico em aprendizagem aplicada para temas climáticos e socioambientais.",
+          "A CLIMAEDU capacita prefeituras e indústrias em resiliência climática, setor por setor, a partir dos seus próprios planos.",
       },
       {
         name: "twitter:image",
