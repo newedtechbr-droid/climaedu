@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
-import { metodo } from "@/data/cursos";
 import { faqGeral } from "@/data/conteudo";
 import {
   FaqList,
