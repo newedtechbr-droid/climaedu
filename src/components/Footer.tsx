@@ -102,7 +102,7 @@ export function Footer() {
                     Localização
                   </dt>
                   <dd className="mt-1 text-base font-medium text-white">
-                    Florianópolis, SC, Brasil
+                    Rua Munique, 51, Córrego Grande, Florianópolis, SC, Brasil
                   </dd>
                 </div>
 

@@ -85,7 +85,7 @@ export const referenciasIndustria: Referencia[] = [
 
 export type Faq = { q: string; a: string };
 
-const faqComum: Faq[] = [
+export const faqGeral: Faq[] = [
   {
     q: "Como a CLIMAEDU prepara as equipes?",
     a: "Partimos do plano que a organização já tem e identificamos o papel de cada área. A preparação combina três formatos: cursos e trilhas online, no ritmo de cada pessoa; encontros ao vivo para tirar dúvidas e praticar; e momentos presenciais no local, com as equipes.",
@@ -113,7 +113,7 @@ export const faqPublico: Faq[] = [
     q: "A CLIMAEDU elabora ou revisa o Plano de Contingência?",
     a: "Não. O plano continua sendo do município e de quem responde por ele. A CLIMAEDU trabalha na preparação das pessoas que vão executá-lo e não substitui a Defesa Civil nem os responsáveis técnicos.",
   },
-  ...faqComum.slice(2),
+  ...faqGeral.slice(2),
 ];
 
 export const faqIndustria: Faq[] = [
@@ -129,5 +129,5 @@ export const faqIndustria: Faq[] = [
     q: "Quais áreas da empresa podem usar?",
     a: "Operação, manutenção, SSMA, meio ambiente, qualidade, RH e T&D, ESG, compliance e lideranças, além de terceiros e novos contratados.",
   },
-  ...faqComum.slice(2),
+  ...faqGeral.slice(2),
 ];

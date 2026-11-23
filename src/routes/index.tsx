@@ -3,20 +3,23 @@ import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
 import { metodo } from "@/data/cursos";
+import { faqGeral } from "@/data/conteudo";
 import pessoasImage from "@/assets/hero-climate.jpg";
 import {
   Acreditamos,
   CursosStrip,
+  FaqList,
   Fechamento,
   MetodologiaResumo,
   NewEdTechMarca,
   ui,
 } from "@/components/brand";
 
-const pageModified = "2026-11-11";
+const pagePublished = "2026-04-19";
+const pageModified = "2026-11-23";
 const title = "CLIMAEDU | Resiliência climática, setor por setor";
 const description =
-  "Capacitação em resiliência climática para prefeituras e indústrias: partimos do plano de cada organização, conectamos as áreas e deixamos o conhecimento registrado na instituição.";
+  "Capacitação em resiliência climática para prefeituras e indústrias, a partir do plano de cada organização, com o conhecimento registrado na instituição.";
 
 
 
@@ -25,6 +28,7 @@ const webPageJsonLd = {
   "@type": "WebPage",
   name: title,
   url: "https://climaedu.com/",
+  datePublished: pagePublished,
   dateModified: pageModified,
   inLanguage: "pt-BR",
   isPartOf: { "@type": "WebSite", name: "CLIMAEDU", url: "https://climaedu.com/" },
@@ -182,6 +186,8 @@ function Index() {
           <CursosStrip />
         </div>
       </section>
+
+      <FaqList items={faqGeral} />
 
       <Fechamento
         title="Vamos conversar sobre os planos da sua organização?"
