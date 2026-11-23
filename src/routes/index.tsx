@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
 import { metodo } from "@/data/cursos";
 import { faqGeral } from "@/data/conteudo";
-import pessoasImage from "@/assets/hero-climate.jpg";
+import pessoasImage from "@/assets/cidade-verde.jpg";
 import {
   Acreditamos,
   CursosStrip,
@@ -81,7 +81,17 @@ function Index() {
               Resiliência climática, <span className="whitespace-nowrap text-primary">setor por setor</span>
             </h1>
             <p className={ui.lead}>
-              Partimos do plano de cada organização, conectamos as áreas que precisam agir juntas e
+              A CLIMAEDU capacita equipes de prefeituras e indústrias em resiliência climática.
+              Partimos do plano que a organização já tem, como o Plano de Contingência previsto na{" "}
+              <a
+                href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+              >
+                Lei nº 12.608/2012
+              </a>{" "}
+              ou o plano de emergência da empresa, conectamos as áreas que precisam agir juntas e
               deixamos o conhecimento registrado na instituição.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -119,7 +129,7 @@ function Index() {
 
       <Acreditamos
         foto={pessoasImage}
-        alt="Equipe de campo com tablets em área alagada, consultando o plano"
+        alt="Vista aérea de avenida cercada por jardins suspensos e áreas verdes"
       />
 
       <MetodologiaResumo />

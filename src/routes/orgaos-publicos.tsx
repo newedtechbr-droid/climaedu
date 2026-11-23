@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import reuniaoImage from "@/assets/team-meeting.jpg";
+import reuniaoImage from "@/assets/gestores-planejamento.jpg";
 import {
   Lente,
   Ambiente,

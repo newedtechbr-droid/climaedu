@@ -171,7 +171,8 @@ export function Footer() {
         <div className="mt-10 border-t border-white/12 pt-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <p className="text-sm leading-relaxed text-white/75">
-              © 2026 CLIMAEDU — produto da NewEdTech · Florianópolis, SC, Brasil
+              © 2026 CLIMAEDU — produto da NewEdTech · Florianópolis, SC, Brasil ·{" "}
+              Atualizado em <time dateTime="2026-11-23">23 de novembro de 2026</time>
             </p>
 
             <a

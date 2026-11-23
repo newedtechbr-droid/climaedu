@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import campoImage from "@/assets/hero-climate.jpg";
-import reuniaoImage from "@/assets/team-meeting.jpg";
+import campoImage from "@/assets/formadora-em-sala.jpg";
+import reuniaoImage from "@/assets/aula-presencial.jpg";
 import {
   Acreditamos,
   Colunas,
@@ -84,14 +84,14 @@ function Sobre() {
         eyebrow="Sobre"
         title="Resiliência climática começa pelas pessoas"
         lead="A CLIMAEDU ajuda prefeituras e organizações a levar seus planos até as equipes que vão executar cada etapa. Temos plataforma de ensino própria e usamos inteligência artificial para produzir cursos sob medida a partir do plano de cada organização. Somos de Florianópolis, Santa Catarina."
-        media={<Lente src={campoImage} alt="Equipe de campo com tablets em área alagada" />}
+        media={<Lente src={campoImage} alt="Formadora conduzindo uma aula presencial" />}
       >
         <NewEdTechMarca />
       </PageHeader>
 
       <Acreditamos
         foto={reuniaoImage}
-        alt="Gestores reunidos em torno de mapas e documentos de planejamento"
+        alt="Formadora conversando com participantes durante uma capacitação presencial"
       />
 
       <section className={ui.section}>
