@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import campoImage from "@/assets/formadora-em-sala.jpg";
-import reuniaoImage from "@/assets/aula-presencial.jpg";
+import reuniaoImage from "@/assets/cidade-verde.jpg";
 import {
   Acreditamos,
   Colunas,
@@ -8,11 +8,9 @@ import {
   INTEGRADORES,
   Lente,
   NewEdTechMarca,
-  OdsGrid,
   PageHeader,
   ui,
 } from "@/components/brand";
-import { odsPublico } from "@/data/conteudo";
 
 const title = "Sobre | CLIMAEDU";
 const description =
@@ -91,7 +89,7 @@ function Sobre() {
 
       <Acreditamos
         foto={reuniaoImage}
-        alt="Formadora conversando com participantes durante uma capacitação presencial"
+        alt="Vista aérea de avenida com passarelas verdes suspensas"
       />
 
       <section className={ui.section}>
@@ -115,14 +113,6 @@ function Sobre() {
       </section>
 
       <section className={`${ui.section} bg-surface`}>
-        <div className="container-brand">
-          <p className={ui.eyebrow}>Agenda 2030</p>
-          <h2 className={ui.h2}>Objetivos de Desenvolvimento Sustentável</h2>
-          <OdsGrid items={odsPublico} />
-        </div>
-      </section>
-
-      <section className={ui.section}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Ecossistema</p>
           <h2 className={ui.h2}>Onde a CLIMAEDU está conectada</h2>

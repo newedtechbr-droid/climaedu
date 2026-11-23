@@ -4,9 +4,7 @@ import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
 import { metodo } from "@/data/cursos";
 import { faqGeral } from "@/data/conteudo";
-import pessoasImage from "@/assets/cidade-verde.jpg";
 import {
-  Acreditamos,
   FaqList,
   Fechamento,
   MetodologiaResumo,
@@ -125,11 +123,6 @@ function Index() {
           ))}
         </div>
       </div>
-
-      <Acreditamos
-        foto={pessoasImage}
-        alt="Vista aérea de avenida com passarelas verdes suspensas"
-      />
 
       <MetodologiaResumo />
 
