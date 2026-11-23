@@ -109,21 +109,6 @@ function Index() {
         />
       </header>
 
-      {/* Faixa da abordagem */}
-      <div className="bg-primary-dark text-white">
-        <div className="container-brand flex flex-wrap items-center gap-x-8 gap-y-3 py-5">
-          {metodo.map((m, i) => (
-            <span key={m.n} className="flex items-center gap-3 text-[18px]">
-              <b className="font-display text-[#e3aca4]">{m.n}</b>
-              <span>{m.title}</span>
-              {i < metodo.length - 1 && (
-                <ArrowRight size={18} className="hidden text-white/50 md:inline" aria-hidden />
-              )}
-            </span>
-          ))}
-        </div>
-      </div>
-
       <MetodologiaResumo />
 
       {/* Para quem */}
