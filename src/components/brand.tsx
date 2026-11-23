@@ -385,11 +385,13 @@ export function CursoCard({ c }: { c: (typeof cursos)[number] }) {
 
 export function CursosStrip() {
   return (
-    <div className="mt-8 grid gap-5 sm:grid-cols-2">
+    <ul className="mt-8 grid list-none gap-5 p-0 sm:grid-cols-2">
       {cursos.map((c) => (
-        <CursoCard key={c.title} c={c} />
+        <li key={c.title}>
+          <CursoCard c={c} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 

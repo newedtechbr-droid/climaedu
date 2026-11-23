@@ -4,6 +4,7 @@ import reuniaoImage from "@/assets/cidade-verde.jpg";
 import {
   Acreditamos,
   Colunas,
+  FaqList,
   Fechamento,
   INTEGRADORES,
   Lente,
@@ -28,6 +29,21 @@ const principios = [
   {
     title: "Prometer só o que entregamos",
     text: "Não fazemos auditoria, não certificamos conformidade e não substituímos a Defesa Civil nem os responsáveis técnicos.",
+  },
+];
+
+const faqSobre = [
+  {
+    q: "O que é a CLIMAEDU?",
+    a: "A CLIMAEDU é a marca da NewEdTech (New Tecnologia e Inovação Educacional Ltda, CNPJ 50.443.417/0001-05) para capacitação em resiliência climática. Atendemos prefeituras e indústrias a partir dos planos que cada organização já tem.",
+  },
+  {
+    q: "Onde a CLIMAEDU fica?",
+    a: "Em Florianópolis, Santa Catarina, na Rua Munique, 51, Córrego Grande. A capacitação combina cursos online, encontros ao vivo e atividades presenciais com as equipes.",
+  },
+  {
+    q: "O que a CLIMAEDU não faz?",
+    a: "Não elabora nem revisa planos, não faz auditoria, não emite certificação de conformidade e não substitui a Defesa Civil nem os responsáveis técnicos. O plano continua sendo da organização.",
   },
 ];
 
@@ -104,6 +120,19 @@ function Sobre() {
               conectam, insegurança na hora de agir e distância entre o que está no plano e o que
               acontece na prática. A CLIMAEDU trabalha nessa distância.
             </p>
+            <p className="mt-4 text-[17px] text-foreground/75">
+              De acordo com a{" "}
+              <a
+                href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+              >
+                Lei nº 12.608/2012
+              </a>
+              , reduzir os riscos de desastre é dever da União, dos estados e dos municípios. Por
+              isso cada área da prefeitura precisa saber o seu papel no plano.
+            </p>
             <p className="mt-8 max-w-[30ch] font-display text-[clamp(26px,2.8vw,34px)] font-bold leading-tight text-primary">{INTEGRADORES}</p>
           </div>
         </div>
@@ -142,6 +171,8 @@ function Sobre() {
           </p>
         </div>
       </section>
+
+      <FaqList items={faqSobre} />
 
       <Fechamento
         title="Vamos conversar?"
