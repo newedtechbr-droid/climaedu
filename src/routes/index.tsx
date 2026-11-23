@@ -1,13 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/cidade-verde-hero.jpg";
+import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
 import { metodo } from "@/data/cursos";
 import { faqGeral } from "@/data/conteudo";
-import pessoasImage from "@/assets/predio-verde.jpg";
+import pessoasImage from "@/assets/cidade-verde.jpg";
 import {
   Acreditamos,
-  CursosStrip,
   FaqList,
   Fechamento,
   MetodologiaResumo,
@@ -129,7 +128,7 @@ function Index() {
 
       <Acreditamos
         foto={pessoasImage}
-        alt="Fachada de prédio coberta de vegetação contra o céu azul"
+        alt="Vista aérea de avenida com passarelas verdes suspensas"
       />
 
       <MetodologiaResumo />
@@ -177,27 +176,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Materiais de apoio */}
-      <section className={`${ui.section} bg-surface`}>
-        <div className="container-brand">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-2xl">
-              <p className={ui.eyebrow}>Materiais de apoio</p>
-              <h2 className={ui.h2}>Cursos para cada área que o clima atravessa</h2>
-              <p className={ui.intro}>
-                Os cursos levam os temas do clima a cada secretaria, com linguagem prática e
-                certificado de conclusão.
-              </p>
-            </div>
-            <Link to="/cursos" className={ui.btnGhost}>
-              Ver cursos
-            </Link>
-          </div>
-          <CursosStrip />
-        </div>
-      </section>
-
-      <FaqList items={faqGeral} />
+      <FaqList items={faqGeral} surface />
 
       <Fechamento
         title="Vamos conversar sobre os planos da sua organização?"
