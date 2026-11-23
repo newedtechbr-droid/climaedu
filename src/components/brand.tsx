@@ -196,11 +196,13 @@ export function NossaEntrega({ surface = false }: { surface?: boolean }) {
 /** Resumo da metodologia para as páginas internas (a versão completa fica na home). */
 export function MetodologiaResumo({
   limitesItems,
+  eyebrow = "Metodologia CLIMAEDU",
   title = "Partimos de um plano existente",
   intro,
   linkTo = "/orgaos-publicos",
 }: {
   limitesItems?: string[];
+  eyebrow?: string;
   title?: string;
   intro?: string;
   linkTo?: "/orgaos-publicos" | "/";
@@ -214,7 +216,7 @@ export function MetodologiaResumo({
     <section id="metodologia" className={`${ui.section} scroll-mt-24 overflow-hidden bg-surface`}>
       <div className="container-brand grid items-center gap-10 md:grid-cols-[minmax(0,8fr)_minmax(0,4fr)]">
         <div>
-          <p className={ui.eyebrow}>Metodologia CLIMAEDU</p>
+          <p className={ui.eyebrow}>{eyebrow}</p>
           <h2 className={ui.h2}>{title}</h2>
           {intro && <p className={ui.intro}>{intro}</p>}
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -233,7 +235,7 @@ export function MetodologiaResumo({
               </div>
             ))}
           </div>
-          <p className="mt-6 font-display text-[20px] font-bold text-primary">{INTEGRADORES}</p>
+          <p className="mt-8 max-w-[30ch] font-display text-[clamp(26px,2.8vw,34px)] font-bold leading-tight text-primary">{INTEGRADORES}</p>
           <Link
             to={linkTo}
             hash="como-trabalhamos"
@@ -266,7 +268,7 @@ export function ComoTrabalhamos({ limitesItems }: { limitesItems?: string[] }) {
         <p className={ui.eyebrow}>Como trabalhamos · Metodologia CLIMAEDU</p>
         <h2 className={ui.h2}>Partimos de um plano existente</h2>
         <Metodo />
-        <p className="mt-10 max-w-[60ch] font-display text-[22px] font-bold text-primary">
+        <p className="mt-10 max-w-[30ch] font-display text-[clamp(26px,2.8vw,34px)] font-bold leading-tight text-primary">
           {INTEGRADORES}
         </p>
         {limitesItems && (

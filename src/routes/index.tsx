@@ -2,12 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-field.jpg";
 import viposaLogo from "@/assets/partners/viposa.png";
-import { metodo } from "@/data/cursos";
 import { faqGeral } from "@/data/conteudo";
-import pessoasImage from "@/assets/hero-climate.jpg";
 import {
-  Acreditamos,
-  CursosStrip,
   FaqList,
   Fechamento,
   MetodologiaResumo,
@@ -81,7 +77,17 @@ function Index() {
               Resiliência climática, <span className="whitespace-nowrap text-primary">setor por setor</span>
             </h1>
             <p className={ui.lead}>
-              Partimos do plano de cada organização, conectamos as áreas que precisam agir juntas e
+              A CLIMAEDU capacita equipes de prefeituras e indústrias em resiliência climática.
+              Partimos do plano que a organização já tem, como o Plano de Contingência previsto na{" "}
+              <a
+                href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12608.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+              >
+                Lei nº 12.608/2012
+              </a>{" "}
+              ou o plano de emergência da empresa, conectamos as áreas que precisam agir juntas e
               deixamos o conhecimento registrado na instituição.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -101,26 +107,6 @@ function Index() {
           style={{ backgroundImage: `url(${heroImage})` }}
         />
       </header>
-
-      {/* Faixa da abordagem */}
-      <div className="bg-primary-dark text-white">
-        <div className="container-brand flex flex-wrap items-center gap-x-8 gap-y-3 py-5">
-          {metodo.map((m, i) => (
-            <span key={m.n} className="flex items-center gap-3 text-[18px]">
-              <b className="font-display text-[#e3aca4]">{m.n}</b>
-              <span>{m.title}</span>
-              {i < metodo.length - 1 && (
-                <ArrowRight size={18} className="hidden text-white/50 md:inline" aria-hidden />
-              )}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <Acreditamos
-        foto={pessoasImage}
-        alt="Equipe de campo com tablets em área alagada, consultando o plano"
-      />
 
       <MetodologiaResumo />
 
@@ -167,27 +153,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Materiais de apoio */}
-      <section className={`${ui.section} bg-surface`}>
-        <div className="container-brand">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div className="max-w-2xl">
-              <p className={ui.eyebrow}>Materiais de apoio</p>
-              <h2 className={ui.h2}>Cursos para cada área que o clima atravessa</h2>
-              <p className={ui.intro}>
-                Os cursos levam os temas do clima a cada secretaria, com linguagem prática e
-                certificado de conclusão.
-              </p>
-            </div>
-            <Link to="/cursos" className={ui.btnGhost}>
-              Ver cursos
-            </Link>
-          </div>
-          <CursosStrip />
-        </div>
-      </section>
-
-      <FaqList items={faqGeral} />
+      <FaqList items={faqGeral} surface />
 
       <Fechamento
         title="Vamos conversar sobre os planos da sua organização?"

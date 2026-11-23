@@ -83,6 +83,7 @@ function Empresas() {
       </section>
 
       <MetodologiaResumo
+        eyebrow="Como trabalhamos na indústria"
         title="Preparação para auditorias e certificações"
         intro="A mesma metodologia que usamos no poder público, aplicada aos procedimentos da empresa: cada função sabe o que fazer, e a capacitação fica registrada para apresentar quando for preciso."
         limitesItems={limitesIndustria}

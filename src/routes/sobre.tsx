@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import campoImage from "@/assets/hero-climate.jpg";
-import reuniaoImage from "@/assets/team-meeting.jpg";
+import campoImage from "@/assets/formadora-em-sala.jpg";
+import reuniaoImage from "@/assets/cidade-verde.jpg";
 import {
   Acreditamos,
   Colunas,
@@ -8,11 +8,9 @@ import {
   INTEGRADORES,
   Lente,
   NewEdTechMarca,
-  OdsGrid,
   PageHeader,
   ui,
 } from "@/components/brand";
-import { odsPublico } from "@/data/conteudo";
 
 const title = "Sobre | CLIMAEDU";
 const description =
@@ -84,14 +82,14 @@ function Sobre() {
         eyebrow="Sobre"
         title="Resiliência climática começa pelas pessoas"
         lead="A CLIMAEDU ajuda prefeituras e organizações a levar seus planos até as equipes que vão executar cada etapa. Temos plataforma de ensino própria e usamos inteligência artificial para produzir cursos sob medida a partir do plano de cada organização. Somos de Florianópolis, Santa Catarina."
-        media={<Lente src={campoImage} alt="Equipe de campo com tablets em área alagada" />}
+        media={<Lente src={campoImage} alt="Formadora conduzindo uma aula presencial" />}
       >
         <NewEdTechMarca />
       </PageHeader>
 
       <Acreditamos
         foto={reuniaoImage}
-        alt="Gestores reunidos em torno de mapas e documentos de planejamento"
+        alt="Vista aérea de avenida com passarelas verdes suspensas"
       />
 
       <section className={ui.section}>
@@ -106,7 +104,7 @@ function Sobre() {
               conectam, insegurança na hora de agir e distância entre o que está no plano e o que
               acontece na prática. A CLIMAEDU trabalha nessa distância.
             </p>
-            <p className="mt-6 font-display text-[22px] font-bold text-primary">{INTEGRADORES}</p>
+            <p className="mt-8 max-w-[30ch] font-display text-[clamp(26px,2.8vw,34px)] font-bold leading-tight text-primary">{INTEGRADORES}</p>
           </div>
         </div>
         <div className="container-brand">
@@ -115,14 +113,6 @@ function Sobre() {
       </section>
 
       <section className={`${ui.section} bg-surface`}>
-        <div className="container-brand">
-          <p className={ui.eyebrow}>Agenda 2030</p>
-          <h2 className={ui.h2}>Objetivos de Desenvolvimento Sustentável</h2>
-          <OdsGrid items={odsPublico} />
-        </div>
-      </section>
-
-      <section className={ui.section}>
         <div className="container-brand">
           <p className={ui.eyebrow}>Ecossistema</p>
           <h2 className={ui.h2}>Onde a CLIMAEDU está conectada</h2>
