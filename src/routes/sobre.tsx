@@ -104,7 +104,7 @@ function Sobre() {
               conectam, insegurança na hora de agir e distância entre o que está no plano e o que
               acontece na prática. A CLIMAEDU trabalha nessa distância.
             </p>
-            <p className="mt-6 font-display text-[22px] font-bold text-primary">{INTEGRADORES}</p>
+            <p className="mt-8 max-w-[30ch] font-display text-[clamp(26px,2.8vw,34px)] font-bold leading-tight text-primary">{INTEGRADORES}</p>
           </div>
         </div>
         <div className="container-brand">
