@@ -29,10 +29,11 @@ const sendDemoRequest = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => input as DemoInput)
   .handler(async ({ data }: { data: DemoInput }) => {
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
-    const LOVABLE_API_KEY = process.env.LOVABLE_API_KEY;
+    const RESEND_FROM = process.env.RESEND_FROM || "CLIMAEDU <onboarding@resend.dev>";
 
-    if (!RESEND_API_KEY || !LOVABLE_API_KEY) {
-      throw new Error("Chaves de API não configuradas");
+    if (!RESEND_API_KEY) {
+      console.error("Demo request: RESEND_API_KEY is not configured");
+      throw new Error("Chave de envio não configurada");
     }
 
     const html = `
@@ -49,15 +50,14 @@ const sendDemoRequest = createServerFn({ method: "POST" })
       </table>
     `;
 
-    const response = await fetch("https://connector-gateway.lovable.dev/resend/emails", {
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
-        "X-Connection-Api-Key": RESEND_API_KEY,
+        Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "CLIMAEDU <onboarding@resend.dev>",
+        from: RESEND_FROM,
         to: ["contato@newedtech.com.br"],
         reply_to: data.email,
         subject: `[CLIMAEDU] Demonstração: ${data.nome} — ${data.instituicao}`,
@@ -67,7 +67,7 @@ const sendDemoRequest = createServerFn({ method: "POST" })
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("Resend error:", errorText);
+      console.error("Demo request: Resend responded", response.status, errorText);
       throw new Error("Falha ao enviar e-mail");
     }
 
@@ -110,7 +110,9 @@ export function DemoFormSection() {
       reset();
     } catch (err) {
       console.error("Erro ao enviar formulário:", err);
-      setErrorMsg("Ocorreu um erro no envio. Por favor, tente pelo WhatsApp: (48) 99160-6518");
+      setErrorMsg(
+        "Ocorreu um erro no envio. Escreva para contato@newedtech.com.br ou chame no WhatsApp: (48) 99160-6518",
+      );
     }
   };
 
